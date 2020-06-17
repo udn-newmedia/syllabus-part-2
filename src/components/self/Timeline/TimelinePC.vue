@@ -24,16 +24,16 @@
       ref="timeLineList"
     >
       <li>
-        <PCPart1 />
+        <PCPart1 :img="imgs[0]" />
       </li>
       <li>
-        <PCPart2 :active="activeArray[1]" />
+        <PCPart2 :active="activeArray[1]" :img="imgs[1]" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart3 :active="activeArray[2]" />
+        <PCPart3 :active="activeArray[2]" :img="imgs[2]" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart4 :active="activeArray[3]" />
+        <PCPart4 :active="activeArray[3]" :img="imgs[3]" />
       </li>
       <li class="timeline-li time-spot">
         <PCPart5 />
@@ -93,14 +93,14 @@ export default {
     PCPart9,
     PCPart10,
     PCPart11,
-    EndPage
+    EndPage,
   },
   data() {
     const activeArray = []
     const pageNumber = {
       length: 1 * 9 + 1.5 * 3,
       startLength: 2,
-      endLength: 1
+      endLength: 1,
     }
     for (let i = 0; i < pageNumber.length; i += 1) {
       activeArray.push(false)
@@ -114,11 +114,12 @@ export default {
     // P6:153.67vw
     return {
       activeArray,
+      imgs: content.timelineImgs,
       data: content.timeline,
       progress: 0.0,
       bottom: 0,
       pageNumber,
-      timelinePostion: {}
+      timelinePostion: {},
     }
   },
   methods: {
@@ -130,7 +131,7 @@ export default {
       const { scrollTop } = document.documentElement
       const { innerHeight } = window
       const scrollBottom = scrollTop + innerHeight
-      const bodyHeight = document.body.offsetHeight
+      // const bodyHeight = document.body.offsetHeight
 
       const allHeight = containerHeight - listHeight
       // count the progress
@@ -156,7 +157,7 @@ export default {
               this.pageNumber.startLength -
               this.pageNumber.endLength +
               1) -
-            timelineShift.left}vw`
+            timelineShift.left}vw`,
         }
         // over
       } else if (distanceBottom >= 0) {
@@ -165,7 +166,7 @@ export default {
             (1 - timelineShift.top) * innerHeight}px`,
           right: `${100 *
             (this.pageNumber.startLength + this.pageNumber.endLength - 2) -
-            timelineShift.left}vw`
+            timelineShift.left}vw`,
         }
         // in the process
       } else {
@@ -177,7 +178,7 @@ export default {
                 this.pageNumber.startLength -
                 this.pageNumber.endLength +
                 1) -
-            timelineShift.left}vw`
+            timelineShift.left}vw`,
         }
       }
 
@@ -196,7 +197,7 @@ export default {
       //   return 'active'
       // }
       return ''
-    }
+    },
   },
   computed: {
     areaTranslateX() {
@@ -210,7 +211,7 @@ export default {
         return 0
       }
       return this.bottom
-    }
+    },
   },
   created() {
     window.addEventListener('scroll', this.updateProgress)
@@ -220,7 +221,7 @@ export default {
   },
   destroyed() {
     window.removeEventListener('scroll', this.updateProgress)
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

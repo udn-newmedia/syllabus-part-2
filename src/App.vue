@@ -18,7 +18,6 @@ import HeaderTypeA from '@/components/header/HeaderTypeA'
 import OtherProjects from '@/components/self/OtherProjects'
 import Editors from '@/components/self/Editors.vue'
 
-import FooterEditor from '@/components/footer/FooterEditor.vue'
 import PageFooter from '@/components/footer/PageFooter.vue'
 
 export default {
@@ -29,8 +28,8 @@ export default {
     Marketing,
     OtherProjects,
     Editors,
-    PageFooter
-  }
+    PageFooter,
+  },
 }
 </script>
 

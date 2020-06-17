@@ -35,7 +35,7 @@
     </div>
     <div class="col-4 h-100 p-relative">
       <div class="part9-image">
-        <img class="img-fluid" :src="img.part9Img" alt />
+        <!-- <img class="img-fluid" :src="img.part9Img" alt /> -->
         <div>十二年國教家長聯盟昨天在教育部外抗議，要求教育部對會考填志願制度提出補救措施，有家長帶著孩子前來聲援。記者王騰毅／攝影</div>
       </div>
     </div>
@@ -43,16 +43,16 @@
 </template>
 
 <script>
-import part9Img from '@/assets/page1/9th/9th@3x.jpg'
+// import part9Img from '@/assets/page1/9th/9th@3x.jpg'
 
 export default {
   name: 'PCPart9',
   props: { active: { type: Boolean, default: false } },
   data() {
     return {
-      img: { part9Img }
+      // img: { part9Img }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

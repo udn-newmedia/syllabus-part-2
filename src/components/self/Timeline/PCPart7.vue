@@ -37,7 +37,7 @@
     </div>
     <div class="col-4 h-100 p-relative">
       <div class="part7-image">
-        <img class="img-fluid" :src="img.part7Img" alt />
+        <!-- <img class="img-fluid" :src="img.part7Img" alt /> -->
         <div>教育部啟動九年一貫課綱改修正工程，全面檢討授課時數、課程領域、重大議題，最快105學年度開始實施。小朋友沈重的書包會減輕嗎 (1)</div>
       </div>
     </div>
@@ -45,16 +45,16 @@
 </template>
 
 <script>
-import part7Img from '@/assets/page1/7th/7th@3x.jpg'
+// import part7Img from '@/assets/page1/7th/7th@3x.jpg'
 
 export default {
   name: 'PCPart7',
   props: { active: { type: Boolean, default: false } },
   data() {
     return {
-      img: { part7Img }
+      // img: { part7Img }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

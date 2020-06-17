@@ -42,17 +42,17 @@
 </template>
 
 <script>
-import part5Img1 from '@/assets/timeline/web/12-years-education_web_chart.svg'
-import part5Img2 from '@/assets/timeline/web/12-years-education_web_pic4.jpg'
+import part5Img1 from '@/assets/img/timeline/web/12-years-education_web_chart.svg'
+import part5Img2 from '@/assets/img/timeline/web/12-years-education_web_pic4.jpg'
 
 export default {
   name: 'PCPart5',
   props: { active: { type: Boolean, default: false } },
   data() {
     return {
-      img: { part5Img1, part5Img2 }
+      img: { part5Img1, part5Img2 },
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

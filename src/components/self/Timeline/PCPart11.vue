@@ -24,7 +24,7 @@
     </div>
     <div class="col-7 h-100 p-relative">
       <div class="part11-image">
-        <img class="img-fluid" :src="img.part11Img" alt />
+        <!-- <img class="img-fluid" :src="img.part11Img" alt /> -->
         <div>進入理想的高中，卻成了「窄門」，真正的免試入學，何時才能實踐。記者陳雨鑫／攝影</div>
       </div>
     </div>
@@ -32,15 +32,15 @@
 </template>
 
 <script>
-import part11Img from '@/assets/page1/11th/11th@3x.jpg'
+// import part11Img from '@/assets/page1/11th/11th@3x.jpg'
 
 export default {
   name: 'PCPart11',
   data() {
     return {
-      img: { part11Img }
+      // img: { part11Img }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

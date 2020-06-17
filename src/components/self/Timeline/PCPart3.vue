@@ -5,9 +5,15 @@
         <div class="part3-time">
           <h2 class="part3-title">教改序幕：410大遊行</h2>
           <ul class="part3-list">
-            <li><span>時間：</span>1994年4月10日</li>
-            <li><span>參與者：</span>200多個民間團體、3萬民眾</li>
-            <li><span>訴求：</span>落實小班小校、廣設高中大學、推動教育現代化、制定教育基本法</li>
+            <li>
+              <span>時間：</span>1994年4月10日
+            </li>
+            <li>
+              <span>參與者：</span>200多個民間團體、3萬民眾
+            </li>
+            <li>
+              <span>訴求：</span>落實小班小校、廣設高中大學、推動教育現代化、制定教育基本法
+            </li>
           </ul>
         </div>
       </div>
@@ -21,25 +27,23 @@
     <div class="part3-image-wrapper">
       <div class="part3-image">
         <img class="img-fluid" :class="{ active }" :src="img.part3Img" alt />
-        <div>
-          民間團體發動「四一○教育改造運動」，匯集了上萬民眾參與，從上午的園遊會、下午的大遊行和晚會表演等方式，表達了民間的教育改革理念。圖為遊行情形。
-        </div>
+        <div>民間團體發動「四一○教育改造運動」，匯集了上萬民眾參與，從上午的園遊會、下午的大遊行和晚會表演等方式，表達了民間的教育改革理念。圖為遊行情形。</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import part3Img from '@/assets/page1/3rd/3rd@3x.jpg'
+// import part3Img from '@/assets/page1/3rd/3rd@3x.jpg'
 
 export default {
   name: 'PCPart3',
-  props: { active: { type: Boolean, default: false } },
+  props: { active: { type: Boolean, default: false }, img: { type: String } },
   data() {
     return {
-      img: { part3Img }
+      // img: { part3Img }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

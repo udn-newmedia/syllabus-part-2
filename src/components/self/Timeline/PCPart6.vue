@@ -46,16 +46,16 @@
 </template>
 
 <script>
-import part6Img from '@/assets/timeline/web/12-years-education_web_pic5.jpg'
+import part6Img from '@/assets/img/timeline/web/12-years-education_web_pic5.jpg'
 
 export default {
   name: 'PCpart6',
   props: { active: { type: Boolean, default: false } },
   data() {
     return {
-      img: { part6Img }
+      img: { part6Img },
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

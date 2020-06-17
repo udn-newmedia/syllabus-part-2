@@ -23,16 +23,16 @@
 </template>
 
 <script>
-import part4Img from '@/assets/page1/4th/4th@3x.jpg'
+// import part4Img from '@/assets/page1/4th/4th@3x.jpg'
 
 export default {
   name: 'PCPart4',
-  props: { active: { type: Boolean, default: false } },
+  props: { active: { type: Boolean, default: false }, img: { type: String } },
   data() {
     return {
-      img: { part4Img }
+      // img: { part4Img }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

@@ -32,7 +32,7 @@
     </div>
     <div class="col-4 h-100 p-relative">
       <div class="part10-image">
-        <img class="img-fluid" :src="img.part10Img" alt />
+        <!-- <img class="img-fluid" :src="img.part10Img" alt /> -->
         <div>10多個家長與教育團體昨天前往教育部舉行「還給學生多元教育選擇權、反對區域階級化」的記者會，要求給學生自主決定要唸的學校。家長們針對新任教長潘文忠一上任所宣布的六項教育政策感到不滿，認為未經溝通禾倉促杜建重 20160524 (1)</div>
       </div>
     </div>
@@ -40,16 +40,16 @@
 </template>
 
 <script>
-import part10Img from '@/assets/page1/10th/10th@3x.jpg'
+// import part10Img from '@/assets/page1/10th/10th@3x.jpg'
 
 export default {
   name: 'PCPart10',
   props: { active: { type: Boolean, default: false } },
   data() {
     return {
-      img: { part10Img }
+      // img: { part10Img }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
