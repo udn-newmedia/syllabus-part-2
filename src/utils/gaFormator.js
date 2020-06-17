@@ -34,7 +34,7 @@ const gaTable = {
     action: 'click',
     label: 'menu_close'
   },
-  HeaderUdnLogo: {    
+  HeaderUdnLogo: {
     category: 'logo',
     action: 'click',
     label: '圓形聯logo'
@@ -44,7 +44,7 @@ const gaTable = {
     action: 'click',
     label: 'goto_content'
   },
-  PageBackTop: {    
+  PageBackTop: {
     category: 'button',
     action: 'click',
     label: '回到最上面'
@@ -58,7 +58,7 @@ const gaTable = {
     category: 'logo',
     action: 'click',
     label: '聯合新聞網_logo'
-  },  
+  },
   FooterLogoNMD: {
     category: 'logo',
     action: 'click',
@@ -68,27 +68,7 @@ const gaTable = {
     category: 'logo',
     action: 'click',
     label: '願景工程_logo'
-  },
-  MenuLink_1: {
-    category: 'menu',
-    action: 'click',
-    label: '揭露課綱五大亂象'
-  },
-  MenuLink_2: {
-    category: 'menu',
-    action: 'click',
-    label: '台灣教育關鍵數字'
-  },
-  MenuLink_3: {
-    category: 'menu',
-    action: 'click',
-    label: '關於108課綱我想說'
-  },
-  MenuLink_4: {
-    category: 'menu',
-    action: 'click',
-    label: '更多課綱相關報導'
-  },
+  }
 }
 
-export default gaTable;
+export default gaTable
