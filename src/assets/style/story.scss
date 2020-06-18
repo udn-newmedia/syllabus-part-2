@@ -1,9 +1,30 @@
-p {
-  font-size: 1.125rem;
+p.enlarge {
+  color: #181818;
+  font-size: 24px;
   @include pad {
-    font-size: 1.25rem;
+    font-size: 30px;
   }
   @include pc {
-    font-size: 1.25rem;
+    font-size: 30px;
   }
+}
+
+h2.enlarge {
+  color: #181818;
+  font-family: GenJyuuGothic-Monospace;
+  font-size: 60px;
+  font-weight: bold;
+  @include pad {
+    font-size: 92px;
+  }
+  @include pc {
+    font-size: 116px;
+  }
+}
+
+.black-article-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 450px;
 }
