@@ -34,7 +34,7 @@
     </div>
     <div class="part5-image-wrapper">
       <div class="part5-image">
-        <img class="img-fluid" :src="img[1]" alt />
+        <img class="img-fluid" :class="{ active }" :src="img[1]" alt />
         <div>廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照</div>
       </div>
     </div>
@@ -148,6 +148,13 @@ export default {
     img {
       width: 100%;
       max-height: 100%;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 2s ease-out;
+      &.active {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
     div {
       font-size: 15px;

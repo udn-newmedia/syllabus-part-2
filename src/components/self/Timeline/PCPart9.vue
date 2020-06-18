@@ -42,7 +42,7 @@
     </div>
     <div class="part9-image-wrapper">
       <div class="part9-image">
-        <img class="img-fluid" :src="img" alt />
+        <img class="img-fluid" :class="{ active }" :src="img" alt />
         <div>圖為首屆國中會考後，十二年國教家長聯盟在教育部外抗議，要求教育部對會考填志願制度提出補救措施。圖／報系資料照</div>
       </div>
     </div>
@@ -162,6 +162,13 @@ export default {
     img {
       max-width: 100%;
       max-height: 100%;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 2s ease-out;
+      &.active {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
     div {
       width: 60.7vw;

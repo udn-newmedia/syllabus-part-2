@@ -43,7 +43,7 @@
     </div>
     <div class="part10-image-wrapper">
       <div class="part10-image">
-        <img class="img-fluid" :src="img" alt />
+        <img class="img-fluid" :class="{ active }" :src="img" alt />
         <div>圖為首屆國中會考後，十二年國教家長聯盟在教育部外抗議，要求教育部對會考填志願制度提出補救措施。圖／報系資料照</div>
       </div>
     </div>
@@ -93,31 +93,6 @@ export default {
           color: #eb0f43;
         }
       }
-      // .part10-nextlist {
-      //   line-height: 1.7;
-      //   text-align: left;
-      //   color: #000000;
-      //   li {
-      //     position: relative;
-      //     padding-left: 22px;
-      //     font-family: SourceHanSansTW-Regular;
-      //     font-size: 20px;
-      //     max-width: 39vw;
-      //     &::before {
-      //       content: '';
-      //       position: absolute;
-      //       width: 12px;
-      //       height: 12px;
-      //       top: 9px;
-      //       left: 0;
-      //       background-color: #000000;
-      //       border-radius: 50%;
-      //     }
-      //     span {
-      //       font-family: SourceHanSansTW-Bold;
-      //     }
-      //   }
-      // }
     }
   }
   .part10-today-wrapper {
@@ -173,20 +148,6 @@ export default {
             font-family: SourceHanSansTW-Bold;
           }
         }
-        // list-style-type: none;
-        // font-size: 20px;
-        // line-height: 1.7;
-        // text-align: left;
-        // color: #000000;
-        // li {
-        //   margin: 12px 0 8px;
-        //   .part10-today-list-subtitle {
-        //     color: #049d88;
-        //   }
-        //   span {
-        //     color: #eb0f43;
-        //   }
-        // }
       }
     }
   }
@@ -201,6 +162,13 @@ export default {
       width: 60.7vw;
       //max-width: 100%;
       max-height: 100%;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 2s ease-out;
+      &.active {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
     div {
       width: 60.7vw;

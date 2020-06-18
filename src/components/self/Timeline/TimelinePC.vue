@@ -42,25 +42,25 @@
         <PCPart4 :active="activeArray[3]" :img="imgs.part4" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart5 :img="imgs.part5" />
+        <PCPart5 :active="activeArray[4]" :img="imgs.part5" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart6 :img="imgs.part6" />
+        <PCPart6 :active="activeArray[5]" :img="imgs.part6" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart7 :img="imgs.part7" />
+        <PCPart7 :active="activeArray[6]" :img="imgs.part7" />
       </li>
       <li>
-        <PCPart8 />
+        <PCPart8 :active="activeArray[7]" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart9 :img="imgs.part9" />
+        <PCPart9 :active="activeArray[8]" :img="imgs.part9" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart10 :img="imgs.part10" />
+        <PCPart10 :active="activeArray[9]" :img="imgs.part10" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart11 :img="imgs.part11" />
+        <PCPart11 :active="activeArray[10]" :img="imgs.part11" />
       </li>
       <li>
         <EndPage />
@@ -110,10 +110,21 @@ export default {
       startLength: 2.4547,
       endLength: 1,
     }
-    for (let i = 0; i < pageNumber.length; i += 1) {
-      activeArray.push(false)
-    }
 
+    const accumulationArray = [
+      100,
+      245.47,
+      377.97,
+      488.36,
+      613.83,
+      767.5,
+      944.3,
+      1010.7,
+      1164.37,
+      1318.04,
+      1401.48,
+      1501.48,
+    ]
     // P1:100vw
     // P2:145.47vw
     // P3:132.5vw
@@ -128,14 +139,25 @@ export default {
     // end:100vw
     //
     // sum:1501.48vw
+
+    for (let i = 0; i < accumulationArray.length; i += 1) {
+      activeArray.push(false)
+    }
+
+    const testArray = []
+    for (let i = 0; i < accumulationArray.length; i += 1) {
+      testArray.push((accumulationArray[i] * 100) / 1501.48)
+    }
+
     return {
       activeArray,
       imgs: content.timelineImgs,
-      data: content.timeline,
       progress: 0.0,
       bottom: 0,
       pageNumber,
       timelinePostion: {},
+      accumulationArray,
+      testArray,
     }
   },
   methods: {
@@ -208,20 +230,32 @@ export default {
       }
 
       // count active
-      for (let i = 0; i < this.pageNumber.length; i += 1) {
-        if (this.progress > ((i - 0.5) * 100) / this.pageNumber.length) {
+      const allLength = this.accumulationArray[
+        this.accumulationArray.length - 1
+      ]
+      for (let i = 0; i < this.accumulationArray.length; i += 1) {
+        if (i === 0) {
           this.activeArray[i] = true
+        } else if (i === 1) {
+          if (
+            this.progress >
+            (this.accumulationArray[0] * 0.5 * 100) / allLength
+          ) {
+            this.activeArray[i] = true
+          }
+        } else {
+          if (
+            this.progress >
+            ((this.accumulationArray[i - 2] +
+              (this.accumulationArray[i - 1] - this.accumulationArray[i - 2]) *
+                0.5) *
+              100) /
+              allLength
+          ) {
+            this.activeArray[i] = true
+          }
         }
       }
-    },
-    active(index) {
-      if (this.activeArray[index + this.pageNumber.startLength]) {
-        return 'active'
-      }
-      // if (this.progress > (index * 100) / this.data.length) {
-      //   return 'active'
-      // }
-      return ''
     },
   },
   computed: {

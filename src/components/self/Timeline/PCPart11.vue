@@ -26,7 +26,7 @@
     </div>
     <div class="part11-image-wrapper">
       <div class="part11-image">
-        <img class="img-fluid" :src="img" alt />
+        <img class="img-fluid" :class="{ active }" :src="img" alt />
       </div>
     </div>
   </div>
@@ -116,6 +116,13 @@ export default {
     img {
       width: 100%;
       max-height: 100%;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 2s ease-out;
+      &.active {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
   }
 }
