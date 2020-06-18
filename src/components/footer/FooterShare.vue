@@ -39,7 +39,7 @@
         Tweet
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
