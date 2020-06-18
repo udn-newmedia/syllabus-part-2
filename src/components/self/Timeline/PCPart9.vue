@@ -161,6 +161,9 @@ export default {
     top: 12.2vh;
     img {
       max-width: 100%;
+      @media screen and (min-width: 1281px) {
+        width: 100%;
+      }
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;

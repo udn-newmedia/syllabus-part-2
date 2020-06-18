@@ -21,7 +21,7 @@
     <ul
       class="time-line-list"
       :style="{
-        width: `${pageNumber.length * 100}vw`,
+        width: `${timelineListWidth}vw`,
         transform:
           progress >= 0 ? `translateX(${areaTranslateX}%)` : 'translateX(0%)',
         position: progress >= 0 ? 'fixed' : 'static',
@@ -274,6 +274,20 @@ export default {
         return 0
       }
       return this.bottom
+    },
+    timelineListWidth() {
+      const { innerWidth } = window
+
+      if (innerWidth <= 1280) {
+        return this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth)
+      } else {
+        const adjustedWidth =
+          this.pageNumber.length * 100 + 50 - 0.1 * (innerWidth - 1280)
+        if (adjustedWidth > this.pageNumber.length * 100) {
+          return adjustedWidth
+        }
+        return this.pageNumber.length * 100
+      }
     },
   },
   created() {
