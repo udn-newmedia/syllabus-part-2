@@ -15,7 +15,7 @@
     </div>
     <div class="part4-image-wrapper">
       <div class="part4-image">
-        <img :class="{ active }" :src="img.part4Img" alt />
+        <img :class="{ active }" :src="img" alt />
         <div>圖為1995年教育改革審議委員會第10次委員會議，教改會召集人李遠哲（圖左）接見陳情的文大「草山學會」學生，並接受學生的陳情書。圖／報系資料照</div>
       </div>
     </div>
@@ -23,16 +23,9 @@
 </template>
 
 <script>
-// import part4Img from '@/assets/page1/4th/4th@3x.jpg'
-
 export default {
   name: 'PCPart4',
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-  data() {
-    return {
-      // img: { part4Img }
-    }
-  },
 }
 </script>
 <style lang="scss" scoped>
@@ -88,13 +81,13 @@ export default {
   height: 71.39vh;
   .part4-image {
     position: absolute;
-    top: 7.36%;
-    @media screen and (max-width: 1280px) {
-      top: 12.36%;
-    }
+    top: 12.36%;
     width: 100%;
     img {
       max-width: 100%;
+      @media screen and (min-width: 1281px) {
+        width: 100%;
+      }
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;

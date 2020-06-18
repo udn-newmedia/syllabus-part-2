@@ -26,7 +26,7 @@
     </div>
     <div class="part3-image-wrapper">
       <div class="part3-image">
-        <img class="img-fluid" :class="{ active }" :src="img.part3Img" alt />
+        <img class="img-fluid" :class="{ active }" :src="img" alt />
         <div>民間團體發動「四一○教育改造運動」，匯集了上萬民眾參與，從上午的園遊會、下午的大遊行和晚會表演等方式，表達了民間的教育改革理念。圖為遊行情形。</div>
       </div>
     </div>
@@ -34,16 +34,9 @@
 </template>
 
 <script>
-// import part3Img from '@/assets/page1/3rd/3rd@3x.jpg'
-
 export default {
   name: 'PCPart3',
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-  data() {
-    return {
-      // img: { part3Img }
-    }
-  },
 }
 </script>
 <style lang="scss" scoped>
@@ -98,7 +91,7 @@ export default {
 .part3-quote {
   position: absolute;
   top: 28.06%;
-  font-family: SourceHanSansTW-Bold;
+  font-family: SourceHanSerifTC-SemiBold;
   font-weight: 600;
   line-height: 1.39;
   text-align: left;
@@ -120,6 +113,9 @@ export default {
     top: 12.36%;
     img {
       max-height: 68.75vh;
+      @media screen and (min-width: 1281px) {
+        width: 100%;
+      }
       transform: translateY(100%);
       opacity: 0;
       transition: all 2s ease-out;

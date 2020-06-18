@@ -1,9 +1,9 @@
 <template>
-  <div class="row h-100 w-100 m-0 justify-content-center align-items-center">
-    <div class="px-5">
+  <div class="part8-wrapper">
+    <div :class="{ active }">
       <p
         class="part8-text"
-      >無論九年一貫或者多元入學，這些體制上的改革並非教改核心，它們都只是在建立一個『良善的教育環境架構』。教改的真正核心應該在於塑造學生的精神面貌，它的思考在於我們到底要『培育』出什麼樣的學生。</p>
+      >溝通不足與配套措施不夠，許多教育工作者只能在「忙、茫、盲」中度過。一道道令人眼花撩亂的教改方案中，教育目的不斷地異化變質，孩子們對這些「教改大餐」消化不良。</p>
       <div class="part8-quote">
         <p>前教育部長曾志朗。取自2003年民間發表之《教改萬言書》</p>
       </div>
@@ -13,26 +13,45 @@
 
 <script>
 export default {
-  name: 'PCPart8'
+  name: 'PCPart8',
+  props: { active: { type: Boolean, default: false } },
 }
 </script>
 <style lang="scss" scoped>
-.part8-text {
-  font-size: 36.8px;
-  font-weight: 600;
-  line-height: 1.7;
-  text-align: left;
-  color: #777777;
-  padding: 0 20% 0;
-}
-.part8-quote {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: left;
-  color: #929292;
+.part8-wrapper {
   display: flex;
-  justify-content: flex-end;
-  padding: 2% 20%;
+  justify-content: center;
+  width: 66.4vw;
+  height: 100vh;
+  padding: 0 100px;
+  & > div {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 2s ease-out;
+    &.active {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    .part8-text {
+      font-family: SourceHanSerifTC-SemiBold;
+      font-size: 36.8px;
+      font-weight: 600;
+      line-height: 1.7;
+      text-align: left;
+      color: #777777;
+      margin-top: 27.22vh;
+    }
+    .part8-quote {
+      font-family: SourceHanSerifTC-Medium;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: left;
+      color: #929292;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 2.78vh;
+    }
+  }
 }
 </style>

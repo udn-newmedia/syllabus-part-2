@@ -49,7 +49,7 @@ export default {
       windowSize: 'web',
       active: 3,
       hovered: null,
-      activePage: 0
+      activePage: 0,
     }
   },
   methods: {
@@ -74,7 +74,7 @@ export default {
 
         this.activePage = Math.round(scrollLeft / offsetWidth)
       }
-    }
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.checkWindowSize)
@@ -88,7 +88,7 @@ export default {
     document
       .querySelector('.otherprojects-container')
       .removeEventListener('scroll', this.containerScrollHandler)
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -120,8 +120,8 @@ export default {
       margin: 5.56vh 0;
       padding: 0 15px;
       @media screen and (max-width: 768px) {
-        flex: 0 0 95%;
-        max-width: 95%;
+        flex: 0 0 85%;
+        max-width: 85%;
         height: 50vh;
       }
       .otherprojects-image {

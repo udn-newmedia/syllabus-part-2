@@ -1,6 +1,6 @@
 <template>
   <div class="part1-page">
-    <div class="part1-img" :style="{ backgroundImage: `url(${img.mainImg})` }" />
+    <div class="part1-img" :style="{ backgroundImage: `url(${img})` }" />
     <div class="part1-text">
       <div class="title">台灣教改</div>
       <div class="title">為什麼</div>
@@ -18,16 +18,9 @@
 </template>
 
 <script>
-// import mainImg from '@/assets/page1/main/main@3x.jpg'
-
 export default {
   name: 'PCPart1',
   props: { img: { type: String } },
-  data() {
-    return {
-      // img: { mainImg }
-    }
-  },
 }
 </script>
 <style lang="scss" scoped>
@@ -46,7 +39,7 @@ export default {
   .part1-text {
     width: 42.2%;
     height: 100%;
-    padding: 11.3% 0 29.3% 36px;
+    padding: 11.3vh 0 0 36px;
     color: #eeeeee;
     .title {
       height: 62px;

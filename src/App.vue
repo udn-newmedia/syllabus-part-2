@@ -42,9 +42,9 @@ export default {
   color: #2c3e50;
 }
 // hide the scroll bar
-// ::-webkit-scrollbar {
-//   display: none;
-// }
+::-webkit-scrollbar {
+  display: none;
+}
 // temporary
 .icon-theme-light {
   color: #ababab !important;

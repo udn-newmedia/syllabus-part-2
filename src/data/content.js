@@ -1,9 +1,3 @@
-// import timelineImg1 from "../assets/5E9E8F4FDB3601587449679.jpeg";
-import bgImg1 from "../assets/8639-ipfprtn6885474.jpg";
-import bgImg2 from "../assets/a6d3d4ac46ec3f6bfc737f3ee4af9076.jpg";
-import bgImg3 from "../assets/d0a15154-beeb-4815-b50a-0bb37d2fc33b.jpg";
-import bgImg4 from "../assets/f_24397642_1.jpg";
-import bgImg5 from "../assets/1576077069-76aedc5bc89a22ed72bc2a72d6c846cf.jpg";
 import colorful from "../assets/colorful.jpeg";
 import trump from "../assets/people/trump.jpeg";
 import abe from "../assets/people/abe.jpg";
@@ -13,12 +7,13 @@ import timelineImg1 from "../assets/img/timeline/web/12-years-education_web_bg.j
 import timelineImg2 from "../assets/img/timeline/web/12-years-education_web_pic1.jpg";
 import timelineImg3 from "../assets/img/timeline/web/12-years-education_web_pic2.jpg";
 import timelineImg4 from "../assets/img/timeline/web/12-years-education_web_pic3.jpg";
-import timelineImg5 from "../assets/img/timeline/web/12-years-education_web_pic4.jpg";
+import timelineImg5_1 from "../assets/img/timeline/web/12-years-education_web_chart.svg";
+import timelineImg5_2 from "../assets/img/timeline/web/12-years-education_web_pic4.jpg";
 import timelineImg6 from "../assets/img/timeline/web/12-years-education_web_pic5.jpg";
 import timelineImg7 from "../assets/img/timeline/web/12-years-education_web_pic6.jpg";
-import timelineImg8 from "../assets/img/timeline/web/12-years-education_web_pic7.jpg";
-import timelineImg9 from "../assets/img/timeline/web/12-years-education_web_pic8.jpg";
-import timelineImg10 from "../assets/img/timeline/web/12-years-education_web_pic9.jpg";
+import timelineImg9 from "../assets/img/timeline/web/12-years-education_web_pic7.jpg";
+import timelineImg10 from "../assets/img/timeline/web/12-years-education_web_pic8.jpg";
+import timelineImg11 from "../assets/img/timeline/web/12-years-education_web_pic9.jpg";
 import otherProjectsWebImg1 from "../assets/img/timeline/relate/12-years-education_r1_web.jpg";
 import otherProjectsWebImg3 from "../assets/img/timeline/relate/12-years-education_r3_web.jpg";
 import otherProjectsWebImg4 from "../assets/img/timeline/relate/12-years-education_r4_web.jpg";
@@ -33,62 +28,18 @@ import videoImg3 from "../assets/img/timeline/12-years-education_v3.jpg";
 import videoImg4 from "../assets/img/timeline/12-years-education_v4.jpg";
 
 const content = {
-  timeline: [
-    {
-      year: 1982,
-      bg: bgImg1,
-      img: { src: timelineImg1, direction: "up" },
-      color: "yellow",
-      article:
-        "的望女精何更氣愛計旅究；木人覺技政親外白但名要事。國字並統接行寫上書原四？果種多道：覺務供然香。覺質味有市酒在來大法不約物！化國處氣一錢！示定個始體演。落不制的人得後起車發大做門到效，且工以熱魚，白學同家因難、我造如，精高子提病老請動自單色著營過的效大果到從然因式而上夠農對！",
-    },
-    {
-      year: 1985,
-      bg: bgImg2,
-      img: { src: timelineImg1, direction: "down" },
-      color: "red",
-      article:
-        "為的家專業認果相、大會舉界式參海制作灣質甚話說家放的鄉該然。畫來學總絕好：是小沒好式我也獲，很本智一業史工臺地念！十師相呢還開長臺選一人時卻子再國了持情家，百力簡了看面子他也頭親上，不一來些治四另間他。座車分。美是前不道音，印會由還實在是由現錢訴地身曾？",
-    },
-    {
-      year: 1990,
-      bg: bgImg3,
-      img: { src: timelineImg1, direction: "down" },
-      color: "blue",
-      article:
-        "合影絕傳年農切老消但往東操回常色，勢水戰過新況。育統望的利往很的雖會賽環想天、名為響在是此現車黑……被不著那……人告多別那了認車戰，飯仍的量是們活決觀近人合是，西國外最路我裝童進表元美現利研民就大年笑風團林益石爸她口。了了超他、全度道！",
-    },
-    {
-      year: 2001,
-      bg: bgImg4,
-      img: { src: timelineImg1, direction: "up" },
-      color: "green",
-      article:
-        "這內家北府！對條令可在光中，夜專天標他、世難今往的生重告舉裝注八中，影兒何人人，細然那新外否獎子師時紀提綠化個同當入我長與，怎沒也林對續老常遊三經詩意洲都呢表直這時表望此火該原的最一少燈馬標專紙。 招主標不。的計大見水像角出頭一都深寫西證為試停地命報招！",
-    },
-    {
-      year: 2018,
-      bg: bgImg5,
-      img: { src: timelineImg1, direction: "down" },
-      color: "purple",
-      article:
-        "備成洋，股件實種子參不於角同模手然青我作球行價的，法成不出賽中股效想客美中部外發高：如告雖活他了又以相溫是統熱如一可喜工；為比許的大長說。力地進給！速聽子看己力自的送靈續子南遊包是；得動兒是很處級。陽了地告益口色意上回同下房行會使到如。",
-    },
-  ],
-
-  timelineImgs: [
-    { img: timelineImg1, id: timelineImg1 },
-    { img: timelineImg2, id: timelineImg2 },
-    { img: timelineImg3, id: timelineImg3 },
-    { img: timelineImg4, id: timelineImg4 },
-    { img: timelineImg5, id: timelineImg5 },
-    { img: timelineImg6, id: timelineImg6 },
-    { img: timelineImg7, id: timelineImg7 },
-    { img: timelineImg8, id: timelineImg8 },
-    { img: timelineImg9, id: timelineImg9 },
-    { img: timelineImg10, id: timelineImg10 },
-  ],
-
+  timelineImgs: {
+    part1: timelineImg1,
+    part2: timelineImg2,
+    part3: timelineImg3,
+    part4: timelineImg4,
+    part5: [timelineImg5_1, timelineImg5_2],
+    part6: timelineImg6,
+    part7: timelineImg7,
+    part9: timelineImg9,
+    part10: timelineImg10,
+    part11: timelineImg11,
+  },
   timelineVideo: [
     {
       img: videoImg1,
@@ -132,7 +83,7 @@ const content = {
     },
     {
       title: "課綱上路周年大調查",
-      img: { web: otherProjectsWebImg1, mob: otherProjectsMobImg1 },
+      img: { web: otherProjectsWebImg4, mob: otherProjectsMobImg4 },
       id: "otherProjectsWebImg2otherProjectsMobImg2",
       link: "/",
     },

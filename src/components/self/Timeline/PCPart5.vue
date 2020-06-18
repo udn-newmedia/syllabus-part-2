@@ -5,7 +5,7 @@
         <div class="part5-graph">
           <h2 class="part5-title">鬆綁：廣設高中大學</h2>
           <p>在教改訴求與政策引導下，高中、大學數量激增，1994年到2019年間，大學錄取率從44%成長到100%</p>
-          <img :src="img.part5Img1" alt />
+          <img :src="img[0]" alt />
         </div>
       </div>
       <div class="part5-today-wrapper">
@@ -34,7 +34,7 @@
     </div>
     <div class="part5-image-wrapper">
       <div class="part5-image">
-        <img class="img-fluid" :src="img.part5Img2" alt />
+        <img class="img-fluid" :class="{ active }" :src="img[1]" alt />
         <div>廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照</div>
       </div>
     </div>
@@ -42,17 +42,9 @@
 </template>
 
 <script>
-import part5Img1 from '@/assets/img/timeline/web/12-years-education_web_chart.svg'
-import part5Img2 from '@/assets/img/timeline/web/12-years-education_web_pic4.jpg'
-
 export default {
   name: 'PCPart5',
-  props: { active: { type: Boolean, default: false } },
-  data() {
-    return {
-      img: { part5Img1, part5Img2 },
-    }
-  },
+  props: { active: { type: Boolean, default: false }, img: { type: Array } },
 }
 </script>
 <style lang="scss" scoped>
@@ -88,10 +80,10 @@ export default {
         font-family: SourceHanSansTW-Regular;
         max-width: 39.06vw;
         margin: 15px 0 23px;
-        padding-right: 5%;
-        @media screen and (min-width: 1280px) {
-          padding-right: 25%;
-        }
+        padding-right: 0%;
+        // @media screen and (min-width: 1280.1px) {
+        //   padding-right: 25%;
+        // }
       }
       img {
         max-width: 100%;
@@ -156,6 +148,13 @@ export default {
     img {
       width: 100%;
       max-height: 100%;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 2s ease-out;
+      &.active {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
     div {
       font-size: 15px;
