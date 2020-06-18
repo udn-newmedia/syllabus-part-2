@@ -1,5 +1,8 @@
 <template lang="pug">
-  h1 {{text}}
+  span.tilt-text(:style="{transform}" :class="{'tilt-text--active': markActive}")
+    p.enlarge.tilt {{text}}
+    div.tilt-text__mark-container
+      div.tilt-text__mark(:class="{'tilt-text__mark--active': markActive}")
 </template>
 
 <script>
@@ -9,10 +12,57 @@ export default {
     text: {
       type: String,
       required: true
+    },
+    rotateDegree: {
+      type: String,
+      reguire: true,
+      validator: function (value) {
+        return value.indexOf('deg') !== -1;
+      }
     }
-  }
+  },
+  data() {
+    return {
+      markActive: false,
+    };
+  },
+  computed: {
+    transform() {
+      return `rotate(${this.markActive ? this.rotateDegree : 0})`;
+    }
+  },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.tilt-text {
+  position: relative;
+  display: inline-block;
+  transition: 0.333s;
+  &.tilt-text--active{
+    transform-origin: -1.25rem 2.5rem;
+  }
+  .tilt-text__mark-container {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .tilt-text__mark {
+      width: 100%;
+      height: 8px;
+      background-color: #000000;
+      border-radius: 8px;
+      transform: translateX(-101%);
+      transition: 1.5s 0.333s;
+
+      &.tilt-text__mark--active{
+        transform: translateX(0);
+      }
+    }
+  }
+}
+p.enlarge.tilt {
+  margin: 0;
+}
 </style>

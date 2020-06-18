@@ -4,7 +4,7 @@
       :src="selectSrc_3(srcMob, srcPad, srcPc)"
       :alt="alt"
     >
-    <figcaption class="full-wide-image__description">
+    <figcaption v-if="useDescription" class="full-wide-image__description article">
       <p class="small">
         <slot />
       </p>
@@ -32,6 +32,10 @@ export default {
     alt: {
       type: String,
       default: document.querySelector('title').innerHTML,
+    },
+    useDescription: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -41,16 +45,15 @@ export default {
 .full-wide-image {
   position: relative;
   width: 100%;
-  @include layout-padding;
+  margin: 0;
   img {
     width: 100%;
-    height: auto
+    height: auto;
   }
   .full-wide-image__description {
-    margin-top: 8px;
     p {
-      color: #7b7a7a;
       margin: 0;
+      color: #7b7a7a;
     }
   }
 }

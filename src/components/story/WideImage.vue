@@ -41,10 +41,19 @@ export default {
 .wide-image {
   position: relative;
   width: 100%;
+  margin: 0;
+  @include pad {
+    width: 680px;
+    margin: 0 auto;
+  }
+  @include pc {
+    width: 820px;
+    margin: 0 auto;
+  }
   @include layout-padding;
   img {
     width: 100%;
-    height: auto
+    height: auto;
   }
   .wide-image__description {
     margin-top: 8px;
