@@ -2,7 +2,7 @@
   <div
     class="time-line-container"
     :style="{
-      height: `calc(${pageNumber.length * 100}vh)`
+      height: `calc(${pageNumber.length * 100}vh)`,
     }"
     ref="timeLineContainer"
   >
@@ -10,53 +10,59 @@
       class="time-line"
       :style="[
         timelinePostion,
-        { width: `${(pageNumber.length - pageNumber.startLength - pageNumber.endLength) * 100}vw` }
+        {
+          width: `${(pageNumber.length -
+            pageNumber.startLength -
+            pageNumber.endLength+0.8) *
+            100}vw`,
+        },
       ]"
     />
     <ul
       class="time-line-list"
       :style="{
         width: `${pageNumber.length * 100}vw`,
-        transform: progress >= 0 ? `translateX(${areaTranslateX}%)` : 'translateX(0%)',
+        transform:
+          progress >= 0 ? `translateX(${areaTranslateX}%)` : 'translateX(0%)',
         position: progress >= 0 ? 'fixed' : 'static',
         bottom: `${bottomDistance}px`
       }"
       ref="timeLineList"
     >
       <li>
-        <PCPart1 :img="imgs[0]" />
+        <PCPart1 :img="imgs.part1" />
       </li>
       <li>
-        <PCPart2 :active="activeArray[1]" :img="imgs[1]" />
+        <PCPart2 :active="activeArray[1]" :img="imgs.part2" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart3 :active="activeArray[2]" :img="imgs[2]" />
+        <PCPart3 :active="activeArray[2]" :img="imgs.part3" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart4 :active="activeArray[3]" :img="imgs[3]" />
+        <PCPart4 :active="activeArray[3]" :img="imgs.part4" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart5 />
-      </li>
-      <li class="timeline-li time-spot" style="width:150vw">
-        <PCPart6 />
+        <PCPart5 :img="imgs.part5" />
       </li>
       <li class="timeline-li time-spot">
-        <PCPart7 />
+        <PCPart6 :img="imgs.part6" />
+      </li>
+      <li class="timeline-li time-spot">
+        <PCPart7 :img="imgs.part7" />
       </li>
       <li>
         <PCPart8 />
       </li>
-      <li class="timeline-li time-spot" style="width:150vw">
-        <PCPart9 />
+      <li class="timeline-li time-spot">
+        <PCPart9 :img="imgs.part9" />
       </li>
-      <li class="timeline-li time-spot" style="width:150vw">
-        <PCPart10 />
+      <li class="timeline-li time-spot">
+        <PCPart10 :img="imgs.part10" />
       </li>
-      <li class="timeline-li time-spot" style="width:100vw">
-        <PCPart11 />
+      <li class="timeline-li time-spot">
+        <PCPart11 :img="imgs.part11" />
       </li>
-      <li style="width:100vw">
+      <li>
         <EndPage />
       </li>
     </ul>
@@ -98,8 +104,10 @@ export default {
   data() {
     const activeArray = []
     const pageNumber = {
-      length: 1 * 9 + 1.5 * 3,
-      startLength: 2,
+      // length: 1 * 9 + 1.5 * 3 + 3,
+      length: 15.0148,
+      // startLength: 2,
+      startLength: 2.4547,
       endLength: 1,
     }
     for (let i = 0; i < pageNumber.length; i += 1) {
@@ -112,6 +120,14 @@ export default {
     // P4:110.39vw
     // P5:125.47vw
     // P6:153.67vw
+    // P7:176.8vw
+    // P8:66.4vw
+    // P9:153.67vw
+    // P10:153.67vw
+    // P11:83.44vw
+    // end:100vw
+    //
+    // sum:1501.48vw
     return {
       activeArray,
       imgs: content.timelineImgs,
@@ -154,9 +170,9 @@ export default {
           top: `${distanceTopEntering + timelineShift.top * innerHeight}px`,
           right: `${-100 *
             (this.pageNumber.length -
-              this.pageNumber.startLength -
-              this.pageNumber.endLength +
-              1) -
+              this.pageNumber.startLength +
+              (1.4547 - 1) +
+              0.8) -
             timelineShift.left}vw`,
         }
         // over
@@ -164,22 +180,31 @@ export default {
         this.timelinePostion = {
           top: `${distanceTopleaving -
             (1 - timelineShift.top) * innerHeight}px`,
-          right: `${100 *
-            (this.pageNumber.startLength + this.pageNumber.endLength - 2) -
+          right: `${100 * (this.pageNumber.startLength - (1.4547 - 1) - 0.8) +
             timelineShift.left}vw`,
         }
         // in the process
       } else {
         this.timelinePostion = {
           top: `${0 + timelineShift.top * innerHeight}px`,
-          right: `${progress * (this.pageNumber.length - 1) -
+          right: `${progress * this.pageNumber.length -
             100 *
               (this.pageNumber.length -
-                this.pageNumber.startLength -
-                this.pageNumber.endLength +
-                1) -
+                this.pageNumber.startLength +
+                (1.4547 - 1) +
+                0.8) -
             timelineShift.left}vw`,
         }
+        // this.timelinePostion = {
+        //   top: `${0 + timelineShift.top * innerHeight}px`,
+        //   right: `${progress * (this.pageNumber.length - 1) -
+        //     100 *
+        //       (this.pageNumber.length -
+        //         this.pageNumber.startLength -
+        //         this.pageNumber.endLength +
+        //         1) -
+        //     timelineShift.left}vw`,
+        // }
       }
 
       // count active
@@ -202,9 +227,13 @@ export default {
   computed: {
     areaTranslateX() {
       if (this.progress < 100) {
-        return this.progress * -(1 - 1 / this.pageNumber.length)
+        return this.progress * -1
       }
-      return 100 * -(1 - 1 / this.pageNumber.length)
+      return 100 * -1
+      // if (this.progress < 100) {
+      //   return this.progress * -(1 - 1 / this.pageNumber.length)
+      // }
+      // return 100 * -(1 - 1 / this.pageNumber.length)
     },
     bottomDistance() {
       if (this.progress <= 100) {

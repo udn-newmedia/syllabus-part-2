@@ -29,15 +29,15 @@ export default {
   name: 'Marketing',
   data() {
     return {
-      dataArray: content.marketing
+      dataArray: content.marketing,
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .marketing {
-  width: 100vw;
+  // width: 100vw;
   height: 100vh;
   .marketing-title {
     font-family: SourceHanSerifTC-Bold;

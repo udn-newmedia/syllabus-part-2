@@ -1,15 +1,15 @@
 <template>
   <div class="part1-page">
-    <div class="part1-img" :style="{ backgroundImage: `url(${img.mainImg})` }" />
+    <div class="part1-img" :style="{ backgroundImage: `url(${img})` }" />
     <div class="part1-text">
       <div class="title">台灣教改</div>
       <div class="title">為什麼</div>
       <div class="title-bold">
         <div>總失敗？</div>
       </div>
-      <p
-        class="content"
-      >台灣教育改革從1994年410大遊行至今已26年，許多立意良善的改革方向，都在手段錯誤、社會價值觀未翻轉、政府與民間溝通不足下變調，甚至失敗收場。《聯合報》帶讀者進入時間洪流，從政策推動過程中，反思：「為什麼台灣教改，總在失敗？」</p>
+      <p class="content">
+        台灣教育改革從1994年410大遊行至今已26年，許多立意良善的改革方向，都在手段錯誤、社會價值觀未翻轉、政府與民間溝通不足下變調，甚至失敗收場。《聯合報》帶讀者進入時間洪流，從政策推動過程中，反思：「為什麼台灣教改，總在失敗？」
+      </p>
       <div class="arrow-wrapper">
         <font-awesome-icon :icon="['fas', 'angle-double-down']" size="4x" />
       </div>
@@ -18,17 +18,10 @@
 </template>
 
 <script>
-// import mainImg from '@/assets/page1/main/main@3x.jpg'
-
 export default {
-  name: 'PCPart1',
+  name: "PCPart1",
   props: { img: { type: String } },
-  data() {
-    return {
-      // img: { mainImg }
-    }
-  },
-}
+};
 </script>
 <style lang="scss" scoped>
 .part1-page {
@@ -46,7 +39,7 @@ export default {
   .part1-text {
     width: 42.2%;
     height: 100%;
-    padding: 11.3% 0 29.3% 36px;
+    padding: 11.3vh 0 0 36px;
     color: #eeeeee;
     .title {
       height: 62px;

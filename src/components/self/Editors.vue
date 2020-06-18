@@ -27,13 +27,13 @@
 
 <script>
 export default {
-  name: 'Editors'
+  name: 'Editors',
 }
 </script>
 <style lang="scss" scoped>
 .editors-wrapper {
   padding-top: 10vh;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #000000;
   display: flex;
@@ -41,7 +41,7 @@ export default {
   align-content: center;
   justify-content: center;
   .list-item {
-    flex: 0 0 50vw;
+    flex: 0 0 50%;
     max-width: 50vw;
     color: #eeeeee;
     font-family: SourceHanSansTW-Normal;

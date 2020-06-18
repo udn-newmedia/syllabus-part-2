@@ -38,7 +38,7 @@
     </div>
     <div class="part6-image-wrapper">
       <div class="part6-image">
-        <img class="img-fluid" :src="img.part6Img" alt />
+        <img class="img-fluid" :src="img" alt />
         <div>圖為末代大學聯考，考場人山人海。圖／報系資料照</div>
       </div>
     </div>
@@ -46,16 +46,9 @@
 </template>
 
 <script>
-import part6Img from '@/assets/img/timeline/web/12-years-education_web_pic5.jpg'
-
 export default {
   name: 'PCpart6',
-  props: { active: { type: Boolean, default: false } },
-  data() {
-    return {
-      img: { part6Img },
-    }
-  },
+  props: { active: { type: Boolean, default: false }, img: { type: String } },
 }
 </script>
 <style lang="scss" scoped>
@@ -63,6 +56,7 @@ export default {
   display: flex;
   width: 92.97vw;
   height: 100vh;
+  margin-right: 70px;
   .part6-graph-wrapper {
     position: relative;
     height: 100%;
@@ -81,7 +75,7 @@ export default {
         text-align: left;
         color: #000000;
         font-family: SourceHanSansTW-Bold;
-        padding-right: 5%;
+        padding-right: 8vw;
       }
       p {
         // width: 39.02vw;
@@ -92,7 +86,7 @@ export default {
         font-family: SourceHanSansTW-Regular;
         max-width: 39.06vw;
         margin: 15px 0 23px;
-        padding-right: 5%;
+        padding-right: 1%;
         span {
           font-family: SourceHanSansTW-Bold;
         }
@@ -103,7 +97,6 @@ export default {
     position: relative;
     height: 100%;
     width: 50%;
-    padding-right: 70px;
     .part6-today {
       position: absolute;
       top: 27.5%;
