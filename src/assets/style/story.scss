@@ -1,0 +1,9 @@
+p {
+  font-size: 1.125rem;
+  @include pad {
+    font-size: 1.25rem;
+  }
+  @include pc {
+    font-size: 1.25rem;
+  }
+}

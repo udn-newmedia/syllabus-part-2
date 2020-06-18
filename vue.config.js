@@ -19,7 +19,8 @@ module.exports = {
       .loader("pug-html-loader")
       .end();
     config.resolve.alias
-      .set('~', resolve('src/assets'));
+      .set('~', resolve('src/assets'))
+      .set('@cs', resolve('src/components/story'));
   },
   css: {
     loaderOptions: {
