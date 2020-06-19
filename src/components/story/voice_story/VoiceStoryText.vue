@@ -1,6 +1,6 @@
 <template lang="pug">
   article.voice-story-text
-    p.enlarge.white.black-bg
+    p.enlarge.black-bg.white
       slot
 </template>
 
@@ -14,6 +14,7 @@ export default {
 p.enlarge.white.black-bg {
   display: inline;
   background-color: #181818;
+  color: #ffffff;
   br {
     display: none;
     @include pad {

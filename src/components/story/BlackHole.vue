@@ -33,12 +33,18 @@ export default {
   },
   methods: {
     initBM() {
+      const path = (() => {
+        let loc = `${document.querySelector('meta[property="main-page"]').content}story/blackhole/${this.deviceType}/data.json`;
+        if (loc.indexOf('https:') >= 0) return loc.replace('https:', location.protocol);
+        return loc.replace('http:', location.protocol);
+      })();
+
       this.bm = bodymovin.loadAnimation({
         container: document.getElementById('body-movin-black-hole'),
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: `./story/blackhole/${this.deviceType}/data.json`,
+        path,
         name: this.name
       });
     }
