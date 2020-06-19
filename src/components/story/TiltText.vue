@@ -1,13 +1,19 @@
 <template lang="pug">
-  span.tilt-text(:style="{transform}" :class="{'tilt-text--active': markActive}")
+  span.tilt-text(
+    :style="{transform}"
+    :class="{'tilt-text--active': observableActive}"
+  )
     p.enlarge.tilt {{text}}
     div.tilt-text__mark-container
-      div.tilt-text__mark(:class="{'tilt-text__mark--active': markActive}")
+      div.tilt-text__mark(:class="{'tilt-text__mark--active': observableActive}")
 </template>
 
 <script>
+import { observableEvent } from '@/mixins/observableEvent.js';
+
 export default {
   name: "TiltText",
+  mixins: [observableEvent],
   props: {
     text: {
       type: String,
@@ -23,12 +29,12 @@ export default {
   },
   data() {
     return {
-      markActive: false,
+      observableActive: false,
     };
   },
   computed: {
     transform() {
-      return `rotate(${this.markActive ? this.rotateDegree : 0})`;
+      return `rotate(${this.observableActive ? this.rotateDegree : 0})`;
     }
   },
 };
@@ -48,16 +54,17 @@ export default {
     left: 0;
     bottom: 0;
     width: 100%;
+    border-radius: 8px;
     .tilt-text__mark {
       width: 100%;
       height: 8px;
       background-color: #000000;
       border-radius: 8px;
       transform: translateX(-101%);
-      transition: 1.5s 0.333s;
-
+      transition: 0;
       &.tilt-text__mark--active{
         transform: translateX(0);
+        transition: 1.5s 0.111s;
       }
     }
   }

@@ -46,6 +46,7 @@ export default {
 .voice-story {
   position: relative;
   width: 100%;
+  margin-top: 96px;
 }
 .voice-story__bg {
   position: absolute;

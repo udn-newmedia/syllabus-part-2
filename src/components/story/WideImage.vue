@@ -50,7 +50,6 @@ export default {
     width: 820px;
     margin: 0 auto;
   }
-  @include layout-padding;
   img {
     width: 100%;
     height: auto;

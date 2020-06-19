@@ -1,17 +1,17 @@
 <template lang="pug">
-  span.mark-text
-    span.mark-text__text
-      slot
-    div.mark-text__highlight-container
-      mark.mark-text__highlight(:class="{'mark-text__highlight--active': markActive}")
+  mark.mark-text(:class="{'mark-text--active': observableActive}")
+    slot
 </template>
 
 <script>
+import { observableEvent } from '@/mixins/observableEvent.js';
+
 export default {
   name: 'MarkText',
+  mixins: [observableEvent],
   data() {
     return {
-      markActive: false,
+      observableActive: false,
     }
   },
 }
@@ -19,30 +19,14 @@ export default {
 
 <style lang="scss" scoped>
 .mark-text {
-  position: relative;
-  .mark-text__text {
-    position: relative;
-    z-index: 2;
-  }
-  .mark-text__highlight-container {
-    z-index: 1;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    .mark-text__highlight {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      background: #fff8d8;
-      transform: translateX(-101%);
-      transition: 1.5s;
-      &.mark-text__highlight--active {
-        transform: translateX(0);
-      }
-    }
+  background: linear-gradient(90deg, #fff8d8 50%, transparent 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+  transition: 0;
+  &.mark-text--active {
+    background-position: left bottom;
+    transform: translateX(0);
+    transition: 1.5s ease-in-out;
   }
 }
 </style>
