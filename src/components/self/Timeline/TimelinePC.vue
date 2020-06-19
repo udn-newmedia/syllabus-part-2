@@ -13,7 +13,8 @@
         {
           width: `${(pageNumber.length -
             pageNumber.startLength -
-            pageNumber.endLength+0.8) *
+            pageNumber.endLength +
+            0.8) *
             100}vw`,
         },
       ]"
@@ -25,7 +26,7 @@
         transform:
           progress >= 0 ? `translateX(${areaTranslateX}%)` : 'translateX(0%)',
         position: progress >= 0 ? 'fixed' : 'static',
-        bottom: `${bottomDistance}px`
+        bottom: `${bottomDistance}px`,
       }"
       ref="timeLineList"
     >
@@ -104,9 +105,7 @@ export default {
   data() {
     const activeArray = []
     const pageNumber = {
-      // length: 1 * 9 + 1.5 * 3 + 3,
       length: 15.0148,
-      // startLength: 2,
       startLength: 2.4547,
       endLength: 1,
     }
@@ -282,7 +281,7 @@ export default {
         return this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth)
       } else {
         const adjustedWidth =
-          this.pageNumber.length * 100 + 50 - 0.1 * (innerWidth - 1280)
+          this.pageNumber.length * 100 + 50 - 0.12 * (innerWidth - 1280)
         if (adjustedWidth > this.pageNumber.length * 100) {
           return adjustedWidth
         }
