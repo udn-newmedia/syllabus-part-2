@@ -32,7 +32,7 @@ export default {
       const bottom = pos.bottom;
 
       if (top < window.innerHeight && bottom> 0) {
-        this.translateX = (1 - top / window.innerHeight) * 100;
+        this.translateX = (1 - top / window.innerHeight) * 50;
       }
     },
     handleScroll() {
@@ -71,6 +71,12 @@ export default {
     .big-space {
       display: inline-block;
       width: 64px;
+      @include pad {
+        width: 128px;
+      }
+      @include pc {
+        width: 20vw;
+      }
     }
   }
 }

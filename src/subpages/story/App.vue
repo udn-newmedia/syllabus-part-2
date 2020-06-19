@@ -64,6 +64,7 @@
         :bgMob="require('~/img/story/story_bg1/mob.jpg')"
         :bgPad="require('~/img/story/story_bg1/pad.jpg')"
         :bgPc="require('~/img/story/story_bg1/pc.jpg')"
+        :voiceSrc="require('~/media/story/sound/story_voice1.mp3')"
       ) 「難道讀了大學，<br>就一定是你未來想從事的事情嗎？」
       ArticleContainer
         p.enlarge 我一直以為我對數理有興趣，但填志願時發現，我一點都不想選理工科系，光想像未來工作的樣子、要念的書，我都不想要。
@@ -78,6 +79,7 @@
         :bgMob="require('~/img/story/story_bg2/mob.jpg')"
         :bgPad="require('~/img/story/story_bg2/pad.jpg')"
         :bgPc="require('~/img/story/story_bg2/pc.jpg')"
+        :voiceSrc="require('~/media/story/sound/story_voice2.mp3')"
       ) 「大家心裡想的還是讀五專就是不會讀書，即使沒有說出來，你還是感覺得到。」
       ArticleContainer
         p.enlarge 我自己也不甘心，<MarkText>覺得是不是我不夠好，才只能選這條路？</MarkText>
@@ -110,13 +112,11 @@
         :srcPc="require('~/img/story/img3/pc.jpg')"
       )
       BlackLine(pos='bottom')
-
       WideImage(
         :srcMob="require('~/img/story/text1/mob.jpg')"
         :srcPad="require('~/img/story/text1/pc.jpg')"
         :srcPc="require('~/img/story/text1/pc.jpg')"
       )
-
       BlackLine(pos='top')
       FullWideImage(
         :srcMob="require('~/img/story/img4/mob.jpg')"
@@ -124,7 +124,6 @@
         :srcPc="require('~/img/story/img4/pc.jpg')"
       )
       BlackLine(pos='bottom')
-
       ArticleContainer
         p.enlarge <strong>一路陪伴女兒的小雅媽媽說：</strong>
         p.enlarge 一開始，希望她就近、隨便念一所大學都好，<MarkText>至少要有個大學文憑，現在大學文憑是基本的。</MarkText>
@@ -132,13 +131,11 @@
         h2.enlarge 因為不知道自己畢業後要幹嘛
         p.enlarge 我發現，很多學生上了大學，還是不知道自己想做什麼，為了不想失業，就只好繼續唸，對未來也不見得有幫助。
         p.enlarge 二女兒（小雅）的經歷，還有接觸到108課綱後，我想法不同了，小女兒現在高一，就覺得，讓她做自己喜歡的事情就好。
-
       WideImage(
         :srcMob="require('~/img/story/text2/mob.jpg')"
         :srcPad="require('~/img/story/text2/pc.jpg')"
         :srcPc="require('~/img/story/text2/pc.jpg')"
       )
-
       BlackLine(pos='top')
       FullWideVideo(
         :srcMob="require('~/media/story/video/mob.mp4')"
