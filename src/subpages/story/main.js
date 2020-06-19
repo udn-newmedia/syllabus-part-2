@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import { rwdMethods } from '@/mixins/masterBuilder.js';
 import '~/style/main.scss';
+import 'intersection-observer';
 
 Vue.config.productionTip = false
 

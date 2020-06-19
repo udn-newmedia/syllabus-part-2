@@ -87,9 +87,10 @@
       ArticleContainer
         p.enlarge 高中3年，我的成長主要來自社團。我參與學生會、扶輪社，也和同學組團參加設計比賽，學到策畫、主持、與廠商應對的能力，畢業後都派上用場。
         h2.enlarge 不上大學後<br>我去打工
-        p.enlarge 「後來跟老闆比較熟的時候，我問他：為什麼會用我這樣的人？攤開履歷我都不一定會用我自己。他跟我說：你社團的部分很加分啊！」
-      TiltText(text="學畫畫"  rotateDegree="15deg")
-      TiltText(text="接攝影案子" rotateDegree="-15deg")
+        p.enlarge 這1年我也實際去試所有「天馬行空」的夢想，
+        DrawPhoto
+          TiltText(slot="draw" text="學畫畫"  rotateDegree="15deg")
+          TiltText(slot="photo" text="接攝影案子" rotateDegree="-15deg")
       FullWideImage(
         :srcMob="require('~/img/story/img2/mob.jpg')"
         :srcPad="require('~/img/story/img2/pc.jpg')"
@@ -125,12 +126,12 @@
       BlackLine(pos='bottom')
 
       ArticleContainer
-        p 一路陪伴女兒的小雅媽媽說：
-        p 一開始，希望她就近、隨便念一所大學都好，<MarkText>至少要有個大學文憑，現在大學文憑是基本的。</MarkText>
-        p 大兒子求學路與小雅完全不同，他功課一向不錯，理所當然順順往上念，<MarkText>沒有特別去思考孩子未來想走什麼，</MarkText>讀到大三，他一度想休學，
-        h2 因為不知道自己畢業後要幹嘛
-        p 我發現，很多學生上了大學，還是不知道自己想做什麼，為了不想失業，就只好繼續唸，對未來也不見得有幫助。
-        p 二女兒（小雅）的經歷，還有接觸到108課綱後，我想法不同了，小女兒現在高一，就覺得，讓她做自己喜歡的事情就好。
+        p.enlarge <strong>一路陪伴女兒的小雅媽媽說：</strong>
+        p.enlarge 一開始，希望她就近、隨便念一所大學都好，<MarkText>至少要有個大學文憑，現在大學文憑是基本的。</MarkText>
+        p.enlarge 大兒子求學路與小雅完全不同，他功課一向不錯，理所當然順順往上念，<MarkText>沒有特別去思考孩子未來想走什麼，</MarkText>讀到大三，他一度想休學，
+        h2.enlarge 因為不知道自己畢業後要幹嘛
+        p.enlarge 我發現，很多學生上了大學，還是不知道自己想做什麼，為了不想失業，就只好繼續唸，對未來也不見得有幫助。
+        p.enlarge 二女兒（小雅）的經歷，還有接觸到108課綱後，我想法不同了，小女兒現在高一，就覺得，讓她做自己喜歡的事情就好。
 
       WideImage(
         :srcMob="require('~/img/story/text2/mob.jpg')"
@@ -181,10 +182,12 @@
 
 <script>
 import { autoResize_3 } from '@/mixins/masterBuilder.js';
+import InApp from 'detect-inapp';
 
 import ArticleContainer from '@/components/layout/ArticleContainer.vue'
 import BlackHole from '@cs/BlackHole.vue';
 import BlackLine from '@cs/BlackLine.vue';
+import DrawPhoto from '@cs/DrawPhoto.vue';
 import HeaderTypeA from '@/components/header/HeaderTypeA'
 import FooterEditor from '@/components/footer/FooterEditor.vue';
 import FooterFbComment from '@/components/footer/FooterFbComment.vue';
@@ -210,6 +213,7 @@ export default {
     ArticleContainer,
     BlackHole,
     BlackLine,
+    DrawPhoto,
     HeaderTypeA,
     FooterEditor,
     FooterFbComment,
@@ -227,7 +231,27 @@ export default {
     TitleMarguee,
     VoiceStory,
     WideImage,
-  }
+  },
+  created() {
+    // 處理inapp browser window.innerWidth問題
+    (function() {
+      const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera);
+      let currentWidth = window.innerWidth;
+      let executeCount = 0;
+      if (inapp.isInApp) {
+        const inappWidthListener = setInterval(() => {
+          executeCount++;
+          if (window.innerWidth !== currentWidth) {
+            window.location.reload();
+            currentWidth = window.innerWidth;
+          }
+          if (executeCount > 10) {
+            clearInterval(inappWidthListener);
+          }
+        }, 100);
+      }
+    })();
+  },
 }
 </script>
 
@@ -242,5 +266,9 @@ export default {
   @include pc {
     padding-left: 20%;
   }
+}
+
+.icon-theme-light {
+  color: #ababab !important;
 }
 </style>
