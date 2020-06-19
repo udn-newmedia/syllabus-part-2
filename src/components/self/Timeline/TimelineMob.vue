@@ -9,10 +9,18 @@
       <li>
         <MobPart3 :windowSize="windowSize" :img="imgs.part3" />
       </li>
-      <li style="height:100px"></li>
-      <li style="height:100px"></li>
-      <li style="height:100px"></li>
-      <li style="height:100px"></li>
+      <li>
+        <MobPart4 :windowSize="windowSize" :img="imgs.part4" :chart="imgs.part4_0" />
+      </li>
+      <li>
+        <MobPart5 :windowSize="windowSize" :img="imgs.part5" />
+      </li>
+      <li>
+        <MobPart6 :windowSize="windowSize" :img="imgs.part6" />
+      </li>
+      <li>
+        <MobPart7 />
+      </li>
       <li style="height:100px"></li>
       <li style="height:100px"></li>
       <li style="height:100px"></li>
@@ -28,11 +36,24 @@ import MobPart0 from './MobPart0'
 import MobPart1 from './MobPart1'
 import MobPart2 from './MobPart2'
 import MobPart3 from './MobPart3'
+import MobPart4 from './MobPart4'
+import MobPart5 from './MobPart5'
+import MobPart6 from './MobPart6'
+import MobPart7 from './MobPart7'
 
 export default {
   name: 'TimelineMob',
   props: { windowSize: { type: Object } },
-  components: { MobPart0, MobPart1, MobPart2, MobPart3 },
+  components: {
+    MobPart0,
+    MobPart1,
+    MobPart2,
+    MobPart3,
+    MobPart4,
+    MobPart5,
+    MobPart6,
+    MobPart7,
+  },
   data() {
     return { imgs: content.timelineMobImgs }
   },
