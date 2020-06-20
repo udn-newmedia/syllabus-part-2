@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <HeaderTypeA slot="header" />
+    <HeaderTypeA slot="header">
+      <HeaderLink />
+    </HeaderTypeA>
     <!-- <Header /> -->
     <router-view />
     <Marketing />
@@ -15,6 +17,7 @@
 // import Header from '@/components/self/Header.vue'
 import Marketing from '@/components/self/Marketing.vue'
 import HeaderTypeA from '@/components/header/HeaderTypeA'
+import HeaderLink from '@/components/self/HeaderLink'
 import OtherProjects from '@/components/self/OtherProjects'
 import Editors from '@/components/self/Editors.vue'
 
@@ -25,6 +28,7 @@ export default {
   components: {
     // Header,
     HeaderTypeA,
+    HeaderLink,
     Marketing,
     OtherProjects,
     Editors,

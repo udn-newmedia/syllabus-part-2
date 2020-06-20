@@ -8,6 +8,7 @@
         :href="item.link"
         class="otherprojects-image-wrapper text-decoration-none"
         :class="{'hovered':hovered===i}"
+        :style="{opacity:i===3&&0.4}"
         @mouseenter="hoverItem(i)"
         @mouseleave="unHoverItem()"
         :key="item.id"
@@ -61,7 +62,7 @@ export default {
       }
     },
     hoverItem(i) {
-      if (this.windowSize === 'web') {
+      if (this.windowSize === 'web' && i !== 3) {
         this.hovered = i
       }
     },
