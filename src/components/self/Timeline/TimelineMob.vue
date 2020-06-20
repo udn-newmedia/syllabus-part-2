@@ -18,14 +18,20 @@
       <li>
         <MobPart6 :windowSize="windowSize" :img="imgs.part6" />
       </li>
-      <li>
+      <li class="no-dot">
         <MobPart7 />
       </li>
-      <li style="height:100px"></li>
-      <li style="height:100px"></li>
-      <li style="height:100px"></li>
-      <li style="height:100px"></li>
+      <li>
+        <MobPart8 :windowSize="windowSize" :img="imgs.part8" />
+      </li>
+      <li>
+        <MobPart9 :windowSize="windowSize" :img="imgs.part9" />
+      </li>
+      <li>
+        <MobPart10 :windowSize="windowSize" :img="imgs.part10" />
+      </li>
     </ul>
+    <MobEndPage />
   </div>
 </template>
 
@@ -40,6 +46,10 @@ import MobPart4 from './MobPart4'
 import MobPart5 from './MobPart5'
 import MobPart6 from './MobPart6'
 import MobPart7 from './MobPart7'
+import MobPart8 from './MobPart8'
+import MobPart9 from './MobPart9'
+import MobPart10 from './MobPart10'
+import MobEndPage from './MobEndPage'
 
 export default {
   name: 'TimelineMob',
@@ -53,6 +63,10 @@ export default {
     MobPart5,
     MobPart6,
     MobPart7,
+    MobPart8,
+    MobPart9,
+    MobPart10,
+    MobEndPage,
   },
   data() {
     return { imgs: content.timelineMobImgs }
@@ -82,6 +96,12 @@ export default {
       height: 30px;
       border-radius: 50%;
       background-color: #00ccb1;
+    }
+  }
+  & > .no-dot {
+    &::before {
+      width: 0;
+      height: 0;
     }
   }
   @media screen and (max-width: 767.99px) {

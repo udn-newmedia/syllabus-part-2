@@ -74,9 +74,9 @@ const content = {
     part4: { pad: timelimePadImgPic4, mob: timelimeMobImgPic4 },
     part5: { pad: timelimePadImgPic5, mob: timelimeMobImgPic5 },
     part6: { pad: timelimePadImgPic6, mob: timelimeMobImgPic6 },
-    part7: { pad: timelimePadImgPic7, mob: timelimeMobImgPic7 },
-    part8: { pad: timelimePadImgPic8, mob: timelimeMobImgPic8 },
-    part9: { pad: timelimePadImgPic9, mob: timelimeMobImgPic9 },
+    part8: { pad: timelimePadImgPic7, mob: timelimeMobImgPic7 },
+    part9: { pad: timelimePadImgPic8, mob: timelimeMobImgPic8 },
+    part10: { pad: timelimePadImgPic9, mob: timelimeMobImgPic9 },
   },
   timelineVideo: [
     {
