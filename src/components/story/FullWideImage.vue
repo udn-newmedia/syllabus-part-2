@@ -5,13 +5,12 @@
       :alt="alt"
     >
     <figcaption v-if="useDescription" class="full-wide-image__description article">
-      <p class="small">
+      <p>
         <slot />
       </p>
     </figcaption>
   </figure>
 </template>
-
 
 <script>
 import { autoResize_3, selectSrcMethod_3 } from '@/mixins/masterBuilder.js';
@@ -54,6 +53,9 @@ export default {
     p {
       margin: 0;
       color: #7b7a7a;
+    }
+    &.article {
+      padding-top: 8px;
     }
   }
 }
