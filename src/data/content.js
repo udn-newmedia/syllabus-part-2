@@ -42,10 +42,12 @@ import timelimeMobImgPic9 from "../assets/img/timeline/mob/12-years-education_mo
 import otherProjectsWebImg1 from "../assets/img/timeline/relate/12-years-education_r1_web.jpg";
 import otherProjectsWebImg3 from "../assets/img/timeline/relate/12-years-education_r3_web.jpg";
 import otherProjectsWebImg4 from "../assets/img/timeline/relate/12-years-education_r4_web.jpg";
+import otherProjectsWebImg5 from "../assets/img/timeline/relate/12-years-education_r5_web.jpg";
 import otherProjectsWebImg6 from "../assets/img/timeline/relate/12-years-education_r6_web.jpg";
 import otherProjectsMobImg1 from "../assets/img/timeline/relate/12-years-education_r1_mob.jpg";
 import otherProjectsMobImg3 from "../assets/img/timeline/relate/12-years-education_r3_mob.jpg";
 import otherProjectsMobImg4 from "../assets/img/timeline/relate/12-years-education_r4_mob.jpg";
+import otherProjectsMobImg5 from "../assets/img/timeline/relate/12-years-education_r5_mob.jpg";
 import otherProjectsMobImg6 from "../assets/img/timeline/relate/12-years-education_r6_mob.jpg";
 import videoImg1 from "../assets/img/timeline/12-years-education_v1.jpg";
 import videoImg2 from "../assets/img/timeline/12-years-education_v2.jpg";
@@ -53,6 +55,15 @@ import videoImg3 from "../assets/img/timeline/12-years-education_v3.jpg";
 import videoImg4 from "../assets/img/timeline/12-years-education_v4.jpg";
 
 const content = {
+  headerLink: [
+    { text: "揭露課綱五大亂象", link: "/" },
+    { text: "課綱上路周年大調查", link: "/" },
+    { text: "台灣教育關鍵數字", link: "/" },
+    { text: "台灣教改為何總失敗", link: "/" },
+    { text: "升學主義悲歌", link: "/" },
+    { text: "關於108課綱 我想說......", link: "/" },
+    { text: "更多課綱相關報導", link: "/" },
+  ],
   timelineImgs: {
     part1: timelineImg1,
     part2: timelineImg2,
@@ -139,8 +150,8 @@ const content = {
     },
     {
       title: "升學主義悲歌：19歲少女的告白",
-      img: { web: otherProjectsWebImg6, mob: otherProjectsMobImg6 },
-      id: "otherProjectsWebImg5otherProjectsMobImg5",
+      img: { web: otherProjectsWebImg5, mob: otherProjectsMobImg5 },
+      id: `${otherProjectsWebImg5}${otherProjectsMobImg5}`,
       link: "/",
     },
     {

@@ -6,23 +6,10 @@
     }"
     ref="timeLineContainer"
   >
-    <div
-      class="time-line"
-      :style="[
-        timelinePostion,
-        {
-          width: `${(pageNumber.length -
-            pageNumber.startLength -
-            pageNumber.endLength +
-            0.8) *
-            100}vw`,
-        },
-      ]"
-    />
     <ul
       class="time-line-list"
       :style="{
-        width: `${timelineListWidth}vw`,
+        width: `${listWidth}vw`,
         transform:
           progress >= 0 ? `translateX(${areaTranslateX}%)` : 'translateX(0%)',
         position: progress >= 0 ? 'fixed' : 'static',
@@ -143,20 +130,14 @@ export default {
       activeArray.push(false)
     }
 
-    const testArray = []
-    for (let i = 0; i < accumulationArray.length; i += 1) {
-      testArray.push((accumulationArray[i] * 100) / 1501.48)
-    }
-
     return {
       activeArray,
       imgs: content.timelineImgs,
       progress: 0.0,
       bottom: 0,
       pageNumber,
-      timelinePostion: {},
       accumulationArray,
-      testArray,
+      listWidth: 1501.48,
     }
   },
   methods: {
@@ -177,56 +158,6 @@ export default {
       this.progress = progress
       // count the distance for bottom after leaving the area
       this.bottom = scrollBottom - containBottom
-
-      // count timeline position
-      const distanceTopEntering = containerTop - scrollTop
-      const distanceBottom =
-        scrollTop + innerHeight - (containerTop + containerHeight)
-      const distanceTopleaving = containerTop + containerHeight - scrollTop
-      const timelineShift = { left: 0, top: 0.235 }
-
-      // not yet
-      if (distanceTopEntering >= 0) {
-        this.timelinePostion = {
-          top: `${distanceTopEntering + timelineShift.top * innerHeight}px`,
-          right: `${-100 *
-            (this.pageNumber.length -
-              this.pageNumber.startLength +
-              (1.4547 - 1) +
-              0.8) -
-            timelineShift.left}vw`,
-        }
-        // over
-      } else if (distanceBottom >= 0) {
-        this.timelinePostion = {
-          top: `${distanceTopleaving -
-            (1 - timelineShift.top) * innerHeight}px`,
-          right: `${100 * (this.pageNumber.startLength - (1.4547 - 1) - 0.8) +
-            timelineShift.left}vw`,
-        }
-        // in the process
-      } else {
-        this.timelinePostion = {
-          top: `${0 + timelineShift.top * innerHeight}px`,
-          right: `${progress * this.pageNumber.length -
-            100 *
-              (this.pageNumber.length -
-                this.pageNumber.startLength +
-                (1.4547 - 1) +
-                0.8) -
-            timelineShift.left}vw`,
-        }
-        // this.timelinePostion = {
-        //   top: `${0 + timelineShift.top * innerHeight}px`,
-        //   right: `${progress * (this.pageNumber.length - 1) -
-        //     100 *
-        //       (this.pageNumber.length -
-        //         this.pageNumber.startLength -
-        //         this.pageNumber.endLength +
-        //         1) -
-        //     timelineShift.left}vw`,
-        // }
-      }
 
       // count active
       const allLength = this.accumulationArray[
@@ -256,6 +187,17 @@ export default {
         }
       }
     },
+    countListWidth() {
+      const { innerWidth } = window
+
+      if (innerWidth <= 1280) {
+        this.listWidth =
+          this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth)
+      } else {
+        this.listWidth =
+          this.pageNumber.length * 100 + 50 - 0.09 * (innerWidth - 1280)
+      }
+    },
   },
   computed: {
     areaTranslateX() {
@@ -274,29 +216,18 @@ export default {
       }
       return this.bottom
     },
-    timelineListWidth() {
-      const { innerWidth } = window
-
-      if (innerWidth <= 1280) {
-        return this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth)
-      } else {
-        const adjustedWidth =
-          this.pageNumber.length * 100 + 50 - 0.12 * (innerWidth - 1280)
-        if (adjustedWidth > this.pageNumber.length * 100) {
-          return adjustedWidth
-        }
-        return this.pageNumber.length * 100
-      }
-    },
   },
   created() {
     window.addEventListener('scroll', this.updateProgress)
+    window.addEventListener('resize', this.countListWidth)
   },
   mounted() {
     this.updateProgress()
+    this.countListWidth()
   },
   destroyed() {
     window.removeEventListener('scroll', this.updateProgress)
+    window.removeEventListener('resize', this.countListWidth)
   },
 }
 </script>
@@ -314,13 +245,6 @@ export default {
 .col-6 {
   flex: 0 0 50%;
   max-width: 50%;
-}
-
-.time-line {
-  position: fixed;
-  height: 1px;
-  background-color: #8f8f8f;
-  z-index: 1;
 }
 .time-spot {
   padding: 0 10px 0 30px;
@@ -349,6 +273,15 @@ export default {
   z-index: 2;
   list-style: none;
   display: flex;
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(21.67% + 20px);
+    left: 245.47vw;
+    height: 1px;
+    width: 83%;
+    background-color: #8f8f8f;
+  }
   li {
     list-style-type: none;
     // min-width: 100vw;
