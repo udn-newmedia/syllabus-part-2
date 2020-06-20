@@ -57,12 +57,12 @@ export default {
 
 <style lang="scss" scoped>
 .black-hole {
-  margin-top: 48px;
+  margin-top: 64px;
   @include pad {
-    margin-top: 96px;
+    margin-top: 192px;
   }
   @include pc {
-    margin-top: 120px;
+    margin-top: 192px;
   }
 }
 .body-movin-container {

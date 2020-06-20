@@ -1,8 +1,5 @@
 <template lang="pug">
-  span.tilt-text(
-    :style="{transform}"
-    :class="{'tilt-text--active': observableActive}"
-  )
+  span.tilt-text(:style="{transform}")
     p.enlarge.tilt {{text}}
     div.tilt-text__mark-container
       div.tilt-text__mark(:class="{'tilt-text__mark--active': observableActive}")
@@ -45,9 +42,7 @@ export default {
   position: relative;
   display: inline-block;
   transition: 0.333s;
-  &.tilt-text--active{
-    transform-origin: -1.25rem 2.5rem;
-  }
+  transform-origin: -1.25rem 2.5rem;
   .tilt-text__mark-container {
     overflow: hidden;
     position: absolute;

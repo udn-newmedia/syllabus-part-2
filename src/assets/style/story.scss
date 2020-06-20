@@ -9,11 +9,16 @@ p.enlarge {
   }
 }
 
+h1, h2 {
+  font-family: GenJyuuGothicX-Monospace-Heavy;
+}
 h2.enlarge {
   color: #181818;
-  font-family: GenJyuuGothic-Monospace;
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 56px;
+  font-weight: 900;
+  @include smob {
+    font-size: 48px;
+  }
   @include pad {
     font-size: 92px;
   }

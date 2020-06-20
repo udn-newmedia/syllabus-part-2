@@ -1,15 +1,13 @@
-<template>
-  <figure class="wide-image">
-    <img
-      :src="selectSrc_3(srcMob, srcPad, srcPc)"
-      :alt="alt"
-    >
-    <figcaption class="wide-image__description">
-      <p class="small">
-        <slot />
-      </p>
-    </figcaption>
-  </figure>
+<template lang="pug">
+  article.wide-image-container
+    figure.wide-image(:class="{ 'wide-image--shrink': shrink }")
+      img(
+        :src="selectSrc_3(srcMob, srcPad, srcPc)"
+        :alt="alt"
+      )
+    figcaption.wide-image__description.article
+      p
+        slot
 </template>
 
 
@@ -32,12 +30,19 @@ export default {
     alt: {
       type: String,
       default: document.querySelector('title').innerHTML,
-    }
+    },
+    shrink: {
+      type: Boolean,
+      default: false,
+    },
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.wide-image-container {
+  width: 100%;
+}
 .wide-image {
   position: relative;
   width: 100%;
@@ -54,12 +59,24 @@ export default {
     width: 100%;
     height: auto;
   }
-  .wide-image__description {
-    margin-top: 8px;
-    p {
-      color: #7b7a7a;
-      margin: 0;
-    }
+}
+.wide-image__description {
+  margin-top: 8px;
+  p {
+    color: #7b7a7a;
+    margin: 0;
+  }
+  &.article {
+    padding-top: 8px;
+  }
+}
+
+.wide-image--shrink {
+  @media screen and (max-width: 767.98px) {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 24px 16px 0 16px;
   }
 }
 </style>

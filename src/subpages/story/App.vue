@@ -84,11 +84,14 @@
       ArticleContainer
         p.enlarge 我自己也不甘心，<MarkText>覺得是不是我不夠好，才只能選這條路？</MarkText>
         p.enlarge 身旁不少朋友都選五專或高職，但我的成績又比他們好一點，就會覺得，上高職和五專好像有點可惜。
+      ChapterTitle
         h2.enlarge 社會還是期待<br>學生上高中，
       BlackHole
       ArticleContainer
         p.enlarge 高中3年，我的成長主要來自社團。我參與學生會、扶輪社，也和同學組團參加設計比賽，學到策畫、主持、與廠商應對的能力，畢業後都派上用場。
+      ChapterTitle
         h2.enlarge 不上大學後<br>我去打工
+      ArticleContainer
         p.enlarge 這1年我也實際去試所有「天馬行空」的夢想，
         DrawPhoto
           TiltText(slot="draw" text="學畫畫"  rotateDegree="15deg")
@@ -102,7 +105,9 @@
       ArticleContainer
         p.enlarge 小時候我曾經想當老師，我硬著頭皮去補習班應徵，但只有高中學歷，根本沒有人會用我，直到一家補習班願意給我工作，還讓我自己設計科學實驗教案。
         p.enlarge 「後來跟老闆比較熟的時候，我問他：為什麼會用我這樣的人？攤開履歷我都不一定會用我自己。他跟我說：你社團的部分很加分啊！」
+      ChapterTitle
         h2.enlarge 我很開心，<br>覺得自己被肯定了
+      ArticleContainer
         p.enlarge 比較愛玩、不喜歡讀書，很多人覺得這樣的孩子就是壞，<MarkText>但我們不是壞孩子，我們也不是什麼事都成不了。</MarkText>
         p.enlarge 到補習班上班後，雖然有挫折，但發現教課、設計教案是我想要的，想當老師就要有大學學歷，所以我正在準備指考，今年7月要重考大學。
       BlackLine(pos='top')
@@ -116,7 +121,8 @@
         :srcMob="require('~/img/story/text1/mob.jpg')"
         :srcPad="require('~/img/story/text1/pc.jpg')"
         :srcPc="require('~/img/story/text1/pc.jpg')"
-      )
+        :shrink="true"
+      ) by 小雅
       BlackLine(pos='top')
       FullWideImage(
         :srcMob="require('~/img/story/img4/mob.jpg')"
@@ -128,14 +134,19 @@
         p.enlarge <strong>一路陪伴女兒的小雅媽媽說：</strong>
         p.enlarge 一開始，希望她就近、隨便念一所大學都好，<MarkText>至少要有個大學文憑，現在大學文憑是基本的。</MarkText>
         p.enlarge 大兒子求學路與小雅完全不同，他功課一向不錯，理所當然順順往上念，<MarkText>沒有特別去思考孩子未來想走什麼，</MarkText>讀到大三，他一度想休學，
+      ChapterTitle
         h2.enlarge 因為不知道自己畢業後要幹嘛
+      ArticleContainer
         p.enlarge 我發現，很多學生上了大學，還是不知道自己想做什麼，為了不想失業，就只好繼續唸，對未來也不見得有幫助。
+        p.enlarge 我小時候，<MarkText>社會覺得女生就是念商科</MarkText>，我也就順著這方向念，畢業後做會計工作，也沒有不好，就好好賺錢，沒多想什麼，從沒想過「探索自己」。
+        p.enlarge 現在看到我的孩子們，我更有感觸，<MarkText>希望他們開心去做想做的事</MarkText>，不要只是為了考試、升學而去學習，以前都是老師教課我們聽，應該讓孩子多點機會表達。
         p.enlarge 二女兒（小雅）的經歷，還有接觸到108課綱後，我想法不同了，小女兒現在高一，就覺得，讓她做自己喜歡的事情就好。
       WideImage(
         :srcMob="require('~/img/story/text2/mob.jpg')"
         :srcPad="require('~/img/story/text2/pc.jpg')"
         :srcPc="require('~/img/story/text2/pc.jpg')"
-      )
+        :shrink="true"
+      ) by 小雅的媽媽
       BlackLine(pos='top')
       FullWideVideo(
         :srcMob="require('~/media/story/video/mob.mp4')"
@@ -179,11 +190,12 @@
 
 <script>
 import { autoResize_3 } from '@/mixins/masterBuilder.js';
-import InApp from 'detect-inapp';
+import { fbBrowserResize } from '@/mixins/fbBrowserResize.js';
 
 import ArticleContainer from '@/components/layout/ArticleContainer.vue'
 import BlackHole from '@cs/BlackHole.vue';
 import BlackLine from '@cs/BlackLine.vue';
+import ChapterTitle from '@cs/ChapterTitle.vue';
 import DrawPhoto from '@cs/DrawPhoto.vue';
 import HeaderTypeA from '@/components/header/HeaderTypeA'
 import FooterEditor from '@/components/footer/FooterEditor.vue';
@@ -205,11 +217,12 @@ import WideImage from '@cs/WideImage.vue';
 
 export default {
   name: 'App',
-  mixins: [autoResize_3],
+  mixins: [autoResize_3, fbBrowserResize],
   components: {
     ArticleContainer,
     BlackHole,
     BlackLine,
+    ChapterTitle,
     DrawPhoto,
     HeaderTypeA,
     FooterEditor,
@@ -228,26 +241,6 @@ export default {
     TitleMarguee,
     VoiceStory,
     WideImage,
-  },
-  created() {
-    // 處理inapp browser window.innerWidth問題
-    (function() {
-      const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera);
-      let currentWidth = window.innerWidth;
-      let executeCount = 0;
-      if (inapp.isInApp) {
-        const inappWidthListener = setInterval(() => {
-          executeCount++;
-          if (window.innerWidth !== currentWidth) {
-            window.location.reload();
-            currentWidth = window.innerWidth;
-          }
-          if (executeCount > 10) {
-            clearInterval(inappWidthListener);
-          }
-        }, 100);
-      }
-    })();
   },
 }
 </script>
