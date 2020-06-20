@@ -5,7 +5,11 @@
       :class="{ 'voice-story__bg--fixed': shouldBgFixed, 'voice-story__bg--bottom': shouldBgAtBottom, 'voice-story__bg--hide': shouldBgHide }"
     )
     .voice-story__content.article
-      VoiceStoryPlay(:voiceSrc="voiceSrc" :shouldSoundStop="shouldSoundStop")
+      VoiceStoryPlay(
+        :voiceIndex="voiceIndex"
+        :voiceSrc="voiceSrc"
+        :shouldSoundStop="shouldSoundStop"
+      )
       VoiceStoryText
         slot
 </template>
@@ -24,6 +28,9 @@ export default {
     VoiceStoryText
   },
   props: {
+    voiceIndex: {
+      type: Number,
+    },
     bgMob: {
       type: String,
     },

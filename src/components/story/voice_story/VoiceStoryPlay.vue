@@ -17,14 +17,19 @@
 </template>
 
 <script>
+import { sendGaMethods } from '@/mixins/masterBuilder.js';
 import VoiceStoryWave from './VoiceStoryWave.vue';
 
 export default {
   name: 'VoiceStoryPlay',
+  mixins: [sendGaMethods],
   components: {
     VoiceStoryWave,
   },
   props: {
+    voiceIndex: {
+      type: Number,
+    },
     voiceSrc: {
       type: String,
     },
@@ -56,6 +61,15 @@ export default {
 
       if (this.isPlay) this.theSound.play();
       else this.theSound.pause();
+
+      this.handleSendGA();
+    },
+    handleSendGA() {
+      this.sendGA({
+        category: 'sound',
+        action: 'click',
+        label: `${this.isPlay ? 'play' : 'pause'}${this.voiceIndex}`
+      });
     }
   },
   mounted() {

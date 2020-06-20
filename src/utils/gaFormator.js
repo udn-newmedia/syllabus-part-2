@@ -68,7 +68,37 @@ const gaTable = {
     category: 'logo',
     action: 'click',
     label: '願景工程_logo'
-  }
+  },
+  StoryMenuLink_1: {
+    category: 'menu',
+    action: 'click',
+    label: '揭露課綱五大亂象'
+  },
+  StoryMenuLink_2: {
+    category: 'menu',
+    action: 'click',
+    label: '課綱上路周年大調查'
+  },
+  StoryMenuLink_3: {
+    category: 'menu',
+    action: 'click',
+    label: '台灣教育關鍵數字'
+  },
+  StoryMenuLink_4: {
+    category: 'menu',
+    action: 'click',
+    label: '台灣教改為何總失敗'
+  },
+  StoryMenuLink_6: {
+    category: 'menu',
+    action: 'click',
+    label: '關於108課綱我想說'
+  },
+  StoryMenuLink_7: {
+    category: 'menu',
+    action: 'click',
+    label: '更多課綱相關報導'
+  },
 }
 
 export default gaTable
