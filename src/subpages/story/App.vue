@@ -1,33 +1,34 @@
 <template lang="pug">
   div#app
+    PageIndicator
     HeaderTypeA
       a(
         href="../problem/"
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
-        @click="sendGA(formatGA('MenuLink_1'))"
+        @click="sendGA(formatGA('StoryMenuLink_1'))"
       ) 揭露課綱五大亂象
       a(
         href="../poll/"
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
-        @click="sendGA(formatGA('MenuLink_2'))"
+        @click="sendGA(formatGA('StoryMenuLink_2'))"
       ) 課綱上路周年大調查
       a(
         href="../problem/"
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
-        @click="sendGA(formatGA('MenuLink_3'))"
+        @click="sendGA(formatGA('StoryMenuLink_3'))"
       ) 台灣教育關鍵數字
       a(
         href="../"
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
-        @click="sendGA(formatGA('MenuLink_4'))"
+        @click="sendGA(formatGA('StoryMenuLink_4'))"
       ) 台灣教改為何總失敗
       a(class="active") 升學主義悲歌
       a(
@@ -35,7 +36,7 @@
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
-        @click="sendGA(formatGA('MenuLink_6'))"
+        @click="sendGA(formatGA('StoryMenuLink_6'))"
       ) 關於108課綱 我想說......
       a(
         href="https://udn.com/search/word/2/108課綱"
@@ -43,7 +44,7 @@
         rel="noopener"
         aria-label="outlink"
         name="outlink"
-        @click="sendGA(formatGA('MenuLink_7'))"
+        @click="sendGA(formatGA('StoryMenuLink_7'))"
       ) 更多課綱相關報導
     main
       TheCover
@@ -61,6 +62,7 @@
           TiltText(text="但我不要只是為了" rotateDegree="15deg")
       TitleMarguee
       VoiceStory(
+        :voiceIndex="1"
         :bgMob="require('~/img/story/story_bg1/mob.jpg')"
         :bgPad="require('~/img/story/story_bg1/pad.jpg')"
         :bgPc="require('~/img/story/story_bg1/pc.jpg')"
@@ -76,6 +78,7 @@
         p.enlarge 我從小不擅長考試讀書，喜歡畫畫和攝影，高職和五專或許比較適合我發展專長，但我下不了決心。
         p.enlarge 國中老師口頭上說：「你就選你有興趣的」，但又開玩笑接了一句：<br v-if="deviceType !== 'pc'"><TiltText text="是只有這條路可以走了嗎？" rotateDegree="25deg"></TiltText>
       VoiceStory(
+        :voiceIndex="2"
         :bgMob="require('~/img/story/story_bg2/mob.jpg')"
         :bgPad="require('~/img/story/story_bg2/pad.jpg')"
         :bgPc="require('~/img/story/story_bg2/pc.jpg')"
@@ -189,7 +192,7 @@
 </template>
 
 <script>
-import { autoResize_3 } from '@/mixins/masterBuilder.js';
+import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js';
 import { fbBrowserResize } from '@/mixins/fbBrowserResize.js';
 
 import ArticleContainer from '@/components/layout/ArticleContainer.vue'
@@ -207,8 +210,9 @@ import FullWideVideo from '@cs/FullWideVideo.vue';
 import Marketing from '@/components/self/Marketing.vue'
 import MarkText from '@cs/MarkText.vue';
 import OtherProjects from '@/components/self/OtherProjects'
-import PageFooter from '@/components/footer/PageFooter.vue'
 import PageBackTop from '@/components/layout/PageBackTop.vue'
+import PageFooter from '@/components/footer/PageFooter.vue'
+import PageIndicator from '@/components/layout/PageIndicator.vue'
 import TheCover from '@cs/TheCover.vue';
 import TiltText from '@cs/TiltText.vue'
 import TitleMarguee from '@cs/TitleMarguee.vue';
@@ -217,7 +221,7 @@ import WideImage from '@cs/WideImage.vue';
 
 export default {
   name: 'App',
-  mixins: [autoResize_3, fbBrowserResize],
+  mixins: [autoResize_3, sendGaMethods, fbBrowserResize],
   components: {
     ArticleContainer,
     BlackHole,
@@ -234,8 +238,9 @@ export default {
     Marketing,
     MarkText,
     OtherProjects,
-    PageFooter,
     PageBackTop,
+    PageFooter,
+    PageIndicator,
     TheCover,
     TiltText,
     TitleMarguee,
