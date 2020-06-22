@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <h1>Poll</h1>
+    <Poll />
   </div>
 </template>
 
 <script>
+import Poll from "../../views/Page3";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-
-  }
-}
+    Poll,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

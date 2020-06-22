@@ -1,5 +1,5 @@
 <template>
-  <div class="mob-part9" ref="mobPart9">
+  <div class="mob-part9">
     <div class="mob-part9-text">
       <h1 class="mob-part9-title">歷時10年籌備的108課綱</h1>
       <ul class="mob-part9-today-list">
@@ -27,7 +27,7 @@
     <div class="mob-part9-img">
       <img
         class="img-fluid"
-        :class="{active}"
+        :class="{ active }"
         :src="windowSize.width >= 768 ? img.pad : img.mob"
         alt
       />
@@ -39,27 +39,10 @@
 <script>
 export default {
   name: 'MobPart9',
-  props: { windowSize: { type: Object }, img: { type: Object } },
-  data() {
-    return { active: false }
-  },
-  methods: {
-    updateProgress() {
-      const containerTop = this.$refs.mobPart9.offsetTop
-      const { innerHeight, pageYOffset } = window
-      if (pageYOffset > containerTop - 0.5 * innerHeight) {
-        this.active = true
-      }
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateProgress)
-  },
-  mounted() {
-    this.updateProgress()
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.updateProgress)
+  props: {
+    windowSize: { type: Object },
+    img: { type: Object },
+    active: { type: Boolean },
   },
 }
 </script>

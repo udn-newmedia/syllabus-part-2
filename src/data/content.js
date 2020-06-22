@@ -54,14 +54,17 @@ import videoImg2 from "../assets/img/timeline/12-years-education_v2.jpg";
 import videoImg3 from "../assets/img/timeline/12-years-education_v3.jpg";
 import videoImg4 from "../assets/img/timeline/12-years-education_v4.jpg";
 
+import pressLikeImg1 from "../assets/img/poll/poll_good_white.svg";
+import pressLikeImg2 from "../assets/img/poll/poll_good_blue.svg";
+
 const content = {
   headerLink: [
-    { text: "揭露課綱五大亂象", link: "/" },
-    { text: "課綱上路周年大調查", link: "/" },
-    { text: "台灣教育關鍵數字", link: "/" },
-    { text: "台灣教改為何總失敗", link: "/" },
-    { text: "升學主義悲歌", link: "/" },
-    { text: "關於108課綱 我想說......", link: "/" },
+    { text: "揭露課綱五大亂象", link: "../problem" },
+    { text: "課綱上路周年大調查", link: "../poll" },
+    { text: "台灣教育關鍵數字", link: "../problem" },
+    { text: "台灣教改為何總失敗", link: "../" },
+    { text: "升學主義悲歌", link: "../story" },
+    { text: "關於108課綱 我想說......", link: "..collect/" },
     { text: "更多課綱相關報導", link: "/" },
   ],
   timelineImgs: {
@@ -244,6 +247,10 @@ const content = {
     "要先改變升學主義及明星學校",
     "鄉鎮學校的壓力在於資源不足",
   ],
+  pressLikeImgs: {
+    unlike: pressLikeImg1,
+    like: pressLikeImg2,
+  },
 };
 
 export default content;

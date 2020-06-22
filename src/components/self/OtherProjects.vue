@@ -8,7 +8,7 @@
         :href="item.link"
         class="otherprojects-image-wrapper text-decoration-none"
         :class="{'hovered':hovered===i}"
-        :style="{opacity:i===3&&0.4}"
+        :style="{opacity:i===active&&0.4}"
         @mouseenter="hoverItem(i)"
         @mouseleave="unHoverItem()"
         :key="item.id"
@@ -48,7 +48,7 @@ export default {
     return {
       dataArray: content.otherProjects,
       windowSize: 'web',
-      active: 3,
+      active: null,
       hovered: null,
       activePage: 0,
     }
@@ -76,6 +76,24 @@ export default {
         this.activePage = Math.round(scrollLeft / offsetWidth)
       }
     },
+    getActive() {
+      const currentURL = new URL(window.location.href)
+      const { pathname } = currentURL
+      switch (pathname) {
+        case '/':
+          this.active = 3
+          break
+        // case value:
+        //   break
+        // case value:
+        //   break
+        // case value:
+        //   break
+
+        default:
+          break
+      }
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.checkWindowSize)
@@ -83,6 +101,7 @@ export default {
       .querySelector('.otherprojects-container')
       .addEventListener('scroll', this.containerScrollHandler)
     this.checkWindowSize()
+    this.getActive()
   },
   destroyed() {
     window.removeEventListener('scroll', this.checkWindowSize)
@@ -95,9 +114,9 @@ export default {
 <style lang="scss" scoped>
 .otherprojects-wrapper {
   margin-top: 10%;
-  height: 100vh;
+  // height: 100vh;
   background-color: #000000;
-  padding: 0 15%;
+  padding: 0 15% 100px;
   .otherprojects-title {
     font-family: NotoSansCJKtc-Medium;
     font-size: 25px;

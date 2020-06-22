@@ -11,16 +11,22 @@
         class="content"
       >台灣教育改革從1994年410大遊行至今已26年，許多立意良善的改革方向，都在手段錯誤、社會價值觀未翻轉、政府與民間溝通不足下變調，甚至失敗收場。《聯合報》帶讀者進入時間洪流，從政策推動過程中，反思：「為什麼台灣教改，總在失敗？」</p>
       <div class="arrow-wrapper">
-        <font-awesome-icon :icon="['fas', 'angle-double-down']" size="4x" />
+        <!-- <font-awesome-icon :icon="['fas', 'angle-double-down']" size="4x" /> -->
+        <NmdArrow />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import NmdArrow from '@/components/pinhead/NmdArrow.vue'
+import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
+
 export default {
   name: 'PCPart1',
   props: { img: { type: String } },
+  components: { NmdArrow },
+  mixins: [autoResize_3, sendGaMethods],
 }
 </script>
 <style lang="scss" scoped>
@@ -73,7 +79,7 @@ export default {
       color: #eeeeee;
       display: flex;
       justify-content: flex-start;
-      padding: 5% 0 0 35%;
+      padding-top: 10%;
     }
   }
 }

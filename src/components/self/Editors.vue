@@ -5,7 +5,7 @@
     <div class="list-item text-right">網頁設計</div>
     <div class="list-item text-left">許瑋琳</div>
     <div class="list-item text-right">網頁製作</div>
-    <div class="list-item text-left">張庭瑋、楊若榆</div>
+    <div class="list-item text-left">張庭瑋</div>
     <div class="list-item text-right">影像</div>
     <div class="list-item text-left">影像中心、報系資料庫</div>
     <div class="list-item text-right">製作單位</div>
@@ -19,6 +19,10 @@
     <div class="list-item text-right" />
     <div class="list-item text-left">2020.07.29</div>
 
+    <div class="share-wrapper">
+      <FooterShare />
+    </div>
+
     <div class="questionnaire">
       <span>填寫閱讀體驗問卷</span>
     </div>
@@ -26,15 +30,19 @@
 </template>
 
 <script>
+import FooterShare from '@/components/footer/FooterShare.vue'
+
 export default {
   name: 'Editors',
+  components: { FooterShare },
 }
 </script>
 <style lang="scss" scoped>
 .editors-wrapper {
-  padding-top: 10vh;
+  padding-top: 100px;
+  padding-bottom: 70px;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-color: #000000;
   display: flex;
   flex-wrap: wrap;
@@ -73,7 +81,7 @@ export default {
     height: 10vh;
     border-radius: 8px;
     background-color: #dce4eb;
-    margin-top: 20.56vh;
+    // margin-top: 20.56vh;
     span {
       font-family: SourceHanSansTW-Bold;
       font-size: 18px;
@@ -81,6 +89,12 @@ export default {
       line-height: 1.21;
       color: #2a324b;
     }
+  }
+
+  .share-wrapper {
+    flex: 0 0 100%;
+    max-width: 0 0 100%;
+    margin-top: 40px;
   }
 }
 </style>

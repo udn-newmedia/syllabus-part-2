@@ -4,11 +4,19 @@
       <HeaderLink />
     </HeaderTypeA>
     <!-- <Header /> -->
-    <router-view />
+    <Page1 />
+    <!-- <router-view /> -->
     <Marketing />
     <OtherProjects />
-    <Editors />
-    <PageFooter slot="footer" />
+
+    <PageFooter slot="footer">
+      <Editors />
+
+      <!-- <FooterShare /> -->
+      <FooterFbComment />
+      <FooterLogo />
+      <PageBackTop />
+    </PageFooter>
   </div>
 </template>
 
@@ -18,21 +26,36 @@
 import Marketing from '@/components/self/Marketing.vue'
 import HeaderTypeA from '@/components/header/HeaderTypeA'
 import HeaderLink from '@/components/self/HeaderLink'
+import Page1 from '@/views/Page1'
 import OtherProjects from '@/components/self/OtherProjects'
 import Editors from '@/components/self/Editors.vue'
 
 import PageFooter from '@/components/footer/PageFooter.vue'
 
+import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
+import { fbBrowserResize } from '@/mixins/fbBrowserResize.js'
+// import FooterShare from '@/components/footer/FooterShare.vue'
+import FooterFbComment from '@/components/footer/FooterFbComment.vue'
+import FooterLogo from '@/components/footer/FooterLogo.vue'
+import PageBackTop from '@/components/layout/PageBackTop.vue'
+
 export default {
   name: 'App',
+  mixins: [autoResize_3, sendGaMethods, fbBrowserResize],
   components: {
     // Header,
     HeaderTypeA,
     HeaderLink,
+    Page1,
     Marketing,
     OtherProjects,
     Editors,
     PageFooter,
+    //
+    // FooterShare,
+    FooterFbComment,
+    FooterLogo,
+    PageBackTop,
   },
 }
 </script>

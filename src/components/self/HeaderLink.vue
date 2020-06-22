@@ -26,20 +26,24 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   padding-left: 30px;
   .header-link {
     white-space: nowrap;
     display: block;
     opacity: 0.7;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.82;
     text-align: left;
     color: #333333;
+    &:hover {
+      text-decoration: none;
+      color: #000;
+    }
     &.active {
       opacity: 1;
       text-decoration: underline;
+      font-weight: 500;
     }
   }
   @media screen and (max-width: 374.99px) {

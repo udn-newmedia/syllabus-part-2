@@ -1,5 +1,5 @@
 <template>
-  <div class="mob-part10" ref="mobPart10">
+  <div class="mob-part10">
     <div class="mob-part10-text">
       <h1 class="mob-part10-title">2020年：108課綱上路1年後</h1>
       <div class="mob-part10-list-title">《聯合報》針對1200位民眾、929所學校進行民調後發現：</div>
@@ -23,7 +23,7 @@
     <div class="mob-part10-img">
       <img
         class="img-fluid"
-        :class="{active}"
+        :class="{ active }"
         :src="windowSize.width >= 768 ? img.pad : img.mob"
         alt
       />
@@ -34,27 +34,10 @@
 <script>
 export default {
   name: 'MobPart10',
-  props: { windowSize: { type: Object }, img: { type: Object } },
-  data() {
-    return { active: false }
-  },
-  methods: {
-    updateProgress() {
-      const containerTop = this.$refs.mobPart10.offsetTop
-      const { innerHeight, pageYOffset } = window
-      if (pageYOffset > containerTop - 0.5 * innerHeight) {
-        this.active = true
-      }
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateProgress)
-  },
-  mounted() {
-    this.updateProgress()
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.updateProgress)
+  props: {
+    windowSize: { type: Object },
+    img: { type: Object },
+    active: { type: Boolean },
   },
 }
 </script>
