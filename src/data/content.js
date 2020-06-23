@@ -54,6 +54,43 @@ import videoImg2 from "../assets/img/timeline/12-years-education_v2.jpg";
 import videoImg3 from "../assets/img/timeline/12-years-education_v3.jpg";
 import videoImg4 from "../assets/img/timeline/12-years-education_v4.jpg";
 
+import pollWebImage1 from "../assets/img/poll/web/poll_chart1_web.svg";
+import pollPadImage1 from "../assets/img/poll/pad/poll_chart1_pad.svg";
+import pollMobImage1 from "../assets/img/poll/mob/poll_chart1_mob.svg";
+import pollWebImage2 from "../assets/img/poll/web/poll_chart2_web.svg";
+import pollPadImage2 from "../assets/img/poll/pad/poll_chart2_web.svg";
+import pollMobImage2 from "../assets/img/poll/mob/poll_chart2_mob.svg";
+import pollWebImage3 from "../assets/img/poll/web/poll_chart3_web.svg";
+import pollPadImage3 from "../assets/img/poll/pad/poll_chart3_web.svg";
+import pollMobImage3 from "../assets/img/poll/mob/poll_chart3_mob.svg";
+import pollWebImage4 from "../assets/img/poll/web/poll_chart4_web.svg";
+import pollPadImage4 from "../assets/img/poll/pad/poll_chart4_web.svg";
+import pollMobImage4 from "../assets/img/poll/mob/poll_chart4_mob.svg";
+import pollWebImage5 from "../assets/img/poll/web/poll_chart5_web.svg";
+import pollPadImage5 from "../assets/img/poll/pad/poll_chart5_web.svg";
+import pollMobImage5 from "../assets/img/poll/mob/poll_chart5_mob.svg";
+import pollWebImage6 from "../assets/img/poll/web/poll_chart6_web.svg";
+import pollPadImage6 from "../assets/img/poll/pad/poll_chart6_web.svg";
+import pollMobImage6 from "../assets/img/poll/mob/poll_chart6_mob.svg";
+import pollWebImage7 from "../assets/img/poll/web/poll_chart7_web.svg";
+import pollPadImage7 from "../assets/img/poll/pad/poll_chart7_web.svg";
+import pollMobImage7 from "../assets/img/poll/mob/poll_chart7_mob.svg";
+import pollWebImage8 from "../assets/img/poll/web/poll_chart8_web.svg";
+import pollPadImage8 from "../assets/img/poll/pad/poll_chart8_web.svg";
+import pollMobImage8 from "../assets/img/poll/mob/poll_chart8_mob.svg";
+import pollWebImage9 from "../assets/img/poll/web/poll_chart9_web.svg";
+import pollPadImage9 from "../assets/img/poll/pad/poll_chart9_web.svg";
+import pollMobImage9 from "../assets/img/poll/mob/poll_chart9_mob.svg";
+import pollWebImage10 from "../assets/img/poll/web/poll_chart10_web.svg";
+import pollPadImage10 from "../assets/img/poll/pad/poll_chart10_web.svg";
+import pollMobImage10 from "../assets/img/poll/mob/poll_chart10_mob.svg";
+import pollWebImage11 from "../assets/img/poll/web/poll_chart11_web.svg";
+import pollPadImage11 from "../assets/img/poll/pad/poll_chart11_web.svg";
+import pollMobImage11 from "../assets/img/poll/mob/poll_chart11_mob.svg";
+import pollWebImage12 from "../assets/img/poll/web/poll_chart12_web.svg";
+import pollPadImage12 from "../assets/img/poll/pad/poll_chart12_web.svg";
+import pollMobImage12 from "../assets/img/poll/mob/poll_chart12_mob.svg";
+
 import pressLikeImg1 from "../assets/img/poll/poll_good_white.svg";
 import pressLikeImg2 from "../assets/img/poll/poll_good_blue.svg";
 
@@ -247,6 +284,68 @@ const content = {
     "要先改變升學主義及明星學校",
     "鄉鎮學校的壓力在於資源不足",
   ],
+  pollImages: {
+    img1: {
+      web: pollWebImage1,
+      pad: pollPadImage1,
+      mob: pollMobImage1,
+    },
+    img2: {
+      web: pollWebImage2,
+      pad: pollPadImage2,
+      mob: pollMobImage2,
+    },
+    img3: {
+      web: pollWebImage3,
+      pad: pollPadImage3,
+      mob: pollMobImage3,
+    },
+    img4: {
+      web: pollWebImage4,
+      pad: pollPadImage4,
+      mob: pollMobImage4,
+    },
+    img5: {
+      web: pollWebImage5,
+      pad: pollPadImage5,
+      mob: pollMobImage5,
+    },
+    img6: {
+      web: pollWebImage6,
+      pad: pollPadImage6,
+      mob: pollMobImage6,
+    },
+    img7: {
+      web: pollWebImage7,
+      pad: pollPadImage7,
+      mob: pollMobImage7,
+    },
+    img8: {
+      web: pollWebImage8,
+      pad: pollPadImage8,
+      mob: pollMobImage8,
+    },
+    img9: {
+      web: pollWebImage9,
+      pad: pollPadImage9,
+      mob: pollMobImage9,
+    },
+    img10: {
+      web: pollWebImage10,
+      pad: pollPadImage10,
+      mob: pollMobImage10,
+    },
+    img11: {
+      web: pollWebImage11,
+      pad: pollPadImage11,
+      mob: pollMobImage11,
+    },
+    img12: {
+      web: pollWebImage12,
+      pad: pollPadImage12,
+      mob: pollMobImage12,
+    },
+  },
   pressLikeImgs: {
     unlike: pressLikeImg1,
     like: pressLikeImg2,
