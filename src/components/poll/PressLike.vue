@@ -1,66 +1,102 @@
 <template>
   <div class="press-like">
-    <div class="tag-area" v-for="(tag,i) in tags" :key="tag.id">
-      <span class="tag" :style="{ backgroundColor: tag.tag.color }">{{ tag.tag.content }}</span>
+    <div class="tag-area" v-for="(tag, i) in tags" :key="tag.id">
+      <span class="tag" :style="{ backgroundColor: tag.tag.color }">{{
+        tag.tag.content
+      }}</span>
       <!-- <p>{{ tag.title }}</p> -->
       <p v-html="tag.title" />
       <div class="like">
         <span class="likeNumber">{{ tag.userlike }}</span>
-        <img @click="sendLike(tag,i)" :src="tag.isLiked ? imgs.like : imgs.unlike" alt />
+        <img
+          @click="sendLike(tag, i)"
+          :src="tag.isLiked ? imgs.like : imgs.unlike"
+          alt
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import content from '../../data/content'
-// import axios from 'axios'
+import content from "../../data/content";
+import axios from "axios";
 
 export default {
-  name: 'PressLike',
+  name: "PressLike",
   data() {
-    const tags = []
+    const tags = [];
 
     for (let i = 0; i < 20; i++) {
       tags.push({
         id: `like${i}`,
         tag: {
-          content: '',
-          color: '',
+          content: "",
+          color: "",
         },
-        title: '',
+        title: "",
         userlike: 0,
         isLiked: false,
-      })
+      });
     }
-    return { tags, imgs: content.pressLikeImgs }
+    return { tags, imgs: content.pressLikeImgs };
   },
   methods: {
     getData() {
-      fetch('https://newmedia.udn.com.tw/active/api/message/?flag=Course108')
-        .then(response => response.json())
-        .then(result => {
+      fetch("https://newmedia.udn.com.tw/active/api/message/?flag=Course108")
+        .then((response) => response.json())
+        .then((result) => {
           for (let i = 0; i < 20; i++) {
             this.tags[i].title = result[i].title.replace(
               /(?:\\[rn]|[\r\n]+)+/g,
-              '<br>',
-            )
+              "<br>"
+            );
             // .replace(/(?:\\[rn]|[\r\n]+)+/g,'<br>')
-            this.tags[i].id = result[i].id
-            this.tags[i].userlike = result[i].userlike
-            this.tags[i].tag.content = result[i].tag.content
-            this.tags[i].tag.color = result[i].tag.color
+            this.tags[i].id = result[i].id;
+            this.tags[i].userlike = result[i].userlike;
+            this.tags[i].tag.content = result[i].tag.content;
+            this.tags[i].tag.color = result[i].tag.color;
           }
-        })
+        });
     },
     sendLike(tag, i) {
       if (!tag.isLiked) {
-        this.tags[i].isLiked = true
-        this.tags[i].userlike += 1
+        this.tags[i].isLiked = true;
+        this.tags[i].userlike += 1;
       } else {
-        this.tags[i].isLiked = false
-        this.tags[i].userlike -= 1
+        this.tags[i].isLiked = false;
+        this.tags[i].userlike -= 1;
       }
+
+      const data = {
+        id: tag.id,
+        userlike: true,
+        flag: "Course108",
+      };
+      axios
+        .post("https://newmedia.udn.com.tw/active/api/message/", data)
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result, i);
+        });
+
+      // const data = {
+      //   id: tag.id,
+      //   userlike: true,
+      //   flag: 'Course108',
+      // }
+      // fetch('https://newmedia.udn.com.tw/active/api/message/', {
+      //   method: 'POST',
+      //   body: JSON.stringify(data),
+      //   headers: new Headers({
+      //     'Content-Type': 'application/json',
+      //     'Allow-Control-Allow-Origin': '*',
+      //   }),
+      // })
+      //   .then(response => response.json())
+      //   .then(result => {
+      //     console.log(result, i)
+      //   })
 
       // axios
       //   .get("https://newmedia.udn.com.tw/active/api/message/?flag=Course108")
@@ -93,9 +129,9 @@ export default {
     },
   },
   mounted() {
-    this.getData()
+    this.getData();
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 .press-like {

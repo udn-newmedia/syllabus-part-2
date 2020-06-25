@@ -160,8 +160,8 @@
         :posterPc="require('~/media/story/video/pc.jpg')"
       )
       BlackLine(pos='bottom')
-    Marketing
-    OtherProjects
+    OtherProjects(theme="light")
+    Marketing(bg="#eeeeee")
     PageFooter
       FooterEditor
         div
@@ -192,32 +192,32 @@
 </template>
 
 <script>
-import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js';
-import { fbBrowserResize } from '@/mixins/fbBrowserResize.js';
+import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
+import { fbBrowserResize } from '@/mixins/fbBrowserResize.js'
 
 import ArticleContainer from '@/components/layout/ArticleContainer.vue'
-import BlackHole from '@cs/BlackHole.vue';
-import BlackLine from '@cs/BlackLine.vue';
-import ChapterTitle from '@cs/ChapterTitle.vue';
-import DrawPhoto from '@cs/DrawPhoto.vue';
+import BlackHole from '@cs/BlackHole.vue'
+import BlackLine from '@cs/BlackLine.vue'
+import ChapterTitle from '@cs/ChapterTitle.vue'
+import DrawPhoto from '@cs/DrawPhoto.vue'
 import HeaderTypeA from '@/components/header/HeaderTypeA'
-import FooterEditor from '@/components/footer/FooterEditor.vue';
-import FooterFbComment from '@/components/footer/FooterFbComment.vue';
-import FooterLogo from '@/components/footer/FooterLogo.vue';
-import FooterShare from '@/components/footer/FooterShare.vue';
-import FullWideImage from '@cs/FullWideImage.vue';
-import FullWideVideo from '@cs/FullWideVideo.vue';
+import FooterEditor from '@/components/footer/FooterEditor.vue'
+import FooterFbComment from '@/components/footer/FooterFbComment.vue'
+import FooterLogo from '@/components/footer/FooterLogo.vue'
+import FooterShare from '@/components/footer/FooterShare.vue'
+import FullWideImage from '@cs/FullWideImage.vue'
+import FullWideVideo from '@cs/FullWideVideo.vue'
 import Marketing from '@/components/self/Marketing.vue'
-import MarkText from '@cs/MarkText.vue';
+import MarkText from '@cs/MarkText.vue'
 import OtherProjects from '@/components/self/OtherProjects'
 import PageBackTop from '@/components/layout/PageBackTop.vue'
 import PageFooter from '@/components/footer/PageFooter.vue'
 import PageIndicator from '@/components/layout/PageIndicator.vue'
-import TheCover from '@cs/TheCover.vue';
+import TheCover from '@cs/TheCover.vue'
 import TiltText from '@cs/TiltText.vue'
-import TitleMarguee from '@cs/TitleMarguee.vue';
-import VoiceStory from '@cs/voice_story/VoiceStory.vue';
-import WideImage from '@cs/WideImage.vue';
+import TitleMarguee from '@cs/TitleMarguee.vue'
+import VoiceStory from '@cs/voice_story/VoiceStory.vue'
+import WideImage from '@cs/WideImage.vue'
 
 export default {
   name: 'App',

@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // var csrfToken = "034c00b0350c7d3307258f5232cdf20c57bfa1e18686b7680a53573e078c668f25ab76c04daf93f065a42dadd0c098a4fb76a43f91b2568babe2f053a7e042a1";
+  </script>
+  <script>
+    $(document).ready(function() {
+      var title = "";
+      var content = "";
+      var identity = "";
+      var mood = "";
+      var cinfo = "";
+      $("#b01").click(function() {
+        htmlobj = $.ajax({
+          // headers: {'X-CSRF-Token': csrfToken},
+          url: "https://udn.com/newmedia/active/api/message/",
+          // url:"https://newmedia.udn.com.tw/active/api/message/",
+          // url: "/api/message/",
+          data: { flag: "Course108" },
+          // data: {'id' : '5e5cd45d','flag': 'Course' },
+          async: false,
+          method: "GET",
+        });
+        $("#myDiv").html(htmlobj.responseText);
+      });
+
+      // start
+      const data = {
+        id: "5ee9c3a9",
+        userlike: true,
+        flag: "Course108",
+      };
+      const url = "https://udn.com/newmedia/active/api/message/";
+
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
+        mode: "cors",
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => console.log(err));
+
+      htmlobj = $.ajax({
+        url,
+        data,
+        dataType: "json",
+        async: false,
+        type: "POST",
+      });
+      console.log(htmlobj);
+      // end
+
+      $("#b02").click(function() {
+        htmlobj = $.ajax({
+          // headers: {'X-CSRF-Token': csrfToken},
+          url: "https://udn.com/newmedia/active/api/message/",
+          // url:"https://newmedia.udn.com.tw/active/api/message/",
+          // url: "/api/message/",
+          data: { id: id, userlike: true, flag: "Course108" },
+          dataType: "json",
+          async: false,
+          type: "POST",
+        });
+        console.log(htmlobj.responseText);
+        $("#myDiv2").html(htmlobj.responseText);
+      });
+
+      $("#title").on("change", function() {
+        console.log(".on(change) = " + $(this).val());
+        title = $(this).val();
+      });
+      $("#content").on("change", function() {
+        console.log(".on(change) = " + $(this).val());
+        content = $(this).val();
+      });
+      $("#contact").on("change", function() {
+        console.log(".on(change) = " + $(this).val());
+        contact = $(this).val();
+      });
+      $("#identity").on("change", function() {
+        console.log(".on(change) = " + $(this).val());
+        identity = $(this).val();
+      });
+      $("#userlike_id").on("change", function() {
+        console.log(".on(change) = " + $(this).val());
+        id = $(this).val();
+      });
+    });
+  </script>
+
+  <body>
+    <h2>108課綱按讚--測試頁面</h2>
+    <h2>資料</h2>
+    <div id="myDiv">
+      <h2>load 結果</h2>
+    </div>
+    <button id="b01" type="button">載入</button>
+    <hr />
+
+    題目按讚<select id="userlike_id">
+      <option value="5ee9c3a9">第1題(5ee9c3a9)</option>
+      <option value="5ee9c3ad">第2題(5ee9c3ad)</option>
+      <option value="5ee9c3bf">第3題(5ee9c3bf)</option>
+      <option value="5ee9c3c2">第4題(5ee9c3c2)</option>
+      <option value="5ee9c3c7">第5題(5ee9c3c7)</option>
+      <option value="5ee9c409">第6題(5ee9c409)</option>
+      <option value="5ee9c40b">第7題(5ee9c40b)</option>
+      <option value="5ee9c40d">第8題(5ee9c40d)</option>
+      <option value="5ee9c40e">第9題(5ee9c40e)</option>
+      <option value="5ee9c410">第10題(5ee9c410)</option>
+      <option value="5ee9c417">第11題(5ee9c417)</option>
+      <option value="5ee9c419">第12題(5ee9c419)</option>
+      <option value="5ee9c41b">第13題(5ee9c41b)</option>
+      <option value="5ee9c41d">第14題(5ee9c41d)</option>
+      <option value="5ee9c41e">第15題(5ee9c41e)</option>
+      <option value="5ee9c420">第16題(5ee9c420)</option>
+      <option value="5ee9c422">第17題(5ee9c422)</option>
+      <option value="5ee9c424">第18題(5ee9c424)</option>
+      <option value="5ee9c426">第19題(5ee9c426)</option>
+      <option value="5ee9c427">第20題(5ee9c427)</option> </select
+    ><br />
+
+    <div id="myDiv2">
+      <h2></h2>
+    </div>
+    <button id="b02" type="button">送出讚</button>
+    <hr />
+
+    <hr />
+    <br /><br />
+
+    <!-- // <h2>LOAD CrowdTangle data</h2>  
+    
+    // <div id="myDiv5"><h2>load 結果</h2></div>
+    // <button id="b05" type="button">載入(互動率)</button> -->
+  </body>
+</html>

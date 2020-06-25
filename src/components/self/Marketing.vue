@@ -1,5 +1,5 @@
 <template>
-  <div class="marketing">
+  <div class="marketing" :style="{'backgroundColor':bg}">
     <div class="marketing-title">課綱強調生活情境</div>
     <div
       class="marketing-text"
@@ -8,11 +8,11 @@
       <div class="marketing-img-blueline">
         <span />
       </div>
-      <div v-for="data in dataArray" class="marketing-img" :key="data.id">
+      <div v-for="(data,i) in dataArray" class="marketing-img" :key="data.id">
         <div class="marketing-img-text">{{data.text}}</div>
         <div class="marketing-img-container">
           <div class="marketing-img-date">{{data.date}}</div>
-          <div class="marketing-img-signup">
+          <div class="marketing-img-signup" @click="signup(i+1)">
             <span>報名</span>
           </div>
           <img class="marketing-img-area" src alt style="background-color:rgba(0,0,0,0.5)" />
@@ -23,14 +23,42 @@
 </template>
 
 <script>
+import { sendGaMethods } from '@/mixins/masterBuilder.js'
 import content from '../../data/content'
 
 export default {
   name: 'Marketing',
+  props: {
+    bg: {
+      type: String,
+      default: '#fff',
+    },
+  },
+  mixins: [sendGaMethods],
   data() {
     return {
       dataArray: content.marketing,
     }
+  },
+  methods: {
+    signup(index) {
+      // do something
+      const url = window.location.href
+      let aim = ''
+      if (url.indexOf('/story') !== -1) {
+        aim = 'story'
+      } else if (url.indexOf('/poll') !== -1) {
+        aim = 'poll'
+      } else {
+        aim = 'timeline'
+      }
+
+      this.sendGA({
+        category: 'activity',
+        action: 'click',
+        label: `${aim}報名${index}`,
+      })
+    },
   },
 }
 </script>
@@ -46,7 +74,7 @@ export default {
     line-height: 1.6;
     text-align: left;
     color: #000000;
-    margin-top: 100px;
+    padding-top: 100px;
     margin-left: 21.9%;
   }
   .marketing-text {

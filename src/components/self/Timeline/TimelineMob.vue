@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="timeline-mob-all">
     <div ref="MobPart0">
       <MobPart0 :windowSize="windowSize" :img="imgs.part0" />
     </div>
@@ -28,7 +28,7 @@
         <MobPart6 :windowSize="windowSize" :img="imgs.part6" :active="activeArray[6]" />
       </li>
       <li class="no-dot" ref="MobPart7">
-        <MobPart7 />
+        <MobPart7 :active="activeArray[7]" />
       </li>
       <li ref="MobPart8">
         <MobPart8 :windowSize="windowSize" :img="imgs.part8" :active="activeArray[8]" />
@@ -92,8 +92,15 @@ export default {
       const result = this.activeArray.slice()
 
       for (let i = 0; i < this.tops.length; i++) {
-        if (pageYOffset > this.tops[i]) {
+        if (i === 0) {
           result[i] = true
+        } else {
+          if (
+            pageYOffset >
+            this.tops[i] - 0.75 * (this.tops[i] - this.tops[i - 1])
+          ) {
+            result[i] = true
+          }
         }
       }
       this.activeArray = result
@@ -102,6 +109,7 @@ export default {
       let tmp = 0
 
       Object.keys(this.$refs).forEach((key, i) => {
+        // console.log(this.$refs[key].offsetHeight)
         if (i === 0) {
           this.tops[i] = 0
           tmp = this.$refs[key].offsetHeight
@@ -121,6 +129,11 @@ export default {
       this.updateProgress()
     })
   },
+  updated() {
+    this.$nextTick(() => {
+      this.countTops()
+    })
+  },
   destroyed() {
     window.removeEventListener('scroll', this.updateProgress)
   },
@@ -128,6 +141,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.timeline-mob-all {
+  overflow-x: hidden;
+}
 .timeline-mob {
   position: relative;
   &::before {

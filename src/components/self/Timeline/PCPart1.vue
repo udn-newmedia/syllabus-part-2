@@ -69,7 +69,7 @@ export default {
 
     .content {
       line-height: 1.7;
-      font-family: MicrosoftJhengHei;
+      font-family: 'Microsoft JhengHei', Roboto, sans-serif;
       font-size: 23px;
       text-align: left;
       color: #eeeeee;

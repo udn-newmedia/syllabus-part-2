@@ -54,9 +54,6 @@ export default {
   left: 0;
 }
 .part3-title {
-  width: 391px;
-  height: 58px;
-  font-family: SourceHanSansTW-Bold;
   font-size: 40px;
   font-weight: bold;
   line-height: 1.56;
@@ -70,7 +67,6 @@ export default {
   li {
     position: relative;
     padding-left: 22px;
-    font-family: SourceHanSansTW-Regular;
     font-size: 20px;
     max-width: 39vw;
     &::before {
@@ -85,13 +81,13 @@ export default {
     }
   }
   span {
-    font-family: SourceHanSansTW-Bold;
+    font-weight: bold;
   }
 }
 .part3-quote {
   position: absolute;
   top: 28.06%;
-  font-family: SourceHanSerifTC-SemiBold;
+  font-family: sans-serif;
   font-weight: 600;
   line-height: 1.39;
   text-align: left;
@@ -126,7 +122,6 @@ export default {
     }
     div {
       font-size: 15px;
-      font-family: SourceHanSansTW-Regular;
       line-height: 1.4;
       text-align: left;
       color: #929292;

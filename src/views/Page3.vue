@@ -1,12 +1,15 @@
 <template>
   <div class="poll">
+    <HeaderTypeC theme="dark" />
     <Twinkle />
     <MessageSource />
     <ThreeEvents />
+    <ArticleCastAnchor title="完整民調結果" />
     <AllPolls :windowSize="windowSize" />
+    <ArticleCastAnchor title="各校提解方" />
     <Schools />
     <PressLike />
-
+    <ArticleCastAnchor title="解焦慮看這" />
     <Marketing />
     <OtherProjects />
     <PageFooter slot="footer">
@@ -19,6 +22,9 @@
 </template>
 
 <script>
+import HeaderTypeC from '@/components/header/HeaderTypeC'
+import ArticleCastAnchor from '@/components/layout/ArticleCastAnchor'
+
 import Twinkle from '@/components/poll/Twinkle'
 import MessageSource from '@/components/poll/MessageSource'
 import ThreeEvents from '@/components/poll/ThreeEvents'
@@ -37,6 +43,8 @@ import PageBackTop from '@/components/layout/PageBackTop.vue'
 export default {
   name: 'Page3',
   components: {
+    HeaderTypeC,
+    ArticleCastAnchor,
     Twinkle,
     MessageSource,
     ThreeEvents,
@@ -71,3 +79,11 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.header-anchor__list
+  .header-anchor__list__item
+  .header-anchor__list__item--active
+  .header-anchor__list__item--dark {
+  border-color: #00ccb1 !important;
+}
+</style>

@@ -51,8 +51,8 @@ import otherProjectsMobImg5 from "../assets/img/timeline/relate/12-years-educati
 import otherProjectsMobImg6 from "../assets/img/timeline/relate/12-years-education_r6_mob.jpg";
 import videoImg1 from "../assets/img/timeline/12-years-education_v1.jpg";
 import videoImg2 from "../assets/img/timeline/12-years-education_v2.jpg";
-import videoImg3 from "../assets/img/timeline/12-years-education_v3.jpg";
-import videoImg4 from "../assets/img/timeline/12-years-education_v4.jpg";
+import videoImg4 from "../assets/img/timeline/12-years-education_v3.jpg";
+import videoImg3 from "../assets/img/timeline/12-years-education_v4.jpg";
 
 import pollWebImage1 from "../assets/img/poll/web/poll_chart1_web.svg";
 import pollPadImage1 from "../assets/img/poll/pad/poll_chart1_pad.svg";
@@ -148,7 +148,7 @@ const content = {
     },
     {
       img: videoImg3,
-      name: "我 是 誰",
+      name: "管 中 閔",
       id: videoImg3,
       description: "TEACH FOR TAIWAN為台灣而教",
       text: "聯合報帶讀者進入教改時間洪流，從一個個教育政策",
@@ -156,7 +156,7 @@ const content = {
     },
     {
       img: videoImg4,
-      name: "管 中 閔",
+      name: "藍 偉 瑩",
       id: videoImg4,
       description: "TEACH FOR TAIWAN為台灣而教",
       text: "聯合報帶讀者進入教改時間洪流，從一個個教育政策",

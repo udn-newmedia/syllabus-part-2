@@ -47,8 +47,6 @@ export default {
       padding: 60px 4.4% 120px;
     }
     .mob-part1-intro {
-      font-family: source-han-sans-traditional, sans-serif;
-      // font-family: SourceHanSansTW-Regular;
       font-size: 20px;
     }
     .mob-part1-quote {

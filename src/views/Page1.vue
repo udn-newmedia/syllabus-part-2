@@ -1,12 +1,7 @@
 <template>
   <div class="page1">
-    <div class="timeline-pc">
-      <TimelinePC />
-      <!-- <TimelinePC v-if="windowSize.width >=1025" /> -->
-    </div>
-    <div class="timeline-mob">
-      <TimelineMob :windowSize="windowSize" />
-    </div>
+    <TimelinePC v-if="windowSize.width >=1025" />
+    <TimelineMob :windowSize="windowSize" v-else />
     <Video />
   </div>
 </template>
@@ -28,8 +23,8 @@ export default {
   },
   methods: {
     checkWindowSize() {
-      const { innerWidth } = window
-      this.windowSize = { width: innerWidth }
+      const { outerWidth } = window
+      this.windowSize = { width: outerWidth }
     },
   },
   created() {
@@ -43,17 +38,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.timeline-pc {
-  display: none;
-  @media screen and (min-width: 1025px) {
-    display: block;
-  }
-}
-.timeline-mob {
-  display: block;
-  @media screen and (min-width: 1025px) {
-    display: none;
-  }
-}
-</style>

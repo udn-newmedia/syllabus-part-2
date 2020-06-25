@@ -1,4 +1,5 @@
 import Vue from "vue";
+import store from "../../store/index";
 
 import "bootstrap/scss/bootstrap.scss";
 import "@/assets/style/reset.scss";
@@ -17,5 +18,6 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 new Vue({
+  store,
   render: (h) => h(App),
 }).$mount("#app");

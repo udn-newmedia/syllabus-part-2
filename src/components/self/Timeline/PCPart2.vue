@@ -2,9 +2,7 @@
   <div class="main-title">
     <div class="title-text">
       <div :class="{ active }">
-        <div class="text-1">
-          教改是全民的，與社會脫離不了關係，如果社會不改善，教育也沒有辦法改革。
-        </div>
+        <div class="text-1">教改是全民的，與社會脫離不了關係，如果社會不改善，教育也沒有辦法改革。</div>
         <div class="text-2">1994.10.29</div>
         <div class="text-2">行政院教育改革審議委員會召集人李遠哲</div>
       </div>
@@ -17,9 +15,9 @@
 
 <script>
 export default {
-  name: "PCPart2",
+  name: 'PCPart2',
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -42,7 +40,7 @@ export default {
     }
     .text-1 {
       font-size: 36.8px;
-      font-family: SourceHanSerifTC-SemiBold;
+      font-family: sans-serif;
       font-weight: 600;
       line-height: 1.7;
       text-align: left;
@@ -52,7 +50,7 @@ export default {
     }
     .text-2 {
       font-size: 20px;
-      font-family: SourceHanSerifTC-Medium;
+      font-family: sans-serif;
       font-weight: 500;
       line-height: 1.5;
       text-align: left;

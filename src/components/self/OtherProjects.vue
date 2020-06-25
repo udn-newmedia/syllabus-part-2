@@ -1,17 +1,21 @@
 <template>
-  <div class="otherprojects-wrapper">
+  <div class="otherprojects-wrapper" :class="`theme-${theme}`">
     <div class="otherprojects-title">108課綱上路周年追蹤報導</div>
 
     <div class="otherprojects-container" ref="otherprojectsContainer">
       <a
         v-for="(item,i) in dataArray"
-        :href="item.link"
-        class="otherprojects-image-wrapper text-decoration-none"
+        :href="operatedLink(item.link,i)"
+        :target="i!==active&&'_blank'"
+        class="otherprojects-image-wrapper"
         :class="{'hovered':hovered===i}"
-        :style="{opacity:i===active&&0.4}"
+        :style="{opacity:i===active&&0.4,
+        cursor: i===active && 'auto'}"
         @mouseenter="hoverItem(i)"
         @mouseleave="unHoverItem()"
+        @click="goToOther(i)"
         :key="item.id"
+        :disabled="true"
       >
         <div class="otherprojects-image">
           <img
@@ -41,9 +45,16 @@
 
 <script>
 import content from '../../data/content'
+import { sendGaMethods } from '@/mixins/masterBuilder.js'
 
 export default {
   name: 'OtherProjects',
+  props: {
+    theme: {
+      type: String,
+      default: 'dark',
+    },
+  },
   data() {
     return {
       dataArray: content.otherProjects,
@@ -53,6 +64,7 @@ export default {
       activePage: 0,
     }
   },
+  mixins: [sendGaMethods],
   methods: {
     checkWindowSize() {
       if (window.innerWidth < 768) {
@@ -62,7 +74,7 @@ export default {
       }
     },
     hoverItem(i) {
-      if (this.windowSize === 'web' && i !== 3) {
+      if (this.windowSize === 'web' && i !== this.active) {
         this.hovered = i
       }
     },
@@ -77,21 +89,36 @@ export default {
       }
     },
     getActive() {
-      const currentURL = new URL(window.location.href)
-      const { pathname } = currentURL
-      switch (pathname) {
-        case '/':
-          this.active = 3
-          break
-        // case value:
-        //   break
-        // case value:
-        //   break
-        // case value:
-        //   break
+      const currentURL = window.location.href
 
-        default:
-          break
+      if (currentURL.indexOf('/fivebig') !== -1) {
+        this.active = 0
+      } else if (currentURL.indexOf('/poll') !== -1) {
+        this.active = 1
+      } else if (currentURL.indexOf('/thenumber') !== -1) {
+        this.active = 2
+      } else if (currentURL.indexOf('/story') !== -1) {
+        this.active = 4
+      } else if (currentURL.indexOf('/wanttosay') !== -1) {
+        this.active = 5
+      } else {
+        this.active = 3
+      }
+    },
+    goToOther(index) {
+      if (index !== this.active) {
+        this.sendGA({
+          category: 'related',
+          action: 'click',
+          label: index + 1,
+        })
+      }
+    },
+    operatedLink(link, index) {
+      if (index === this.active) {
+        return 'javascript:void(0);'
+      } else {
+        return link
       }
     },
   },
@@ -114,8 +141,6 @@ export default {
 <style lang="scss" scoped>
 .otherprojects-wrapper {
   margin-top: 10%;
-  // height: 100vh;
-  background-color: #000000;
   padding: 0 15% 100px;
   .otherprojects-title {
     font-family: NotoSansCJKtc-Medium;
@@ -123,7 +148,6 @@ export default {
     font-weight: 500;
     line-height: 2.56;
     text-align: center;
-    color: #eeeeee;
     padding-top: 16.39vh;
   }
   .otherprojects-container {
@@ -134,6 +158,7 @@ export default {
       overflow-y: scroll;
     }
     .otherprojects-image-wrapper {
+      text-decoration: none;
       flex: 0 0 33.33%;
       max-width: 33.33%;
       height: 30.14vh;
@@ -225,6 +250,28 @@ export default {
     line-height: 1.7;
     text-align: center;
     color: #00ccb1;
+  }
+  &.theme-dark {
+    background-color: #000000;
+    .otherprojects-title {
+      color: #eeeeee;
+    }
+  }
+  &.theme-light {
+    background-color: #fff;
+    text-decoration: none;
+    .otherprojects-title {
+      color: #000;
+    }
+    .otherprojects-container {
+      .otherprojects-image-wrapper {
+        .otherprojects-subtitle-wrapper {
+          .otherprojects-subtitle {
+            color: #000;
+          }
+        }
+      }
+    }
   }
 }
 </style>

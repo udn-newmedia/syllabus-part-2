@@ -42,7 +42,6 @@ export default {
 .part4-title {
   height: 58px;
   font-size: 40px;
-  font-family: SourceHanSansTW-Bold;
   font-weight: bold;
   line-height: 1.88;
   text-align: left;
@@ -56,7 +55,6 @@ export default {
   li {
     position: relative;
     padding-left: 22px;
-    font-family: SourceHanSansTW-Regular;
     font-size: 20px;
     max-width: 39vw;
     &::before {
@@ -71,7 +69,6 @@ export default {
     }
   }
   .bold {
-    font-family: SourceHanSansTW-Bold;
     font-weight: bold;
   }
 }
@@ -98,7 +95,6 @@ export default {
       }
     }
     div {
-      font-family: SourceHanSansTW-Regular;
       font-size: 15px;
       line-height: 1.4;
       text-align: left;

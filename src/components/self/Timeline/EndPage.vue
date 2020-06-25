@@ -26,7 +26,7 @@ export default {
   height: 100vh;
   width: 100vw;
   .end-page-text {
-    font-family: SourceHanSerifTC;
+    font-family: sans-serif;
     font-size: 36.8px;
     font-weight: 600;
     line-height: 1.7;

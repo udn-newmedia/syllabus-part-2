@@ -45,6 +45,7 @@
 
 <script>
 import content from '../../data/content'
+import { sendGaMethods } from '@/mixins/masterBuilder.js'
 
 export default {
   name: 'Video',
@@ -53,24 +54,54 @@ export default {
       dataArray: content.timelineVideo,
       active: 0,
       videoId: '',
+      trigger: null,
       playerVars: {
         autoplay: 1,
         mute: 1,
-        playsinline: 1
+        playsinline: 1,
       },
-      swiperOption: {
-        pagination: {
-          el: '.swiper-pagination'
-        }
-      }
     }
   },
+  mixins: [sendGaMethods],
   methods: {
     playVideo() {
-      this.player.playVideo()
+      if (!this.trigger) {
+        let name = ''
+        console.log(this.active)
+        switch (this.active) {
+          case 0:
+            name = '劉安婷'
+            break
+          case 1:
+            name = '嚴長壽'
+            break
+          case 2:
+            name = '管中閔'
+            break
+
+          default:
+            name = '藍偉瑩'
+            break
+        }
+
+        this.trigger = setInterval(() => {
+          this.player.getPlayerState().then(() => {
+            this.sendGA({
+              category: 'video',
+              action: 'times',
+              label: name,
+            })
+          })
+        }, 5000)
+        this.player.playVideo()
+      }
     },
     pauseVideo() {
-      this.player.pauseVideo()
+      if (this.trigger) {
+        clearInterval(this.trigger)
+        this.trigger = null
+        this.player.pauseVideo()
+      }
     },
     changeActive(index) {
       const target = content.timelineVideo[index]
@@ -82,7 +113,32 @@ export default {
         this.playerVars.autoplay = 1
       }
 
+      this.pauseVideo()
       this.playVideo()
+
+      let name = ''
+
+      switch (index) {
+        case 0:
+          name = '劉安婷'
+          break
+        case 1:
+          name = '嚴長壽'
+          break
+        case 2:
+          name = '管中閔'
+          break
+
+        default:
+          name = '藍偉瑩'
+          break
+      }
+
+      this.sendGA({
+        category: 'video',
+        action: 'click',
+        label: name,
+      })
     },
     autoplayHandler() {
       const wrapperTop = this.$refs.videoWrapper.offsetTop
@@ -100,26 +156,28 @@ export default {
       } else {
         this.pauseVideo()
       }
-    }
+    },
   },
   computed: {
     player() {
       return this.$refs.youtube.player
     },
-    swiper() {
-      return this.$refs.mySwiper.$swiper
-    }
   },
   created() {
     window.addEventListener('scroll', this.autoplayHandler)
   },
   mounted() {
-    this.changeActive(0)
+    const target = content.timelineVideo[0]
+    this.videoId = target.videoId
+    this.active = 0
+    if (!this.playerVars.autoplay) {
+      this.playerVars.autoplay = 1
+    }
     this.playerVars.autoplay = 0
   },
   destroyed() {
     window.removeEventListener('scroll', this.autoplayHandler)
-  }
+  },
 }
 </script>
 

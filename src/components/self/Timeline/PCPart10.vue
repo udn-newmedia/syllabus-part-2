@@ -79,11 +79,9 @@ export default {
         line-height: 1.56;
         text-align: left;
         color: #000000;
-        font-family: SourceHanSansTW-Bold;
         padding-bottom: 15px;
       }
       .part10-nextlist {
-        font-family: SourceHanSansTW-Regular;
         font-size: 20px;
         line-height: 1.7;
         text-align: left;
@@ -107,8 +105,7 @@ export default {
         display: flex;
         // justify-content: flex-start;
         align-items: center;
-        // height: 57px;
-        font-family: SourceHanSansTW-Bold;
+
         span {
           display: inline-block;
           white-space: nowrap;
@@ -122,7 +119,6 @@ export default {
         }
       }
       .part10-today-list {
-        font-family: SourceHanSansTW;
         font-size: 20px;
         line-height: 1.7;
         text-align: left;
@@ -131,7 +127,6 @@ export default {
         li {
           position: relative;
           padding-left: 22px;
-          font-family: SourceHanSansTW-Regular;
           font-size: 20px;
           max-width: 39vw;
           &::before {
@@ -145,7 +140,7 @@ export default {
             border-radius: 50%;
           }
           span {
-            font-family: SourceHanSansTW-Bold;
+            font-weight: bold;
           }
         }
       }
