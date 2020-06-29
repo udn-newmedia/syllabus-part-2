@@ -12,7 +12,9 @@
       >台灣教育改革從1994年410大遊行至今已26年，許多立意良善的改革方向，都在手段錯誤、社會價值觀未翻轉、政府與民間溝通不足下變調，甚至失敗收場。《聯合報》帶讀者進入時間洪流，從政策推動過程中，反思：「為什麼台灣教改，總在失敗？」</p>
       <div class="arrow-wrapper">
         <!-- <font-awesome-icon :icon="['fas', 'angle-double-down']" size="4x" /> -->
-        <NmdArrow />
+        <span @click="moveToPart2">
+          <NmdArrow />
+        </span>
       </div>
     </div>
   </div>
@@ -27,6 +29,11 @@ export default {
   props: { img: { type: String } },
   components: { NmdArrow },
   mixins: [autoResize_3, sendGaMethods],
+  methods: {
+    moveToPart2() {
+      this.$emit('moveToPart2')
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -78,7 +85,7 @@ export default {
     .arrow-wrapper {
       color: #eeeeee;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       padding-top: 10%;
     }
   }

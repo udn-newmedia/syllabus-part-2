@@ -18,8 +18,9 @@
       :key="message.id"
     >{{ message.text }}</span>
     <div class="arrow-wrapper">
-      <!-- <font-awesome-icon :icon="['fas', 'angle-double-down']" size="4x" /> -->
-      <NmdArrow />
+      <span @click="goToNext()">
+        <NmdArrow />
+      </span>
     </div>
   </div>
 </template>
@@ -71,6 +72,9 @@ export default {
         this.messages[index].opacity = 0.2
       }
     },
+    goToNext() {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+    },
   },
   mounted() {
     this.twinkleMessages()
@@ -87,6 +91,7 @@ export default {
   background-color: #000;
   color: #fff;
   width: 100vw;
+  max-width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -98,6 +103,8 @@ export default {
   color: #f5f5f5;
   @media screen and (max-width: 767.99px) {
     font-size: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .twinkle-title {
@@ -107,8 +114,11 @@ export default {
   line-height: 1.25;
   text-align: left;
   color: #fbfbfb;
+  font-family: GenJyuuGothic-Monospace-Heavy;
   @media screen and (max-width: 767.99px) {
     font-size: 36px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .arrow-wrapper {

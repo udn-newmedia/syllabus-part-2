@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <PageIndicator />
     <HeaderTypeA slot="header">
       <HeaderLink />
     </HeaderTypeA>
@@ -22,7 +23,7 @@
 
 <script>
 // @ is an alias to /src
-// import Header from '@/components/self/Header.vue'
+import PageIndicator from '@/components/layout/PageIndicator'
 import Marketing from '@/components/self/Marketing.vue'
 import HeaderTypeA from '@/components/header/HeaderTypeA'
 import HeaderLink from '@/components/self/HeaderLink'
@@ -43,7 +44,7 @@ export default {
   name: 'App',
   mixins: [autoResize_3, sendGaMethods, fbBrowserResize],
   components: {
-    // Header,
+    PageIndicator,
     HeaderTypeA,
     HeaderLink,
     Page1,

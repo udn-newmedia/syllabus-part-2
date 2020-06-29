@@ -91,15 +91,15 @@ export default {
     getActive() {
       const currentURL = window.location.href
 
-      if (currentURL.indexOf('/fivebig') !== -1) {
+      if (currentURL.indexOf('../problem') !== -1) {
         this.active = 0
       } else if (currentURL.indexOf('/poll') !== -1) {
         this.active = 1
-      } else if (currentURL.indexOf('/thenumber') !== -1) {
+      } else if (currentURL.indexOf('/data') !== -1) {
         this.active = 2
       } else if (currentURL.indexOf('/story') !== -1) {
         this.active = 4
-      } else if (currentURL.indexOf('/wanttosay') !== -1) {
+      } else if (currentURL.indexOf('/collect') !== -1) {
         this.active = 5
       } else {
         this.active = 3

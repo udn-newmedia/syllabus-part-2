@@ -67,7 +67,7 @@ export default {
     playVideo() {
       if (!this.trigger) {
         let name = ''
-        console.log(this.active)
+
         switch (this.active) {
           case 0:
             name = '劉安婷'

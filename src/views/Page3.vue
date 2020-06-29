@@ -1,6 +1,9 @@
 <template>
   <div class="poll">
-    <HeaderTypeC theme="dark" />
+    <PageIndicator />
+    <HeaderTypeC theme="dark" pageTitle="課綱上路周年大調查">
+      <HeaderLink theme="dark" />
+    </HeaderTypeC>
     <Twinkle />
     <MessageSource />
     <ThreeEvents />
@@ -22,9 +25,10 @@
 </template>
 
 <script>
+import PageIndicator from '@/components/layout/PageIndicator'
 import HeaderTypeC from '@/components/header/HeaderTypeC'
 import ArticleCastAnchor from '@/components/layout/ArticleCastAnchor'
-
+import HeaderLink from '@/components/self/HeaderLink'
 import Twinkle from '@/components/poll/Twinkle'
 import MessageSource from '@/components/poll/MessageSource'
 import ThreeEvents from '@/components/poll/ThreeEvents'
@@ -43,7 +47,9 @@ import PageBackTop from '@/components/layout/PageBackTop.vue'
 export default {
   name: 'Page3',
   components: {
+    PageIndicator,
     HeaderTypeC,
+    HeaderLink,
     ArticleCastAnchor,
     Twinkle,
     MessageSource,
