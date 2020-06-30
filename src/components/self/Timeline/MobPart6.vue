@@ -1,5 +1,5 @@
 <template>
-  <div class="mob-part6" ref="mobPart6">
+  <div class="mob-part6">
     <div class="mob-part6-text">
       <h1 class="mob-part6-title">課程重大變革：九年一貫</h1>
       <ul class="mob-part6-list">
@@ -33,7 +33,7 @@
     <div class="mob-part6-img">
       <img
         class="img-fluid"
-        :class="{active}"
+        :class="{ active }"
         :src="windowSize.width >= 768 ? img.pad : img.mob"
         alt
       />
@@ -45,27 +45,10 @@
 <script>
 export default {
   name: 'MobPart6',
-  props: { windowSize: { type: Object }, img: { type: Object } },
-  data() {
-    return { active: false }
-  },
-  methods: {
-    updateProgress() {
-      const containerTop = this.$refs.mobPart6.offsetTop
-      const { innerHeight, pageYOffset } = window
-      if (pageYOffset > containerTop - 0.5 * innerHeight) {
-        this.active = true
-      }
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateProgress)
-  },
-  mounted() {
-    this.updateProgress()
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.updateProgress)
+  props: {
+    windowSize: { type: Object },
+    img: { type: Object },
+    active: { type: Boolean },
   },
 }
 </script>

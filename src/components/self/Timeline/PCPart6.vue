@@ -74,7 +74,6 @@ export default {
         line-height: 1.56;
         text-align: left;
         color: #000000;
-        font-family: SourceHanSansTW-Bold;
         padding-right: 8vw;
       }
       p {
@@ -83,12 +82,11 @@ export default {
         line-height: 1.7;
         text-align: left;
         color: #000000;
-        font-family: SourceHanSansTW-Regular;
         max-width: 39.06vw;
         margin: 15px 0 23px;
         padding-right: 1%;
         span {
-          font-family: SourceHanSansTW-Bold;
+          font-weight: bold;
         }
       }
     }
@@ -105,8 +103,6 @@ export default {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        // height: 57px;
-        font-family: SourceHanSansTW-Bold;
         span {
           display: inline-block;
           white-space: nowrap;

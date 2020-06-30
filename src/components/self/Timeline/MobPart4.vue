@@ -1,11 +1,11 @@
 <template>
-  <div class="mob-part4" ref="mobPart4">
+  <div class="mob-part4">
     <div class="mob-part4-text">
       <h1 class="mob-part4-title">鬆綁：廣設高中大學</h1>
       <p class="mob-part4-chart-text">在教改訴求與政策引導下，高中、大學數量激增，1994年到2019年間，大學錄取率從44%成長到100%。</p>
 
       <div class="mob-part4-chart">
-        <img :class="{active}" :src="windowSize.width >= 768 ? chart.pad : chart.mob" alt />
+        <img :class="{ active }" :src="windowSize.width >= 768 ? chart.pad : chart.mob" alt />
       </div>
       <h2 class="mob-part4ーsubtitle">2020年的今天</h2>
       <ul class="mob-part4-today-list">
@@ -25,7 +25,7 @@
     <div class="mob-part4-img">
       <img
         class="img-fluid"
-        :class="{active}"
+        :class="{ active }"
         :src="windowSize.width >= 768 ? img.pad : img.mob"
         alt
       />
@@ -41,27 +41,7 @@ export default {
     windowSize: { type: Object },
     img: { type: Object },
     chart: { type: Object },
-  },
-  data() {
-    return { active: false }
-  },
-  methods: {
-    updateProgress() {
-      const containerTop = this.$refs.mobPart4.offsetTop
-      const { innerHeight, pageYOffset } = window
-      if (pageYOffset > containerTop - 0.5 * innerHeight) {
-        this.active = true
-      }
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateProgress)
-  },
-  mounted() {
-    this.updateProgress()
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.updateProgress)
+    active: { type: Boolean },
   },
 }
 </script>

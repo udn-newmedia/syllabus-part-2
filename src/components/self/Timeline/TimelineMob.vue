@@ -1,37 +1,48 @@
 <template>
-  <div>
-    <MobPart0 :windowSize="windowSize" :img="imgs.part0" />
-    <MobPart1 :windowSize="windowSize" :img="imgs.part1" />
+  <div class="timeline-mob-all">
+    <div ref="MobPart0">
+      <MobPart0 :windowSize="windowSize" :img="imgs.part0" />
+    </div>
+    <div ref="MobPart1">
+      <MobPart1 :windowSize="windowSize" :img="imgs.part1" :active="activeArray[1]" />
+    </div>
     <ul class="timeline-mob">
-      <li>
-        <MobPart2 :windowSize="windowSize" :img="imgs.part2" />
+      <li ref="MobPart2">
+        <MobPart2 :windowSize="windowSize" :img="imgs.part2" :active="activeArray[2]" />
       </li>
-      <li>
-        <MobPart3 :windowSize="windowSize" :img="imgs.part3" />
+      <li ref="MobPart3">
+        <MobPart3 :windowSize="windowSize" :img="imgs.part3" :active="activeArray[3]" />
       </li>
-      <li>
-        <MobPart4 :windowSize="windowSize" :img="imgs.part4" :chart="imgs.part4_0" />
+      <li ref="MobPart4">
+        <MobPart4
+          :windowSize="windowSize"
+          :img="imgs.part4"
+          :chart="imgs.part4_0"
+          :active="activeArray[4]"
+        />
       </li>
-      <li>
-        <MobPart5 :windowSize="windowSize" :img="imgs.part5" />
+      <li ref="MobPart5">
+        <MobPart5 :windowSize="windowSize" :img="imgs.part5" :active="activeArray[5]" />
       </li>
-      <li>
-        <MobPart6 :windowSize="windowSize" :img="imgs.part6" />
+      <li ref="MobPart6">
+        <MobPart6 :windowSize="windowSize" :img="imgs.part6" :active="activeArray[6]" />
       </li>
-      <li class="no-dot">
-        <MobPart7 />
+      <li class="no-dot" ref="MobPart7">
+        <MobPart7 :active="activeArray[7]" />
       </li>
-      <li>
-        <MobPart8 :windowSize="windowSize" :img="imgs.part8" />
+      <li ref="MobPart8">
+        <MobPart8 :windowSize="windowSize" :img="imgs.part8" :active="activeArray[8]" />
       </li>
-      <li>
-        <MobPart9 :windowSize="windowSize" :img="imgs.part9" />
+      <li ref="MobPart9">
+        <MobPart9 :windowSize="windowSize" :img="imgs.part9" :active="activeArray[9]" />
       </li>
-      <li>
-        <MobPart10 :windowSize="windowSize" :img="imgs.part10" />
+      <li ref="MobPart10">
+        <MobPart10 :windowSize="windowSize" :img="imgs.part10" :active="activeArray[10]" />
       </li>
     </ul>
-    <MobEndPage />
+    <div ref="MobEndPage">
+      <MobEndPage />
+    </div>
   </div>
 </template>
 
@@ -69,12 +80,70 @@ export default {
     MobEndPage,
   },
   data() {
-    return { imgs: content.timelineMobImgs }
+    const activeArray = []
+    for (let i = 0; i < 12; i += 1) {
+      activeArray.push(false)
+    }
+    return { imgs: content.timelineMobImgs, activeArray, tops: [] }
+  },
+  methods: {
+    updateProgress() {
+      const { pageYOffset } = window
+      const result = this.activeArray.slice()
+
+      for (let i = 0; i < this.tops.length; i++) {
+        if (i === 0) {
+          result[i] = true
+        } else {
+          if (
+            pageYOffset >
+            this.tops[i] - 0.75 * (this.tops[i] - this.tops[i - 1])
+          ) {
+            result[i] = true
+          }
+        }
+      }
+      this.activeArray = result
+    },
+    countTops() {
+      let tmp = 0
+
+      Object.keys(this.$refs).forEach((key, i) => {
+        // console.log(this.$refs[key].offsetHeight)
+        if (i === 0) {
+          this.tops[i] = 0
+          tmp = this.$refs[key].offsetHeight
+        } else {
+          this.tops[i] = tmp
+          tmp = this.$refs[key].offsetHeight + this.tops[i]
+        }
+      })
+    },
+  },
+  created() {
+    window.addEventListener('scroll', this.updateProgress)
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.countTops()
+      this.updateProgress()
+    })
+  },
+  updated() {
+    this.$nextTick(() => {
+      this.countTops()
+    })
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.updateProgress)
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.timeline-mob-all {
+  overflow-x: hidden;
+}
 .timeline-mob {
   position: relative;
   &::before {

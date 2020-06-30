@@ -1,40 +1,64 @@
 <template>
   <div id="app">
+    <PageIndicator />
     <HeaderTypeA slot="header">
       <HeaderLink />
     </HeaderTypeA>
     <!-- <Header /> -->
-    <router-view />
+    <Timeline />
+    <!-- <router-view /> -->
     <Marketing />
     <OtherProjects />
-    <Editors />
-    <PageFooter slot="footer" />
+
+    <PageFooter slot="footer">
+      <Editors />
+
+      <!-- <FooterShare /> -->
+      <FooterFbComment />
+      <FooterLogo />
+      <PageBackTop />
+    </PageFooter>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import Header from '@/components/self/Header.vue'
-import Marketing from '@/components/self/Marketing.vue'
-import HeaderTypeA from '@/components/header/HeaderTypeA'
-import HeaderLink from '@/components/self/HeaderLink'
-import OtherProjects from '@/components/self/OtherProjects'
-import Editors from '@/components/self/Editors.vue'
+import PageIndicator from "@/components/layout/PageIndicator";
+import Marketing from "@/components/self/Marketing.vue";
+import HeaderTypeA from "@/components/header/HeaderTypeA";
+import HeaderLink from "@/components/self/HeaderLink";
+import Timeline from "@/views/Timeline";
+import OtherProjects from "@/components/self/OtherProjects";
+import Editors from "@/components/self/Editors.vue";
 
-import PageFooter from '@/components/footer/PageFooter.vue'
+import PageFooter from "@/components/footer/PageFooter.vue";
+
+import { autoResize_3, sendGaMethods } from "@/mixins/masterBuilder.js";
+import { fbBrowserResize } from "@/mixins/fbBrowserResize.js";
+// import FooterShare from '@/components/footer/FooterShare.vue'
+import FooterFbComment from "@/components/footer/FooterFbComment.vue";
+import FooterLogo from "@/components/footer/FooterLogo.vue";
+import PageBackTop from "@/components/layout/PageBackTop.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  mixins: [autoResize_3, sendGaMethods, fbBrowserResize],
   components: {
-    // Header,
+    PageIndicator,
     HeaderTypeA,
     HeaderLink,
+    Timeline,
     Marketing,
     OtherProjects,
     Editors,
     PageFooter,
+    //
+    // FooterShare,
+    FooterFbComment,
+    FooterLogo,
+    PageBackTop,
   },
-}
+};
 </script>
 
 <style lang="scss">

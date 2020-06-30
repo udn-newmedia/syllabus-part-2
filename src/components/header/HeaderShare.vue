@@ -1,5 +1,5 @@
 <template>
-  <sectoin class="header-share">
+  <section class="header-share">
     <!-- mob -->
     <div
       v-if="isMob"
@@ -8,9 +8,15 @@
         'header-share__container--active': toggleFlag && headerActiveFlag,
       }"
     >
-      <div class="header-share__share-icon"><ShareFb /></div>
-      <div class="header-share__share-icon"><ShareLine /></div>
-      <div class="header-share__share-icon"><ShareTwitter /></div>
+      <div class="header-share__share-icon">
+        <ShareFb />
+      </div>
+      <div class="header-share__share-icon">
+        <ShareLine />
+      </div>
+      <div class="header-share__share-icon">
+        <ShareTwitter />
+      </div>
     </div>
     <div
       v-if="isMob"
@@ -19,7 +25,7 @@
         'header-share__share-icon__toggle': true,
         'header-share__share-icon__toggle--active': toggleFlag && headerActiveFlag,
         'custom-button': true,
-      }" 
+      }"
       @click="toggle()"
     >
       <i class="icon-share-alt-solid" />
@@ -37,14 +43,14 @@
         <ShareTwitter :theme="theme" />
       </div>
     </div>
-  </sectoin>
+  </section>
 </template>
 
 <script>
-import { autoResize_2, sendGaMethods } from '@/mixins/masterBuilder.js';
-import ShareFb from '@/components/pinhead/ShareFb.vue';
-import ShareLine from '@/components/pinhead/ShareLine.vue';
-import ShareTwitter from '@/components/pinhead/ShareTwitter.vue';
+import { autoResize_2, sendGaMethods } from '@/mixins/masterBuilder.js'
+import ShareFb from '@/components/pinhead/ShareFb.vue'
+import ShareLine from '@/components/pinhead/ShareLine.vue'
+import ShareTwitter from '@/components/pinhead/ShareTwitter.vue'
 
 export default {
   name: 'HeaderShare',
@@ -69,12 +75,12 @@ export default {
   },
   watch: {
     headerActiveFlag: function(value) {
-      if (!value) this.toggleFlag = false;
-    }
+      if (!value) this.toggleFlag = false
+    },
   },
   methods: {
     toggle() {
-      this.toggleFlag = !this.toggleFlag;
+      this.toggleFlag = !this.toggleFlag
     },
   },
 }
@@ -107,7 +113,7 @@ export default {
     opacity: 0;
     transform-origin: 100% 0;
     transform: translate(100%, -50%) scale(0);
-    transition: .333s ease-in-out;
+    transition: 0.333s ease-in-out;
     @include pc {
       position: relative;
       top: auto;
@@ -153,7 +159,7 @@ export default {
       line-height: 0.5;
       transform: translateY(-52%);
       transform-origin: 100% 0;
-      transition: .333s ease-in-out;
+      transition: 0.333s ease-in-out;
       &.header-share__share-icon__toggle--active {
         right: 28%;
         transform: translateY(-52%) scale(1.35);

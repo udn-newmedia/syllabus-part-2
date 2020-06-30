@@ -1,6 +1,6 @@
 <template>
-  <div class="mob-part7" ref="mobPart7">
-    <div class="mob-part7-text mob-part7-quote" :class="{active}">
+  <div class="mob-part7">
+    <div class="mob-part7-text mob-part7-quote" :class="{ active }">
       <p
         class="mob-part7-quote-text"
       >溝通不足與配套措施不夠，許多教育工作者只能在「忙、茫、盲」中度過。一道道令人眼花撩亂的教改方案中，教育目的不斷地異化變質，孩子們對這些「教改大餐」消化不良。</p>
@@ -15,26 +15,8 @@
 <script>
 export default {
   name: 'MobPart7',
-  data() {
-    return { active: false }
-  },
-  methods: {
-    updateProgress() {
-      const containerTop = this.$refs.mobPart7.offsetTop
-      const { innerHeight, pageYOffset } = window
-      if (pageYOffset > containerTop - 0.5 * innerHeight) {
-        this.active = true
-      }
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateProgress)
-  },
-  mounted() {
-    this.updateProgress()
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.updateProgress)
+  props: {
+    active: { type: Boolean },
   },
 }
 </script>

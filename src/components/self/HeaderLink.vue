@@ -2,20 +2,51 @@
   <div class="header-link-wrapper">
     <a
       class="header-link"
-      :class="{active:active===i}"
+      :class="[{active:active===i},`theme-${theme}`]"
       v-for="(link,i) in links"
       :href="link.link"
       :key="link.text"
+      @click="sendGA({
+        category: 'menu',
+        action: 'click',
+        label: link.gaLabel,
+      })"
     >{{link.text}}</a>
   </div>
 </template>
 
 <script>
 import content from '../../data/content'
+import { sendGaMethods } from '@/mixins/masterBuilder.js'
+
 export default {
   name: 'HeaderLink',
+  props: { theme: { type: String, default: 'light' } },
+  mixins: [sendGaMethods],
   data() {
     return { links: content.headerLink, active: 3 }
+  },
+  methods: {
+    getActive() {
+      const currentURL = window.location.href
+
+      if (currentURL.indexOf('../problem') !== -1) {
+        this.active = 0
+      } else if (currentURL.indexOf('/poll') !== -1) {
+        this.active = 1
+      } else if (currentURL.indexOf('/data') !== -1) {
+        this.active = 2
+      } else if (currentURL.indexOf('/story') !== -1) {
+        this.active = 4
+      } else if (currentURL.indexOf('/collect') !== -1) {
+        this.active = 5
+      } else {
+        this.active = 3
+      }
+    },
+  },
+  mounted() {
+    this.getActive()
   },
 }
 </script>
@@ -26,20 +57,22 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   padding-left: 30px;
   .header-link {
     white-space: nowrap;
     display: block;
     opacity: 0.7;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.82;
     text-align: left;
-    color: #333333;
+    &:hover {
+      text-decoration: none;
+    }
     &.active {
       opacity: 1;
       text-decoration: underline;
+      font-weight: 500;
     }
   }
   @media screen and (max-width: 374.99px) {
@@ -49,6 +82,18 @@ export default {
     .header-link {
       font-size: 24px;
       line-height: 1.52;
+    }
+  }
+  .theme-light {
+    color: #333333;
+    &:hover {
+      color: #000;
+    }
+  }
+  .theme-dark {
+    color: #eeeeee;
+    &:hover {
+      color: #fff;
     }
   }
 }

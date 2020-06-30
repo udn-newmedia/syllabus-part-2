@@ -58,23 +58,23 @@
 </template>
 
 <script>
-import content from '../../../data/content'
+import content from "../../../data/content";
 
-import PCPart1 from './PCPart1'
-import PCPart2 from './PCPart2'
-import PCPart3 from './PCPart3'
-import PCPart4 from './PCPart4'
-import PCPart5 from './PCPart5'
-import PCPart6 from './PCPart6'
-import PCPart7 from './PCPart7'
-import PCPart8 from './PCPart8'
-import PCPart9 from './PCPart9'
-import PCPart10 from './PCPart10'
-import PCPart11 from './PCPart11'
-import EndPage from './EndPage'
+import PCPart1 from "./PCPart1";
+import PCPart2 from "./PCPart2";
+import PCPart3 from "./PCPart3";
+import PCPart4 from "./PCPart4";
+import PCPart5 from "./PCPart5";
+import PCPart6 from "./PCPart6";
+import PCPart7 from "./PCPart7";
+import PCPart8 from "./PCPart8";
+import PCPart9 from "./PCPart9";
+import PCPart10 from "./PCPart10";
+import PCPart11 from "./PCPart11";
+import EndPage from "./EndPage";
 
 export default {
-  name: 'TimelinePC',
+  name: "TimelinePC",
   components: {
     PCPart1,
     PCPart2,
@@ -90,12 +90,12 @@ export default {
     EndPage,
   },
   data() {
-    const activeArray = []
+    const activeArray = [];
     const pageNumber = {
       length: 15.0148,
       startLength: 2.4547,
       endLength: 1,
-    }
+    };
 
     const accumulationArray = [
       100,
@@ -110,7 +110,7 @@ export default {
       1318.04,
       1401.48,
       1501.48,
-    ]
+    ];
     // P1:100vw
     // P2:145.47vw
     // P3:132.5vw
@@ -127,7 +127,7 @@ export default {
     // sum:1501.48vw
 
     for (let i = 0; i < accumulationArray.length; i += 1) {
-      activeArray.push(false)
+      activeArray.push(false);
     }
 
     return {
@@ -138,73 +138,73 @@ export default {
       pageNumber,
       accumulationArray,
       listWidth: 1501.48,
-    }
+    };
   },
   methods: {
     updateProgress() {
-      const containerTop = this.$refs.timeLineContainer.offsetTop
-      const containerHeight = this.$refs.timeLineContainer.offsetHeight
-      const containBottom = containerTop + containerHeight
-      const listHeight = this.$refs.timeLineList.offsetHeight
-      const { scrollTop } = document.documentElement
-      const { innerHeight } = window
-      const scrollBottom = scrollTop + innerHeight
+      const containerTop = this.$refs.timeLineContainer.offsetTop;
+      const containerHeight = this.$refs.timeLineContainer.offsetHeight;
+      const containBottom = containerTop + containerHeight;
+      const listHeight = this.$refs.timeLineList.offsetHeight;
+      const { scrollTop } = document.documentElement;
+      const { innerHeight } = window;
+      const scrollBottom = scrollTop + innerHeight;
       // const bodyHeight = document.body.offsetHeight
 
-      const allHeight = containerHeight - listHeight
+      const allHeight = containerHeight - listHeight;
       // count the progress
-      const progress = ((scrollTop - containerTop) * 100) / allHeight
+      const progress = ((scrollTop - containerTop) * 100) / allHeight;
 
-      this.progress = progress
+      this.progress = progress;
       // count the distance for bottom after leaving the area
-      this.bottom = scrollBottom - containBottom
+      this.bottom = scrollBottom - containBottom;
 
       // count active
       const allLength = this.accumulationArray[
         this.accumulationArray.length - 1
-      ]
+      ];
       for (let i = 0; i < this.accumulationArray.length; i += 1) {
         if (i === 0) {
-          this.activeArray[i] = true
+          this.activeArray[i] = true;
         } else if (i === 1) {
           if (
             this.progress >
-            (this.accumulationArray[0] * 0.5 * 100) / allLength
+            (this.accumulationArray[0] * 0.75 * 100) / allLength
           ) {
-            this.activeArray[i] = true
+            this.activeArray[i] = true;
           }
         } else {
           if (
             this.progress >
             ((this.accumulationArray[i - 2] +
               (this.accumulationArray[i - 1] - this.accumulationArray[i - 2]) *
-                0.5) *
+                0.75) *
               100) /
               allLength
           ) {
-            this.activeArray[i] = true
+            this.activeArray[i] = true;
           }
         }
       }
     },
     countListWidth() {
-      const { innerWidth } = window
+      const { innerWidth } = window;
 
       if (innerWidth <= 1280) {
         this.listWidth =
-          this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth)
+          this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth);
       } else {
         this.listWidth =
-          this.pageNumber.length * 100 + 50 - 0.09 * (innerWidth - 1280)
+          this.pageNumber.length * 100 + 50 - 0.09 * (innerWidth - 1280);
       }
     },
   },
   computed: {
     areaTranslateX() {
       if (this.progress < 100) {
-        return this.progress * -1
+        return this.progress * -1;
       }
-      return 100 * -1
+      return 100 * -1;
       // if (this.progress < 100) {
       //   return this.progress * -(1 - 1 / this.pageNumber.length)
       // }
@@ -212,24 +212,24 @@ export default {
     },
     bottomDistance() {
       if (this.progress <= 100) {
-        return 0
+        return 0;
       }
-      return this.bottom
+      return this.bottom;
     },
   },
   created() {
-    window.addEventListener('scroll', this.updateProgress)
-    window.addEventListener('resize', this.countListWidth)
+    window.addEventListener("scroll", this.updateProgress);
+    window.addEventListener("resize", this.countListWidth);
   },
   mounted() {
-    this.updateProgress()
-    this.countListWidth()
+    this.updateProgress();
+    this.countListWidth();
   },
   destroyed() {
-    window.removeEventListener('scroll', this.updateProgress)
-    window.removeEventListener('resize', this.countListWidth)
+    window.removeEventListener("scroll", this.updateProgress);
+    window.removeEventListener("resize", this.countListWidth);
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 @media (max-width: 576px) {
@@ -251,7 +251,7 @@ export default {
   position: relative;
 }
 .time-spot::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 40px;
   height: 40px;
@@ -265,7 +265,7 @@ export default {
 // timeline-area
 .time-line-container {
   overflow: hidden;
-  background-image: url('../../../assets/bg/bg01.jpg');
+  background-image: url("../../../assets/bg/bg01.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -274,7 +274,7 @@ export default {
   list-style: none;
   display: flex;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(21.67% + 20px);
     left: 245.47vw;
@@ -367,6 +367,13 @@ export default {
   to {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+</style>
+<style lang="scss">
+.ScrollDownArrow {
+  .arrows {
+    cursor: auto !important;
   }
 }
 </style>

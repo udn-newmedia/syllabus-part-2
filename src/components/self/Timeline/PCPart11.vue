@@ -60,10 +60,8 @@ export default {
         line-height: 1.56;
         text-align: left;
         color: #000000;
-        font-family: SourceHanSansTW-Bold;
       }
       .part11-subtitle {
-        font-family: SourceHanSansTW-Bold;
         font-size: 20px;
         font-weight: bold;
         line-height: 1.7;
@@ -78,7 +76,6 @@ export default {
         li {
           position: relative;
           padding-left: 22px;
-          font-family: SourceHanSansTW-Regular;
           font-size: 20px;
           max-width: 39.06vw;
           &::before {
@@ -92,11 +89,11 @@ export default {
             border-radius: 50%;
           }
           .strong-red {
-            font-family: SourceHanSansTW-Bold;
+            font-weight: bold;
             color: #eb0f43;
           }
           .strong-black {
-            font-family: SourceHanSansTW-Bold;
+            font-weight: bold;
           }
         }
       }

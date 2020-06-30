@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <h1>Poll</h1>
+    <Poll />
   </div>
 </template>
 
 <script>
+import Poll from '@/views/Poll'
 
 export default {
   name: 'App',
   components: {
-
-  }
+    Poll,
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

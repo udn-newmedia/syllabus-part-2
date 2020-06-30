@@ -1,4 +1,3 @@
-import colorful from "../assets/colorful.jpeg";
 import trump from "../assets/people/trump.jpeg";
 import abe from "../assets/people/abe.jpg";
 import johnson from "../assets/people/johnson.jpeg";
@@ -51,18 +50,74 @@ import otherProjectsMobImg5 from "../assets/img/timeline/relate/12-years-educati
 import otherProjectsMobImg6 from "../assets/img/timeline/relate/12-years-education_r6_mob.jpg";
 import videoImg1 from "../assets/img/timeline/12-years-education_v1.jpg";
 import videoImg2 from "../assets/img/timeline/12-years-education_v2.jpg";
-import videoImg3 from "../assets/img/timeline/12-years-education_v3.jpg";
-import videoImg4 from "../assets/img/timeline/12-years-education_v4.jpg";
+import videoImg4 from "../assets/img/timeline/12-years-education_v3.jpg";
+import videoImg3 from "../assets/img/timeline/12-years-education_v4.jpg";
+
+import pollWebImage1 from "../assets/img/poll/web/poll_chart1_web.svg";
+import pollPadImage1 from "../assets/img/poll/pad/poll_chart1_pad.svg";
+import pollMobImage1 from "../assets/img/poll/mob/poll_chart1_mob.svg";
+import pollWebImage2 from "../assets/img/poll/web/poll_chart2_web.svg";
+import pollPadImage2 from "../assets/img/poll/pad/poll_chart2_web.svg";
+import pollMobImage2 from "../assets/img/poll/mob/poll_chart2_mob.svg";
+import pollWebImage3 from "../assets/img/poll/web/poll_chart3_web.svg";
+import pollPadImage3 from "../assets/img/poll/pad/poll_chart3_web.svg";
+import pollMobImage3 from "../assets/img/poll/mob/poll_chart3_mob.svg";
+import pollWebImage4 from "../assets/img/poll/web/poll_chart4_web.svg";
+import pollPadImage4 from "../assets/img/poll/pad/poll_chart4_web.svg";
+import pollMobImage4 from "../assets/img/poll/mob/poll_chart4_mob.svg";
+import pollWebImage5 from "../assets/img/poll/web/poll_chart5_web.svg";
+import pollPadImage5 from "../assets/img/poll/pad/poll_chart5_web.svg";
+import pollMobImage5 from "../assets/img/poll/mob/poll_chart5_mob.svg";
+import pollWebImage6 from "../assets/img/poll/web/poll_chart6_web.svg";
+import pollPadImage6 from "../assets/img/poll/pad/poll_chart6_web.svg";
+import pollMobImage6 from "../assets/img/poll/mob/poll_chart6_mob.svg";
+import pollWebImage7 from "../assets/img/poll/web/poll_chart7_web.svg";
+import pollPadImage7 from "../assets/img/poll/pad/poll_chart7_web.svg";
+import pollMobImage7 from "../assets/img/poll/mob/poll_chart7_mob.svg";
+import pollWebImage8 from "../assets/img/poll/web/poll_chart8_web.svg";
+import pollPadImage8 from "../assets/img/poll/pad/poll_chart8_web.svg";
+import pollMobImage8 from "../assets/img/poll/mob/poll_chart8_mob.svg";
+import pollWebImage9 from "../assets/img/poll/web/poll_chart9_web.svg";
+import pollPadImage9 from "../assets/img/poll/pad/poll_chart9_web.svg";
+import pollMobImage9 from "../assets/img/poll/mob/poll_chart9_mob.svg";
+import pollWebImage10 from "../assets/img/poll/web/poll_chart10_web.svg";
+import pollPadImage10 from "../assets/img/poll/pad/poll_chart10_web.svg";
+import pollMobImage10 from "../assets/img/poll/mob/poll_chart10_mob.svg";
+import pollWebImage11 from "../assets/img/poll/web/poll_chart11_web.svg";
+import pollPadImage11 from "../assets/img/poll/pad/poll_chart11_web.svg";
+import pollMobImage11 from "../assets/img/poll/mob/poll_chart11_mob.svg";
+import pollWebImage12 from "../assets/img/poll/web/poll_chart12_web.svg";
+import pollPadImage12 from "../assets/img/poll/pad/poll_chart12_web.svg";
+import pollMobImage12 from "../assets/img/poll/mob/poll_chart12_mob.svg";
+
+import pressLikeImg1 from "../assets/img/poll/poll_good_white.svg";
+import pressLikeImg2 from "../assets/img/poll/poll_good_blue.svg";
 
 const content = {
   headerLink: [
-    { text: "揭露課綱五大亂象", link: "/" },
-    { text: "課綱上路周年大調查", link: "/" },
-    { text: "台灣教育關鍵數字", link: "/" },
-    { text: "台灣教改為何總失敗", link: "/" },
-    { text: "升學主義悲歌", link: "/" },
-    { text: "關於108課綱 我想說......", link: "/" },
-    { text: "更多課綱相關報導", link: "/" },
+    {
+      text: "揭露課綱五大亂象",
+      link: "../problem",
+      gaLabel: "揭露課綱五大亂象",
+    },
+    {
+      text: "課綱上路周年大調查",
+      link: "../poll",
+      gaLabel: "課綱上路周年大調查",
+    },
+    {
+      text: "台灣教育關鍵數字",
+      link: "../problem",
+      gaLabel: "台灣教育關鍵數字",
+    },
+    { text: "台灣教改為何總失敗", link: "../", gaLabel: "台灣教改為何總失敗" },
+    { text: "升學主義悲歌", link: "../story", gaLabel: "升學主義悲歌" },
+    {
+      text: "關於108課綱 我想說......",
+      link: "..collect/",
+      gaLabel: "關於108課綱 我想說",
+    },
+    { text: "更多課綱相關報導", link: "../more", gaLabel: "更多課綱相關報導" },
   ],
   timelineImgs: {
     part1: timelineImg1,
@@ -108,7 +163,7 @@ const content = {
     },
     {
       img: videoImg3,
-      name: "我 是 誰",
+      name: "管 中 閔",
       id: videoImg3,
       description: "TEACH FOR TAIWAN為台灣而教",
       text: "聯合報帶讀者進入教改時間洪流，從一個個教育政策",
@@ -116,7 +171,7 @@ const content = {
     },
     {
       img: videoImg4,
-      name: "管 中 閔",
+      name: "藍 偉 瑩",
       id: videoImg4,
       description: "TEACH FOR TAIWAN為台灣而教",
       text: "聯合報帶讀者進入教改時間洪流，從一個個教育政策",
@@ -128,83 +183,48 @@ const content = {
       title: "無效預算？揭露108課綱五大亂象",
       img: { web: otherProjectsWebImg1, mob: otherProjectsMobImg1 },
       id: `${otherProjectsWebImg1}${otherProjectsMobImg1}`,
-      link: "/",
+      link: "../problem",
     },
     {
       title: "課綱上路周年大調查",
       img: { web: otherProjectsWebImg4, mob: otherProjectsMobImg4 },
       id: "otherProjectsWebImg2otherProjectsMobImg2",
-      link: "/",
+      link: "../poll",
     },
     {
       title: "台灣教育關鍵數字",
       img: { web: otherProjectsWebImg3, mob: otherProjectsMobImg3 },
       id: `${otherProjectsWebImg3}${otherProjectsMobImg3}`,
-      link: "/",
+      link: "../data",
     },
     {
       title: "台灣教改為何總失敗",
       img: { web: otherProjectsWebImg4, mob: otherProjectsMobImg4 },
       id: `${otherProjectsWebImg4}${otherProjectsMobImg4}`,
-      link: "/",
+      link: "../",
     },
     {
       title: "升學主義悲歌：19歲少女的告白",
       img: { web: otherProjectsWebImg5, mob: otherProjectsMobImg5 },
       id: `${otherProjectsWebImg5}${otherProjectsMobImg5}`,
-      link: "/",
+      link: "../story",
     },
     {
       title: "關於108課綱 我想說......",
       img: { web: otherProjectsWebImg6, mob: otherProjectsMobImg6 },
       id: `${otherProjectsWebImg6}${otherProjectsMobImg6}`,
-      link: "/",
+      link: "../collect",
     },
   ],
   marketing: [
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然1" },
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然2" },
   ],
-
-  page2Articles: [
-    { title: "1testtesttesttesttestest", id: "gfdgdfgs", height: "500px" },
-    {
-      title: "2testtesttesttesttestest",
-      id: "gfdgdfgssdfsfs",
-      height: "300px",
-    },
-    {
-      title: "34testtesttesttesttestest",
-      id: "gfdgdfgssfsvxv",
-      height: "800px",
-    },
-    {
-      title: "5testtesttesttesttestest",
-      id: "gfdgdfgsxcvsgsf",
-      height: "600px",
-    },
-    {
-      title: "6testtesttesttesttestest",
-      id: "gfdgdfgfsffewbjs",
-      height: "200px",
-    },
-    {
-      title: "7testtesttesttesttestest",
-      id: "gfdgdfgsjgjyjhf",
-      height: "700px",
-    },
-    {
-      title: "8testtesttesttesttestest",
-      id: "gfdgdfgshrhtr54",
-      height: "400px",
-    },
-  ],
   theirVoice: [
     { img: trump, id: "trump", description: "我想贏得選舉" },
     { img: abe, id: "abe", description: "奧運能辦了嗎" },
     { img: johnson, id: "johnson", description: "你說我頭髮很亂？" },
   ],
-  progress: { img: colorful },
   twinkleArticle: [
     "升學壓力鬆綁才有助改革",
     "與現實有差距",
@@ -244,6 +264,72 @@ const content = {
     "要先改變升學主義及明星學校",
     "鄉鎮學校的壓力在於資源不足",
   ],
+  pollImages: {
+    img1: {
+      web: pollWebImage1,
+      pad: pollPadImage1,
+      mob: pollMobImage1,
+    },
+    img2: {
+      web: pollWebImage2,
+      pad: pollPadImage2,
+      mob: pollMobImage2,
+    },
+    img3: {
+      web: pollWebImage3,
+      pad: pollPadImage3,
+      mob: pollMobImage3,
+    },
+    img4: {
+      web: pollWebImage4,
+      pad: pollPadImage4,
+      mob: pollMobImage4,
+    },
+    img5: {
+      web: pollWebImage5,
+      pad: pollPadImage5,
+      mob: pollMobImage5,
+    },
+    img6: {
+      web: pollWebImage6,
+      pad: pollPadImage6,
+      mob: pollMobImage6,
+    },
+    img7: {
+      web: pollWebImage7,
+      pad: pollPadImage7,
+      mob: pollMobImage7,
+    },
+    img8: {
+      web: pollWebImage8,
+      pad: pollPadImage8,
+      mob: pollMobImage8,
+    },
+    img9: {
+      web: pollWebImage9,
+      pad: pollPadImage9,
+      mob: pollMobImage9,
+    },
+    img10: {
+      web: pollWebImage10,
+      pad: pollPadImage10,
+      mob: pollMobImage10,
+    },
+    img11: {
+      web: pollWebImage11,
+      pad: pollPadImage11,
+      mob: pollMobImage11,
+    },
+    img12: {
+      web: pollWebImage12,
+      pad: pollPadImage12,
+      mob: pollMobImage12,
+    },
+  },
+  pressLikeImgs: {
+    unlike: pressLikeImg1,
+    like: pressLikeImg2,
+  },
 };
 
 export default content;

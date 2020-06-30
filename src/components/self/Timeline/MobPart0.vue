@@ -36,7 +36,7 @@ export default {
     text-align: left;
     color: #eeeeee;
     .mob-part0-title-bold {
-      font-family: GenSenMaruGothicTW-Heavy;
+      font-family: GenJyuuGothicX-Monospace-Heavy;
       font-size: 75px;
       font-weight: 900;
       line-height: 1.33;

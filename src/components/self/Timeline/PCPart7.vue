@@ -77,7 +77,6 @@ export default {
         line-height: 1.56;
         text-align: left;
         color: #000000;
-        font-family: SourceHanSansTW-Bold;
       }
       .part7-91list {
         line-height: 1.7;
@@ -86,7 +85,6 @@ export default {
         li {
           position: relative;
           padding-left: 22px;
-          font-family: SourceHanSansTW-Regular;
           font-size: 20px;
           max-width: 39vw;
           &::before {
@@ -115,8 +113,6 @@ export default {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        // height: 57px;
-        font-family: SourceHanSansTW-Bold;
         span {
           display: inline-block;
           white-space: nowrap;

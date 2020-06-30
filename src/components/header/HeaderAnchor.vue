@@ -13,9 +13,7 @@
         :id="'header-anchor-' + item.title"
         @click="handleScrollVert(item.title)"
       >
-        <p class="small">
-          {{ item.title }}
-        </p>
+        <p class="small">{{ item.title }}</p>
       </li>
     </ul>
   </div>
@@ -30,8 +28,8 @@ export default {
   mixins: [autoResize_2, sendGaMethods],
   props: {
     theme: {
-      type: String
-    }
+      type: String,
+    },
   },
   methods: {
     handleScrollVert(index) {
@@ -39,7 +37,7 @@ export default {
       this.sendGA({
         category: 'anchor',
         action: 'click',
-        label: index
+        label: index,
       })
     },
     handleScrollHorz(index) {
@@ -47,14 +45,16 @@ export default {
       const anchor = document.getElementById(`header-anchor-${index}`)
       anchorList.scrollTo({
         left: anchor.offsetLeft,
-        behavior: 'smooth'
+        behavior: 'smooth',
       })
     },
     handleScroll() {
       const list = this.$store.state.anchorList
 
       for (let i = list.length - 1; i >= 0; i -= 1) {
-        const pos = document.getElementById(`anchor-${list[i].title}`).getBoundingClientRect().top
+        const pos = document
+          .getElementById(`anchor-${list[i].title}`)
+          .getBoundingClientRect().top
         if (pos < 1) {
           this.$store.dispatch('updateAnchorStatus', { index: i, status: true })
           for (let j = 0; j < list.length; j += 1) {
@@ -66,12 +66,12 @@ export default {
     },
     handleUpdateAnchor(index, status) {
       this.$store.dispatch('updateAnchorStatus', { index, status })
-    }
+    },
   },
   computed: {
     anchorList() {
       return this.$store.state.anchorList
-    }
+    },
   },
   watch: {
     anchorList: {
@@ -86,15 +86,15 @@ export default {
           }
         }
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll, false)
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll, false)
-  }
+  },
 }
 </script>
 
@@ -147,7 +147,8 @@ ul {
       // font-weight: bold;
       border-bottom: solid 2px;
       &.header-anchor__list__item--dark {
-        border-color: #cf0606;
+        // border-color: #cf0606;
+        border-color: #00ccb1;
         p {
           color: #ffffff;
         }
