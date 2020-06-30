@@ -40,7 +40,7 @@ export default {
     }
     .text-1 {
       font-size: 36.8px;
-      font-family: sans-serif;
+      font-family: source-han-serif-tc, sans-serif;
       font-weight: 600;
       line-height: 1.7;
       text-align: left;
@@ -50,7 +50,7 @@ export default {
     }
     .text-2 {
       font-size: 20px;
-      font-family: sans-serif;
+      font-family: source-han-serif-tc, sans-serif;
       font-weight: 500;
       line-height: 1.5;
       text-align: left;

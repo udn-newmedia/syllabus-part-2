@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: source-han-sans-cjk-tc, "Noto Sans TC", "Microsoft JhengHei", Roboto, sans-serif;
+html,
+body {
+  font-family: source-han-sans-cjk-tc, "Noto Sans TC", "Microsoft JhengHei",
+    Roboto, sans-serif;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   &.white {
     color: #f6f6f6;
@@ -65,8 +73,10 @@ p {
   }
 }
 
-a, button {
-  font-family: source-han-sans-cjk-tc, "Noto Sans TC", "Microsoft JhengHei", Roboto, sans-serif;
+a,
+button {
+  font-family: source-han-sans-cjk-tc, "Noto Sans TC", "Microsoft JhengHei",
+    Roboto, sans-serif;
 }
 
 .article {
@@ -82,7 +92,10 @@ a, button {
     max-width: 720px;
     padding: 72px 0 72px 0;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin-bottom: 16px;
   }
 

@@ -1,7 +1,3 @@
-// import trump from "../assets/people/trump.jpeg";
-// import abe from "../assets/people/abe.jpg";
-// import johnson from "../assets/people/johnson.jpeg";
-
 import timelineImg1 from "../assets/img/timeline/web/12-years-education_web_bg.jpg";
 import timelineImg2 from "../assets/img/timeline/web/12-years-education_web_pic1.jpg";
 import timelineImg3 from "../assets/img/timeline/web/12-years-education_web_pic2.jpg";
@@ -97,27 +93,31 @@ const content = {
   headerLink: [
     {
       text: "揭露課綱五大亂象",
-      link: "../problem",
+      link: "../problem/",
       gaLabel: "揭露課綱五大亂象",
     },
     {
       text: "課綱上路周年大調查",
-      link: "../poll",
+      link: "../poll/",
       gaLabel: "課綱上路周年大調查",
     },
     {
       text: "台灣教育關鍵數字",
-      link: "../problem",
+      link: "../problem/",
       gaLabel: "台灣教育關鍵數字",
     },
     { text: "台灣教改為何總失敗", link: "../", gaLabel: "台灣教改為何總失敗" },
-    { text: "升學主義悲歌", link: "../story", gaLabel: "升學主義悲歌" },
+    { text: "升學主義悲歌", link: "../story/", gaLabel: "升學主義悲歌" },
     {
       text: "關於108課綱 我想說......",
-      link: "..collect/",
+      link: "../collect/",
       gaLabel: "關於108課綱 我想說",
     },
-    { text: "更多課綱相關報導", link: "../more", gaLabel: "更多課綱相關報導" },
+    {
+      text: "更多課綱相關報導",
+      link: "https://udn.com/search/word/2/108課綱",
+      gaLabel: "更多課綱相關報導",
+    },
   ],
   timelineImgs: {
     part1: timelineImg1,
@@ -183,19 +183,19 @@ const content = {
       title: "無效預算？揭露108課綱五大亂象",
       img: { web: otherProjectsWebImg1, mob: otherProjectsMobImg1 },
       id: `${otherProjectsWebImg1}${otherProjectsMobImg1}`,
-      link: "../problem",
+      link: "../problem/",
     },
     {
       title: "課綱上路周年大調查",
       img: { web: otherProjectsWebImg4, mob: otherProjectsMobImg4 },
       id: "otherProjectsWebImg2otherProjectsMobImg2",
-      link: "../poll",
+      link: "../poll/",
     },
     {
       title: "台灣教育關鍵數字",
       img: { web: otherProjectsWebImg3, mob: otherProjectsMobImg3 },
       id: `${otherProjectsWebImg3}${otherProjectsMobImg3}`,
-      link: "../data",
+      link: "../data/",
     },
     {
       title: "台灣教改為何總失敗",
@@ -207,24 +207,20 @@ const content = {
       title: "升學主義悲歌：19歲少女的告白",
       img: { web: otherProjectsWebImg5, mob: otherProjectsMobImg5 },
       id: `${otherProjectsWebImg5}${otherProjectsMobImg5}`,
-      link: "../story",
+      link: "../story/",
     },
     {
       title: "關於108課綱 我想說......",
       img: { web: otherProjectsWebImg6, mob: otherProjectsMobImg6 },
       id: `${otherProjectsWebImg6}${otherProjectsMobImg6}`,
-      link: "../collect",
+      link: "../collect/",
     },
   ],
   marketing: [
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然1" },
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然2" },
   ],
-  // theirVoice: [
-  //   { img: trump, id: "trump", description: "我想贏得選舉" },
-  //   { img: abe, id: "abe", description: "奧運能辦了嗎" },
-  //   { img: johnson, id: "johnson", description: "你說我頭髮很亂？" },
-  // ],
+
   twinkleArticle: [
     "升學壓力鬆綁才有助改革",
     "與現實有差距",

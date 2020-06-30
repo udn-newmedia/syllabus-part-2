@@ -87,7 +87,7 @@ export default {
 .part3-quote {
   position: absolute;
   top: 28.06%;
-  font-family: sans-serif;
+  font-family: source-han-serif-tc, sans-serif;
   font-weight: 600;
   line-height: 1.39;
   text-align: left;

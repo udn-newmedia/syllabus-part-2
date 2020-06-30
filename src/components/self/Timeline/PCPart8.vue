@@ -33,7 +33,7 @@ export default {
       opacity: 1;
     }
     .part8-text {
-      font-family: sans-serif;
+      font-family: source-han-serif-tc, sans-serif;
       font-size: 36.8px;
       font-weight: 600;
       line-height: 1.7;
@@ -42,7 +42,7 @@ export default {
       margin-top: 27.22vh;
     }
     .part8-quote {
-      font-family: sans-serif;
+      font-family: source-han-serif-tc, sans-serif;
       font-size: 20px;
       font-weight: 500;
       line-height: 1.5;

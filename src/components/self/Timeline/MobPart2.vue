@@ -46,7 +46,7 @@ export default {
     padding-top: 72px;
     padding-left: 14.3%;
     padding-right: 7.8%;
-    font-family: source-han-sans-traditional, sans-serif;
+    // font-family: source-han-sans-traditional, sans-serif;
     .mob-part2-title {
       margin-bottom: 15px;
 
@@ -78,7 +78,7 @@ export default {
     }
     .mob-part2-content {
       margin-bottom: 30px;
-      font-family: source-han-serif-tc, serif;
+      font-family: source-han-serif-tc, sans-serif;
       font-size: 30px;
       font-weight: 600;
       line-height: 1.7;

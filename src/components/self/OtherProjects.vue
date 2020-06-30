@@ -157,6 +157,7 @@ export default {
   margin-top: 10%;
   padding: 0 15% 100px;
   .otherprojects-title {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', Roboto, sans-serif;
     font-size: 25px;
     font-weight: 500;
     line-height: 2.56;
@@ -194,7 +195,7 @@ export default {
         display: flex;
         justify-content: flex-start;
         .otherprojects-subtitle {
-          // font-family: MicrosoftJhengHei;
+          font-family: 'Microsoft JhengHei', Roboto, sans-serif;
           font-size: 18px;
           line-height: 1.7;
           justify-self: start;
