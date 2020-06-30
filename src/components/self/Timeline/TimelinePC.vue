@@ -265,7 +265,7 @@ export default {
 // timeline-area
 .time-line-container {
   overflow: hidden;
-  background-image: url("../../../assets/bg/bg01.jpg");
+  background-image: url("../../../assets/img/timeline/backgroung.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
 }

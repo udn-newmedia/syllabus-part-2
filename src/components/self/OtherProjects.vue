@@ -194,7 +194,7 @@ export default {
         display: flex;
         justify-content: flex-start;
         .otherprojects-subtitle {
-          font-family: MicrosoftJhengHei;
+          // font-family: MicrosoftJhengHei;
           font-size: 18px;
           line-height: 1.7;
           justify-self: start;
@@ -258,7 +258,7 @@ export default {
   .otherprojects-link {
     margin-top: 11.11vh;
     display: block;
-    font-family: MicrosoftJhengHei;
+    // font-family: MicrosoftJhengHei;
     font-size: 18px;
     line-height: 1.7;
     text-align: center;
