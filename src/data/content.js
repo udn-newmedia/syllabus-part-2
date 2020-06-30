@@ -1,6 +1,6 @@
-import trump from "../assets/people/trump.jpeg";
-import abe from "../assets/people/abe.jpg";
-import johnson from "../assets/people/johnson.jpeg";
+// import trump from "../assets/people/trump.jpeg";
+// import abe from "../assets/people/abe.jpg";
+// import johnson from "../assets/people/johnson.jpeg";
 
 import timelineImg1 from "../assets/img/timeline/web/12-years-education_web_bg.jpg";
 import timelineImg2 from "../assets/img/timeline/web/12-years-education_web_pic1.jpg";
@@ -220,11 +220,11 @@ const content = {
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然1" },
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然2" },
   ],
-  theirVoice: [
-    { img: trump, id: "trump", description: "我想贏得選舉" },
-    { img: abe, id: "abe", description: "奧運能辦了嗎" },
-    { img: johnson, id: "johnson", description: "你說我頭髮很亂？" },
-  ],
+  // theirVoice: [
+  //   { img: trump, id: "trump", description: "我想贏得選舉" },
+  //   { img: abe, id: "abe", description: "奧運能辦了嗎" },
+  //   { img: johnson, id: "johnson", description: "你說我頭髮很亂？" },
+  // ],
   twinkleArticle: [
     "升學壓力鬆綁才有助改革",
     "與現實有差距",
