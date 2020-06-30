@@ -1,31 +1,25 @@
 <template>
   <div class="end-page-wrapper">
     <div>
-      <p class="end-page-text">這一次教改，有機會改變台灣長年以考試為目標、填鴨式教學的升學風氣嗎？</p>
+      <p class="end-page-text">
+        這一次教改，有機會改變台灣長年以考試為目標、填鴨式教學的升學風氣嗎？
+      </p>
       <div class="arrow-wrapper">
-        <!-- <font-awesome-icon :icon="['fas','angle-double-down']" size="4x" /> -->
-        <span @click="moveToNext">
-          <NmdArrow iconColor="#ababab" />
-        </span>
+        <NmdArrow iconColor="#ababab" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import NmdArrow from '@/components/pinhead/NmdArrow.vue'
-import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
+import NmdArrow from "@/components/pinhead/NmdArrow.vue";
+import { autoResize_3, sendGaMethods } from "@/mixins/masterBuilder.js";
 
 export default {
-  name: 'EndPage',
+  name: "EndPage",
   components: { NmdArrow },
   mixins: [autoResize_3, sendGaMethods],
-  methods: {
-    moveToNext() {
-      this.$emit('moveToNext')
-    },
-  },
-}
+};
 </script>
 <style lang="scss" scoped>
 .end-page-wrapper {

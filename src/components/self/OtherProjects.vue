@@ -83,9 +83,20 @@ export default {
     },
     containerScrollHandler() {
       if (this.windowSize === 'mob') {
-        const { scrollLeft, offsetWidth } = this.$refs.otherprojectsContainer
-
-        this.activePage = Math.round(scrollLeft / offsetWidth)
+        const {
+          scrollLeft,
+          scrollWidth,
+          offsetWidth,
+        } = this.$refs.otherprojectsContainer
+        for (let i = 0; i < this.dataArray.length; i++) {
+          if (
+            scrollLeft >
+            ((scrollWidth - offsetWidth) * (2 * i - 1)) /
+              (2 * (this.dataArray.length - 1))
+          ) {
+            this.activePage = i
+          }
+        }
       }
     },
     getActive() {
@@ -140,10 +151,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .otherprojects-wrapper {
+  ::-webkit-scrollbar {
+    display: none;
+  }
   margin-top: 10%;
   padding: 0 15% 100px;
   .otherprojects-title {
-    font-family: NotoSansCJKtc-Medium;
     font-size: 25px;
     font-weight: 500;
     line-height: 2.56;

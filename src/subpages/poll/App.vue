@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import Poll from "../../views/Page3";
+import Poll from '@/views/Poll'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Poll,
   },
-};
+}
 </script>
 
 <style></style>

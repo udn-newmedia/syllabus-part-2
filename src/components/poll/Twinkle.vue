@@ -16,27 +16,26 @@
       @mouseenter="highlightMessage(i)"
       @mouseleave="unhighlightMessage(i)"
       :key="message.id"
-    >{{ message.text }}</span>
+      >{{ message.text }}</span
+    >
     <div class="arrow-wrapper">
-      <span @click="goToNext()">
-        <NmdArrow />
-      </span>
+      <NmdArrow />
     </div>
   </div>
 </template>
 
 <script>
-import content from '../../data/content'
-import NmdArrow from '@/components/pinhead/NmdArrow.vue'
-import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
+import content from "../../data/content";
+import NmdArrow from "@/components/pinhead/NmdArrow.vue";
+import { autoResize_3, sendGaMethods } from "@/mixins/masterBuilder.js";
 
 export default {
-  name: 'Twinkle',
+  name: "Twinkle",
   components: { NmdArrow },
   mixins: [autoResize_3, sendGaMethods],
   data() {
-    const messages = []
-    const fakeText = content.twinkleArticle
+    const messages = [];
+    const fakeText = content.twinkleArticle;
 
     for (let i = 0; i < fakeText.length * 2; i += 1) {
       messages.push({
@@ -45,41 +44,38 @@ export default {
         x: Math.random() * (80 + 1),
         y: Math.random() * (95 + 1),
         opacity: 0,
-      })
+      });
     }
-    return { messages }
+    return { messages };
   },
   methods: {
     twinkleMessages() {
       for (let i = 0; i < this.messages.length; i += 1) {
         setTimeout(() => {
-          this.messages[i].opacity = 1
-        }, 500 * i)
+          this.messages[i].opacity = 1;
+        }, 500 * i);
       }
       for (let i = 0; i < this.messages.length; i += 1) {
         setTimeout(() => {
-          this.messages[i].opacity = 0.2
-        }, 500 * i + 500)
+          this.messages[i].opacity = 0.2;
+        }, 500 * i + 500);
       }
     },
     highlightMessage(index) {
       if (this.messages[index].opacity === 0.2) {
-        this.messages[index].opacity = 1
+        this.messages[index].opacity = 1;
       }
     },
     unhighlightMessage(index) {
       if (this.messages[index].opacity === 1) {
-        this.messages[index].opacity = 0.2
+        this.messages[index].opacity = 0.2;
       }
-    },
-    goToNext() {
-      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
     },
   },
   mounted() {
-    this.twinkleMessages()
+    this.twinkleMessages();
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -138,7 +134,7 @@ export default {
 // }
 
 @mixin arrow($x-distance, $direction, $zindex, $color, $top) {
-  content: '';
+  content: "";
   position: absolute;
   top: $top;
   z-index: $zindex;
@@ -175,60 +171,17 @@ export default {
     position: relative;
     display: inline-block;
   }
-  // .twinkle-message-left {
-  //   &::after {
-  //     @include arrow(-15px, left, 1, #fff, 5px);
-  //   }
-  //   &::before {
-  //     @include arrow(-12px, left, 2, #000, 5px);
-  //   }
-  //   .twinkle-people-left {
-  //     @include people('left');
-  //   }
-  // }
-  // .twinkle-message-right {
-  //   .test & {
-  //     color: pink;
-  //   }
-  //   &::after {
-  //     @include arrow(-15px, right, 1, #fff, 5px);
-  //   }
-  //   &::before {
-  //     @include arrow(-12px, right, 2, #000, 5px);
-  //   }
-  //   .twinkle-people-right {
-  //     @include people('right');
-  //   }
-  // }
 }
 @media (max-width: 576px) {
   .twinkle-message {
     font-size: 18px;
-    // .twinkle-message-left {
-    //   &::after {
-    //     @include arrow(-15px, left, 1, #fff, 0px);
-    //   }
-    //   &::before {
-    //     @include arrow(-12px, left, 2, #000, 0px);
-    //   }
-    //   .twinkle-people-left {
-    //     @include people('left', 0px, -35px, -35px);
-    //   }
-    // }
-    // .twinkle-message-right {
-    //   .test & {
-    //     color: pink;
-    //   }
-    //   &::after {
-    //     @include arrow(-15px, right, 1, #fff, 0px);
-    //   }
-    //   &::before {
-    //     @include arrow(-12px, right, 2, #000, 0px);
-    //   }
-    //   .twinkle-people-right {
-    //     @include people('right', 0px, -35px, -35px);
-    //   }
-    // }
+  }
+}
+</style>
+<style lang="scss">
+.ScrollDownArrow {
+  .arrows {
+    cursor: auto !important;
   }
 }
 </style>

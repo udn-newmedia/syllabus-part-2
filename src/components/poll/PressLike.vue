@@ -20,112 +20,83 @@
 
 <script>
 import content from "../../data/content";
-import axios from "axios";
+// import axios from "axios";
+import $ from "jquery";
 
 export default {
   name: "PressLike",
   data() {
-    const tags = [];
+    // const tags = [];
 
-    for (let i = 0; i < 20; i++) {
-      tags.push({
-        id: `like${i}`,
-        tag: {
-          content: "",
-          color: "",
-        },
-        title: "",
-        userlike: 0,
-        isLiked: false,
-      });
-    }
-    return { tags, imgs: content.pressLikeImgs };
+    // for (let i = 0; i < 20; i++) {
+    //   tags.push({
+    //     id: `like${i}`,
+    //     tag: {
+    //       content: "",
+    //       color: "",
+    //     },
+    //     title: "",
+    //     userlike: 0,
+    //     isLiked: false,
+    //   });
+    // }
+    return { tags: [], imgs: content.pressLikeImgs };
   },
   methods: {
     getData() {
       fetch("https://newmedia.udn.com.tw/active/api/message/?flag=Course108")
         .then((response) => response.json())
         .then((result) => {
-          for (let i = 0; i < 20; i++) {
-            this.tags[i].title = result[i].title.replace(
+          for (let i = 0; i < result.length; i++) {
+            this.tags.push(result[i]);
+            // this.tags[i].title = result[i].title.replace(
+            //   /(?:\\[rn]|[\r\n]+)+/g,
+            //   "<br>"
+            // );
+            // this.tags[i].id = result[i].id;
+            // this.tags[i].userlike = result[i].userlike;
+            // this.tags[i].tag.content = result[i].tag.content;
+            // this.tags[i].tag.color = result[i].tag.color;
+          }
+          for (let i = 0; i < this.tags.length; i++) {
+            this.tags[i].title = this.tags[i].title.replace(
               /(?:\\[rn]|[\r\n]+)+/g,
               "<br>"
             );
-            // .replace(/(?:\\[rn]|[\r\n]+)+/g,'<br>')
-            this.tags[i].id = result[i].id;
-            this.tags[i].userlike = result[i].userlike;
-            this.tags[i].tag.content = result[i].tag.content;
-            this.tags[i].tag.color = result[i].tag.color;
           }
         });
     },
     sendLike(tag, i) {
-      if (!tag.isLiked) {
-        this.tags[i].isLiked = true;
-        this.tags[i].userlike += 1;
-      } else {
-        this.tags[i].isLiked = false;
-        this.tags[i].userlike -= 1;
-      }
-
       const data = {
         id: tag.id,
         userlike: true,
         flag: "Course108",
       };
-      axios
-        .post("https://newmedia.udn.com.tw/active/api/message/", data)
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result, i);
-        });
+      const url = "https://newmedia.udn.com.tw/active/api/message/";
 
-      // const data = {
-      //   id: tag.id,
-      //   userlike: true,
-      //   flag: 'Course108',
-      // }
-      // fetch('https://newmedia.udn.com.tw/active/api/message/', {
-      //   method: 'POST',
-      //   body: JSON.stringify(data),
-      //   headers: new Headers({
-      //     'Content-Type': 'application/json',
-      //     'Allow-Control-Allow-Origin': '*',
-      //   }),
-      // })
-      //   .then(response => response.json())
-      //   .then(result => {
-      //     console.log(result, i)
-      //   })
-
-      // axios
-      //   .get("https://newmedia.udn.com.tw/active/api/message/?flag=Course108")
-      //   .then((response) => response.json())
-      //   .then((result) => {
-      //     console.log(result);
-      //   })
-      //   .catch(function(error) {
-      //     // 请求失败处理
-      //     console.log(error);
-      //   });
-      // // const data = {
-      // //   id: tag.id,
-      // //   userlike: true,
-      // //   flag: "Course108",
-      // // };
-      // // //https://newmedia.udn.com.tw/active/api/message/
-      // // fetch("/data/active/api/message/", {
-      // //   method: "POST",
-      // //   body: JSON.stringify(data),
-      // //   headers: new Headers({
-      // //     "Content-Type": "application/json",
-      // //     "Allow-Control-Allow-Origin": "*",
-      // //   }),
-      // // })
-      // //   .then((response) => response.json())
-      // //   .then((result) => {
-      // //     console.log(result);
-      // //   });
+      if (!tag.isLiked) {
+        this.tags[i].isLiked = true;
+        this.tags[i].userlike += 1;
+        if (!this.tags[i].isPressed) {
+          $.ajax({
+            url,
+            data,
+            dataType: "json",
+            type: "POST",
+          });
+        }
+        this.tags[i].isPressed = true;
+        // fetch(url, {
+        //   method: "POST",
+        //   body: JSON.stringify(data),
+        //   headers: new Headers({
+        //     "Content-Type": "application/json",
+        //   }),
+        // });
+      } else {
+        this.tags[i].isLiked = false;
+        this.tags[i].userlike -= 1;
+      }
     },
   },
   mounted() {

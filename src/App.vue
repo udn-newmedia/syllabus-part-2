@@ -5,7 +5,7 @@
       <HeaderLink />
     </HeaderTypeA>
     <!-- <Header /> -->
-    <Page1 />
+    <Timeline />
     <!-- <router-view /> -->
     <Marketing />
     <OtherProjects />
@@ -23,31 +23,31 @@
 
 <script>
 // @ is an alias to /src
-import PageIndicator from '@/components/layout/PageIndicator'
-import Marketing from '@/components/self/Marketing.vue'
-import HeaderTypeA from '@/components/header/HeaderTypeA'
-import HeaderLink from '@/components/self/HeaderLink'
-import Page1 from '@/views/Page1'
-import OtherProjects from '@/components/self/OtherProjects'
-import Editors from '@/components/self/Editors.vue'
+import PageIndicator from "@/components/layout/PageIndicator";
+import Marketing from "@/components/self/Marketing.vue";
+import HeaderTypeA from "@/components/header/HeaderTypeA";
+import HeaderLink from "@/components/self/HeaderLink";
+import Timeline from "@/views/Timeline";
+import OtherProjects from "@/components/self/OtherProjects";
+import Editors from "@/components/self/Editors.vue";
 
-import PageFooter from '@/components/footer/PageFooter.vue'
+import PageFooter from "@/components/footer/PageFooter.vue";
 
-import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
-import { fbBrowserResize } from '@/mixins/fbBrowserResize.js'
+import { autoResize_3, sendGaMethods } from "@/mixins/masterBuilder.js";
+import { fbBrowserResize } from "@/mixins/fbBrowserResize.js";
 // import FooterShare from '@/components/footer/FooterShare.vue'
-import FooterFbComment from '@/components/footer/FooterFbComment.vue'
-import FooterLogo from '@/components/footer/FooterLogo.vue'
-import PageBackTop from '@/components/layout/PageBackTop.vue'
+import FooterFbComment from "@/components/footer/FooterFbComment.vue";
+import FooterLogo from "@/components/footer/FooterLogo.vue";
+import PageBackTop from "@/components/layout/PageBackTop.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   mixins: [autoResize_3, sendGaMethods, fbBrowserResize],
   components: {
     PageIndicator,
     HeaderTypeA,
     HeaderLink,
-    Page1,
+    Timeline,
     Marketing,
     OtherProjects,
     Editors,
@@ -58,7 +58,7 @@ export default {
     FooterLogo,
     PageBackTop,
   },
-}
+};
 </script>
 
 <style lang="scss">

@@ -1,4 +1,3 @@
-import colorful from "../assets/colorful.jpeg";
 import trump from "../assets/people/trump.jpeg";
 import abe from "../assets/people/abe.jpg";
 import johnson from "../assets/people/johnson.jpeg";
@@ -221,46 +220,11 @@ const content = {
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然1" },
     { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然2" },
   ],
-
-  page2Articles: [
-    { title: "1testtesttesttesttestest", id: "gfdgdfgs", height: "500px" },
-    {
-      title: "2testtesttesttesttestest",
-      id: "gfdgdfgssdfsfs",
-      height: "300px",
-    },
-    {
-      title: "34testtesttesttesttestest",
-      id: "gfdgdfgssfsvxv",
-      height: "800px",
-    },
-    {
-      title: "5testtesttesttesttestest",
-      id: "gfdgdfgsxcvsgsf",
-      height: "600px",
-    },
-    {
-      title: "6testtesttesttesttestest",
-      id: "gfdgdfgfsffewbjs",
-      height: "200px",
-    },
-    {
-      title: "7testtesttesttesttestest",
-      id: "gfdgdfgsjgjyjhf",
-      height: "700px",
-    },
-    {
-      title: "8testtesttesttesttestest",
-      id: "gfdgdfgshrhtr54",
-      height: "400px",
-    },
-  ],
   theirVoice: [
     { img: trump, id: "trump", description: "我想贏得選舉" },
     { img: abe, id: "abe", description: "奧運能辦了嗎" },
     { img: johnson, id: "johnson", description: "你說我頭髮很亂？" },
   ],
-  progress: { img: colorful },
   twinkleArticle: [
     "升學壓力鬆綁才有助改革",
     "與現實有差距",

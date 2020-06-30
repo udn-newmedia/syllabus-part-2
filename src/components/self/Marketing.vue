@@ -1,5 +1,5 @@
 <template>
-  <div class="marketing" :style="{'backgroundColor':bg}">
+  <div class="marketing" :style="{ backgroundColor: bg }">
     <div class="marketing-title">課綱強調生活情境</div>
     <div
       class="marketing-text"
@@ -8,11 +8,11 @@
       <div class="marketing-img-blueline">
         <span />
       </div>
-      <div v-for="(data,i) in dataArray" class="marketing-img" :key="data.id">
-        <div class="marketing-img-text">{{data.text}}</div>
+      <div v-for="(data, i) in dataArray" class="marketing-img" :key="data.id">
+        <div class="marketing-img-text">{{ data.text }}</div>
         <div class="marketing-img-container">
-          <div class="marketing-img-date">{{data.date}}</div>
-          <div class="marketing-img-signup" @click="signup(i+1)">
+          <div class="marketing-img-date">{{ data.date }}</div>
+          <div class="marketing-img-signup" @click="signup(i + 1)">
             <span>報名</span>
           </div>
           <img class="marketing-img-area" src alt style="background-color:rgba(0,0,0,0.5)" />
@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 .marketing {
   // width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   .marketing-title {
     font-family: SourceHanSerifTC-Bold;
     font-size: 40px;
@@ -109,9 +109,8 @@ export default {
       flex: 0 0 27.42vw;
       max-width: 27.42vw;
       height: 41.52vh;
-      margin: 0 1.4vw;
+      margin: 35px 1.4vw 0;
       .marketing-img-text {
-        font-family: SourceHanSansTW-Bold;
         font-size: 28px;
         font-weight: bold;
         line-height: 1.29;
@@ -158,7 +157,7 @@ export default {
 }
 @media screen and (max-width: 960px) {
   .marketing {
-    height: 120vh;
+    // height: 120vh;
     .marketing-title {
       margin-left: 12.5%;
     }
