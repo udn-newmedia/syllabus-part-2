@@ -3,7 +3,7 @@ import Vue from "vue";
 import { rwdMethods } from "@/mixins/masterBuilder.js";
 import "bootstrap/scss/bootstrap.scss";
 import "@/assets/style/reset.scss";
-import "./assets/style/main.scss";
+import "@/assets/style/main.scss";
 import "@/assets/style/font.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core";

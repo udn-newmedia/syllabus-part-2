@@ -3,7 +3,13 @@
     <h1 class="video-title">他們眼中的台灣教育</h1>
     <div class="video">
       <div class="video-area">
-        <youtube :video-id="videoId" :player-vars="playerVars" ref="youtube" />
+        <youtube
+          :video-id="videoId"
+          :player-vars="playerVars"
+          @playing="playing"
+          @paused="paused"
+          ref="youtube"
+        />
       </div>
       <div class="video-menu">
         <div
@@ -44,141 +50,242 @@
 </template>
 
 <script>
-import content from '../../data/content'
-import { sendGaMethods } from '@/mixins/masterBuilder.js'
+import content from "../../data/content";
+import { sendGaMethods } from "@/mixins/masterBuilder.js";
 
 export default {
-  name: 'Video',
+  name: "Video",
   data() {
     return {
       dataArray: content.timelineVideo,
       active: 0,
-      videoId: '',
+      videoId: "",
       trigger: null,
       playerVars: {
         autoplay: 1,
         mute: 1,
         playsinline: 1,
       },
-    }
+    };
   },
   mixins: [sendGaMethods],
   methods: {
     playVideo() {
-      if (!this.trigger) {
-        let name = ''
+      this.startSendingVideoGA(this.player.playVideo);
+      // if (!this.trigger) {
+      //   let name = "";
 
-        switch (this.active) {
-          case 0:
-            name = '劉安婷'
-            break
-          case 1:
-            name = '嚴長壽'
-            break
-          case 2:
-            name = '管中閔'
-            break
+      //   switch (this.active) {
+      //     case 0:
+      //       name = "劉安婷";
+      //       break;
+      //     case 1:
+      //       name = "嚴長壽";
+      //       break;
+      //     case 2:
+      //       name = "管中閔";
+      //       break;
 
-          default:
-            name = '藍偉瑩'
-            break
-        }
+      //     default:
+      //       name = "藍偉瑩";
+      //       break;
+      //   }
 
-        this.trigger = setInterval(() => {
-          this.player.getPlayerState().then(() => {
-            this.sendGA({
-              category: 'video',
-              action: 'times',
-              label: name,
-            })
-          })
-        }, 5000)
-        this.player.playVideo()
-      }
+      //   this.trigger = setInterval(() => {
+      //     this.player.getPlayerState().then(() => {
+      //       this.sendGA({
+      //         category: "video",
+      //         action: "times",
+      //         label: name,
+      //       });
+      //     });
+      //   }, 5000);
+      //   this.player.playVideo();
+      // }
     },
     pauseVideo() {
-      if (this.trigger) {
-        clearInterval(this.trigger)
-        this.trigger = null
-        this.player.pauseVideo()
-      }
+      this.stopSendingVideoGA(this.player.pauseVideo);
+      // if (this.trigger) {
+      //   clearInterval(this.trigger);
+      //   this.trigger = null;
+      //   this.player.pauseVideo();
+      // }
     },
     changeActive(index) {
-      const target = content.timelineVideo[index]
+      const target = content.timelineVideo[index];
 
-      this.videoId = target.videoId
-      this.active = index
+      this.videoId = target.videoId;
+      this.active = index;
 
       if (!this.playerVars.autoplay) {
-        this.playerVars.autoplay = 1
+        this.playerVars.autoplay = 1;
       }
 
-      this.pauseVideo()
-      this.playVideo()
+      this.pauseVideo();
+      this.playVideo();
 
-      let name = ''
+      let name = "";
 
       switch (index) {
         case 0:
-          name = '劉安婷'
-          break
+          name = "劉安婷";
+          break;
         case 1:
-          name = '嚴長壽'
-          break
+          name = "嚴長壽";
+          break;
         case 2:
-          name = '管中閔'
-          break
+          name = "管中閔";
+          break;
 
         default:
-          name = '藍偉瑩'
-          break
+          name = "藍偉瑩";
+          break;
       }
 
       this.sendGA({
-        category: 'video',
-        action: 'click',
+        category: "video",
+        action: "click",
         label: name,
-      })
+      });
     },
     autoplayHandler() {
-      const wrapperTop = this.$refs.videoWrapper.offsetTop
-      const wrapperHeight = this.$refs.videoWrapper.offsetHeight
-      const { scrollTop } = document.documentElement
-      const { innerHeight } = window
+      const wrapperTop = this.$refs.videoWrapper.offsetTop;
+      const wrapperHeight = this.$refs.videoWrapper.offsetHeight;
+      const { scrollTop } = document.documentElement;
+      const { innerHeight } = window;
 
       if (
         scrollTop > wrapperTop &&
         scrollTop < wrapperTop + wrapperHeight - 0.5 * innerHeight
       ) {
-        this.playVideo()
+        this.playVideo();
       } else if (scrollTop < wrapperTop) {
-        this.pauseVideo()
+        this.pauseVideo();
       } else {
-        this.pauseVideo()
+        this.pauseVideo();
+      }
+    },
+    playing() {
+      this.startSendingVideoGA();
+      // if (!this.trigger) {
+      //   let name = "";
+
+      //   switch (this.active) {
+      //     case 0:
+      //       name = "劉安婷";
+      //       break;
+      //     case 1:
+      //       name = "嚴長壽";
+      //       break;
+      //     case 2:
+      //       name = "管中閔";
+      //       break;
+
+      //     default:
+      //       name = "藍偉瑩";
+      //       break;
+      //   }
+
+      //   this.trigger = setInterval(() => {
+      //     this.player.getPlayerState().then(() => {
+      //       console.log("sendGA");
+      //       this.sendGA({
+      //         category: "video",
+      //         action: "times",
+      //         label: name,
+      //       });
+      //     });
+      //   }, 5000);
+      // }
+    },
+    paused() {
+      this.stopSendingVideoGA();
+      // if (this.trigger) {
+      //   clearInterval(this.trigger);
+      //   this.trigger = null;
+      //   console.log("stop sendGA");
+      // }
+    },
+    startSendingVideoGA(fn) {
+      if (!this.trigger) {
+        let name = "";
+
+        switch (this.active) {
+          case 0:
+            name = "劉安婷";
+            break;
+          case 1:
+            name = "嚴長壽";
+            break;
+          case 2:
+            name = "管中閔";
+            break;
+
+          default:
+            name = "藍偉瑩";
+            break;
+        }
+        // console.log("sendGA:", {
+        //   category: "video",
+        //   action: "times",
+        //   label: name,
+        // });
+        this.sendGA({
+          category: "video",
+          action: "times",
+          label: name,
+        });
+        this.trigger = setInterval(() => {
+          this.player.getPlayerState().then(() => {
+            // console.log("sendGA:", {
+            //   category: "video",
+            //   action: "times",
+            //   label: name,
+            // });
+            this.sendGA({
+              category: "video",
+              action: "times",
+              label: name,
+            });
+          });
+        }, 10100);
+        if (fn) {
+          fn();
+        }
+      }
+    },
+    stopSendingVideoGA(fn) {
+      if (this.trigger) {
+        //console.log("stopGA");
+        clearInterval(this.trigger);
+        this.trigger = null;
+        if (fn) {
+          fn();
+        }
       }
     },
   },
   computed: {
     player() {
-      return this.$refs.youtube.player
+      return this.$refs.youtube.player;
     },
   },
   created() {
-    window.addEventListener('scroll', this.autoplayHandler)
+    window.addEventListener("scroll", this.autoplayHandler);
   },
   mounted() {
-    const target = content.timelineVideo[0]
-    this.videoId = target.videoId
-    this.active = 0
+    const target = content.timelineVideo[0];
+    this.videoId = target.videoId;
+    this.active = 0;
     if (!this.playerVars.autoplay) {
-      this.playerVars.autoplay = 1
+      this.playerVars.autoplay = 1;
     }
-    this.playerVars.autoplay = 0
+    this.playerVars.autoplay = 0;
   },
   destroyed() {
-    window.removeEventListener('scroll', this.autoplayHandler)
+    window.removeEventListener("scroll", this.autoplayHandler);
   },
-}
+};
 </script>
 
 <style lang="scss">
