@@ -256,7 +256,7 @@ export default {
     },
     stopSendingVideoGA(fn) {
       if (this.trigger) {
-        console.log("stopGA");
+        //console.log("stopGA");
         clearInterval(this.trigger);
         this.trigger = null;
         if (fn) {

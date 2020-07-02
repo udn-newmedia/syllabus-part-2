@@ -23,7 +23,7 @@
         :target="i!==active&&'_blank'"
         class="otherprojects-image-wrapper"
         :class="{'hovered':hovered===i}"
-        :style="{
+        :style="{opacity:i===active&&0.4,
         cursor: i===active && 'auto'}"
         @mouseenter="hoverItem(i)"
         @mouseleave="unHoverItem()"
@@ -71,6 +71,7 @@ export default {
       type: String,
       default: 'dark',
     },
+    isNotRoot: { type: Boolean, default: true },
   },
   data() {
     return {
@@ -146,7 +147,7 @@ export default {
       if (index === this.active) {
         return 'javascript:void(0);'
       } else {
-        return link
+        return this.isNotRoot ? `.${link}` : link
       }
     },
   },
