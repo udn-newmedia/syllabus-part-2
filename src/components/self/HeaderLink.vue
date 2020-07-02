@@ -4,14 +4,21 @@
       class="header-link"
       :class="[{active:active===i},`theme-${theme}`]"
       v-for="(link,i) in links"
-      :href="link.link"
+      :href="operatedLink(link.link, i)"
+      :target="i!==active&&'_blank'"
+      rel="noopener"
+      aria-label="outlink"
+      name="outlink"
       :key="link.text"
       @click="sendGA({
         category: 'menu',
         action: 'click',
         label: link.gaLabel,
       })"
-    >{{link.text}}</a>
+    >
+      <span class="text">{{link.text}}</span>
+      <span class="online" v-if="link.online">{{link.online}}</span>
+    </a>
   </div>
 </template>
 
@@ -21,7 +28,10 @@ import { sendGaMethods } from '@/mixins/masterBuilder.js'
 
 export default {
   name: 'HeaderLink',
-  props: { theme: { type: String, default: 'light' } },
+  props: {
+    theme: { type: String, default: 'light' },
+    isRoot: { type: Boolean, default: true },
+  },
   mixins: [sendGaMethods],
   data() {
     return { links: content.headerLink, active: 3 }
@@ -44,6 +54,13 @@ export default {
         this.active = 3
       }
     },
+    operatedLink(link, index) {
+      if (index === this.active) {
+        return 'javascript:void(0);'
+      } else {
+        return this.isRoot ? link : `.${link}`
+      }
+    },
   },
   mounted() {
     this.getActive()
@@ -57,7 +74,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 30px;
   .header-link {
     white-space: nowrap;
     display: block;
@@ -71,8 +87,18 @@ export default {
     }
     &.active {
       opacity: 1;
-      text-decoration: underline;
       font-weight: 500;
+      cursor: default;
+      .text {
+        text-decoration: underline;
+      }
+    }
+
+    .online {
+      color: #00ccb1;
+      @media screen and (max-width: 374.99px) {
+        font-size: 13px;
+      }
     }
   }
   @media screen and (max-width: 374.99px) {

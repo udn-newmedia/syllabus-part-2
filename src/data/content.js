@@ -35,11 +35,13 @@ import timelimeMobImgPic8 from "../assets/img/timeline/mob/12-years-education_mo
 import timelimeMobImgPic9 from "../assets/img/timeline/mob/12-years-education_mob_pic9.jpg";
 
 import otherProjectsWebImg1 from "../assets/img/timeline/relate/12-years-education_r1_web.jpg";
+import otherProjectsWebImg2 from "../assets/img/timeline/relate/12-years-education_r2_web.jpg";
 import otherProjectsWebImg3 from "../assets/img/timeline/relate/12-years-education_r3_web.jpg";
 import otherProjectsWebImg4 from "../assets/img/timeline/relate/12-years-education_r4_web.jpg";
 import otherProjectsWebImg5 from "../assets/img/timeline/relate/12-years-education_r5_web.jpg";
 import otherProjectsWebImg6 from "../assets/img/timeline/relate/12-years-education_r6_web.jpg";
 import otherProjectsMobImg1 from "../assets/img/timeline/relate/12-years-education_r1_mob.jpg";
+import otherProjectsMobImg2 from "../assets/img/timeline/relate/12-years-education_r2_mob.jpg";
 import otherProjectsMobImg3 from "../assets/img/timeline/relate/12-years-education_r3_mob.jpg";
 import otherProjectsMobImg4 from "../assets/img/timeline/relate/12-years-education_r4_mob.jpg";
 import otherProjectsMobImg5 from "../assets/img/timeline/relate/12-years-education_r5_mob.jpg";
@@ -93,25 +95,30 @@ const content = {
   headerLink: [
     {
       text: "揭露課綱五大亂象",
-      link: "../problem/",
+      link: "./problem/",
       gaLabel: "揭露課綱五大亂象",
     },
     {
       text: "課綱上路周年大調查",
-      link: "../poll/",
+      link: "./poll/",
       gaLabel: "課綱上路周年大調查",
+      online: "（07/13上線）",
     },
     {
       text: "台灣教育關鍵數字",
-      link: "../problem/",
+      link: "./problem/",
       gaLabel: "台灣教育關鍵數字",
     },
-    { text: "台灣教改為何總失敗", link: "../", gaLabel: "台灣教改為何總失敗" },
-    { text: "升學主義悲歌", link: "../story/", gaLabel: "升學主義悲歌" },
+    { text: "台灣教改為何總失敗", link: "./", gaLabel: "台灣教改為何總失敗" },
     {
-      text: "關於108課綱 我想說......",
-      link: "../collect/",
-      gaLabel: "關於108課綱 我想說",
+      text: "一個家庭看台灣升學主義",
+      link: "./story/",
+      gaLabel: "一個家庭看台灣升學主義",
+    },
+    {
+      text: "寫下你的教改心聲",
+      link: "./collect/",
+      gaLabel: "寫下你的教改心聲",
     },
     {
       text: "更多課綱相關報導",
@@ -186,13 +193,14 @@ const content = {
       link: "../problem/",
     },
     {
-      title: "課綱上路周年大調查",
-      img: { web: otherProjectsWebImg4, mob: otherProjectsMobImg4 },
-      id: "otherProjectsWebImg2otherProjectsMobImg2",
+      title: "【108課綱大調查】 升學主義 教師心中的教改殺手",
+      img: { web: otherProjectsWebImg2, mob: otherProjectsMobImg2 },
+      id: `${otherProjectsWebImg2}${otherProjectsMobImg2}`,
       link: "../poll/",
+      online: "  (7/13上線) ",
     },
     {
-      title: "台灣教育關鍵數字",
+      title: "最不快樂的世代 看懂台灣教育",
       img: { web: otherProjectsWebImg3, mob: otherProjectsMobImg3 },
       id: `${otherProjectsWebImg3}${otherProjectsMobImg3}`,
       link: "../data/",
@@ -204,21 +212,21 @@ const content = {
       link: "../",
     },
     {
-      title: "升學主義悲歌：19歲少女的告白",
+      title: "她的家庭 是台灣升學主義縮影",
       img: { web: otherProjectsWebImg5, mob: otherProjectsMobImg5 },
       id: `${otherProjectsWebImg5}${otherProjectsMobImg5}`,
       link: "../story/",
     },
     {
-      title: "關於108課綱 我想說......",
+      title: "當台灣學生好可憐？寫下你的教改心聲",
       img: { web: otherProjectsWebImg6, mob: otherProjectsMobImg6 },
       id: `${otherProjectsWebImg6}${otherProjectsMobImg6}`,
       link: "../collect/",
     },
   ],
   marketing: [
-    { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然1" },
-    { img: "", text: "黎孔平 X 徐沛然", date: "08.24", id: "黎孔平X徐沛然2" },
+    { img: "", text: "黎孔平 X 徐沛然", date: "08.", id: "黎孔平X徐沛然" },
+    { img: "", text: "黃蘭燕 X 楊富民", date: "08.", id: "黃蘭燕X楊富民" },
   ],
 
   twinkleArticle: [
