@@ -2,10 +2,10 @@
   <div class="poll">
     <PageIndicator />
     <HeaderTypeC theme="dark" :device="windowSize.width<=576?'mob':'pc'" pageTitle="課綱上路周年大調查">
-      <HeaderLink theme="dark" />
+      <HeaderLink theme="dark" :isRoot="false" />
     </HeaderTypeC>
     <Twinkle />
-    <MessageSource />
+    <!-- <MessageSource /> -->
     <ThreeEvents />
     <ArticleCastAnchor title="完整民調結果" />
     <AllPolls :windowSize="windowSize" />
@@ -30,7 +30,7 @@ import HeaderTypeC from '@/components/header/HeaderTypeC'
 import ArticleCastAnchor from '@/components/layout/ArticleCastAnchor'
 import HeaderLink from '@/components/self/HeaderLink'
 import Twinkle from '@/components/poll/Twinkle'
-import MessageSource from '@/components/poll/MessageSource'
+// import MessageSource from '@/components/poll/MessageSource'
 import ThreeEvents from '@/components/poll/ThreeEvents'
 import PressLike from '@/components/poll/PressLike'
 import AllPolls from '@/components/poll/AllPolls'
@@ -45,14 +45,14 @@ import FooterLogo from '@/components/footer/FooterLogo.vue'
 import PageBackTop from '@/components/layout/PageBackTop.vue'
 
 export default {
-  name: 'Page3',
+  name: 'Poll',
   components: {
     PageIndicator,
     HeaderTypeC,
     HeaderLink,
     ArticleCastAnchor,
     Twinkle,
-    MessageSource,
+    // MessageSource,
     ThreeEvents,
     PressLike,
     AllPolls,

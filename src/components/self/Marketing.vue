@@ -68,7 +68,7 @@ export default {
   // width: 100vw;
   // height: 100vh;
   .marketing-title {
-    font-family: source-han-serif-tc;
+    font-family: source-han-serif-tc, sans-serif;
     font-size: 40px;
     font-weight: bold;
     line-height: 1.6;
@@ -142,7 +142,6 @@ export default {
           width: 101px;
           height: 50px;
           background-color: #000;
-          font-family: SourceHanSansTW;
           font-size: 16px;
           line-height: 1.25;
           color: #f7f5f5;

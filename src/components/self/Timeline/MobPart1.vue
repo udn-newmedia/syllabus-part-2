@@ -37,8 +37,6 @@ export default {
   .mob-part1-text {
     padding: 72px 12.5% 120px;
     line-height: 1.7;
-    font-family: source-han-serif-tc, serif;
-    // font-family: SourceHanSerifTC-Medium;
     text-align: left;
     @media screen and (max-width: 767.99px) {
       padding: 60px 3.9% 120px;

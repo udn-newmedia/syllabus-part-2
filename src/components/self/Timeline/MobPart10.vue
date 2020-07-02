@@ -49,7 +49,6 @@ export default {
     padding-top: 72px;
     padding-left: 14.3%;
     padding-right: 7.8%;
-    font-family: source-han-sans-traditional, sans-serif;
     .mob-part10-title {
       margin-bottom: 15px;
       font-size: 40px;
@@ -102,7 +101,6 @@ export default {
       }
     }
     .mob-part10-img-text {
-      font-family: source-han-sans-traditional, sans-serif;
       font-size: 15px;
       line-height: 1.4;
       color: #929292;

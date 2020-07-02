@@ -54,7 +54,6 @@ export default {
     padding-top: 72px;
     padding-left: 14.3%;
     padding-right: 7.8%;
-    font-family: source-han-sans-traditional, sans-serif;
     .mob-part9-title {
       margin-bottom: 15px;
 
@@ -86,7 +85,6 @@ export default {
     }
     .mob-part9ーsubtitle {
       display: inline-block;
-      font-family: source-han-sans-traditional, sans-serif;
       font-size: 40px;
       font-weight: bold;
       line-height: 1.56;
@@ -127,7 +125,6 @@ export default {
       }
     }
     .mob-part9-img-text {
-      font-family: source-han-sans-traditional, sans-serif;
       font-size: 15px;
       line-height: 1.4;
       color: #929292;

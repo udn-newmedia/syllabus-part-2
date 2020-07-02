@@ -20,7 +20,7 @@ export default {
     margin-bottom: 100px;
     padding-left: 12.5%;
     padding-right: 12.5%;
-    font-family: source-han-serif-tc, serif;
+    // font-family: source-han-serif-tc, serif;
     color: #777777;
     .mob-end-page-quote-text {
       font-size: 36.8px;

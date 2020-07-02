@@ -3,7 +3,6 @@ import { detectPlatform } from "@/utils/udn-newmedia-utils";
 import gaTable from "@/utils/gaFormator";
 
 function detectDevice(w) {
-  console.log(w);
   switch (true) {
     case w < 767.98:
       return "mob";
