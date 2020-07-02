@@ -10,12 +10,12 @@
         @click="sendGA(formatGA('StoryMenuLink_1'))"
       ) 揭露課綱五大亂象
       a(
-        href="../poll/"
-        target="_blank" rel="noopener"
-        aria-label="outlink"
-        name="outlink"
-        @click="sendGA(formatGA('StoryMenuLink_2'))"
-      ) 課綱上路周年大調查
+        :class="{'header-menu-link--disabled': !isAfterOnlineDate}"
+        :href="isAfterOnlineDate ? '../poll/' : '#'"
+        target="_blank"
+        rel="noopener"
+        @click="sendGA({category: 'menu', action: 'click', label: '108課綱上路周年大調查'})"
+      ) <span v-if="isAfterOnlineDate">108</span>課綱上路周年大調查<span  v-if="!isAfterOnlineDate"class="menu-item__online-date">（07/13上線）</span>
       a(
         href="../problem/"
         target="_blank" rel="noopener"
@@ -194,6 +194,7 @@
 <script>
 import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
 import { fbBrowserResize } from '@/mixins/fbBrowserResize.js'
+import isAfterOnlineDate from '@/mixins/handleOnlineDate.js';
 
 import ArticleContainer from '@/components/layout/ArticleContainer.vue'
 import BlackHole from '@cs/BlackHole.vue'
@@ -221,7 +222,7 @@ import WideImage from '@cs/WideImage.vue'
 
 export default {
   name: 'App',
-  mixins: [autoResize_3, sendGaMethods, fbBrowserResize],
+  mixins: [autoResize_3, sendGaMethods, fbBrowserResize, isAfterOnlineDate],
   components: {
     ArticleContainer,
     BlackHole,
@@ -252,6 +253,7 @@ export default {
 
 <style lang="scss">
 @import '~/style/story.scss';
+@import '~/style/menu_item_disabled.scss';
 
 #tilt-text-1 {
   padding-left: 24%;
