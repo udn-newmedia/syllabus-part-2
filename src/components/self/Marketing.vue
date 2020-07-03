@@ -1,16 +1,34 @@
 <template>
   <div class="marketing" :style="{ backgroundColor: bg }">
     <div class="marketing-title">活動資訊</div>
-    <div
-      class="marketing-text"
-    >對108課綱、升學制度變革還是有很多疑惑和擔憂？《聯合報》邀請瑩光教育協會理事長藍偉瑩、十二年國教新課綱推動專案辦公室協作委員范信賢、開放個人經驗平台（IOH）創辦人莊智超等多位教育界專家，8月在聯經書房為大家解答。</div>
+    <div class="marketing-text">
+      對108課綱、升學制度變革還是有很多疑惑和擔憂？《聯合報》邀請瑩光教育協會理事長藍偉瑩、十二年國教新課綱推動專案辦公室協作委員范信賢、開放個人經驗平台（IOH）創辦人莊智超等多位教育界專家，8月在聯經書房為大家解答。
+    </div>
     <div class="marketing-img-wrapper">
       <div class="marketing-img" v-for="(data, i) in dataArray" :key="data.id">
         <div class="marketing-img-date">{{ data.date }}</div>
-        <div class="marketing-img-container" :style="{backgroundImage:`url(${data.imgs.bg})`}">
-          <div class="marketing-img-title" :style="{color:i%2===0&&'#fff'}">{{ data.title1}}</div>
-          <div class="marketing-img-title" :style="{color:i%2===0&&'#fff'}">{{ data.title2 }}</div>
-          <p class="marketing-img-text" :style="{color:i%2===0&&'#fff'}">{{ data.text }}</p>
+        <div
+          class="marketing-img-container"
+          :style="{ backgroundImage: `url(${data.imgs.bg})` }"
+        >
+          <div
+            class="marketing-img-title"
+            :style="{ color: i % 2 === 0 && '#fff' }"
+          >
+            {{ data.title1 }}
+          </div>
+          <div
+            class="marketing-img-title"
+            :style="{ color: i % 2 === 0 && '#fff' }"
+          >
+            {{ data.title2 }}
+          </div>
+          <p
+            class="marketing-img-text"
+            :style="{ color: i % 2 === 0 && '#fff' }"
+          >
+            {{ data.text }}
+          </p>
           <div class="marketing-img-guest">
             <div class="marketing-img-people">
               <img :src="data.imgs.people1" alt />
@@ -18,14 +36,19 @@
             </div>
             <div
               class="marketing-img-guest-text"
-              :style="{color:i%2===0?'#fff':'#cf5454'}"
-            >{{data.guest}}</div>
+              :style="{ color: i % 2 === 0 ? '#fff' : '#cf5454' }"
+            >
+              {{ data.guest }}
+            </div>
           </div>
           <div class="marketing-img-button">
             <div
               class="marketing-img-signup"
               @click="signup(i + 1)"
-              :style="[{color:i%2===0?'#cf5454':'#fff'},{backgroundColor:i%2===0?'#fff':'#cf5454'}]"
+              :style="[
+                { color: i % 2 === 0 ? '#cf5454' : '#fff' },
+                { backgroundColor: i % 2 === 0 ? '#fff' : '#cf5454' },
+              ]"
             >
               <span>報名</span>
             </div>
@@ -37,49 +60,53 @@
 </template>
 
 <script>
-import { sendGaMethods } from '@/mixins/masterBuilder.js'
-import content from '../../data/content'
+import { sendGaMethods } from "@/mixins/masterBuilder.js";
+import content from "../../data/content";
 
 export default {
-  name: 'Marketing',
+  name: "Marketing",
   props: {
     bg: {
       type: String,
-      default: '#fff',
+      default: "#fff",
     },
   },
   mixins: [sendGaMethods],
   data() {
     return {
       dataArray: content.marketing,
-    }
+    };
   },
   methods: {
     signup(index) {
       // do something
-      const url = window.location.href
-      let aim = ''
-      if (url.indexOf('/story') !== -1) {
-        aim = 'story'
-      } else if (url.indexOf('/poll') !== -1) {
-        aim = 'poll'
+      const url = window.location.href;
+      let aim = "";
+      if (url.indexOf("/story") !== -1) {
+        aim = "story";
+      } else if (url.indexOf("/poll") !== -1) {
+        aim = "poll";
       } else {
-        aim = 'timeline'
+        aim = "timeline";
       }
 
       this.sendGA({
-        category: 'activity',
-        action: 'click',
+        category: "activity",
+        action: "click",
         label: `${aim}報名${index}`,
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .marketing {
   text-align: left;
+  padding-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 101px;
+  }
   .marketing-title {
     font-family: source-han-serif-tc, sans-serif;
     font-size: 40px;
@@ -121,6 +148,7 @@ export default {
         z-index: 1;
         border-radius: 6px;
         padding-top: 40px;
+        padding-bottom: 40px;
         display: flex;
         flex-wrap: wrap;
         @media screen and (min-width: 961px) and (max-width: 1377px) {
@@ -128,12 +156,14 @@ export default {
         }
         @media screen and (max-width: 768px) {
           padding-top: 30px;
+          padding-bottom: 30px;
         }
         .marketing-img-title {
           font-size: 28px;
           font-weight: bold;
           line-height: 1.29;
           padding-left: 6.8%;
+          padding-right: 6.8%;
           max-width: 100%;
           flex: 0 0 100%;
         }

@@ -4,13 +4,17 @@
 
     <div class="otherprojects-container" ref="otherprojectsContainer">
       <a
-        v-for="(item,i) in dataArray"
-        :href="operatedLink(item.link,i)"
-        :target="i===active||(i===1&&!isAfterOnlineDate)?'':'_blank'"
+        v-for="(item, i) in dataArray"
+        :href="operatedLink(item.link, i)"
+        :target="
+          i === active || (i === 1 && !isAfterOnlineDate) ? '' : '_blank'
+        "
         class="otherprojects-image-wrapper"
-        :class="{'hovered':hovered===i}"
-        :style="{opacity:(i===active||(i===1&&!isAfterOnlineDate))&&0.4,
-        cursor: (i===active||(i===1&&!isAfterOnlineDate)) && 'auto'}"
+        :class="{ hovered: hovered === i }"
+        :style="{
+          opacity: (i === active || (i === 1 && !isAfterOnlineDate)) && 0.4,
+          cursor: (i === active || (i === 1 && !isAfterOnlineDate)) && 'auto',
+        }"
         @mouseenter="hoverItem(i)"
         @mouseleave="unHoverItem()"
         @click="goToOther(i)"
@@ -19,15 +23,15 @@
       >
         <div class="otherprojects-image">
           <img
-            :src="windowSize==='web' ? item.img.web : item.img.mob"
+            :src="windowSize === 'web' ? item.img.web : item.img.mob"
             alt
             class="otherprojects-image"
           />
         </div>
         <div class="otherprojects-subtitle-wrapper">
           <span class="otherprojects-subtitle">
-            <span class="underline">{{item.title}}</span>
-            <span class="online" v-if="item.online">{{item.online}}</span>
+            <span class="underline">{{ item.title }}</span>
+            <span class="online" v-if="item.online">{{ item.online }}</span>
           </span>
         </div>
       </a>
@@ -36,8 +40,8 @@
     <ul class="otherprojects-pagination">
       <li
         class="otherprojects-pagination-item"
-        v-for="(item,i) in dataArray"
-        :class="{'active':activePage===i}"
+        v-for="(item, i) in dataArray"
+        :class="{ active: activePage === i, light: theme !== 'dark' }"
         :key="`pagination${item.id}`"
       />
     </ul>
@@ -47,116 +51,116 @@
 </template>
 
 <script>
-import content from '../../data/content'
-import { sendGaMethods } from '@/mixins/masterBuilder.js'
-import isAfterOnlineDate from '@/mixins/handleOnlineDate.js'
+import content from "../../data/content";
+import { sendGaMethods } from "@/mixins/masterBuilder.js";
+import isAfterOnlineDate from "@/mixins/handleOnlineDate.js";
 
 export default {
-  name: 'OtherProjects',
+  name: "OtherProjects",
   props: {
     theme: {
       type: String,
-      default: 'dark',
+      default: "dark",
     },
     isNotRoot: { type: Boolean, default: true },
   },
   data() {
     return {
       dataArray: content.otherProjects,
-      windowSize: 'web',
+      windowSize: "web",
       active: null,
       hovered: null,
       activePage: 0,
-    }
+    };
   },
   mixins: [sendGaMethods, isAfterOnlineDate],
   methods: {
     checkWindowSize() {
       if (window.innerWidth < 768) {
-        this.windowSize = 'mob'
+        this.windowSize = "mob";
       } else {
-        this.windowSize = 'web'
+        this.windowSize = "web";
       }
     },
     hoverItem(i) {
       if (
-        this.windowSize === 'web' &&
+        this.windowSize === "web" &&
         i !== this.active &&
         (i !== 1 || !isAfterOnlineDate)
       ) {
-        this.hovered = i
+        this.hovered = i;
       }
     },
     unHoverItem() {
-      this.hovered = null
+      this.hovered = null;
     },
     containerScrollHandler() {
-      if (this.windowSize === 'mob') {
+      if (this.windowSize === "mob") {
         const {
           scrollLeft,
           scrollWidth,
           offsetWidth,
-        } = this.$refs.otherprojectsContainer
+        } = this.$refs.otherprojectsContainer;
         for (let i = 0; i < this.dataArray.length; i++) {
           if (
             scrollLeft >
             ((scrollWidth - offsetWidth) * (2 * i - 1)) /
               (2 * (this.dataArray.length - 1))
           ) {
-            this.activePage = i
+            this.activePage = i;
           }
         }
       }
     },
     getActive() {
-      const currentURL = window.location.href
+      const currentURL = window.location.href;
 
-      if (currentURL.indexOf('../problem') !== -1) {
-        this.active = 0
-      } else if (currentURL.indexOf('/poll') !== -1) {
-        this.active = 1
-      } else if (currentURL.indexOf('/data') !== -1) {
-        this.active = 2
-      } else if (currentURL.indexOf('/story') !== -1) {
-        this.active = 4
-      } else if (currentURL.indexOf('/collect') !== -1) {
-        this.active = 5
+      if (currentURL.indexOf("../problem") !== -1) {
+        this.active = 0;
+      } else if (currentURL.indexOf("/poll") !== -1) {
+        this.active = 1;
+      } else if (currentURL.indexOf("/data") !== -1) {
+        this.active = 2;
+      } else if (currentURL.indexOf("/story") !== -1) {
+        this.active = 4;
+      } else if (currentURL.indexOf("/collect") !== -1) {
+        this.active = 5;
       } else {
-        this.active = 3
+        this.active = 3;
       }
     },
     goToOther(index) {
       if (index !== this.active) {
         this.sendGA({
-          category: 'related',
-          action: 'click',
+          category: "related",
+          action: "click",
           label: index + 1,
-        })
+        });
       }
     },
     operatedLink(link, index) {
       if (index === this.active || (index === 1 && isAfterOnlineDate)) {
-        return 'javascript:void(0);'
+        return "javascript:void(0);";
       } else {
-        return this.isNotRoot ? `.${link}` : link
+        return this.isNotRoot ? `.${link}` : link;
       }
     },
   },
   mounted() {
-    window.addEventListener('scroll', this.checkWindowSize)
+    window.addEventListener("scroll", this.checkWindowSize);
     document
-      .querySelector('.otherprojects-container')
-      .addEventListener('scroll', this.containerScrollHandler)
-    this.checkWindowSize()
-    this.getActive()
+      .querySelector(".otherprojects-container")
+      .addEventListener("scroll", this.containerScrollHandler);
+    this.checkWindowSize();
+    this.getActive();
   },
   destroyed() {
-    window.removeEventListener('scroll', this.checkWindowSize)
+    window.removeEventListener("scroll", this.checkWindowSize);
     document
-      .querySelector('.otherprojects-container')
-      .removeEventListener('scroll', this.containerScrollHandler)
+      .querySelector(".otherprojects-container")
+      .removeEventListener("scroll", this.containerScrollHandler);
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 .otherprojects-wrapper {
@@ -166,7 +170,7 @@ export default {
   margin-top: 10%;
   padding: 0 15% 100px;
   .otherprojects-title {
-    font-family: 'Noto Sans TC', 'Microsoft JhengHei', Roboto, sans-serif;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", Roboto, sans-serif;
     font-size: 25px;
     font-weight: 500;
     line-height: 2.56;
@@ -205,7 +209,7 @@ export default {
         display: flex;
         justify-content: flex-start;
         .otherprojects-subtitle {
-          font-family: 'Microsoft JhengHei', Roboto, sans-serif;
+          font-family: "Microsoft JhengHei", Roboto, sans-serif;
           font-size: 18px;
           line-height: 1.7;
           justify-self: start;
@@ -265,6 +269,7 @@ export default {
       display: flex;
       justify-content: center;
       .otherprojects-pagination-item {
+        list-style: none;
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -273,6 +278,9 @@ export default {
         background-color: #ababab;
         &.active {
           background-color: #ffffff;
+          &.light {
+            background-color: #00ccb1;
+          }
         }
       }
     }
