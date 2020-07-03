@@ -98,7 +98,7 @@
         p.enlarge 這1年我也實際去試所有「天馬行空」的夢想，
         DrawPhoto
           TiltText(slot="draw" text="學畫畫"  rotateDegree="15deg")
-          TiltText(slot="photo" text="接攝影案子" rotateDegree="-15deg")
+          TiltText(slot="photo" text="接攝影案子" :reverse="true" rotateDegree="-15deg")
       FullWideImage(
         :srcMob="require('~/img/story/img2/mob.jpg')"
         :srcPad="require('~/img/story/img2/pc.jpg')"

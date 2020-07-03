@@ -31,7 +31,6 @@ export default {
 .photo-container {
   position: absolute;
   left: 50%;
-  top: 3rem;
   transform: translate(0, 100%);  
 }
 </style>
