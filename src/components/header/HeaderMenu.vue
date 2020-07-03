@@ -309,7 +309,7 @@ export default {
       font-size: 18px;
       opacity: 0.7;
       color: #333333;
-      text-align: justify;
+      // text-align: justify;
       cursor: pointer;
       @include clean-tap;
 

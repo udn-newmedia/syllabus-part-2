@@ -42,6 +42,7 @@ export default {
   height: 100vh;
   padding: 64px 0;
   background-color: #181818;
+  overflow: hidden;
   @include pc {
     padding: 10% 0;
   }
@@ -64,9 +65,10 @@ export default {
       line-height: 1.1;
       @include pc {
         font-size: 22vw;
-        text-align:justify;
+        text-align: justify;
         text-justify: distribute-all-lines;
         text-align-last:justify;
+        white-space: nowrap;
       }
     }
     .right {
