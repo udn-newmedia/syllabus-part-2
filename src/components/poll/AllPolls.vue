@@ -6,37 +6,22 @@
       <span>民眾調查結果</span>
     </div>
     <div class="chart1-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img1.web:(windowSize.width>=768?imgs.img1.pad:imgs.img1.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img1.web:imgs.img1.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img2.web:(windowSize.width>=768?imgs.img2.pad:imgs.img2.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img2.web:imgs.img2.mob" alt />
     </div>
     <p class="chart-text1">以下統計結果為「聽過新課綱」的民眾</p>
-    <div class="chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img3.web:(windowSize.width>=768?imgs.img3.pad:imgs.img3.mob)"
-        alt
-      />
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img3.web:imgs.img3.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img4.web:(windowSize.width>=768?imgs.img4.pad:imgs.img4.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img4.web:imgs.img4.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img5.web:(windowSize.width>=768?imgs.img5.pad:imgs.img5.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img5.web:imgs.img5.mob" alt />
     </div>
-    <div class="chart-text2">
+    <!-- <div class="chart-text2">
       <div>
         40.3
         <span>%</span>
@@ -55,12 +40,24 @@
         <span>不會</span>
         因新課綱調整教育方式
       </p>
+    </div>-->
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img6.web:imgs.img6.mob" alt />
     </div>
-    <div class="chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img6.web:(windowSize.width>=768?imgs.img6.pad:imgs.img6.mob)"
-        alt
-      />
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img7.web:imgs.img7.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img8.web:imgs.img8.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img9.web:imgs.img9.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img10.web:imgs.img10.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img11.web:imgs.img11.mob" alt />
     </div>
 
     <p
@@ -71,40 +68,40 @@
       <span>學校調查結果</span>
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img7.web:(windowSize.width>=768?imgs.img7.pad:imgs.img7.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img12.web:imgs.img12.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img8.web:(windowSize.width>=768?imgs.img8.pad:imgs.img8.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img13.web:imgs.img13.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img9.web:(windowSize.width>=768?imgs.img9.pad:imgs.img9.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img14.web:imgs.img14.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img10.web:(windowSize.width>=768?imgs.img10.pad:imgs.img10.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img15.web:imgs.img15.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img11.web:(windowSize.width>=768?imgs.img11.pad:imgs.img11.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img16.web:imgs.img16.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img
-        :src="windowSize.width>=1025?imgs.img12.web:(windowSize.width>=768?imgs.img12.pad:imgs.img12.mob)"
-        alt
-      />
+      <img :src="windowSize.width>=768?imgs.img17.web:imgs.img17.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img18.web:imgs.img18.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img19.web:imgs.img19.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img20.web:imgs.img20.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img21.web:imgs.img21.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img22.web:imgs.img22.mob" alt />
+    </div>
+    <div class="chart-area chart">
+      <img :src="windowSize.width>=768?imgs.img23.web:imgs.img23.mob" alt />
     </div>
     <p
       class="all-polls-remarks"

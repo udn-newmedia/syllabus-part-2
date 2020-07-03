@@ -4,7 +4,7 @@
     <HeaderTypeC theme="dark" :device="windowSize.width<=576?'mob':'pc'" pageTitle="課綱上路周年大調查">
       <HeaderLink theme="dark" :isRoot="false" />
     </HeaderTypeC>
-    <Twinkle />
+    <Twinkle :windowSize="windowSize" />
     <!-- <MessageSource /> -->
     <ThreeEvents />
     <ArticleCastAnchor title="完整民調結果" />

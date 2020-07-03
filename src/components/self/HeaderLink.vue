@@ -2,10 +2,10 @@
   <div class="header-link-wrapper">
     <a
       class="header-link"
-      :class="[{active:active===i},`theme-${theme}`]"
+      :class="[{active:active===i},`theme-${theme}`,{'not-online':i===1&&!isAfterOnlineDate}]"
       v-for="(link,i) in links"
       :href="operatedLink(link.link, i)"
-      :target="i!==active&&'_blank'"
+      :target="i===active||(i===1&&!isAfterOnlineDate)?'':'_blank'"
       rel="noopener"
       aria-label="outlink"
       name="outlink"
@@ -17,7 +17,7 @@
       })"
     >
       <span class="text">{{link.text}}</span>
-      <span class="online" v-if="link.online">{{link.online}}</span>
+      <span class="menu-item__online-date" v-if="link.online && !isAfterOnlineDate">{{link.online}}</span>
     </a>
   </div>
 </template>
@@ -25,6 +25,7 @@
 <script>
 import content from '../../data/content'
 import { sendGaMethods } from '@/mixins/masterBuilder.js'
+import isAfterOnlineDate from '@/mixins/handleOnlineDate.js'
 
 export default {
   name: 'HeaderLink',
@@ -32,7 +33,7 @@ export default {
     theme: { type: String, default: 'light' },
     isRoot: { type: Boolean, default: true },
   },
-  mixins: [sendGaMethods],
+  mixins: [sendGaMethods, isAfterOnlineDate],
   data() {
     return { links: content.headerLink, active: 3 }
   },
@@ -55,10 +56,10 @@ export default {
       }
     },
     operatedLink(link, index) {
-      if (index === this.active) {
+      if (index === this.active || (index === 1 && isAfterOnlineDate)) {
         return 'javascript:void(0);'
       } else {
-        return this.isRoot ? link : `.${link}`
+        return this.isNotRoot ? `.${link}` : link
       }
     },
   },
@@ -68,6 +69,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '~/style/menu_item_disabled.scss';
+
 .header-link-wrapper {
   height: 100%;
   width: 100%;
@@ -75,13 +78,15 @@ export default {
   flex-direction: column;
   justify-content: center;
   .header-link {
-    white-space: nowrap;
     display: block;
     opacity: 0.7;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.82;
     text-align: left;
+    @media screen and (max-width: 374.99px) {
+      font-size: 18px;
+    }
     &:hover {
       text-decoration: none;
     }
@@ -93,13 +98,16 @@ export default {
         text-decoration: underline;
       }
     }
-
-    .online {
-      color: #00ccb1;
-      @media screen and (max-width: 374.99px) {
-        font-size: 13px;
-      }
+    &.not-online {
+      cursor: auto;
     }
+    // .online {
+    //   color: #00ccb1;
+    //   font-size: 16px;
+    //   @media screen and (max-width: 374.99px) {
+    //     font-size: 13px;
+    //   }
+    // }
   }
   @media screen and (max-width: 374.99px) {
     padding-left: 0;

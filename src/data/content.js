@@ -50,46 +50,61 @@ import videoImg1 from "../assets/img/timeline/12-years-education_v1.jpg";
 import videoImg2 from "../assets/img/timeline/12-years-education_v2.jpg";
 import videoImg4 from "../assets/img/timeline/12-years-education_v3.jpg";
 import videoImg3 from "../assets/img/timeline/12-years-education_v4.jpg";
-
-import pollWebImage1 from "../assets/img/poll/web/poll_chart1_web.svg";
-import pollPadImage1 from "../assets/img/poll/pad/poll_chart1_pad.svg";
-import pollMobImage1 from "../assets/img/poll/mob/poll_chart1_mob.svg";
-import pollWebImage2 from "../assets/img/poll/web/poll_chart2_web.svg";
-import pollPadImage2 from "../assets/img/poll/pad/poll_chart2_web.svg";
-import pollMobImage2 from "../assets/img/poll/mob/poll_chart2_mob.svg";
-import pollWebImage3 from "../assets/img/poll/web/poll_chart3_web.svg";
-import pollPadImage3 from "../assets/img/poll/pad/poll_chart3_web.svg";
-import pollMobImage3 from "../assets/img/poll/mob/poll_chart3_mob.svg";
-import pollWebImage4 from "../assets/img/poll/web/poll_chart4_web.svg";
-import pollPadImage4 from "../assets/img/poll/pad/poll_chart4_web.svg";
-import pollMobImage4 from "../assets/img/poll/mob/poll_chart4_mob.svg";
-import pollWebImage5 from "../assets/img/poll/web/poll_chart5_web.svg";
-import pollPadImage5 from "../assets/img/poll/pad/poll_chart5_web.svg";
-import pollMobImage5 from "../assets/img/poll/mob/poll_chart5_mob.svg";
-import pollWebImage6 from "../assets/img/poll/web/poll_chart6_web.svg";
-import pollPadImage6 from "../assets/img/poll/pad/poll_chart6_web.svg";
-import pollMobImage6 from "../assets/img/poll/mob/poll_chart6_mob.svg";
-import pollWebImage7 from "../assets/img/poll/web/poll_chart7_web.svg";
-import pollPadImage7 from "../assets/img/poll/pad/poll_chart7_web.svg";
-import pollMobImage7 from "../assets/img/poll/mob/poll_chart7_mob.svg";
-import pollWebImage8 from "../assets/img/poll/web/poll_chart8_web.svg";
-import pollPadImage8 from "../assets/img/poll/pad/poll_chart8_web.svg";
-import pollMobImage8 from "../assets/img/poll/mob/poll_chart8_mob.svg";
-import pollWebImage9 from "../assets/img/poll/web/poll_chart9_web.svg";
-import pollPadImage9 from "../assets/img/poll/pad/poll_chart9_web.svg";
-import pollMobImage9 from "../assets/img/poll/mob/poll_chart9_mob.svg";
-import pollWebImage10 from "../assets/img/poll/web/poll_chart10_web.svg";
-import pollPadImage10 from "../assets/img/poll/pad/poll_chart10_web.svg";
-import pollMobImage10 from "../assets/img/poll/mob/poll_chart10_mob.svg";
-import pollWebImage11 from "../assets/img/poll/web/poll_chart11_web.svg";
-import pollPadImage11 from "../assets/img/poll/pad/poll_chart11_web.svg";
-import pollMobImage11 from "../assets/img/poll/mob/poll_chart11_mob.svg";
-import pollWebImage12 from "../assets/img/poll/web/poll_chart12_web.svg";
-import pollPadImage12 from "../assets/img/poll/pad/poll_chart12_web.svg";
-import pollMobImage12 from "../assets/img/poll/mob/poll_chart12_mob.svg";
+import pollWebImage1 from "../assets/img/poll/web/0702_new/poll_chart1_web.svg";
+import pollWebImage2 from "../assets/img/poll/web/0702_new/poll_chart２_web.svg";
+import pollWebImage3 from "../assets/img/poll/web/0702_new/poll_chart３_web.svg";
+import pollWebImage4 from "../assets/img/poll/web/0702_new/poll_chart４_web.svg";
+import pollWebImage5 from "../assets/img/poll/web/0702_new/poll_chart５_web.svg";
+import pollWebImage6 from "../assets/img/poll/web/0702_new/poll_chart６_web.svg";
+import pollWebImage7 from "../assets/img/poll/web/0702_new/poll_chart７_web.svg";
+import pollWebImage8 from "../assets/img/poll/web/0702_new/poll_chart８_web.svg";
+import pollWebImage9 from "../assets/img/poll/web/0702_new/poll_chart９_web.svg";
+import pollWebImage10 from "../assets/img/poll/web/0702_new/poll_chart10_web.svg";
+import pollWebImage11 from "../assets/img/poll/web/0702_new/poll_chart11_web.svg";
+import pollWebImage12 from "../assets/img/poll/web/0702_new/poll_chart12_web.svg";
+import pollWebImage13 from "../assets/img/poll/web/0702_new/poll_chart13_web.svg";
+import pollWebImage14 from "../assets/img/poll/web/0702_new/poll_chart14_web.svg";
+import pollWebImage15 from "../assets/img/poll/web/0702_new/poll_chart15_web.svg";
+import pollWebImage16 from "../assets/img/poll/web/0702_new/poll_chart16_web.svg";
+import pollWebImage17 from "../assets/img/poll/web/0702_new/poll_chart17_web.svg";
+import pollWebImage18 from "../assets/img/poll/web/0702_new/poll_chart18_web.svg";
+import pollWebImage19 from "../assets/img/poll/web/0702_new/poll_chart19_web.svg";
+import pollWebImage20 from "../assets/img/poll/web/0702_new/poll_chart20_web.svg";
+import pollWebImage21 from "../assets/img/poll/web/0702_new/poll_chart21_web.svg";
+import pollWebImage22 from "../assets/img/poll/web/0702_new/poll_chart22_web.svg";
+import pollWebImage23 from "../assets/img/poll/web/0702_new/poll_chart23_web.svg";
+import pollMobImage1 from "../assets/img/poll/mob/0702_new/poll_chart1_mob.svg";
+import pollMobImage2 from "../assets/img/poll/mob/0702_new/poll_chart2_mob.svg";
+import pollMobImage3 from "../assets/img/poll/mob/0702_new/poll_chart3_mob.svg";
+import pollMobImage4 from "../assets/img/poll/mob/0702_new/poll_chart4_mob.svg";
+import pollMobImage5 from "../assets/img/poll/mob/0702_new/poll_chart5_mob.svg";
+import pollMobImage6 from "../assets/img/poll/mob/0702_new/poll_chart6_mob.svg";
+import pollMobImage7 from "../assets/img/poll/mob/0702_new/poll_chart7_mob.svg";
+import pollMobImage8 from "../assets/img/poll/mob/0702_new/poll_chart8_mob.svg";
+import pollMobImage9 from "../assets/img/poll/mob/0702_new/poll_chart9_mob.svg";
+import pollMobImage10 from "../assets/img/poll/mob/0702_new/poll_chart10_mob.svg";
+import pollMobImage11 from "../assets/img/poll/mob/0702_new/poll_chart11_mob.svg";
+import pollMobImage12 from "../assets/img/poll/mob/0702_new/poll_chart12_mob.svg";
+import pollMobImage13 from "../assets/img/poll/mob/0702_new/poll_chart13_mob.svg";
+import pollMobImage14 from "../assets/img/poll/mob/0702_new/poll_chart14_mob.svg";
+import pollMobImage15 from "../assets/img/poll/mob/0702_new/poll_chart15_mob.svg";
+import pollMobImage16 from "../assets/img/poll/mob/0702_new/poll_chart16_mob.svg";
+import pollMobImage17 from "../assets/img/poll/mob/0702_new/poll_chart17_mob.svg";
+import pollMobImage18 from "../assets/img/poll/mob/0702_new/poll_chart18_mob.svg";
+import pollMobImage19 from "../assets/img/poll/mob/0702_new/poll_chart19_mob.svg";
+import pollMobImage20 from "../assets/img/poll/mob/0702_new/poll_chart20_mob.svg";
+import pollMobImage21 from "../assets/img/poll/mob/0702_new/poll_chart21_mob.svg";
+import pollMobImage22 from "../assets/img/poll/mob/0702_new/poll_chart22_mob.svg";
+import pollMobImage23 from "../assets/img/poll/mob/0702_new/poll_chart23_mob.svg";
 
 import pressLikeImg1 from "../assets/img/poll/poll_good_white.svg";
 import pressLikeImg2 from "../assets/img/poll/poll_good_blue.svg";
+
+import marketingPeople1 from "../assets/img/marketing/lan.png";
+import marketingPeople2 from "../assets/img/marketing/fan.png";
+import marketingPeople3 from "../assets/img/marketing/zhuang.png";
+import marketingBg1 from "../assets/img/marketing/banner_bg1.jpg";
+import marketingBg2 from "../assets/img/marketing/banner_bg2.jpg";
 
 const content = {
   headerLink: [
@@ -225,8 +240,32 @@ const content = {
     },
   ],
   marketing: [
-    { img: "", text: "黎孔平 X 徐沛然", date: "08.", id: "黎孔平X徐沛然" },
-    { img: "", text: "黃蘭燕 X 楊富民", date: "08.", id: "黃蘭燕X楊富民" },
+    {
+      imgs: {
+        people1: marketingPeople1,
+        people2: marketingPeople2,
+        bg: marketingBg1,
+      },
+      title1: "108課綱好難懂？",
+      title2: "專家讓你問到飽",
+      text: "2小時解答你對新課綱的所有困惑",
+      date: "08.17",
+      guest: "講者 藍偉瑩 X 范信賢",
+      id: marketingBg1,
+    },
+    {
+      imgs: {
+        people1: marketingPeople1,
+        people2: marketingPeople3,
+        bg: marketingBg2,
+      },
+      title1: "怎麼做好學習歷程檔案？",
+      title2: "生涯探索是第一步",
+      text: "學習歷程檔案將是未來升大學關鍵，你搞懂了嗎？",
+      date: "08.29",
+      guest: "講者 藍偉瑩 X 莊智超",
+      id: marketingBg2,
+    },
   ],
 
   twinkleArticle: [
@@ -271,63 +310,95 @@ const content = {
   pollImages: {
     img1: {
       web: pollWebImage1,
-      pad: pollPadImage1,
       mob: pollMobImage1,
     },
     img2: {
       web: pollWebImage2,
-      pad: pollPadImage2,
       mob: pollMobImage2,
     },
     img3: {
       web: pollWebImage3,
-      pad: pollPadImage3,
       mob: pollMobImage3,
     },
     img4: {
       web: pollWebImage4,
-      pad: pollPadImage4,
       mob: pollMobImage4,
     },
     img5: {
       web: pollWebImage5,
-      pad: pollPadImage5,
       mob: pollMobImage5,
     },
     img6: {
       web: pollWebImage6,
-      pad: pollPadImage6,
       mob: pollMobImage6,
     },
     img7: {
       web: pollWebImage7,
-      pad: pollPadImage7,
       mob: pollMobImage7,
     },
     img8: {
       web: pollWebImage8,
-      pad: pollPadImage8,
       mob: pollMobImage8,
     },
     img9: {
       web: pollWebImage9,
-      pad: pollPadImage9,
       mob: pollMobImage9,
     },
     img10: {
       web: pollWebImage10,
-      pad: pollPadImage10,
       mob: pollMobImage10,
     },
     img11: {
       web: pollWebImage11,
-      pad: pollPadImage11,
       mob: pollMobImage11,
     },
     img12: {
       web: pollWebImage12,
-      pad: pollPadImage12,
       mob: pollMobImage12,
+    },
+    img13: {
+      web: pollWebImage13,
+      mob: pollMobImage13,
+    },
+    img14: {
+      web: pollWebImage14,
+      mob: pollMobImage14,
+    },
+    img15: {
+      web: pollWebImage15,
+      mob: pollMobImage15,
+    },
+    img16: {
+      web: pollWebImage16,
+      mob: pollMobImage16,
+    },
+    img17: {
+      web: pollWebImage17,
+      mob: pollMobImage17,
+    },
+    img18: {
+      web: pollWebImage18,
+      mob: pollMobImage18,
+    },
+    img19: {
+      web: pollWebImage19,
+      mob: pollMobImage19,
+    },
+    img20: {
+      web: pollWebImage20,
+      mob: pollMobImage20,
+    },
+    img21: {
+      web: pollWebImage21,
+      mob: pollMobImage21,
+    },
+    img22: {
+      web: pollWebImage22,
+      mob: pollMobImage22,
+    },
+    img23: {
+      web: pollWebImage23,
+      mob: pollMobImage23,
     },
   },
   pressLikeImgs: {

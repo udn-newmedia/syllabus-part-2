@@ -40,6 +40,9 @@ export default {
       font-size: 75px;
       font-weight: 900;
       line-height: 1.33;
+      @media screen and (max-width: 374.99px) {
+        font-size: 70px;
+      }
     }
   }
 }

@@ -1,4 +1,3 @@
-
 const isAfterOnlineDate = {
   computed: {
     isAfterOnlineDate() {
@@ -6,8 +5,8 @@ const isAfterOnlineDate = {
       const today = new Date();
 
       return onlineDate.getTime() < today.getTime();
-    }
-  }
-}
+    },
+  },
+};
 
 export default isAfterOnlineDate;

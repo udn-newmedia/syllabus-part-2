@@ -3,28 +3,14 @@
     <div class="otherprojects-title">108課綱上路周年追蹤報導</div>
 
     <div class="otherprojects-container" ref="otherprojectsContainer">
-      <!-- <a
-        v-for="(item,i) in dataArray"
-        :href="operatedLink(item.link,i)"
-        :target="i!==active&&'_blank'"
-        class="otherprojects-image-wrapper"
-        :class="{'hovered':hovered===i}"
-        :style="{opacity:i===active&&0.4,
-        cursor: i===active && 'auto'}"
-        @mouseenter="hoverItem(i)"
-        @mouseleave="unHoverItem()"
-        @click="goToOther(i)"
-        :key="item.id"
-        :disabled="true"
-      >-->
       <a
         v-for="(item,i) in dataArray"
         :href="operatedLink(item.link,i)"
-        :target="i!==active&&'_blank'"
+        :target="i===active||(i===1&&!isAfterOnlineDate)?'':'_blank'"
         class="otherprojects-image-wrapper"
         :class="{'hovered':hovered===i}"
-        :style="{opacity:i===active&&0.4,
-        cursor: i===active && 'auto'}"
+        :style="{opacity:(i===active||(i===1&&!isAfterOnlineDate))&&0.4,
+        cursor: (i===active||(i===1&&!isAfterOnlineDate)) && 'auto'}"
         @mouseenter="hoverItem(i)"
         @mouseleave="unHoverItem()"
         @click="goToOther(i)"
@@ -63,6 +49,7 @@
 <script>
 import content from '../../data/content'
 import { sendGaMethods } from '@/mixins/masterBuilder.js'
+import isAfterOnlineDate from '@/mixins/handleOnlineDate.js'
 
 export default {
   name: 'OtherProjects',
@@ -82,7 +69,7 @@ export default {
       activePage: 0,
     }
   },
-  mixins: [sendGaMethods],
+  mixins: [sendGaMethods, isAfterOnlineDate],
   methods: {
     checkWindowSize() {
       if (window.innerWidth < 768) {
@@ -92,7 +79,11 @@ export default {
       }
     },
     hoverItem(i) {
-      if (this.windowSize === 'web' && i !== this.active) {
+      if (
+        this.windowSize === 'web' &&
+        i !== this.active &&
+        (i !== 1 || !isAfterOnlineDate)
+      ) {
         this.hovered = i
       }
     },
@@ -144,7 +135,7 @@ export default {
       }
     },
     operatedLink(link, index) {
-      if (index === this.active) {
+      if (index === this.active || (index === 1 && isAfterOnlineDate)) {
         return 'javascript:void(0);'
       } else {
         return this.isNotRoot ? `.${link}` : link
@@ -187,7 +178,8 @@ export default {
     flex-wrap: wrap;
     @media screen and (max-width: 768px) {
       flex-wrap: nowrap;
-      overflow-y: scroll;
+      // overflow-y: scroll;
+      overflow-y: hidden;
     }
     .otherprojects-image-wrapper {
       text-decoration: none;
@@ -233,17 +225,6 @@ export default {
               background-size: 0% 100%;
               transition: background-size 0.5s;
             }
-            // position: relative;
-            // &::after {
-            //   position: absolute;
-            //   content: '';
-            //   width: 0;
-            //   bottom: 0;
-            //   left: 0;
-            //   height: 2px;
-            //   background-color: #00ccb1;
-            //   transition: all 0.5s ease-in-out;
-            // }
           }
           @media screen and (max-width: 768px) {
             text-align: center;

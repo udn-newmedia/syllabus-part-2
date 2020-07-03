@@ -2,7 +2,9 @@
   <div class="twinkle-container">
     <div>
       <div class="twinkle-subtitle">108課綱大調查</div>
-      <h1 class="twinkle-title">升學主義 教師心中的教改殺手</h1>
+      <h1 v-if="windowSize.width>=768" class="twinkle-title">升學主義 教師心中的教改殺手</h1>
+      <h1 v-if="windowSize.width<768" class="twinkle-title">升學主義</h1>
+      <h1 v-if="windowSize.width<768" class="twinkle-title">教師心中的教改殺手</h1>
     </div>
 
     <span
@@ -31,6 +33,7 @@ import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
 export default {
   name: 'Twinkle',
   components: { NmdArrow },
+  props: { windowSize: { type: Object } },
   mixins: [autoResize_3, sendGaMethods],
   data() {
     const messages = []
@@ -101,6 +104,9 @@ export default {
     padding-left: 16px;
     padding-right: 16px;
   }
+  @media screen and (max-width: 374.99px) {
+    font-size: 20px;
+  }
 }
 .twinkle-title {
   z-index: 1000;
@@ -109,11 +115,14 @@ export default {
   line-height: 1.25;
   text-align: left;
   color: #fbfbfb;
-  font-family: GenJyuuGothic-Monospace-Heavy;
+  // font-family: GenJyuuGothicX-Monospace-Heavy;
   @media screen and (max-width: 767.99px) {
     font-size: 36px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+  @media screen and (max-width: 374.99px) {
+    font-size: 32px;
   }
 }
 .arrow-wrapper {
