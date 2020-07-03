@@ -23,9 +23,9 @@
       <FooterShare />
     </div>
 
-    <div class="questionnaire">
+    <a class="questionnaire" href="https://www.surveycake.com/s/KpQKN" target="_blank">
       <span>填寫閱讀體驗問卷</span>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -42,7 +42,7 @@ export default {
   padding-top: 100px;
   padding-bottom: 70px;
   width: 100%;
-  height: 80vh;
+  // height: 80vh;
   background-color: #000000;
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +52,6 @@ export default {
     flex: 0 0 50%;
     max-width: 50vw;
     color: #eeeeee;
-    font-family: SourceHanSansTW-Normal;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -61,6 +60,9 @@ export default {
   }
 
   .questionnaire {
+    &:hover {
+      text-decoration: none;
+    }
     flex: 0 0 45vw;
     max-width: 45vw;
     @include pad {
@@ -83,7 +85,6 @@ export default {
     background-color: #dce4eb;
     // margin-top: 20.56vh;
     span {
-      font-family: SourceHanSansTW-Bold;
       font-size: 18px;
       font-weight: bold;
       line-height: 1.21;

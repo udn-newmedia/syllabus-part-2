@@ -11,7 +11,7 @@ const pollContent = contentGenerator("../contents/poll.html");
 /* 測試路徑 */
 const pathRoot =
   process.env.NODE_ENV === "production"
-    ? "https://nmdap.udn.com.tw/test/Second_Wave/"
+    ? "https://nmdap.udn.com.tw/test/Second_Wave2/"
     : "http://localhost:8080/";
 
 const story_path = "story/";
@@ -60,7 +60,7 @@ module.exports = {
       entry: "src/subpages/poll/main.js",
       template: "public/index.html",
       filename: "poll/index.html",
-      title: "108課綱上路周年大調查 | 專題 | 聯合報",
+      title: "【108課綱大調查】 升學主義 教師心中的教改殺手 | 專題 | 聯合報",
       description:
         "108課綱上路1年，《聯合報》此次針對全台929所國高中、1243位民眾進行民調，調查結果看到民眾和學校對新課綱理念的認同，但也看到他們濃厚的焦慮與不安。",
       keywords: "108課綱.12年國教,教改,升學,民調,聯合報",

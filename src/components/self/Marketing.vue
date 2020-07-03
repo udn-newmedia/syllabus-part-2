@@ -1,21 +1,35 @@
 <template>
   <div class="marketing" :style="{ backgroundColor: bg }">
-    <div class="marketing-title">課綱強調生活情境</div>
+    <div class="marketing-title">活動資訊</div>
     <div
       class="marketing-text"
-    >你對台灣教育、上路一年的108課綱有話想說嗎？歡迎寫下看法，《聯合報》今年將持續追蹤報導此波教改，你的心聲與建議，都是我們的重要報導線索。</div>
+    >對108課綱、升學制度變革還是有很多疑惑和擔憂？《聯合報》邀請瑩光教育協會理事長藍偉瑩、十二年國教新課綱推動專案辦公室協作委員范信賢、開放個人經驗平台（IOH）創辦人莊智超等多位教育界專家，8月在聯經書房為大家解答。</div>
     <div class="marketing-img-wrapper">
-      <div class="marketing-img-blueline">
-        <span />
-      </div>
-      <div v-for="(data, i) in dataArray" class="marketing-img" :key="data.id">
-        <div class="marketing-img-text">{{ data.text }}</div>
-        <div class="marketing-img-container">
-          <div class="marketing-img-date">{{ data.date }}</div>
-          <div class="marketing-img-signup" @click="signup(i + 1)">
-            <span>報名</span>
+      <div class="marketing-img" v-for="(data, i) in dataArray" :key="data.id">
+        <div class="marketing-img-date">{{ data.date }}</div>
+        <div class="marketing-img-container" :style="{backgroundImage:`url(${data.imgs.bg})`}">
+          <div class="marketing-img-title" :style="{color:i%2===0&&'#fff'}">{{ data.title1}}</div>
+          <div class="marketing-img-title" :style="{color:i%2===0&&'#fff'}">{{ data.title2 }}</div>
+          <p class="marketing-img-text" :style="{color:i%2===0&&'#fff'}">{{ data.text }}</p>
+          <div class="marketing-img-guest">
+            <div class="marketing-img-people">
+              <img :src="data.imgs.people1" alt />
+              <img :src="data.imgs.people2" alt />
+            </div>
+            <div
+              class="marketing-img-guest-text"
+              :style="{color:i%2===0?'#fff':'#cf5454'}"
+            >{{data.guest}}</div>
           </div>
-          <img class="marketing-img-area" src alt style="background-color:rgba(0,0,0,0.5)" />
+          <div class="marketing-img-button">
+            <div
+              class="marketing-img-signup"
+              @click="signup(i + 1)"
+              :style="[{color:i%2===0?'#cf5454':'#fff'},{backgroundColor:i%2===0?'#fff':'#cf5454'}]"
+            >
+              <span>報名</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -65,8 +79,7 @@ export default {
 
 <style lang="scss" scoped>
 .marketing {
-  // width: 100vw;
-  // height: 100vh;
+  text-align: left;
   .marketing-title {
     font-family: source-han-serif-tc, sans-serif;
     font-size: 40px;
@@ -78,77 +91,102 @@ export default {
     margin-left: 21.9%;
   }
   .marketing-text {
-    // font-family: SourceHanSansTW-Regular;
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
-    color: #7b7a7a;
+    color: #979797;
     margin-left: 21.9%;
     width: 33.67%;
   }
   .marketing-img-wrapper {
     margin-top: 7.36vh;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    .marketing-img-blueline {
-      flex: 0 0 31.25vw;
-      max-width: 31.25vw;
-      height: 41.52vh;
-      position: relative;
-      span {
-        position: absolute;
-        width: 12.89vw;
-        height: 1px;
-        background-color: #00ccb1;
-        right: -10%;
-        top: 50%;
-        z-index: 2;
-      }
-    }
     .marketing-img {
       flex: 0 0 27.42vw;
       max-width: 27.42vw;
-      height: 41.52vh;
+      // height: 41.52vh;
       margin: 35px 1.4vw 0;
-      .marketing-img-text {
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 1.29;
+
+      .marketing-img-date {
+        font-family: TitlingGothicFBComp-Standard;
+        font-size: 44px;
+        line-height: 0.55;
         text-align: left;
-        color: #000000;
-        margin-bottom: 8px;
-        margin-left: 12px;
+        color: #cf5454;
+        margin-bottom: 10px;
       }
       .marketing-img-container {
         z-index: 1;
-        position: relative;
-        height: 34.58vh;
         border-radius: 6px;
-        background-color: #bebebe;
-        .marketing-img-date {
-          position: absolute;
-          top: 26px;
-          left: 16px;
-          font-family: TitlingGothicFBComp-Standard;
-          font-size: 44px;
-          line-height: 0.55;
-          text-align: left;
-          color: #000000;
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: 961px) and (max-width: 1377px) {
+          height: 100%;
         }
-        .marketing-img-signup {
-          position: absolute;
-          bottom: 24px;
-          right: 24px;
-          width: 101px;
-          height: 50px;
-          background-color: #000;
+        @media screen and (max-width: 768px) {
+          padding-top: 30px;
+        }
+        .marketing-img-title {
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 1.29;
+          padding-left: 6.8%;
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+        .marketing-img-text {
           font-size: 16px;
-          line-height: 1.25;
-          color: #f7f5f5;
-          border-radius: 8px;
+          line-height: 1.5;
+          text-align: left;
+          margin-top: 8px;
+          padding-left: 6.8%;
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
+        .marketing-img-guest {
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          .marketing-img-people {
+            width: 100%;
+            display: flex;
+            padding-left: 13.6%;
+            img {
+              max-width: 50%;
+              flex: 0 0 50%;
+              padding: 0 7.5px;
+            }
+          }
+          .marketing-img-guest-text {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+            @media screen and (max-width: 375px) {
+              font-size: 12px;
+            }
+          }
+        }
+        .marketing-img-button {
+          max-width: 50%;
+          flex: 0 0 50%;
           display: flex;
           justify-content: center;
           align-items: center;
+          .marketing-img-signup {
+            width: 101px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 1.25;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
     }

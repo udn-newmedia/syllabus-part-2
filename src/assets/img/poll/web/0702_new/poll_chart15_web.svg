@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="867" viewBox="0 0 850 867">
+  <g id="poll_chart15_web" transform="translate(-215 -12164)">
+    <rect id="Rectangle_3026" data-name="Rectangle 3026" width="850" height="867" rx="5" transform="translate(215 12164)" fill="#fff"/>
+    <rect id="Rectangle_3027" data-name="Rectangle 3027" width="513" height="25" transform="translate(487.5 12365)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3047" data-name="Rectangle 3047" width="513" height="25" transform="translate(487.5 12759)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3028" data-name="Rectangle 3028" width="513" height="25" transform="translate(487.5 12401)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3029" data-name="Rectangle 3029" width="513" height="25" transform="translate(487.5 12477)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3030" data-name="Rectangle 3030" width="513" height="25" transform="translate(487.5 12593)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3031" data-name="Rectangle 3031" width="513" height="25" transform="translate(487.5 12437)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3032" data-name="Rectangle 3032" width="513" height="25" transform="translate(487.5 12553)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3033" data-name="Rectangle 3033" width="513" height="25" transform="translate(487.5 12513)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3034" data-name="Rectangle 3034" width="513" height="25" transform="translate(487.5 12629)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3049" data-name="Rectangle 3049" width="513" height="25" transform="translate(487.5 12797)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3035" data-name="Rectangle 3035" width="513" height="25" transform="translate(487.5 12327)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3051" data-name="Rectangle 3051" width="513" height="25" transform="translate(487.5 12836)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3055" data-name="Rectangle 3055" width="513" height="25" transform="translate(487.5 12916)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3053" data-name="Rectangle 3053" width="513" height="25" transform="translate(487.5 12876)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3057" data-name="Rectangle 3057" width="513" height="25" transform="translate(487.5 12956)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3036" data-name="Rectangle 3036" width="244" height="25" transform="translate(487.5 12365)" fill="#00ccb1"/>
+    <rect id="Rectangle_3048" data-name="Rectangle 3048" width="347" height="25" transform="translate(487.5 12759)" fill="#00ccb1"/>
+    <rect id="Rectangle_3037" data-name="Rectangle 3037" width="128" height="25" transform="translate(487.5 12401)" fill="#00ccb1"/>
+    <rect id="Rectangle_3038" data-name="Rectangle 3038" width="90" height="25" transform="translate(487.5 12477)" fill="#00ccb1"/>
+    <rect id="Rectangle_3039" data-name="Rectangle 3039" width="54" height="25" transform="translate(487.5 12593)" fill="#00ccb1"/>
+    <rect id="Rectangle_3040" data-name="Rectangle 3040" width="120" height="25" transform="translate(487.5 12437)" fill="#00ccb1"/>
+    <rect id="Rectangle_3041" data-name="Rectangle 3041" width="72" height="25" transform="translate(487.5 12553)" fill="#00ccb1"/>
+    <rect id="Rectangle_3042" data-name="Rectangle 3042" width="77" height="25" transform="translate(487.5 12513)" fill="#00ccb1"/>
+    <rect id="Rectangle_3043" data-name="Rectangle 3043" width="36" height="25" transform="translate(487.5 12629)" fill="#00ccb1"/>
+    <rect id="Rectangle_3050" data-name="Rectangle 3050" width="330" height="25" transform="translate(487.5 12797)" fill="#00ccb1"/>
+    <rect id="Rectangle_3044" data-name="Rectangle 3044" width="285" height="25" transform="translate(487.5 12327)" fill="#00ccb1"/>
+    <rect id="Rectangle_3052" data-name="Rectangle 3052" width="131" height="25" transform="translate(487.5 12836)" fill="#00ccb1"/>
+    <rect id="Rectangle_3056" data-name="Rectangle 3056" width="91" height="25" transform="translate(487.5 12916)" fill="#00ccb1"/>
+    <rect id="Rectangle_3054" data-name="Rectangle 3054" width="126" height="25" transform="translate(487.5 12876)" fill="#00ccb1"/>
+    <rect id="Rectangle_3058" data-name="Rectangle 3058" width="54" height="25" transform="translate(487.5 12956)" fill="#00ccb1"/>
+    <text id="內文p" transform="translate(778.5 12347)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">55.0</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-2" data-name="內文p" transform="translate(623.5 12855)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">25.1</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-3" data-name="內文p" transform="translate(618.5 12895)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">24.8</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-4" data-name="內文p" transform="translate(582.5 12935)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">18.4</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-5" data-name="內文p" transform="translate(546.5 12975)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">10.7</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-6" data-name="內文p" transform="translate(737.5 12385)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">47.3</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-7" data-name="內文p" transform="translate(838.5 12778)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">68.3</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-8" data-name="內文p" transform="translate(621.5 12420)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">23.5</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-9" data-name="內文p" transform="translate(582.5 12496)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">17.4</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-10" data-name="內文p" transform="translate(543.5 12613)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">10.2</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-11" data-name="內文p" transform="translate(613.5 12456)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">21.0</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-12" data-name="內文p" transform="translate(563.5 12573)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">14.4</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-13" data-name="內文p" transform="translate(568.5 12532)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">14.9</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-14" data-name="內文p" transform="translate(528.5 12648)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">6.7</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-15" data-name="內文p" transform="translate(822.5 12816)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">63.4</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-16" data-name="內文p" transform="translate(280.5 12278)" font-size="20" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="23">部定課程遇到困難的領域為：（可複選）</tspan></text>
+    <text id="內文p-17" data-name="內文p" transform="translate(280.5 12707)" font-size="20" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="23">彈性學習課程遇到的困難為：（可複選）</tspan></text>
+    <text id="內文p-18" data-name="內文p" transform="translate(420.5 12346)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-140" y="0">跨領域統整課程</tspan></text>
+    <text id="內文p-19" data-name="內文p" transform="translate(400.5 12775)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-120" y="0">教師負擔過重</tspan></text>
+    <text id="內文p-20" data-name="內文p" transform="translate(360.5 12384)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">科技領域</tspan></text>
+    <text id="內文p-21" data-name="內文p" transform="translate(400.5 12815)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-120" y="0">課程規劃困難</tspan></text>
+    <text id="內文p-22" data-name="內文p" transform="translate(280.5 12423)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">語文</tspan></text>
+    <text id="內文p-23" data-name="內文p" transform="translate(280.5 12499)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">社會</tspan></text>
+    <text id="內文p-24" data-name="內文p" transform="translate(280.5 12615)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">數學</tspan></text>
+    <text id="內文p-25" data-name="內文p" transform="translate(280.5 12459)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">自然科學</tspan></text>
+    <text id="內文p-26" data-name="內文p" transform="translate(280.5 12575)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">藝術</tspan></text>
+    <text id="內文p-27" data-name="內文p" transform="translate(280.5 12535)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">綜合活動</tspan></text>
+    <text id="內文p-28" data-name="內文p" transform="translate(280.5 12651)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">健康與體育</tspan></text>
+    <text id="內文p-29" data-name="內文p" transform="translate(280.5 12855)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">教學資源不足</tspan></text>
+    <text id="內文p-30" data-name="內文p" transform="translate(280.5 12935)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">開課量、類型不足</tspan></text>
+    <text id="內文p-31" data-name="內文p" transform="translate(280.5 12895)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">外部資源難尋</tspan></text>
+    <text id="內文p-32" data-name="內文p" transform="translate(280.5 12975)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">其他</tspan></text>
+    <text id="內文p-33" data-name="內文p" transform="translate(280.5 12249)" font-size="25" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="0">54.8%國中課程實施遇到困難</tspan></text>
+  </g>
+</svg>

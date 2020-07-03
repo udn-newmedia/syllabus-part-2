@@ -90,14 +90,16 @@ export default {
     updateProgress() {
       const { pageYOffset } = window
       const result = this.activeArray.slice()
-
+      console.log(pageYOffset)
+      console.log(this.tops[0])
+      console.log(this.tops[1])
       for (let i = 0; i < this.tops.length; i++) {
         if (i === 0) {
           result[i] = true
         } else {
           if (
             pageYOffset >
-            this.tops[i] - 0.75 * (this.tops[i] - this.tops[i - 1])
+            this.tops[i] + 0.2 * (this.tops[i + 1] - this.tops[i])
           ) {
             result[i] = true
           }

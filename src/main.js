@@ -1,4 +1,5 @@
 import Vue from "vue";
+import "whatwg-fetch";
 
 import { rwdMethods } from "@/mixins/masterBuilder.js";
 import "bootstrap/scss/bootstrap.scss";
