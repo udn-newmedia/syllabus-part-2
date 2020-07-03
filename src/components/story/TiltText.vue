@@ -1,5 +1,5 @@
 <template lang="pug">
-  span.tilt-text(:style="{transform}")
+  span.tilt-text(:class="{'tilt-text--reverse': reverse}" :style="{transform}")
     p.enlarge.tilt {{text}}
     div.tilt-text__mark-container
       div.tilt-text__mark(:class="{'tilt-text__mark--active': observableActive}")
@@ -15,6 +15,10 @@ export default {
     text: {
       type: String,
       required: true
+    },
+    reverse: {
+      type: Boolean,
+      default: false
     },
     rotateDegree: {
       type: String,
@@ -43,6 +47,9 @@ export default {
   display: inline-block;
   transition: 0.333s;
   transform-origin: -1.25rem 2.5rem;
+  &.tilt-text--reverse {
+    transform-origin: 100% 2.5rem;
+  }
   .tilt-text__mark-container {
     overflow: hidden;
     position: absolute;
