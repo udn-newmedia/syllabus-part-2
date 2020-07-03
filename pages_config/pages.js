@@ -42,7 +42,7 @@ module.exports = {
       entry: "src/subpages/story/main.js",
       template: "public/index.html",
       filename: "story/index.html",
-      title: "升學主義悲歌：19歲少女的告白 | 專題 | 聯合報",
+      title: "她的家庭 是台灣升學主義縮影 | 專題 | 聯合報",
       description:
         "教育改革總強調多元與鬆綁，但當機會更多，為什麼台灣教育，卻讓學生更迷惘、甚至後悔自己的選擇？一個真實故事，背後是難以翻轉的文憑迷思。新一波教改，能給孩子嘗試不同道路的勇氣嗎？",
       keywords: "教改,升學,考試,108課綱,聯合報",
