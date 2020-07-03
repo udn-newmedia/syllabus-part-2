@@ -251,6 +251,7 @@ const content = {
       text: "2小時解答你對新課綱的所有困惑",
       date: "08.17",
       guest: "講者 藍偉瑩 X 范信賢",
+      link: "https://a.udn.com/forums/forum/34/index.htm",
       id: marketingBg1,
     },
     {
@@ -264,6 +265,7 @@ const content = {
       text: "學習歷程檔案將是未來升大學關鍵，你搞懂了嗎？",
       date: "08.29",
       guest: "講者 藍偉瑩 X 莊智超",
+      link: "https://a.udn.com/forums/forum/35/index.htm",
       id: marketingBg2,
     },
   ],
