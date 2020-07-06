@@ -11,8 +11,10 @@ const pollContent = contentGenerator("../contents/poll.html");
 /* 測試路徑 */
 const pathRoot =
   process.env.NODE_ENV === "production"
-    ? "https://nmdap.udn.com.tw/test/Second_Wave2/"
+    ? "https://nmdap.udn.com.tw/test/Second_Wave/"
     : "http://localhost:8080/";
+// ? "https://nmdap.udn.com.tw/2020/12-years-education"
+// ? "https://nmdap.udn.com.tw/test/Second_Wave/"
 
 const story_path = "story/";
 const poll_path = "poll/";
