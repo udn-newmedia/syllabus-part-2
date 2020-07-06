@@ -38,7 +38,7 @@
     </div>
     <div class="part6-image-wrapper">
       <div class="part6-image">
-        <img class="img-fluid" :class="{ active }" :src="img" alt />
+        <img :class="{ active }" :src="img" alt />
         <div>圖為末代大學聯考，考場人山人海。圖／報系資料照</div>
       </div>
     </div>
@@ -141,9 +141,10 @@ export default {
   .part6-image {
     position: absolute;
     top: 12.2vh;
+    width: 60.7vw;
     img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      //max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
       transition: all 2s ease-out;
@@ -157,7 +158,7 @@ export default {
       line-height: 1.4;
       text-align: left;
       color: #929292;
-      padding: 0 10%;
+      // padding: 0 10%;
       @media screen and (max-width: 1280px) {
         padding: 0;
       }

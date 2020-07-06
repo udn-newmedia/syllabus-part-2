@@ -42,8 +42,10 @@
             </div>
           </div>
           <div class="marketing-img-button">
-            <div
+            <a
               class="marketing-img-signup"
+              target="_blank"
+              :href="data.link"
               @click="signup(i + 1)"
               :style="[
                 { color: i % 2 === 0 ? '#cf5454' : '#fff' },
@@ -51,7 +53,7 @@
               ]"
             >
               <span>報名</span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -216,6 +218,9 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
       }
