@@ -13,6 +13,9 @@ const pathRoot =
   process.env.NODE_ENV === "production"
     ? "https://nmdap.udn.com.tw/test/12-years-education/"
     : "http://localhost:8080/";
+// https://nmdap.udn.com.tw/test/12-years-education/
+// ? "https://nmdap.udn.com.tw/2020/12-years-education"
+// ? "https://nmdap.udn.com.tw/test/Second_Wave/"
 
 const story_path = "story/";
 const poll_path = "poll/";
@@ -62,7 +65,7 @@ module.exports = {
       filename: "poll/index.html",
       title: "【108課綱大調查】 升學主義 教師心中的教改殺手 | 專題 | 聯合報",
       description:
-        "108課綱上路1年，《聯合報》此次針對全台929所國高中、1243位民眾進行民調，調查結果看到民眾和學校對新課綱理念的認同，但也看到他們濃厚的焦慮與不安。",
+        "《聯合報》針對全台929所國高中、1243位民眾進行民調，發現超過6成民眾沒聽過108課綱、7成家長不清楚課綱內涵；升學是教師認為的教改殺手，也是家長最焦慮和擔心的制度變革。",
       keywords: "108課綱.12年國教,教改,升學,民調,聯合報",
       author: "洪欣慈、許瑋琳、張庭瑋",
       datePublished: "2020-07-13T07:00:00+08:00",

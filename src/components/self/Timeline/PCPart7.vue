@@ -28,7 +28,7 @@
                 >等因素，「行李箱書包」變成校園裡最沉重的風景。
               </div>
             </li>
-            <li style="padding-left:9.38vw">
+            <li>
               <div class="part7-today-list-subtitle">檢討聲浪不斷：</div>
               <div>1. 政策上路太匆忙、缺乏溝通。</div>
               <div>2. 缺乏研究基礎支撐。</div>
@@ -49,7 +49,7 @@
       <div class="part7-image">
         <img class="img-fluid" :class="{ active }" :src="img" alt />
         <div>
-          廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照
+          九年一貫上路後，學生書包愈來愈沈重，各界批評聲浪不斷。圖／報系資料照
         </div>
       </div>
     </div>
@@ -65,12 +65,13 @@ export default {
 <style lang="scss" scoped>
 .part7-text {
   display: flex;
-  width: 144.3vw;
+  width: 1710px;
   height: 100vh;
   .part7-91-wrapper {
     position: relative;
     height: 100%;
-    width: 32.86%;
+    width: 500px;
+    margin-right: 70px;
     .part7-91 {
       position: absolute;
       display: flex;
@@ -93,7 +94,6 @@ export default {
           position: relative;
           padding-left: 22px;
           font-size: 20px;
-          max-width: 39vw;
           &::before {
             content: "";
             position: absolute;
@@ -111,7 +111,7 @@ export default {
   .part7-today-wrapper {
     position: relative;
     height: 100%;
-    width: 67.14%;
+    width: 1140px;
     .part7-today {
       position: absolute;
       top: 27.5%;
@@ -124,7 +124,7 @@ export default {
           display: inline-block;
           white-space: nowrap;
           color: #ffffff;
-          padding: 0 5%;
+          padding: 0 15px;
           background-color: #00ccb1;
           font-size: 40px;
           font-weight: bold;
@@ -140,12 +140,13 @@ export default {
         color: #000000;
         display: flex;
         flex-wrap: wrap;
-        // flex-direction: column;
+        // display: float;
         li {
-          flex: 0 0 50%;
-          max-height: 50%;
-          // max-width: 100%;
-          margin: 12px 0 8px;
+          flex: 0 0 500px;
+          max-width: 500px;
+          // float: left;
+          // width: 50%;
+          margin: 12px 70px 8px 0;
           .part7-today-list-subtitle {
             color: #049d88;
           }
@@ -159,20 +160,19 @@ export default {
 }
 
 .part7-image-wrapper {
-  width: 32.5vw;
+  width: 416px;
   height: 100vh;
-  margin-left: 70px;
   position: relative;
   .part7-image {
     height: 68.8vh;
     position: absolute;
-    top: 12.2vh;
+    top: 89px;
     img {
       width: 100%;
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;

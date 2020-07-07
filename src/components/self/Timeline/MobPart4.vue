@@ -70,13 +70,13 @@ export default {
       justify-content: center;
       img {
         max-width: 100%;
-        transition: all 2s ease-out;
-        transform: translateX(-100%);
-        opacity: 0;
-        &.active {
-          transform: translateX(0%);
-          opacity: 1;
-        }
+        // transition: all 1s ease-out;
+        // transform: translateX(-100%);
+        // opacity: 0;
+        // &.active {
+        //   transform: translateX(0%);
+        //   opacity: 1;
+        // }
       }
     }
     .mob-part4ーsubtitle {
@@ -113,7 +113,7 @@ export default {
     padding-right: 7.8%;
     img {
       max-width: 100%;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       transform: translateX(-100%);
       opacity: 0;
       &.active {

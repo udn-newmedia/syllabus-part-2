@@ -10,7 +10,10 @@
           i === active || (i === 1 && !isAfterOnlineDate) ? '' : '_blank'
         "
         class="otherprojects-image-wrapper"
-        :class="{ hovered: hovered === i }"
+        :class="{
+          hovered: hovered === i,
+          'item-first': i === 0,
+        }"
         :style="{
           opacity: (i === active || (i === 1 && !isAfterOnlineDate)) && 0.4,
           cursor: (i === active || (i === 1 && !isAfterOnlineDate)) && 'auto',
@@ -46,7 +49,9 @@
       />
     </ul>
 
-    <a href="/" class="otherprojects-link">更多課綱相關報導</a>
+    <a href="https://udn.com/search/word/2/108課綱" class="otherprojects-link"
+      >更多課綱相關報導</a
+    >
   </div>
 </template>
 
@@ -169,9 +174,12 @@ export default {
   }
   margin-top: 10%;
   padding: 0 15% 100px;
+  @media screen and (max-width: 768px) {
+    padding: 0 0 100px;
+  }
   .otherprojects-title {
     font-family: "Noto Sans TC", "Microsoft JhengHei", Roboto, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 2.56;
     text-align: center;
@@ -193,9 +201,19 @@ export default {
       margin: 5.56vh 0;
       padding: 0 15px;
       @media screen and (max-width: 768px) {
-        flex: 0 0 85%;
-        max-width: 85%;
-        height: 50vh;
+        flex: 0 0 340px;
+        max-width: 340px;
+        height: 382.5px;
+      }
+      @media screen and (max-width: 414px) {
+        flex: 0 0 280px;
+        max-width: 280px;
+        height: 315px;
+      }
+      @media screen and (max-width: 374.99px) {
+        flex: 0 0 200px;
+        max-width: 200px;
+        height: 225px;
       }
       .otherprojects-image {
         max-width: 100%;
@@ -233,12 +251,6 @@ export default {
           @media screen and (max-width: 768px) {
             text-align: center;
           }
-          @media screen and (max-width: 768px) and (min-width: 700px) {
-            max-width: 80%;
-          }
-          @media screen and (max-width: 699px) and (min-width: 630px) {
-            max-width: 90%;
-          }
         }
       }
       &.hovered {
@@ -260,6 +272,25 @@ export default {
           }
         }
       }
+      &.item-first {
+        @media screen and (max-width: 768px) {
+          // margin-left: 15vw;
+        }
+        @media screen and (max-width: 768px) {
+          margin-left: 214px;
+        }
+        @media screen and (max-width: 414px) {
+          margin-left: 74px;
+        }
+        @media screen and (max-width: 374.99px) {
+          margin-left: 44px;
+        }
+      }
+      // &.item-last {
+      //   @media screen and (max-width: 768px) {
+      //     margin-right: 15vw;
+      //   }
+      // }
     }
   }
 
@@ -268,6 +299,7 @@ export default {
     @media screen and (max-width: 768px) {
       display: flex;
       justify-content: center;
+      margin-top: 50px;
       .otherprojects-pagination-item {
         list-style: none;
         width: 8px;
@@ -289,7 +321,7 @@ export default {
   .otherprojects-link {
     margin-top: 11.11vh;
     display: block;
-    // font-family: MicrosoftJhengHei;
+    text-decoration: underline;
     font-size: 18px;
     line-height: 1.7;
     text-align: center;

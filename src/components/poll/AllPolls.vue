@@ -1,124 +1,164 @@
 <template>
   <div class="all-polls">
     <h2 class="all-polls-title">完整民調數字</h2>
-    <p class="all-polls-intro">《聯合報》於2020年4月底至5月初針對1243位民眾、929所學校進行民調：</p>
-    <div class="all-polls-smallblock">
+    <p class="all-polls-intro">
+      《聯合報》於2020年4月15日至5月4日針對1243位民眾、929所學校進行民調：
+    </p>
+    <div class="all-polls-smallblock" @click="clickFake">
       <span>民眾調查結果</span>
     </div>
     <div class="chart1-area chart">
-      <img :src="windowSize.width>=768?imgs.img1.web:imgs.img1.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img1.web : imgs.img1.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img2.web:imgs.img2.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img2.web : imgs.img2.mob" alt />
     </div>
     <p class="chart-text1">以下統計結果為「聽過新課綱」的民眾</p>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img3.web:imgs.img3.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img3.web : imgs.img3.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img4.web:imgs.img4.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img4.web : imgs.img4.mob" alt />
+    </div>
+    <ArticleCastAnchor title="家長最焦慮升學" />
+    <div class="chart-area chart">
+      <img :src="windowSize.width >= 768 ? imgs.img5.web : imgs.img5.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img5.web:imgs.img5.mob" alt />
-    </div>
-    <!-- <div class="chart-text2">
-      <div>
-        40.3
-        <span>%</span>
-      </div>
-      <p>
-        民眾認為新課綱會
-        <span>拉大</span>
-        城鄉差距
-      </p>
-      <div>
-        65.4
-        <span>%</span>
-      </div>
-      <p>
-        家長
-        <span>不會</span>
-        因新課綱調整教育方式
-      </p>
-    </div>-->
-    <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img6.web:imgs.img6.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img6.web : imgs.img6.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img7.web:imgs.img7.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img7.web : imgs.img7.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img8.web:imgs.img8.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img8.web : imgs.img8.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img9.web:imgs.img9.mob" alt />
+      <img :src="windowSize.width >= 768 ? imgs.img9.web : imgs.img9.mob" alt />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img10.web:imgs.img10.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img10.web : imgs.img10.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img11.web:imgs.img11.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img11.web : imgs.img11.mob"
+        alt
+      />
     </div>
 
-    <p
-      class="all-polls-remarks"
-    >註：此次調查於4月15日至20日進行，成功訪問1243位年滿20歲成年民眾，另303人拒訪；在95%的信心水準下，抽樣誤差在正負2.7個百分點以內。調查是以台灣地區住宅電話為母體作尾數兩位隨機抽樣，調查結果依台灣地區20歲以上人口之性別、年齡及縣市結構進行加權。</p>
+    <p class="all-polls-remarks">
+      註：此次調查於4月15日至20日進行，成功訪問1243位年滿20歲成年民眾，另303人拒訪；在95%的信心水準下，抽樣誤差在正負2.7個百分點以內。調查是以台灣地區住宅電話為母體作尾數兩位隨機抽樣，調查結果依台灣地區20歲以上人口之性別、年齡及縣市結構進行加權。
+    </p>
+    <ArticleCastAnchor title="7成學校實施困難" />
     <div class="all-polls-border" />
-    <div class="all-polls-smallblock">
+    <div class="all-polls-smallblock" @click="clickFake">
       <span>學校調查結果</span>
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img12.web:imgs.img12.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img12.web : imgs.img12.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img13.web:imgs.img13.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img13.web : imgs.img13.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img14.web:imgs.img14.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img14.web : imgs.img14.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img15.web:imgs.img15.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img15.web : imgs.img15.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img16.web:imgs.img16.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img16.web : imgs.img16.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img17.web:imgs.img17.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img17.web : imgs.img17.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img18.web:imgs.img18.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img18.web : imgs.img18.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img19.web:imgs.img19.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img19.web : imgs.img19.mob"
+        alt
+      />
+    </div>
+    <ArticleCastAnchor title="考招制度影響落實" />
+    <div class="chart-area chart">
+      <img
+        :src="windowSize.width >= 768 ? imgs.img20.web : imgs.img20.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img20.web:imgs.img20.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img21.web : imgs.img21.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img21.web:imgs.img21.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img22.web : imgs.img22.mob"
+        alt
+      />
     </div>
     <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img22.web:imgs.img22.mob" alt />
+      <img
+        :src="windowSize.width >= 768 ? imgs.img23.web : imgs.img23.mob"
+        alt
+      />
     </div>
-    <div class="chart-area chart">
-      <img :src="windowSize.width>=768?imgs.img23.web:imgs.img23.mob" alt />
-    </div>
-    <p
-      class="all-polls-remarks"
-    >註：此次調查於4月21日至5月4日間進行，成功訪問929所學校（國中661所、高中268所），受訪對象為各校教務主任或指定代理人，以網路問卷、電話訪問、電子郵寄、傳真等方式進行調查，調查結果依學校所在地區偏遠程度進行加權。</p>
+    <p class="all-polls-remarks">
+      註：此次調查於4月21日至5月4日間進行，成功訪問929所學校（國中661所、高中268所），受訪對象為各校教務主任或指定代理人，以網路問卷、電話訪問、電子郵寄、傳真等方式進行調查，調查結果依學校所在地區偏遠程度進行加權。
+    </p>
   </div>
 </template>
 
 <script>
-import content from '../../data/content'
+import content from "../../data/content";
+import { sendGaMethods } from "@/mixins/masterBuilder.js";
+import ArticleCastAnchor from "@/components/layout/ArticleCastAnchor";
 
 export default {
-  name: 'AllPolls',
+  name: "AllPolls",
   props: { windowSize: { type: Object } },
+  components: { ArticleCastAnchor },
   data() {
-    return { imgs: content.pollImages }
+    return { imgs: content.pollImages };
   },
-}
+  mixins: [sendGaMethods],
+  methods: {
+    clickFake() {
+      this.sendGA({
+        category: "poll",
+        action: "click",
+        label: "像按鈕的區塊被點擊了",
+      });
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .all-polls {

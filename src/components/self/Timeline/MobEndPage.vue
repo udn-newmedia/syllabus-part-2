@@ -1,15 +1,17 @@
 <template>
   <div class="mob-end-page">
     <div class="mob-end-page-text mob-end-page-quote">
-      <p class="mob-end-page-quote-text">這一次教改，有機會改變台灣長年以考試為目標、填鴨式教學的升學風氣嗎？</p>
+      <p class="mob-end-page-quote-text">
+        這一次教改，有機會改變台灣長年以考試為目標、填鴨式教學的升學風氣嗎？
+      </p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MobEndPage',
-}
+  name: "MobEndPage",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -20,11 +22,11 @@ export default {
     margin-bottom: 100px;
     padding-left: 12.5%;
     padding-right: 12.5%;
-    // font-family: source-han-serif-tc, serif;
+    font-family: source-han-serif-tc, serif;
     color: #777777;
     .mob-end-page-quote-text {
       font-size: 36.8px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.7;
     }
   }
