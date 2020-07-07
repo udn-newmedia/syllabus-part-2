@@ -44,7 +44,9 @@
     <div class="part10-image-wrapper">
       <div class="part10-image">
         <img class="img-fluid" :class="{ active }" :src="img" alt />
-        <div>圖為首屆國中會考後，十二年國教家長聯盟在教育部外抗議，要求教育部對會考填志願制度提出補救措施。圖／報系資料照</div>
+        <div>
+          十二年國教、108課綱的各項政策，近年屢遭家長與教育團體抗議。圖／報系資料照
+        </div>
       </div>
     </div>
   </div>
@@ -52,20 +54,20 @@
 
 <script>
 export default {
-  name: 'PCPart10',
+  name: "PCPart10",
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-}
+};
 </script>
 <style lang="scss" scoped>
 .part10-text {
   display: flex;
-  width: 92.97vw;
+  width: 1140px;
   height: 100vh;
-  margin-right: 70px;
   .part10-graph-wrapper {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 500px;
+    margin-right: 70px;
     .part10-graph {
       position: absolute;
       display: flex;
@@ -96,7 +98,8 @@ export default {
   .part10-today-wrapper {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 500px;
+    margin-right: 70px;
     .part10-today {
       position: absolute;
       top: 27.5%;
@@ -110,7 +113,7 @@ export default {
           display: inline-block;
           white-space: nowrap;
           color: #ffffff;
-          padding: 0 5%;
+          padding: 0 15px;
           background-color: #00ccb1;
           font-size: 40px;
           font-weight: bold;
@@ -128,9 +131,8 @@ export default {
           position: relative;
           padding-left: 22px;
           font-size: 20px;
-          max-width: 39vw;
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 12px;
             height: 12px;
@@ -149,24 +151,24 @@ export default {
 }
 
 .part10-image-wrapper {
-  width: 60.7vw;
+  width: 777px;
   .part10-image {
     position: absolute;
-    top: 12.2vh;
+    top: 89px;
     img {
-      width: 60.7vw;
+      width: 777px;
       //max-width: 100%;
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;
       }
     }
     div {
-      width: 60.7vw;
+      width: 777px;
       font-size: 15px;
       line-height: 1.4;
       text-align: left;

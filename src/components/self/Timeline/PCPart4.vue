@@ -1,14 +1,18 @@
 <template>
-  <div class="d-flex h-100" style="width:107vw">
+  <div class="part4-wrapper">
     <div class="part4-direction-wrapper">
       <div class="part4-direction">
         <h2 class="part4-title">教改方向：鬆綁、適性</h2>
         <ul class="part4-list">
-          <li>1994年9月，行政院教育改革審議委員會成立，由時任中央研究院院長的李遠哲擔任教改會召集人。</li>
+          <li>
+            1994年9月，行政院教育改革審議委員會成立，由時任中央研究院院長的李遠哲擔任教改會召集人。
+          </li>
           <li>1996年教改會向行政院提出《教育改革總諮議報告書》。</li>
           <li>
             改革方向：
-            <span class="bold">教育鬆綁、適性揚才、暢通升學管道、提升教育品質、建立終身學習</span>
+            <span class="bold"
+              >教育鬆綁、適性揚才、暢通升學管道、提升教育品質、建立終身學習</span
+            >
           </li>
         </ul>
       </div>
@@ -16,7 +20,9 @@
     <div class="part4-image-wrapper">
       <div class="part4-image">
         <img :class="{ active }" :src="img" alt />
-        <div>圖為1995年教育改革審議委員會第10次委員會議，教改會召集人李遠哲（圖左）接見陳情的文大「草山學會」學生，並接受學生的陳情書。圖／報系資料照</div>
+        <div>
+          圖為1995年教育改革審議委員會第10次委員會議，教改會召集人李遠哲（圖左）接見陳情的文大「草山學會」學生，並接受學生的陳情書。圖／報系資料照
+        </div>
       </div>
     </div>
   </div>
@@ -24,13 +30,19 @@
 
 <script>
 export default {
-  name: 'PCPart4',
+  name: "PCPart4",
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-}
+};
 </script>
 <style lang="scss" scoped>
+.part4-wrapper {
+  width: 1347px;
+  height: 100vh;
+  display: flex;
+}
 .part4-direction-wrapper {
-  width: 49.69vw;
+  width: 500px;
+  margin-right: 70px;
   position: relative;
   .part4-direction {
     position: absolute;
@@ -56,9 +68,9 @@ export default {
     position: relative;
     padding-left: 22px;
     font-size: 20px;
-    max-width: 39vw;
+    // max-width: 39vw;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 12px;
       height: 12px;
@@ -74,11 +86,11 @@ export default {
 }
 .part4-image-wrapper {
   position: relative;
-  width: 60.7vw;
+  width: 777px;
   height: 71.39vh;
   .part4-image {
     position: absolute;
-    top: 12.36%;
+    top: 89px;
     width: 100%;
     img {
       max-width: 100%;
@@ -88,7 +100,7 @@ export default {
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;

@@ -48,7 +48,7 @@ export default {
       font-size: 20px;
     }
     .mob-part1-quote {
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       transform: translateX(100%);
       opacity: 0;
       &.active {
@@ -74,7 +74,7 @@ export default {
     }
   }
   & > img {
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
     opacity: 0;
     &.active {
       opacity: 1;
