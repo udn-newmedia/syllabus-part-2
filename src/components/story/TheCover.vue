@@ -88,7 +88,7 @@ export default {
     display: inline-block;
     overflow:hidden;
     border-right: .05em solid;
-    animation: typing 1.5s 1s steps(17), caret 1s steps(1) infinite, fade-in 0s 1s forwards;
+    animation: typing 0.5s 1s steps(17), caret 1s steps(1) infinite, fade-in 0s 1s forwards;
     @keyframes typing {
       from { width: 0; }
     }
@@ -98,14 +98,14 @@ export default {
   }
   .show-second {
     opacity: 0;
-    animation: fade-in 0s 3.333s forwards;
+    animation: fade-in 0s 1.833s forwards;
   }
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
   }
   .arrow-container {
-    margin: 32px auto;
+    // margin: 32px auto;
     display: flex;
     justify-content: center;
     align-items: center;

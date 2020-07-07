@@ -66,7 +66,7 @@ export default {
       transition: 0;
       &.tilt-text__mark--active{
         transform: translateX(0);
-        transition: 1.5s 0.111s;
+        transition: 0.6s 0.111s;
       }
     }
   }

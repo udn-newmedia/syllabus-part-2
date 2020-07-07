@@ -1,8 +1,8 @@
 <template>
   <figure class="full-wide-video">
     <video
+      id="ending-video"
       :poster="selectSrc_3(posterMob, posterPad, posterPc)"
-      autoplay
       muted
       playsinline
       webkit-playsinline
@@ -15,10 +15,11 @@
 
 <script>
 import { autoResize_3, selectSrcMethod_3 } from '@/mixins/masterBuilder.js';
+import { observableEvent } from '@/mixins/observableEvent.js';
 
 export default {
   name: 'FullWideVideo',
-  mixins: [autoResize_3, selectSrcMethod_3],
+  mixins: [autoResize_3, selectSrcMethod_3, observableEvent],
   props: {
     srcMob: {
       type: String,
@@ -38,7 +39,21 @@ export default {
     posterPc: {
       type: String,
     },
-  }
+  },
+  data() {
+    return {
+      observableActive: false
+    }
+  },
+  watch: {
+    observableActive: {
+      handler(value) {
+        if (!value) return;
+        const endingVideo = document.getElementById('ending-video');
+        endingVideo.play(); 
+      }
+    }
+  },
 }
 </script>
 

@@ -67,7 +67,7 @@ export default {
   .title-marguee__text {
     font-size: 25vw;
     white-space: nowrap;
-    transition: .111s;
+    // transition: .111s;
     .big-space {
       display: inline-block;
       width: 64px;

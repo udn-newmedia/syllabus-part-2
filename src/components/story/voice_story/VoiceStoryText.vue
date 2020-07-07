@@ -13,7 +13,7 @@ export default {
 <style lang="scss" scoped>
 p.enlarge.white.black-bg {
   display: inline;
-  background-color: #181818;
+  background-color: #181818bb;
   color: #ffffff;
   br {
     display: none;
