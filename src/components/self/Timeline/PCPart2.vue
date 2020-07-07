@@ -32,7 +32,7 @@ export default {
     & > div {
       transform: translateX(100%);
       opacity: 0;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       &.active {
         transform: translateX(0%);
         opacity: 1;
@@ -67,7 +67,7 @@ export default {
       width: 100%;
       height: 100%;
       opacity: 0;
-      transition: opacity 3s ease-in-out;
+      transition: opacity 1s ease-in-out;
       &.active {
         opacity: 1;
       }

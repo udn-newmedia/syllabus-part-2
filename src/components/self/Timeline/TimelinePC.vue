@@ -90,41 +90,52 @@ export default {
     EndPage,
   },
   data() {
+    const { innerWidth } = window;
     const activeArray = [];
     const pageNumber = {
-      length: 15.0148,
+      length: 0,
       startLength: 2.4547,
       endLength: 1,
     };
 
-    const accumulationArray = [
+    const accumulationArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    const widthArray = [
       100,
-      245.47,
-      377.97,
-      488.36,
-      613.83,
-      767.5,
-      944.3,
-      1010.7,
-      1164.37,
-      1318.04,
-      1401.48,
-      1501.48,
+      145.47,
+      ((1556 + 200) * 100) / innerWidth,
+      ((1347 + 200) * 100) / innerWidth,
+      ((1556 + 200) * 100) / innerWidth,
+      ((1917 + 200) * 100) / innerWidth,
+      ((2126 + 200) * 100) / innerWidth,
+      ((650 + 200) * 100) / innerWidth,
+      ((1917 + 200) * 100) / innerWidth,
+      ((1917 + 200) * 100) / innerWidth,
+      ((986 + 200) * 100) / innerWidth,
+      100,
     ];
+    for (let i = 0; i < widthArray.length; i += 1) {
+      pageNumber.length = pageNumber.length + widthArray[i] / 100;
+      if (i === 0) {
+        accumulationArray[i] = widthArray[i];
+      } else {
+        accumulationArray[i] = widthArray[i] + accumulationArray[i - 1];
+      }
+    }
     // P1:100vw
     // P2:145.47vw
-    // P3:132.5vw
-    // P4:110.39vw
-    // P5:125.47vw
-    // P6:153.67vw
-    // P7:176.8vw
-    // P8:66.4vw
-    // P9:153.67vw
-    // P10:153.67vw
-    // P11:83.44vw
+    // P3:132.5vw >> (500+70+500+70+416)px=1556px
+    // P4:110.39vw >> (500+70+777)px=1347px
+    // P5:125.47vw >> (500+70+500+70+416)px=1556px
+    // P6:153.67vw >> (500+70+500+70+777)px=1917px
+    // P7:176.8vw >> (500+70+500+70+500+70+416)px=2126px
+    // P8:66.4vw >> 650px
+    // P9:153.67vw >> (500+70+500+70+777)px=1917px
+    // P10:153.67vw >> (500+70+500+70+777)px=1917px
+    // P11:83.44vw >> (500+70+416)px=986px
     // end:100vw
     //
-    // sum:1501.48vw
+    // sum:1501.48vw >> 345.47vw + 13972px
 
     for (let i = 0; i < accumulationArray.length; i += 1) {
       activeArray.push(false);
@@ -137,7 +148,8 @@ export default {
       bottom: 0,
       pageNumber,
       accumulationArray,
-      listWidth: 1501.48,
+      listWidth: pageNumber.length * 100,
+      widthArray,
     };
   },
   methods: {
@@ -187,28 +199,24 @@ export default {
         }
       }
     },
-    countListWidth() {
-      const { innerWidth } = window;
+    // countListWidth() {
+    //   const { innerWidth } = window;
 
-      if (innerWidth <= 1280) {
-        this.listWidth =
-          this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth);
-      } else {
-        this.listWidth =
-          this.pageNumber.length * 100 + 50 - 0.09 * (innerWidth - 1280);
-      }
-    },
+    //   if (innerWidth <= 1280) {
+    //     this.listWidth =
+    //       this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth);
+    //   } else {
+    //     this.listWidth =
+    //       this.pageNumber.length * 100 + 50 - 0.09 * (innerWidth - 1280);
+    //   }
+    // },
   },
   computed: {
     areaTranslateX() {
       if (this.progress < 100) {
-        return this.progress * -1;
+        return this.progress * (1 - 1 / this.pageNumber.length) * -1;
       }
-      return 100 * -1;
-      // if (this.progress < 100) {
-      //   return this.progress * -(1 - 1 / this.pageNumber.length)
-      // }
-      // return 100 * -(1 - 1 / this.pageNumber.length)
+      return 100 * (1 - 1 / this.pageNumber.length) * -1;
     },
     bottomDistance() {
       if (this.progress <= 100) {
@@ -219,15 +227,15 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.updateProgress);
-    window.addEventListener("resize", this.countListWidth);
+    // window.addEventListener("resize", this.countListWidth);
   },
   mounted() {
     this.updateProgress();
-    this.countListWidth();
+    // this.countListWidth();
   },
   destroyed() {
     window.removeEventListener("scroll", this.updateProgress);
-    window.removeEventListener("resize", this.countListWidth);
+    // window.removeEventListener("resize", this.countListWidth);
   },
 };
 </script>
@@ -238,14 +246,7 @@ export default {
     max-width: 50%;
   }
 }
-.col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-.col-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
+
 .time-spot {
   padding: 0 10px 0 30px;
   position: relative;
@@ -268,6 +269,7 @@ export default {
   background-image: url("../../../assets/img/timeline/backgroung.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
+  background-size: 48px;
 }
 .time-line-list {
   z-index: 2;
@@ -279,7 +281,11 @@ export default {
     top: calc(21.67% + 20px);
     left: 245.47vw;
     height: 1px;
-    width: 83%;
+    // sum of part3 to part11
+    width: calc(15772px - 100px);
+    // @media screen and (min-width: ){
+
+    // }
     background-color: #8f8f8f;
   }
   li {

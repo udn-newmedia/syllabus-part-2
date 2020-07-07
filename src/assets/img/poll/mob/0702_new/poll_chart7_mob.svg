@@ -1,60 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="382" height="1694" viewBox="0 0 382 1694">
+<svg xmlns="http://www.w3.org/2000/svg" width="382" height="1651" viewBox="0 0 382 1651">
   <g id="poll_chart7_mob" transform="translate(-16 -7540)">
-    <rect id="Rectangle_2742" data-name="Rectangle 2742" width="382" height="1694" rx="5" transform="translate(16 7540)" fill="#fff"/>
-    <text id="標題2" transform="translate(37 7570)" fill="#131313" font-size="24" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="28">對學校及教師掌握、落實新課綱</tspan><tspan x="0" y="64.4">的能力，有沒有信心？</tspan></text>
-    <g id="Group_2093" data-name="Group 2093" transform="translate(0 -31)">
+    <rect id="Rectangle_2742" data-name="Rectangle 2742" width="382" height="1651" rx="5" transform="translate(16 7540)" fill="#fff"/>
+    <text id="標題2" transform="translate(37 7570)" fill="#131313" font-size="24" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="28">新課綱對城鄉差距的影響</tspan></text>
+    <g id="Group_2093" data-name="Group 2093" transform="translate(0 -74)">
       <text id="內文p" transform="translate(207 8211)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-40" y="0">沒有影響</tspan></text>
       <text id="_29.9_" data-name="29.9%" transform="translate(151 8091)" fill="#8e8e8e" font-size="40" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="0">29.9</tspan><tspan y="0" font-size="25">%</tspan></text>
       <path id="Subtraction_172" data-name="Subtraction 172" d="M103,206a103.772,103.772,0,0,1-20.758-2.093,102.437,102.437,0,0,1-36.83-15.5A103.311,103.311,0,0,1,8.094,143.092a102.516,102.516,0,0,1-6-19.334,104.006,104.006,0,0,1,0-41.516,102.422,102.422,0,0,1,15.5-36.83A103.3,103.3,0,0,1,62.907,8.094a102.494,102.494,0,0,1,19.334-6,104,104,0,0,1,41.517,0,102.422,102.422,0,0,1,36.83,15.5,103.306,103.306,0,0,1,37.318,45.317,102.462,102.462,0,0,1,6,19.334,103.994,103.994,0,0,1,0,41.516,102.415,102.415,0,0,1-15.5,36.83,103.3,103.3,0,0,1-45.317,37.318,102.494,102.494,0,0,1-19.334,6A103.774,103.774,0,0,1,103,206Zm.395-181.532a78.927,78.927,0,1,0,78.927,78.927A79.016,79.016,0,0,0,103.395,24.468Z" transform="translate(104 7975)" fill="#eee"/>
       <path id="Subtraction_176" data-name="Subtraction 176" d="M3986.294,3348.746h0l-22.3-7.873a78.134,78.134,0,0,0,6.994-32.477,79.016,79.016,0,0,0-78.927-78.928l-.394,0V3205a103.731,103.731,0,0,1,20.757,2.094,102.4,102.4,0,0,1,36.83,15.5,103.348,103.348,0,0,1,37.319,45.317,102.545,102.545,0,0,1,6,19.335,103.933,103.933,0,0,1,0,41.516,102.482,102.482,0,0,1-6,19.332c-.092.219-.186.438-.28.654Z" transform="translate(-3684.667 4770)" fill="#00ccb1"/>
     </g>
-    <text id="內文p-2" data-name="內文p" transform="translate(207 8452)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-60" y="0">縮減城鄉差距</tspan></text>
-    <text id="_15.0_" data-name="15.0%" transform="translate(149 8332)" fill="#8e8e8e" font-size="40" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="0">15.0</tspan><tspan y="0" font-size="25">%</tspan></text>
-    <path id="Subtraction_177" data-name="Subtraction 177" d="M103,206a103.772,103.772,0,0,1-20.758-2.093,102.437,102.437,0,0,1-36.83-15.5A103.311,103.311,0,0,1,8.094,143.092a102.516,102.516,0,0,1-6-19.334,104.006,104.006,0,0,1,0-41.516,102.422,102.422,0,0,1,15.5-36.83A103.3,103.3,0,0,1,62.907,8.094a102.494,102.494,0,0,1,19.334-6,104,104,0,0,1,41.517,0,102.422,102.422,0,0,1,36.83,15.5,103.306,103.306,0,0,1,37.318,45.317,102.462,102.462,0,0,1,6,19.334,103.994,103.994,0,0,1,0,41.516,102.415,102.415,0,0,1-15.5,36.83,103.3,103.3,0,0,1-45.317,37.318,102.494,102.494,0,0,1-19.334,6A103.774,103.774,0,0,1,103,206Zm.395-181.532a78.927,78.927,0,1,0,78.927,78.927A79.016,79.016,0,0,0,103.395,24.468Z" transform="translate(104 8216)" fill="#eee"/>
-    <path id="Subtraction_182" data-name="Subtraction 182" d="M-1234.014,62.135h0A79.288,79.288,0,0,0-1302.273,22.8h-.395V-1.667A103.837,103.837,0,0,1-1281.908.427a102.591,102.591,0,0,1,19.333,6,103.09,103.09,0,0,1,17.5,9.5A103.835,103.835,0,0,1-1229.836,28.5a103.457,103.457,0,0,1,12.577,15.244c1.889,2.8,3.663,5.724,5.271,8.7l-22.026,9.688h0Z" transform="translate(1509.667 8217.668)" fill="#00ccb1"/>
-    <g id="Group_2092" data-name="Group 2092" transform="translate(0 -15)">
+    <text id="內文p-2" data-name="內文p" transform="translate(207 8409)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-60" y="0">縮減城鄉差距</tspan></text>
+    <text id="_15.0_" data-name="15.0%" transform="translate(149 8289)" fill="#8e8e8e" font-size="40" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="0">15.0</tspan><tspan y="0" font-size="25">%</tspan></text>
+    <path id="Subtraction_177" data-name="Subtraction 177" d="M103,206a103.772,103.772,0,0,1-20.758-2.093,102.437,102.437,0,0,1-36.83-15.5A103.311,103.311,0,0,1,8.094,143.092a102.516,102.516,0,0,1-6-19.334,104.006,104.006,0,0,1,0-41.516,102.422,102.422,0,0,1,15.5-36.83A103.3,103.3,0,0,1,62.907,8.094a102.494,102.494,0,0,1,19.334-6,104,104,0,0,1,41.517,0,102.422,102.422,0,0,1,36.83,15.5,103.306,103.306,0,0,1,37.318,45.317,102.462,102.462,0,0,1,6,19.334,103.994,103.994,0,0,1,0,41.516,102.415,102.415,0,0,1-15.5,36.83,103.3,103.3,0,0,1-45.317,37.318,102.494,102.494,0,0,1-19.334,6A103.774,103.774,0,0,1,103,206Zm.395-181.532a78.927,78.927,0,1,0,78.927,78.927A79.016,79.016,0,0,0,103.395,24.468Z" transform="translate(104 8173)" fill="#eee"/>
+    <path id="Subtraction_182" data-name="Subtraction 182" d="M-1234.014,62.135h0A79.288,79.288,0,0,0-1302.273,22.8h-.395V-1.667A103.837,103.837,0,0,1-1281.908.427a102.591,102.591,0,0,1,19.333,6,103.09,103.09,0,0,1,17.5,9.5A103.835,103.835,0,0,1-1229.836,28.5a103.457,103.457,0,0,1,12.577,15.244c1.889,2.8,3.663,5.724,5.271,8.7l-22.026,9.688h0Z" transform="translate(1509.667 8174.668)" fill="#00ccb1"/>
+    <g id="Group_2092" data-name="Group 2092" transform="translate(0 -58)">
       <text id="內文p-3" data-name="內文p" transform="translate(147 7923)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">拉大城鄉差距</tspan></text>
       <text id="_40.3_" data-name="40.3%" transform="translate(151 7803)" fill="#8e8e8e" font-size="40" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="0">40.3</tspan><tspan y="0" font-size="25">%</tspan></text>
       <path id="Subtraction_168" data-name="Subtraction 168" d="M103,206a103.772,103.772,0,0,1-20.758-2.093,102.437,102.437,0,0,1-36.83-15.5A103.311,103.311,0,0,1,8.094,143.092a102.516,102.516,0,0,1-6-19.334,104.006,104.006,0,0,1,0-41.516,102.422,102.422,0,0,1,15.5-36.83A103.3,103.3,0,0,1,62.907,8.094a102.494,102.494,0,0,1,19.334-6,104,104,0,0,1,41.517,0,102.422,102.422,0,0,1,36.83,15.5,103.306,103.306,0,0,1,37.318,45.317,102.462,102.462,0,0,1,6,19.334,103.994,103.994,0,0,1,0,41.516,102.415,102.415,0,0,1-15.5,36.83,103.3,103.3,0,0,1-45.317,37.318,102.494,102.494,0,0,1-19.334,6A103.774,103.774,0,0,1,103,206Zm.395-181.532a78.927,78.927,0,1,0,78.927,78.927A79.016,79.016,0,0,0,103.395,24.468Z" transform="translate(104 7687)" fill="#eee"/>
       <path id="Subtraction_171" data-name="Subtraction 171" d="M-1209.469,9666.729h0l-17.538-16.045a78.609,78.609,0,0,0,29.662-61.623,78.579,78.579,0,0,0-76.321-78.886V9485.71a103.663,103.663,0,0,1,17.759,2.051,102.542,102.542,0,0,1,19.334,6,102.841,102.841,0,0,1,17.495,9.494,103.808,103.808,0,0,1,15.245,12.578,103.616,103.616,0,0,1,12.575,15.245,102.891,102.891,0,0,1,9.5,17.5,102.415,102.415,0,0,1,6,19.334,103.858,103.858,0,0,1,2.094,20.759,103.844,103.844,0,0,1-2.094,20.756,102.511,102.511,0,0,1-6,19.334,102.983,102.983,0,0,1-9.5,17.5,103.694,103.694,0,0,1-12.575,15.242c-1.8,1.8-3.7,3.561-5.635,5.231Z" transform="translate(1483.667 -1798.667)" fill="#eb0f43"/>
     </g>
-    <text id="內文p-4" data-name="內文p" transform="translate(37 8508)" font-size="18" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="21">拉大城鄉差距的原因？（可複選）</tspan></text>
-    <text id="內文p-5" data-name="內文p" transform="translate(37 8913)" font-size="18" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="21">縮減城鄉差距的原因？（可複選）</tspan></text>
-    <text id="內文p-6" data-name="內文p" transform="translate(180 8576)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-144" y="0">偏鄉學生資源較少</tspan></text>
-    <text id="內文p-7" data-name="內文p" transform="translate(162 8981)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-126" y="0">新課綱重視多元</tspan></text>
-    <text id="內文p-8" data-name="內文p" transform="translate(151 8765)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-115.056" y="0">無意見/未回答</tspan></text>
-    <text id="內文p-9" data-name="內文p" transform="translate(144 9170)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-108" y="0">對學生較公平</tspan></text>
-    <text id="內文p-10" data-name="內文p" transform="translate(36 8639)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">偏鄉師資設備不足難開課</tspan></text>
-    <text id="內文p-11" data-name="內文p" transform="translate(36 9044)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">無意見/未回答</tspan></text>
-    <text id="內文p-12" data-name="內文p" transform="translate(36 8828)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">偏鄉地區家長觀念老舊</tspan></text>
-    <text id="內文p-13" data-name="內文p" transform="translate(234 8703)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-198" y="0">鄉下教師仍習慣舊式教學</tspan></text>
-    <text id="內文p-14" data-name="內文p" transform="translate(180 9108)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-144" y="0">翻轉明星學校迷思</tspan></text>
-    <rect id="Rectangle_3368" data-name="Rectangle 3368" width="340" height="25" transform="translate(37 8585)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3415" data-name="Rectangle 3415" width="340" height="25" transform="translate(37 8990)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3374" data-name="Rectangle 3374" width="340" height="25" transform="translate(37 8774)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3411" data-name="Rectangle 3411" width="340" height="25" transform="translate(37 9179)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3370" data-name="Rectangle 3370" width="340" height="25" transform="translate(37 8649)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3413" data-name="Rectangle 3413" width="340" height="25" transform="translate(37 9054)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3376" data-name="Rectangle 3376" width="340" height="25" transform="translate(37 8838)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3372" data-name="Rectangle 3372" width="340" height="25" transform="translate(37 8711)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3412" data-name="Rectangle 3412" width="340" height="25" transform="translate(37 9116)" fill="#f6f6f6"/>
-    <text id="內文p-15" data-name="內文p" transform="translate(328 8731)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">9.1</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-16" data-name="內文p" transform="translate(318 9136)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">11.9</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-17" data-name="內文p" transform="translate(317 8670)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">35.9</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-18" data-name="內文p" transform="translate(317 9075)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">36.3</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-19" data-name="內文p" transform="translate(328 8859)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">2.1</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-20" data-name="內文p" transform="translate(317 8606)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">75.1</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-21" data-name="內文p" transform="translate(317 9011)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">52.7</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-22" data-name="內文p" transform="translate(328 8795)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">8.7</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-23" data-name="內文p" transform="translate(328 9200)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">5.1</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <rect id="Rectangle_3407" data-name="Rectangle 3407" width="123" height="25" transform="translate(37 8649)" fill="#00ccb1"/>
-    <rect id="Rectangle_3405" data-name="Rectangle 3405" width="28" height="25" transform="translate(37 8711)" fill="#00ccb1"/>
-    <rect id="Rectangle_3401" data-name="Rectangle 3401" width="9" height="25" transform="translate(37 8838)" fill="#00ccb1"/>
-    <rect id="Rectangle_3403" data-name="Rectangle 3403" width="25" height="25" transform="translate(37 8774)" fill="#00ccb1"/>
-    <rect id="Rectangle_3409" data-name="Rectangle 3409" width="259" height="25" transform="translate(37 8585)" fill="#00ccb1"/>
-    <rect id="Rectangle_3421" data-name="Rectangle 3421" width="125" height="25" transform="translate(37 9054)" fill="#00ccb1"/>
-    <rect id="Rectangle_3419" data-name="Rectangle 3419" width="73" height="25" transform="translate(37 9116)" fill="#00ccb1"/>
-    <rect id="Rectangle_3417" data-name="Rectangle 3417" width="19" height="25" transform="translate(37 9179)" fill="#00ccb1"/>
-    <rect id="Rectangle_3423" data-name="Rectangle 3423" width="180" height="25" transform="translate(37 8990)" fill="#00ccb1"/>
+    <text id="內文p-4" data-name="內文p" transform="translate(37 8465)" font-size="18" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="21">拉大城鄉差距的原因？（可複選）</tspan></text>
+    <text id="內文p-5" data-name="內文p" transform="translate(37 8870)" font-size="18" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="21">縮減城鄉差距的原因？（可複選）</tspan></text>
+    <text id="內文p-6" data-name="內文p" transform="translate(180 8533)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-144" y="0">偏鄉學生資源較少</tspan></text>
+    <text id="內文p-7" data-name="內文p" transform="translate(162 8938)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-126" y="0">新課綱重視多元</tspan></text>
+    <text id="內文p-8" data-name="內文p" transform="translate(151 8722)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-115.056" y="0">無意見/未回答</tspan></text>
+    <text id="內文p-9" data-name="內文p" transform="translate(144 9127)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-108" y="0">對學生較公平</tspan></text>
+    <text id="內文p-10" data-name="內文p" transform="translate(36 8596)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">偏鄉師資設備不足難開課</tspan></text>
+    <text id="內文p-11" data-name="內文p" transform="translate(36 9001)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">無意見/未回答</tspan></text>
+    <text id="內文p-12" data-name="內文p" transform="translate(36 8785)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="0">偏鄉地區家長觀念老舊</tspan></text>
+    <text id="內文p-13" data-name="內文p" transform="translate(234 8660)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-198" y="0">鄉下教師仍習慣舊式教學</tspan></text>
+    <text id="內文p-14" data-name="內文p" transform="translate(180 9065)" font-size="18" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-144" y="0">翻轉明星學校迷思</tspan></text>
+    <rect id="Rectangle_3368" data-name="Rectangle 3368" width="340" height="25" transform="translate(37 8542)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3415" data-name="Rectangle 3415" width="340" height="25" transform="translate(37 8947)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3374" data-name="Rectangle 3374" width="340" height="25" transform="translate(37 8731)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3411" data-name="Rectangle 3411" width="340" height="25" transform="translate(37 9136)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3370" data-name="Rectangle 3370" width="340" height="25" transform="translate(37 8606)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3413" data-name="Rectangle 3413" width="340" height="25" transform="translate(37 9011)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3376" data-name="Rectangle 3376" width="340" height="25" transform="translate(37 8795)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3372" data-name="Rectangle 3372" width="340" height="25" transform="translate(37 8668)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3412" data-name="Rectangle 3412" width="340" height="25" transform="translate(37 9073)" fill="#f6f6f6"/>
+    <text id="內文p-15" data-name="內文p" transform="translate(328 8688)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">9.1</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-16" data-name="內文p" transform="translate(318 9093)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">11.9</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-17" data-name="內文p" transform="translate(317 8627)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">35.9</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-18" data-name="內文p" transform="translate(317 9032)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">36.3</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-19" data-name="內文p" transform="translate(328 8816)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">2.1</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-20" data-name="內文p" transform="translate(317 8563)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">75.1</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-21" data-name="內文p" transform="translate(317 8968)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">52.7</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-22" data-name="內文p" transform="translate(328 8752)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">8.7</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-23" data-name="內文p" transform="translate(328 9157)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">5.1</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <rect id="Rectangle_3407" data-name="Rectangle 3407" width="123" height="25" transform="translate(37 8606)" fill="#00ccb1"/>
+    <rect id="Rectangle_3405" data-name="Rectangle 3405" width="28" height="25" transform="translate(37 8668)" fill="#00ccb1"/>
+    <rect id="Rectangle_3401" data-name="Rectangle 3401" width="9" height="25" transform="translate(37 8795)" fill="#00ccb1"/>
+    <rect id="Rectangle_3403" data-name="Rectangle 3403" width="25" height="25" transform="translate(37 8731)" fill="#00ccb1"/>
+    <rect id="Rectangle_3409" data-name="Rectangle 3409" width="259" height="25" transform="translate(37 8542)" fill="#00ccb1"/>
+    <rect id="Rectangle_3421" data-name="Rectangle 3421" width="125" height="25" transform="translate(37 9011)" fill="#00ccb1"/>
+    <rect id="Rectangle_3419" data-name="Rectangle 3419" width="73" height="25" transform="translate(37 9073)" fill="#00ccb1"/>
+    <rect id="Rectangle_3417" data-name="Rectangle 3417" width="19" height="25" transform="translate(37 9136)" fill="#00ccb1"/>
+    <rect id="Rectangle_3423" data-name="Rectangle 3423" width="180" height="25" transform="translate(37 8947)" fill="#00ccb1"/>
   </g>
 </svg>

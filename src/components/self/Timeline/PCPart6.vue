@@ -47,20 +47,20 @@
 
 <script>
 export default {
-  name: 'PCpart6',
+  name: "PCpart6",
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-}
+};
 </script>
 <style lang="scss" scoped>
 .part6-text {
   display: flex;
-  width: 92.97vw;
+  width: 1140px;
   height: 100vh;
-  margin-right: 70px;
   .part6-graph-wrapper {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 500px;
+    margin-right: 70px;
     .part6-graph {
       position: absolute;
       display: flex;
@@ -82,7 +82,6 @@ export default {
         line-height: 1.7;
         text-align: left;
         color: #000000;
-        max-width: 39.06vw;
         margin: 15px 0 23px;
         padding-right: 1%;
         span {
@@ -94,7 +93,8 @@ export default {
   .part6-today-wrapper {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 500px;
+    margin-right: 70px;
     .part6-today {
       position: absolute;
       top: 27.5%;
@@ -107,7 +107,7 @@ export default {
           display: inline-block;
           white-space: nowrap;
           color: #ffffff;
-          padding: 0 5%;
+          padding: 0 15px;
           background-color: #00ccb1;
           font-size: 40px;
           font-weight: bold;
@@ -136,18 +136,18 @@ export default {
 }
 
 .part6-image-wrapper {
-  width: 60.7vw;
+  width: 777px;
   // height: 68.8vh;
   .part6-image {
     position: absolute;
-    top: 12.2vh;
-    width: 60.7vw;
+    top: 89px;
+    width: 777px;
     img {
       width: 100%;
       //max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;

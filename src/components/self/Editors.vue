@@ -13,9 +13,13 @@
         <p>網頁製作</p>
         <p>張庭瑋</p>
       </div>
-      <div>
+      <!-- <div>
         <p>影像</p>
         <p>影像中心、報系資料庫</p>
+      </div> -->
+      <div>
+        <p>監製</p>
+        <p>蕭衡倩</p>
       </div>
       <div>
         <p>製作單位</p>
@@ -30,12 +34,8 @@
         <p>數據中心</p>
       </div>
       <div>
-        <p>監製</p>
-        <p>蕭衡倩</p>
-      </div>
-      <div>
         <p></p>
-        <p>2020.07.29</p>
+        <p>{{ onlineTime }}</p>
       </div>
     </FooterEditor>
     <div class="share-wrapper">
@@ -59,12 +59,13 @@ import FooterEditor from "@/components/footer/FooterEditor.vue";
 
 export default {
   name: "Editors",
+  props: { onlineTime: { type: String } },
   components: { FooterShare, FooterEditor },
 };
 </script>
 <style lang="scss" scoped>
 .editors-wrapper {
-  padding-bottom: 70px;
+  padding-bottom: 150px;
   background-color: #000000;
 
   .questionnaire-wrapper {

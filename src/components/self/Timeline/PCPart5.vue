@@ -4,7 +4,9 @@
       <div class="part5-graph-wrapper">
         <div class="part5-graph">
           <h2 class="part5-title">鬆綁：廣設高中大學</h2>
-          <p>在教改訴求與政策引導下，高中、大學數量激增，1994年到2019年間，大學錄取率從44%成長到100%</p>
+          <p>
+            在教改訴求與政策引導下，高中、大學數量激增，1994年到2019年間，大學錄取率從44%成長到100%
+          </p>
           <img :src="img[0]" alt />
         </div>
       </div>
@@ -25,7 +27,8 @@
               <div class="part5-today-list-subtitle">「人生勝利組」定型：</div>
               <div>
                 社會形塑出「
-                <span>上高中大學＝成功</span>」氣氛，追求明星高中、名牌大學，技職體系價值感低落。
+                <span>上高中大學＝成功</span
+                >」氣氛，追求明星高中、名牌大學，技職體系價值感低落。
               </div>
             </li>
           </ul>
@@ -35,7 +38,9 @@
     <div class="part5-image-wrapper">
       <div class="part5-image">
         <img class="img-fluid" :class="{ active }" :src="img[1]" alt />
-        <div>廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照</div>
+        <div>
+          廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照
+        </div>
       </div>
     </div>
   </div>
@@ -43,19 +48,20 @@
 
 <script>
 export default {
-  name: 'PCPart5',
+  name: "PCPart5",
   props: { active: { type: Boolean, default: false }, img: { type: Array } },
-}
+};
 </script>
 <style lang="scss" scoped>
 .part5-text {
   display: flex;
-  width: 92.97vw;
+  width: 1140px;
   height: 100vh;
   .part5-graph-wrapper {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 500px;
+    margin-right: 70px;
     .part5-graph {
       position: absolute;
       display: flex;
@@ -76,7 +82,6 @@ export default {
         line-height: 1.7;
         text-align: left;
         color: #000000;
-        max-width: 39.06vw;
         margin: 15px 0 23px;
         padding-right: 0%;
         // @media screen and (min-width: 1280.1px) {
@@ -91,7 +96,8 @@ export default {
   .part5-today-wrapper {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 500px;
+    margin-right: 70px;
     .part5-today {
       position: absolute;
       top: 27.5%;
@@ -104,7 +110,7 @@ export default {
           display: inline-block;
           white-space: nowrap;
           color: #ffffff;
-          padding: 0 5%;
+          padding: 0 15px;
           background-color: #00ccb1;
           font-size: 40px;
           font-weight: bold;
@@ -133,20 +139,19 @@ export default {
 }
 
 .part5-image-wrapper {
-  width: 32.5vw;
+  width: 416px;
   height: 100vh;
-  margin-left: 70px;
   position: relative;
   .part5-image {
     height: 68.8vh;
     position: absolute;
-    top: 12.2vh;
+    top: 89px;
     img {
       width: 100%;
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;

@@ -90,7 +90,7 @@ export default {
     padding-right: 7.8%;
     img {
       max-width: 100%;
-      transition: all 2s ease-out;
+      transition: all 1s ease-out;
       transform: translateX(-100%);
       opacity: 0;
       &.active {
