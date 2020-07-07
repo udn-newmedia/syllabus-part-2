@@ -30,14 +30,14 @@
         name="outlink"
         @click="sendGA(formatGA('StoryMenuLink_4'))"
       ) 台灣教改為何總失敗
-      a(class="active") 升學主義悲歌
+      a(class="active") 一個家庭看台灣升學主義
       a(
         href="../collect/"
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
         @click="sendGA(formatGA('StoryMenuLink_6'))"
-      ) 關於108課綱 我想說......
+      ) 寫下你的教改心聲
       a(
         href="https://udn.com/search/word/2/108課綱"
         target="_blank"
@@ -49,9 +49,9 @@
     main
       TheCover
       ArticleContainer
-        p.enlarge 爸爸說：幹嘛不隨便填一個科系，<br>先進到大學再說啊！
-        p.enlarge 老師說：就先順順上大學，<br>以後不做相關的工作也沒關係啊！
-        p.enlarge 鬧了一場家庭革命，<br>爸爸氣到2、3個月不跟我說話。
+        p.enlarge 爸爸說：幹嘛不隨便填一個科系，<br class="narrow-device-br">先進到大學再說啊！
+        p.enlarge 老師說：就先順順上大學，<br class="narrow-device-br">以後不做相關的工作也沒關係啊！
+        p.enlarge 鬧了一場家庭革命，<br class="narrow-device-br">爸爸氣到2、3個月不跟我說話。
       WideImage(
         :srcMob="require('~/img/story/img1/mob.jpg')"
         :srcPad="require('~/img/story/img1/pc.jpg')"
@@ -73,7 +73,7 @@
         p.enlarge 現在回想，<MarkText>只是那些科目成績比較好，就以為是興趣。</MarkText>
       ArticleContainer(bgColor="#000000")
         div.black-article-container
-          p.white 時間回到國三，<br>當時的小雅猶豫要選高中、高職還是五專。
+          p.enlarge.white 時間回到國三，<br>當時的小雅猶豫要選高中、高職還是五專。
       ArticleContainer
         p.enlarge 我從小不擅長考試讀書，喜歡畫畫和攝影，高職和五專或許比較適合我發展專長，但我下不了決心。
         p.enlarge 國中老師口頭上說：「你就選你有興趣的」，但又開玩笑接了一句：<br v-if="deviceType !== 'pc'"><TiltText text="是只有這條路可以走了嗎？" rotateDegree="25deg"></TiltText>
@@ -107,7 +107,7 @@
       ) 圖為小雅的水彩繪畫作品。圖／小雅提供
       ArticleContainer
         p.enlarge 小時候我曾經想當老師，我硬著頭皮去補習班應徵，但只有高中學歷，根本沒有人會用我，直到一家補習班願意給我工作，還讓我自己設計科學實驗教案。
-        p.enlarge 「後來跟老闆比較熟的時候，我問他：為什麼會用我這樣的人？攤開履歷我都不一定會用我自己。他跟我說：你社團的部分很加分啊！」
+        p.enlarge 後來跟老闆比較熟的時候，我問他：「為什麼會用我這樣的人？攤開履歷我都不一定會用我自己。」他跟我說：「你社團的部分很加分啊！」
       ChapterTitle
         h2.enlarge 我很開心，<br>覺得自己被肯定了
       ArticleContainer
@@ -169,7 +169,10 @@
           p 洪欣慈
         div
           p 網頁設計
-          p 張心慈
+          p 許瑋琳
+        div
+          p 影像
+          p 林澔一、報系資料庫
         div
           p 網頁製作
           p 楊若榆
@@ -184,7 +187,7 @@
           p 聯合報新媒體中心、<br>視覺設計中心、<br>數據中心
         div
           p 
-          p 2020.07
+          p 2020.07.09
       FooterShare
       FooterFbComment
       FooterLogo
@@ -265,7 +268,27 @@ export default {
   }
 }
 
+.article {
+  padding: 48px 16px 48px 16px !important;
+  @include pad {
+    padding: 72px 0 72px 0;
+    max-width: 576px;
+  }
+  @include pc {
+    max-width: 720px;
+    padding: 72px 0 72px 0;
+  }
+}
+
+
 .icon-theme-light {
   color: #ababab !important;
+}
+
+.narrow-device-br {
+  display: none;
+  @include pc {
+    display: initial;
+  }
 }
 </style>

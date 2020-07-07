@@ -25,7 +25,6 @@ export default {
   transition: 0;
   &.mark-text--active {
     background-position: left bottom;
-    transform: translateX(0);
     transition: 1.5s ease-in-out;
   }
 }

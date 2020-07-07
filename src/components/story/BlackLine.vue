@@ -73,7 +73,7 @@ export default {
   transition: 0;
   &.black-line__line--active {
     transform: translateX(0);
-    transition: 1.5s;
+    transition: 0.6s;
   }
 }
 </style>
