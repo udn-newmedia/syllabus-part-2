@@ -4,9 +4,7 @@
       <div class="part5-graph-wrapper">
         <div class="part5-graph">
           <h2 class="part5-title">鬆綁：廣設高中大學</h2>
-          <p>
-            在教改訴求與政策引導下，高中、大學數量激增，1994年到2019年間，大學錄取率從44%成長到100%
-          </p>
+          <p>在教改訴求與政策引導下，高中、大學數量激增，1994年到2019年間，大學錄取率從44%成長到100%</p>
           <img :src="img[0]" alt />
         </div>
       </div>
@@ -27,8 +25,7 @@
               <div class="part5-today-list-subtitle">「人生勝利組」定型：</div>
               <div>
                 社會形塑出「
-                <span>上高中大學＝成功</span
-                >」氣氛，追求明星高中、名牌大學，技職體系價值感低落。
+                <span>上高中大學＝成功</span>」氣氛，追求明星高中、名牌大學，技職體系價值感低落。
               </div>
             </li>
           </ul>
@@ -38,9 +35,7 @@
     <div class="part5-image-wrapper">
       <div class="part5-image">
         <img class="img-fluid" :class="{ active }" :src="img[1]" alt />
-        <div>
-          廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照
-        </div>
+        <div>廣設大學造成學歷貶值，高學歷變成高失業，圖為補習班的廣告口號。圖／報系資料照</div>
       </div>
     </div>
   </div>
@@ -48,9 +43,9 @@
 
 <script>
 export default {
-  name: "PCPart5",
+  name: 'PCPart5',
   props: { active: { type: Boolean, default: false }, img: { type: Array } },
-};
+}
 </script>
 <style lang="scss" scoped>
 .part5-text {
@@ -69,6 +64,7 @@ export default {
       justify-content: flex-start;
       top: 27.22%;
       left: 0;
+      width: 500px;
       .part5-title {
         font-size: 40px;
         font-weight: bold;
@@ -77,7 +73,6 @@ export default {
         color: #000000;
       }
       p {
-        // width: 39.02vw;
         font-size: 20px;
         line-height: 1.7;
         text-align: left;
@@ -151,7 +146,7 @@ export default {
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;

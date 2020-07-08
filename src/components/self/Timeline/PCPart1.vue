@@ -77,7 +77,7 @@ export default {
     .arrow-wrapper {
       color: #eeeeee;
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       padding-top: 10%;
     }
   }

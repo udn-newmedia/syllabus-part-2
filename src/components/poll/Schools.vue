@@ -27,6 +27,7 @@ export default {
     line-height: 1.7;
     color: #121212;
   }
+
   @media screen and (max-width: 1024.99px) {
     h2 {
       margin: 100px 12.5% 0;
@@ -43,6 +44,14 @@ export default {
     p {
       margin: 7px 3.9% 15px;
       font-size: 18px;
+    }
+  }
+  h2,
+  p {
+    @media screen and (min-width: 768px) and (max-width: 1024.98px) {
+      width: 576px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

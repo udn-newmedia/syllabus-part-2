@@ -47,9 +47,9 @@
 
 <script>
 export default {
-  name: "PCpart6",
+  name: 'PCpart6',
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-};
+}
 </script>
 <style lang="scss" scoped>
 .part6-text {
@@ -68,13 +68,13 @@ export default {
       justify-content: flex-start;
       top: 27.22%;
       left: 0;
+      width: 500px;
       .part6-title {
         font-size: 40px;
         font-weight: bold;
         line-height: 1.56;
         text-align: left;
         color: #000000;
-        padding-right: 8vw;
       }
       p {
         // width: 39.02vw;
@@ -147,7 +147,7 @@ export default {
       //max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;
