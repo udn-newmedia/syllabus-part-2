@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.black-line(:class="{'black-line--top': pos==='top', 'black-line--bottom': pos==='bottom'}")
+  div.black-line(:class="{'black-line--top': pos==='top', 'black-line--bottom': pos==='bottom' && !isLast}")
     div.black-line__line-container(:class="{'black-line__line-container--black-hole': pos==='blackhole'}")
       div.black-line__line(:class="{'black-line__line--active': observableActive}")
 </template>
@@ -16,6 +16,10 @@ export default {
       validator: function (value) {
         return ['top', 'bottom', 'blackhole'].indexOf(value) !== -1;
       }
+    },
+    isLast: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

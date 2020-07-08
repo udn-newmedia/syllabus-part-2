@@ -159,7 +159,7 @@
         :posterPad="require('~/media/story/video/pad.jpg')"
         :posterPc="require('~/media/story/video/pc.jpg')"
       )
-      BlackLine(pos='bottom')
+      BlackLine(pos='bottom' :isLast="true")
     OtherProjects(theme="light")
     Marketing(bg="#eeeeee")
     PageFooter
@@ -171,14 +171,11 @@
           p 網頁設計
           p 許瑋琳
         div
-          p 影像
-          p 林澔一、報系資料庫
-        div
           p 網頁製作
           p 楊若榆
         div
           p 影像
-          p 影像中心、<br>報系資料庫
+          p 林澔一、報系資料庫
         div
           p 監製
           p 蕭衡倩
@@ -280,6 +277,9 @@ export default {
   }
 }
 
+.white {
+  color: #ffffff !important;
+}
 
 .icon-theme-light {
   color: #ababab !important;
