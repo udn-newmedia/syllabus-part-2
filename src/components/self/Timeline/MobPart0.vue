@@ -21,8 +21,9 @@ export default {
   background-color: #000000;
   .mob-part0-text {
     padding-top: 36px;
-    padding-left: 13.3%;
-    @media screen and (max-width: 767.99px) {
+    // padding-left: 13.3%;
+    padding-left: 100px;
+    @media screen and (max-width: 767.98px) {
       padding-top: 49px;
       padding-left: 4.1%;
     }

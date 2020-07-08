@@ -60,6 +60,12 @@ export default {
     padding-top: 72px;
     padding-left: 14.3%;
     padding-right: 7.8%;
+    @media screen and (min-width: 768px) {
+      width: 576px;
+      margin-left: 100px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
     .mob-part6-title {
       margin-bottom: 15px;
 
@@ -123,7 +129,7 @@ export default {
     padding-right: 7.8%;
     img {
       max-width: 100%;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       transform: translateX(-100%);
       opacity: 0;
       &.active {
@@ -160,8 +166,6 @@ export default {
       .mob-part6ーsubtitle {
         font-size: 30px;
         margin-bottom: 10px;
-        padding-left: 0;
-        padding-right: 0;
       }
       .mob-part6-today-list {
         font-size: 18px;

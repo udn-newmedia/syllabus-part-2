@@ -1,46 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="725" viewBox="0 0 850 725">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="507" viewBox="0 0 850 507">
   <g id="poll_chart__web" data-name="poll_chart５_web" transform="translate(-215 -4835)">
-    <rect id="Rectangle_2604" data-name="Rectangle 2604" width="850" height="725" rx="5" transform="translate(215 4835)" fill="#fff"/>
+    <rect id="Rectangle_2604" data-name="Rectangle 2604" width="850" height="507" rx="5" transform="translate(215 4835)" fill="#fff"/>
     <text id="內文p" transform="translate(280 4891)" font-size="25" font-family="SourceHanSansTW-Bold, Source Han Sans TW" font-weight="700"><tspan x="0" y="29">最擔心的變革是？（可複選）</tspan></text>
-    <text id="內文p-2" data-name="內文p" transform="translate(360 5272)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">升學制度</tspan></text>
-    <text id="內文p-3" data-name="內文p" transform="translate(360 5310)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">素養學習</tspan></text>
-    <text id="內文p-4" data-name="內文p" transform="translate(400 5348)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-120" y="0">必修時數減少</tspan></text>
-    <rect id="Rectangle_2638" data-name="Rectangle 2638" width="513" height="25" transform="translate(487 5250)" fill="#f6f6f6"/>
-    <rect id="Rectangle_2636" data-name="Rectangle 2636" width="513" height="25" transform="translate(487 5288)" fill="#f6f6f6"/>
-    <rect id="Rectangle_2634" data-name="Rectangle 2634" width="513" height="25" transform="translate(487 5327)" fill="#f6f6f6"/>
-    <rect id="Rectangle_2639" data-name="Rectangle 2639" width="191" height="25" transform="translate(487 5250)" fill="#00ccb1"/>
-    <rect id="Rectangle_2637" data-name="Rectangle 2637" width="120" height="25" transform="translate(487 5288)" fill="#00ccb1"/>
-    <rect id="Rectangle_2635" data-name="Rectangle 2635" width="115" height="25" transform="translate(487 5327)" fill="#00ccb1"/>
-    <text id="內文p-5" data-name="內文p" transform="translate(609 5346)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">21.7</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-6" data-name="內文p" transform="translate(686 5269)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">37.2</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-7" data-name="內文p" transform="translate(615 5308)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">22.9</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-8" data-name="內文p" transform="translate(360 5504)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">彈性課程</tspan></text>
-    <text id="內文p-9" data-name="內文p" transform="translate(360 5387)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">生涯引導</tspan></text>
-    <text id="內文p-10" data-name="內文p" transform="translate(420 5426)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-140" y="0">多元選修課增加</tspan></text>
-    <text id="內文p-11" data-name="內文p" transform="translate(400 5465)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-120" y="0">學習歷程檔案</tspan></text>
-    <rect id="Rectangle_3180" data-name="Rectangle 3180" width="513" height="25" transform="translate(487 5485)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3186" data-name="Rectangle 3186" width="513" height="25" transform="translate(487 5368)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3182" data-name="Rectangle 3182" width="513" height="25" transform="translate(487 5407)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3181" data-name="Rectangle 3181" width="513" height="25" transform="translate(487 5446)" fill="#f6f6f6"/>
-    <rect id="Rectangle_3184" data-name="Rectangle 3184" width="56" height="25" transform="translate(487 5485)" fill="#00ccb1"/>
-    <rect id="Rectangle_3187" data-name="Rectangle 3187" width="106" height="25" transform="translate(487 5368)" fill="#00ccb1"/>
-    <rect id="Rectangle_3183" data-name="Rectangle 3183" width="97" height="25" transform="translate(487 5407)" fill="#00ccb1"/>
-    <rect id="Rectangle_3185" data-name="Rectangle 3185" width="92" height="25" transform="translate(487 5446)" fill="#00ccb1"/>
-    <text id="內文p-12" data-name="內文p" transform="translate(547 5504)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">10.9</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-13" data-name="內文p" transform="translate(599 5388)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">20.1</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-14" data-name="內文p" transform="translate(588 5426)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">18.7</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <text id="內文p-15" data-name="內文p" transform="translate(582 5465)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">17.4</tspan><tspan y="0" font-size="15">%</tspan></text>
-    <g id="Group_2119" data-name="Group 2119" transform="translate(408.127 4957)">
-      <text id="內文p-16" data-name="內文p" transform="translate(63 213)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0" y="23">都不擔心</tspan></text>
-      <text id="_13.6_" data-name="13.6%" transform="translate(47 116)" fill="#8e8e8e" font-size="40" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="0">13.6</tspan><tspan y="0" font-size="25">%</tspan></text>
-      <path id="Subtraction_35" data-name="Subtraction 35" d="M103,206a103.772,103.772,0,0,1-20.758-2.093,102.437,102.437,0,0,1-36.83-15.5A103.311,103.311,0,0,1,8.094,143.092a102.516,102.516,0,0,1-6-19.334,104.006,104.006,0,0,1,0-41.516,102.422,102.422,0,0,1,15.5-36.83A103.3,103.3,0,0,1,62.907,8.094a102.494,102.494,0,0,1,19.334-6,104,104,0,0,1,41.517,0,102.422,102.422,0,0,1,36.83,15.5,103.306,103.306,0,0,1,37.318,45.317,102.462,102.462,0,0,1,6,19.334,103.994,103.994,0,0,1,0,41.516,102.415,102.415,0,0,1-15.5,36.83,103.3,103.3,0,0,1-45.317,37.318,102.494,102.494,0,0,1-19.334,6A103.774,103.774,0,0,1,103,206Zm.395-181.532a78.927,78.927,0,1,0,78.927,78.927A79.016,79.016,0,0,0,103.395,24.468Z" fill="#eee"/>
-    </g>
-    <g id="Group_2120" data-name="Group 2120" transform="translate(658.795 4957)">
-      <text id="內文p-17" data-name="內文p" transform="translate(42 213)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="0.08" y="23">無意見/未回答</tspan></text>
-      <text id="_9.4_" data-name="9.4%" transform="translate(63 72)" fill="#8e8e8e" font-size="40" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="44">9.4</tspan><tspan y="44" font-size="25">%</tspan></text>
-      <path id="Subtraction_32" data-name="Subtraction 32" d="M103,206a103.772,103.772,0,0,1-20.758-2.093,102.437,102.437,0,0,1-36.83-15.5A103.311,103.311,0,0,1,8.094,143.092a102.516,102.516,0,0,1-6-19.334,104.006,104.006,0,0,1,0-41.516,102.422,102.422,0,0,1,15.5-36.83A103.3,103.3,0,0,1,62.907,8.094a102.494,102.494,0,0,1,19.334-6,104,104,0,0,1,41.517,0,102.422,102.422,0,0,1,36.83,15.5,103.306,103.306,0,0,1,37.318,45.317,102.462,102.462,0,0,1,6,19.334,103.994,103.994,0,0,1,0,41.516,102.415,102.415,0,0,1-15.5,36.83,103.3,103.3,0,0,1-45.317,37.318,102.494,102.494,0,0,1-19.334,6A103.774,103.774,0,0,1,103,206Zm.395-181.532a78.927,78.927,0,1,0,78.927,78.927A79.016,79.016,0,0,0,103.395,24.468Z" fill="#eee"/>
-      <path id="Subtraction_260" data-name="Subtraction 260" d="M-1897.375,18856.617a78.977,78.977,0,0,0-59.23-26.818c-.133,0-.264,0-.4,0v-24.467a103.574,103.574,0,0,1,20.762,2.1,102.6,102.6,0,0,1,19.333,6,103.193,103.193,0,0,1,17.494,9.5,103.458,103.458,0,0,1,15.244,12.58c2.175,2.174,4.28,4.477,6.255,6.844l-19.462,14.268Z" transform="translate(2060 -18805.334)" fill="#eb0f43"/>
-    </g>
-    <path id="Subtraction_259" data-name="Subtraction 259" d="M-1215.044,23845.465a78.548,78.548,0,0,0-70.765-44c-.133,0-.265,0-.4,0V23777a103.564,103.564,0,0,1,20.759,2.092,102.237,102.237,0,0,1,19.331,6,103,103,0,0,1,17.5,9.5,103.524,103.524,0,0,1,15.24,12.576,103.573,103.573,0,0,1,12.582,15.246,103.3,103.3,0,0,1,7.96,14.043l-22.209,9.006Z" transform="translate(1797.333 -18820)" fill="#00ccb1"/>
+    <text id="內文p-2" data-name="內文p" transform="translate(360 4970)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">升學制度</tspan></text>
+    <text id="內文p-3" data-name="內文p" transform="translate(360 5008)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">素養學習</tspan></text>
+    <text id="內文p-4" data-name="內文p" transform="translate(400 5046)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-120" y="0">必修時數減少</tspan></text>
+    <rect id="Rectangle_2638" data-name="Rectangle 2638" width="513" height="25" transform="translate(487 4948)" fill="#f6f6f6"/>
+    <rect id="Rectangle_2636" data-name="Rectangle 2636" width="513" height="25" transform="translate(487 4986)" fill="#f6f6f6"/>
+    <rect id="Rectangle_2634" data-name="Rectangle 2634" width="513" height="25" transform="translate(487 5025)" fill="#f6f6f6"/>
+    <rect id="Rectangle_2639" data-name="Rectangle 2639" width="191" height="25" transform="translate(487 4948)" fill="#00ccb1"/>
+    <rect id="Rectangle_2637" data-name="Rectangle 2637" width="120" height="25" transform="translate(487 4986)" fill="#00ccb1"/>
+    <rect id="Rectangle_2635" data-name="Rectangle 2635" width="115" height="25" transform="translate(487 5025)" fill="#00ccb1"/>
+    <text id="內文p-5" data-name="內文p" transform="translate(609 5044)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">21.7</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-6" data-name="內文p" transform="translate(686 4967)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">37.2</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-7" data-name="內文p" transform="translate(615 5006)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">22.9</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-8" data-name="內文p" transform="translate(360 5241)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">彈性課程</tspan></text>
+    <text id="內文p-9" data-name="內文p" transform="translate(408 5280)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-127.84" y="0">無意見/未回答</tspan></text>
+    <text id="內文p-10" data-name="內文p" transform="translate(360 5085)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">生涯引導</tspan></text>
+    <text id="內文p-11" data-name="內文p" transform="translate(420 5124)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-140" y="0">多元選修課增加</tspan></text>
+    <text id="內文p-12" data-name="內文p" transform="translate(400 5163)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-120" y="0">學習歷程檔案</tspan></text>
+    <text id="內文p-13" data-name="內文p" transform="translate(360 5202)" font-size="20" font-family="SourceHanSansTW-Regular, Source Han Sans TW"><tspan x="-80" y="0">都不擔心</tspan></text>
+    <rect id="Rectangle_3180" data-name="Rectangle 3180" width="513" height="25" transform="translate(487 5222)" fill="#f6f6f6"/>
+    <rect id="Rectangle_4216" data-name="Rectangle 4216" width="513" height="25" transform="translate(487 5261)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3186" data-name="Rectangle 3186" width="513" height="25" transform="translate(487 5066)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3182" data-name="Rectangle 3182" width="513" height="25" transform="translate(487 5105)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3181" data-name="Rectangle 3181" width="513" height="25" transform="translate(487 5144)" fill="#f6f6f6"/>
+    <rect id="Rectangle_4214" data-name="Rectangle 4214" width="513" height="25" transform="translate(487 5183)" fill="#f6f6f6"/>
+    <rect id="Rectangle_3184" data-name="Rectangle 3184" width="56" height="25" transform="translate(487 5222)" fill="#00ccb1"/>
+    <rect id="Rectangle_4217" data-name="Rectangle 4217" width="49" height="25" transform="translate(487 5261)" fill="#00ccb1"/>
+    <rect id="Rectangle_3187" data-name="Rectangle 3187" width="106" height="25" transform="translate(487 5066)" fill="#00ccb1"/>
+    <rect id="Rectangle_3183" data-name="Rectangle 3183" width="97" height="25" transform="translate(487 5105)" fill="#00ccb1"/>
+    <rect id="Rectangle_3185" data-name="Rectangle 3185" width="92" height="25" transform="translate(487 5144)" fill="#00ccb1"/>
+    <rect id="Rectangle_4215" data-name="Rectangle 4215" width="70" height="25" transform="translate(487 5183)" fill="#00ccb1"/>
+    <text id="內文p-14" data-name="內文p" transform="translate(547 5241)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">10.9</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-15" data-name="內文p" transform="translate(542 5280)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">9.4</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-16" data-name="內文p" transform="translate(599 5086)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">20.1</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-17" data-name="內文p" transform="translate(588 5124)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">18.7</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-18" data-name="內文p" transform="translate(582 5163)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">17.4</tspan><tspan y="0" font-size="15">%</tspan></text>
+    <text id="內文p-19" data-name="內文p" transform="translate(562 5202)" fill="#8e8e8e" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">13.6</tspan><tspan y="0" font-size="15">%</tspan></text>
   </g>
 </svg>

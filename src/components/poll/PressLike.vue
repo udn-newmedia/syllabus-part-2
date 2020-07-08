@@ -2,18 +2,16 @@
   <div class="press-like">
     <div class="tag-area-wrapper">
       <div class="tag-area" v-for="(tag, i) in tags" :key="tag.id">
-        <span class="tag" :style="{ backgroundColor: tag.tag.color }">{{
+        <span class="tag" :style="{ backgroundColor: tag.tag.color }">
+          {{
           tag.tag.content
-        }}</span>
+          }}
+        </span>
         <!-- <p>{{ tag.title }}</p> -->
         <p v-html="tag.title" />
         <div class="like">
           <span class="likeNumber">{{ tag.userlike }}</span>
-          <img
-            @click="sendLike(tag, i)"
-            :src="tag.isLiked ? imgs.like : imgs.unlike"
-            alt
-          />
+          <img @click="sendLike(tag, i)" :src="tag.isLiked ? imgs.like : imgs.unlike" alt />
         </div>
       </div>
     </div>
@@ -21,10 +19,10 @@
 </template>
 
 <script>
-import content from "../../data/content";
+import content from '../../data/content'
 
 export default {
-  name: "PressLike",
+  name: 'PressLike',
   data() {
     // const tags = [];
 
@@ -40,15 +38,15 @@ export default {
     //     isLiked: false,
     //   });
     // }
-    return { tags: [], imgs: content.pressLikeImgs };
+    return { tags: [], imgs: content.pressLikeImgs }
   },
   methods: {
     getData() {
-      fetch("https://newmedia.udn.com.tw/active/api/message/?flag=Course108")
-        .then((response) => response.json())
-        .then((result) => {
+      fetch('https://newmedia.udn.com.tw/active/api/message/?flag=Course108')
+        .then(response => response.json())
+        .then(result => {
           for (let i = 0; i < result.length; i++) {
-            this.tags.push(result[i]);
+            this.tags.push(result[i])
             // this.tags[i].title = result[i].title.replace(
             //   /(?:\\[rn]|[\r\n]+)+/g,
             //   "<br>"
@@ -61,10 +59,10 @@ export default {
           for (let i = 0; i < this.tags.length; i++) {
             this.tags[i].title = this.tags[i].title.replace(
               /(?:\\[rn]|[\r\n]+)+/g,
-              "<br>"
-            );
+              '<br>',
+            )
           }
-        });
+        })
     },
     sendLike(tag, i) {
       // const data = {
@@ -72,12 +70,12 @@ export default {
       //   userlike: true,
       //   flag: 'Course108',
       // }
-      const dataString = `id=${tag.id}&userlike=${true}&flag=Course108`;
-      const url = "https://newmedia.udn.com.tw/active/api/message/";
+      const dataString = `id=${tag.id}&userlike=${true}&flag=Course108`
+      const url = 'https://newmedia.udn.com.tw/active/api/message/'
 
       if (!tag.isLiked) {
-        this.tags[i].isLiked = true;
-        this.tags[i].userlike += 1;
+        this.tags[i].isLiked = true
+        this.tags[i].userlike += 1
         // ajax
         if (!this.tags[i].isPressed) {
           // var http = new XMLHttpRequest()
@@ -89,19 +87,19 @@ export default {
           // http.onreadystatechange = function() {}
           // http.send(dataString)
           fetch(url, {
-            method: "POST",
+            method: 'POST',
             body: dataString,
             headers: new Headers({
-              "Content-Type": "application/x-www-form-urlencoded",
+              'Content-Type': 'application/x-www-form-urlencoded',
             }),
-          });
+          })
           // .then(result => result.json())
           // .then(result => console.log(result))
         }
-        this.tags[i].isPressed = true;
+        this.tags[i].isPressed = true
       } else {
-        this.tags[i].isLiked = false;
-        this.tags[i].userlike -= 1;
+        this.tags[i].isLiked = false
+        this.tags[i].userlike -= 1
       }
 
       // const data = {
@@ -136,9 +134,9 @@ export default {
     },
   },
   mounted() {
-    this.getData();
+    this.getData()
   },
-};
+}
 </script>
 <style lang="scss" scoped>
 .press-like {
@@ -162,7 +160,7 @@ export default {
       width: 715px;
       column-count: 2;
     }
-    @media screen and (max-width: 767.99px) {
+    @media screen and (max-width: 767.98px) {
       width: 350px;
       column-count: 1;
     }

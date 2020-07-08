@@ -1,14 +1,14 @@
 <template>
   <div class="main-title">
     <div class="title-text">
-      <div :class="{ active }">
+      <div :class="{ active:active[0] }">
         <div class="text-1">教改是全民的，與社會脫離不了關係，如果社會不改善，教育也沒有辦法改革。</div>
         <div class="text-2">1994.10.29</div>
         <div class="text-2">行政院教育改革審議委員會召集人李遠哲</div>
       </div>
     </div>
     <div class="title-img">
-      <img :class="{ active }" :src="img" alt />
+      <img :class="{ active:active[1] }" :src="img" alt />
     </div>
   </div>
 </template>
@@ -16,7 +16,10 @@
 <script>
 export default {
   name: 'PCPart2',
-  props: { active: { type: Boolean, default: false }, img: { type: String } },
+  props: {
+    active: { type: Array },
+    img: { type: String },
+  },
 }
 </script>
 
@@ -32,7 +35,7 @@ export default {
     & > div {
       transform: translateX(100%);
       opacity: 0;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       &.active {
         transform: translateX(0%);
         opacity: 1;
@@ -67,7 +70,7 @@ export default {
       width: 100%;
       height: 100%;
       opacity: 0;
-      transition: opacity 1s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
       &.active {
         opacity: 1;
       }

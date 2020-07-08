@@ -43,6 +43,12 @@ export default {
     padding-top: 72px;
     padding-left: 14.3%;
     padding-right: 7.8%;
+    @media screen and (min-width: 768px) {
+      width: 576px;
+      margin-left: 100px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
     .mob-part3-title {
       margin-bottom: 15px;
 
@@ -86,7 +92,7 @@ export default {
     padding-right: 7.8%;
     img {
       max-width: 100%;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       transform: translateX(-100%);
       opacity: 0;
       &.active {
@@ -100,6 +106,10 @@ export default {
       color: #929292;
       margin-top: 5px;
       margin-bottom: 25px;
+      width: 598px;
+      @media screen and (max-width: 767.98px) {
+        width: auto;
+      }
     }
   }
   @media screen and (max-width: 767.99px) {

@@ -44,9 +44,7 @@
     <div class="part10-image-wrapper">
       <div class="part10-image">
         <img class="img-fluid" :class="{ active }" :src="img" alt />
-        <div>
-          十二年國教、108課綱的各項政策，近年屢遭家長與教育團體抗議。圖／報系資料照
-        </div>
+        <div>十二年國教、108課綱的各項政策，近年屢遭家長與教育團體抗議。圖／報系資料照</div>
       </div>
     </div>
   </div>
@@ -54,9 +52,9 @@
 
 <script>
 export default {
-  name: "PCPart10",
+  name: 'PCPart10',
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-};
+}
 </script>
 <style lang="scss" scoped>
 .part10-text {
@@ -75,6 +73,7 @@ export default {
       justify-content: flex-start;
       top: 27.22%;
       left: 0;
+      width: 500px;
       .part10-title {
         font-size: 40px;
         font-weight: bold;
@@ -103,6 +102,7 @@ export default {
     .part10-today {
       position: absolute;
       top: 27.5%;
+      width: 500px;
       // padding: 0 10% 0 10%;
       .part10-today-title {
         display: flex;
@@ -132,7 +132,7 @@ export default {
           padding-left: 22px;
           font-size: 20px;
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             width: 12px;
             height: 12px;
@@ -161,7 +161,7 @@ export default {
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;
