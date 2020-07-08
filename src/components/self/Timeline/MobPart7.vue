@@ -31,6 +31,12 @@ export default {
     padding-top: 72px;
     padding-left: 14.3%;
     padding-right: 7.8%;
+    @media screen and (min-width: 768px) {
+      width: 576px;
+      margin-left: 100px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
     font-family: source-han-serif-tc, serif;
     color: #777777;
     .mob-part7-quote-text {
@@ -51,7 +57,7 @@ export default {
     }
   }
   .mob-part7-quote {
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     transform: translateX(100%);
     opacity: 0;
     &.active {

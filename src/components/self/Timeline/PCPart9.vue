@@ -5,10 +5,11 @@
         <div class="part9-graph">
           <h2 class="part9-title">下一波教改：十二年國教、免試入學</h2>
           <ul class="part9-nextlist">
-            <li><span>2011年：</span>前總統馬英九宣布啟動十二年國民基本教育</li>
             <li>
-              <span>2014年：</span
-              >國中教育會考上路，國中升學分為「免試入學」和「特色招生」
+              <span>2011年：</span>前總統馬英九宣布啟動十二年國民基本教育
+            </li>
+            <li>
+              <span>2014年：</span>國中教育會考上路，國中升學分為「免試入學」和「特色招生」
             </li>
           </ul>
         </div>
@@ -21,21 +22,18 @@
           <ul class="part9-today-list">
             <li>
               <div class="part9-today-list-subtitle">「免試」不是真免試：</div>
-              <div>
-                報名人數若超過學校招生名額，將進行「超額比序」，項目包括會考成績、志願序、多元學習表現。
-              </div>
+              <div>報名人數若超過學校招生名額，將進行「超額比序」，項目包括會考成績、志願序、多元學習表現。</div>
             </li>
             <li>
               <div class="part9-today-list-subtitle">明星高中搶破頭：</div>
-              <div>
-                有些縣市已幾乎全面免試；但部分縣市明星高中光環仍在，升學壓力沒減輕。
-              </div>
+              <div>有些縣市已幾乎全面免試；但部分縣市明星高中光環仍在，升學壓力沒減輕。</div>
             </li>
             <li>
               <div class="part9-today-list-subtitle">私校風氣更盛：</div>
               <div>
                 升學方式複雜，家長圖直升，就讀私立國中的學生大增。教育部統計，2014年就讀私立國中的學生比例僅
-                <span>11.74％</span>，2019年增加到 <span>13.9％</span>。
+                <span>11.74％</span>，2019年增加到
+                <span>13.9％</span>。
               </div>
             </li>
           </ul>
@@ -45,9 +43,7 @@
     <div class="part9-image-wrapper">
       <div class="part9-image">
         <img class="img-fluid" :class="{ active }" :src="img" alt />
-        <p>
-          圖為首屆國中會考後，十二年國教家長聯盟在教育部外抗議，要求教育部對會考填志願制度提出補救措施。圖／報系資料照
-        </p>
+        <p>圖為首屆國中會考後，十二年國教家長聯盟在教育部外抗議，要求教育部對會考填志願制度提出補救措施。圖／報系資料照</p>
       </div>
     </div>
   </div>
@@ -55,9 +51,9 @@
 
 <script>
 export default {
-  name: "PCPart9",
+  name: 'PCPart9',
   props: { active: { type: Boolean, default: false }, img: { type: String } },
-};
+}
 </script>
 <style lang="scss" scoped>
 .part9-text {
@@ -76,6 +72,7 @@ export default {
       justify-content: flex-start;
       top: 27.22%;
       left: 0;
+      width: 500px;
       .part9-title {
         font-size: 40px;
         font-weight: bold;
@@ -94,7 +91,7 @@ export default {
           font-size: 20px;
           max-width: 39vw;
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             width: 12px;
             height: 12px;
@@ -118,6 +115,7 @@ export default {
     .part9-today {
       position: absolute;
       top: 27.5%;
+      width: 500px;
       // padding: 0 10% 0 10%;
       .part9-today-title {
         display: flex;
@@ -165,7 +163,7 @@ export default {
       max-height: 100%;
       transform: translateY(100%);
       opacity: 0;
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
       &.active {
         transform: translateY(0%);
         opacity: 1;

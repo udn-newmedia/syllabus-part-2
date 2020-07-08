@@ -58,23 +58,23 @@
 </template>
 
 <script>
-import content from "../../../data/content";
+import content from '../../../data/content'
 
-import PCPart1 from "./PCPart1";
-import PCPart2 from "./PCPart2";
-import PCPart3 from "./PCPart3";
-import PCPart4 from "./PCPart4";
-import PCPart5 from "./PCPart5";
-import PCPart6 from "./PCPart6";
-import PCPart7 from "./PCPart7";
-import PCPart8 from "./PCPart8";
-import PCPart9 from "./PCPart9";
-import PCPart10 from "./PCPart10";
-import PCPart11 from "./PCPart11";
-import EndPage from "./EndPage";
+import PCPart1 from './PCPart1'
+import PCPart2 from './PCPart2'
+import PCPart3 from './PCPart3'
+import PCPart4 from './PCPart4'
+import PCPart5 from './PCPart5'
+import PCPart6 from './PCPart6'
+import PCPart7 from './PCPart7'
+import PCPart8 from './PCPart8'
+import PCPart9 from './PCPart9'
+import PCPart10 from './PCPart10'
+import PCPart11 from './PCPart11'
+import EndPage from './EndPage'
 
 export default {
-  name: "TimelinePC",
+  name: 'TimelinePC',
   components: {
     PCPart1,
     PCPart2,
@@ -90,15 +90,15 @@ export default {
     EndPage,
   },
   data() {
-    const { innerWidth } = window;
-    const activeArray = [];
+    const { innerWidth } = window
+    const activeArray = []
     const pageNumber = {
       length: 0,
       startLength: 2.4547,
       endLength: 1,
-    };
+    }
 
-    const accumulationArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const accumulationArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     const widthArray = [
       100,
@@ -113,13 +113,13 @@ export default {
       ((1917 + 200) * 100) / innerWidth,
       ((986 + 200) * 100) / innerWidth,
       100,
-    ];
+    ]
     for (let i = 0; i < widthArray.length; i += 1) {
-      pageNumber.length = pageNumber.length + widthArray[i] / 100;
+      pageNumber.length = pageNumber.length + widthArray[i] / 100
       if (i === 0) {
-        accumulationArray[i] = widthArray[i];
+        accumulationArray[i] = widthArray[i]
       } else {
-        accumulationArray[i] = widthArray[i] + accumulationArray[i - 1];
+        accumulationArray[i] = widthArray[i] + accumulationArray[i - 1]
       }
     }
     // P1:100vw
@@ -138,7 +138,11 @@ export default {
     // sum:1501.48vw >> 345.47vw + 13972px
 
     for (let i = 0; i < accumulationArray.length; i += 1) {
-      activeArray.push(false);
+      if (i === 1) {
+        activeArray.push([false, false])
+      } else {
+        activeArray.push(false)
+      }
     }
 
     return {
@@ -150,40 +154,45 @@ export default {
       accumulationArray,
       listWidth: pageNumber.length * 100,
       widthArray,
-    };
+    }
   },
   methods: {
     updateProgress() {
-      const containerTop = this.$refs.timeLineContainer.offsetTop;
-      const containerHeight = this.$refs.timeLineContainer.offsetHeight;
-      const containBottom = containerTop + containerHeight;
-      const listHeight = this.$refs.timeLineList.offsetHeight;
-      const { scrollTop } = document.documentElement;
-      const { innerHeight } = window;
-      const scrollBottom = scrollTop + innerHeight;
+      const containerTop = this.$refs.timeLineContainer.offsetTop
+      const containerHeight = this.$refs.timeLineContainer.offsetHeight
+      const containBottom = containerTop + containerHeight
+      const listHeight = this.$refs.timeLineList.offsetHeight
+      const { scrollTop } = document.documentElement
+      const { innerHeight } = window
+      const scrollBottom = scrollTop + innerHeight
       // const bodyHeight = document.body.offsetHeight
 
-      const allHeight = containerHeight - listHeight;
+      const allHeight = containerHeight - listHeight
       // count the progress
-      const progress = ((scrollTop - containerTop) * 100) / allHeight;
+      const progress = ((scrollTop - containerTop) * 100) / allHeight
 
-      this.progress = progress;
+      this.progress = progress
       // count the distance for bottom after leaving the area
-      this.bottom = scrollBottom - containBottom;
+      this.bottom = scrollBottom - containBottom
 
       // count active
       const allLength = this.accumulationArray[
         this.accumulationArray.length - 1
-      ];
+      ]
       for (let i = 0; i < this.accumulationArray.length; i += 1) {
         if (i === 0) {
-          this.activeArray[i] = true;
+          this.activeArray[i] = true
         } else if (i === 1) {
           if (
             this.progress >
-            (this.accumulationArray[0] * 0.75 * 100) / allLength
+            (this.accumulationArray[0] * 0.5 * 100) / allLength
           ) {
-            this.activeArray[i] = true;
+            // this.activeArray[i] = true
+            this.activeArray[i] = [true, false]
+          }
+          if (this.progress > (this.accumulationArray[0] * 100) / allLength) {
+            // this.activeArray[i] = true
+            this.activeArray[i] = [true, true]
           }
         } else {
           if (
@@ -194,7 +203,7 @@ export default {
               100) /
               allLength
           ) {
-            this.activeArray[i] = true;
+            this.activeArray[i] = true
           }
         }
       }
@@ -214,30 +223,30 @@ export default {
   computed: {
     areaTranslateX() {
       if (this.progress < 100) {
-        return this.progress * (1 - 1 / this.pageNumber.length) * -1;
+        return this.progress * (1 - 1 / this.pageNumber.length) * -1
       }
-      return 100 * (1 - 1 / this.pageNumber.length) * -1;
+      return 100 * (1 - 1 / this.pageNumber.length) * -1
     },
     bottomDistance() {
       if (this.progress <= 100) {
-        return 0;
+        return 0
       }
-      return this.bottom;
+      return this.bottom
     },
   },
   created() {
-    window.addEventListener("scroll", this.updateProgress);
+    window.addEventListener('scroll', this.updateProgress)
     // window.addEventListener("resize", this.countListWidth);
   },
   mounted() {
-    this.updateProgress();
+    this.updateProgress()
     // this.countListWidth();
   },
   destroyed() {
-    window.removeEventListener("scroll", this.updateProgress);
+    window.removeEventListener('scroll', this.updateProgress)
     // window.removeEventListener("resize", this.countListWidth);
   },
-};
+}
 </script>
 <style lang="scss" scoped>
 @media (max-width: 576px) {
@@ -252,7 +261,7 @@ export default {
   position: relative;
 }
 .time-spot::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 40px;
   height: 40px;
@@ -266,7 +275,7 @@ export default {
 // timeline-area
 .time-line-container {
   overflow: hidden;
-  background-image: url("../../../assets/img/timeline/backgroung.jpg");
+  background-image: url('../../../assets/img/timeline/backgroung.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 48px;
@@ -276,7 +285,7 @@ export default {
   list-style: none;
   display: flex;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: calc(21.67% + 20px);
     left: 245.47vw;
