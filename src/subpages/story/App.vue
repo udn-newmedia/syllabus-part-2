@@ -159,7 +159,7 @@
         :posterPad="require('~/media/story/video/pad.jpg')"
         :posterPc="require('~/media/story/video/pc.jpg')"
       )
-      BlackLine(pos='bottom')
+      BlackLine(pos='bottom' :isLast="true")
     OtherProjects(theme="light")
     Marketing(bg="#eeeeee")
     PageFooter
