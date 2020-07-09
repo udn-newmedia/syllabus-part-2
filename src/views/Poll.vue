@@ -6,7 +6,7 @@
       :device="windowSize.width <= 576 ? 'mob' : 'pc'"
       pageTitle="課綱上路周年大調查"
     >
-      <HeaderLink theme="dark" :isRoot="false" />
+      <HeaderLink theme="dark" />
     </HeaderTypeC>
     <Twinkle :windowSize="windowSize" />
     <!-- <MessageSource /> -->
@@ -29,27 +29,27 @@
 </template>
 
 <script>
-import PageIndicator from "@/components/layout/PageIndicator";
-import HeaderTypeC from "@/components/header/HeaderTypeC";
-import ArticleCastAnchor from "@/components/layout/ArticleCastAnchor";
-import HeaderLink from "@/components/self/HeaderLink";
-import Twinkle from "@/components/poll/Twinkle";
+import PageIndicator from '@/components/layout/PageIndicator'
+import HeaderTypeC from '@/components/header/HeaderTypeC'
+import ArticleCastAnchor from '@/components/layout/ArticleCastAnchor'
+import HeaderLink from '@/components/self/HeaderLink'
+import Twinkle from '@/components/poll/Twinkle'
 // import MessageSource from '@/components/poll/MessageSource'
-import ThreeEvents from "@/components/poll/ThreeEvents";
-import PressLike from "@/components/poll/PressLike";
-import AllPolls from "@/components/poll/AllPolls";
-import Schools from "@/components/poll/Schools";
+import ThreeEvents from '@/components/poll/ThreeEvents'
+import PressLike from '@/components/poll/PressLike'
+import AllPolls from '@/components/poll/AllPolls'
+import Schools from '@/components/poll/Schools'
 
-import Marketing from "@/components/self/Marketing.vue";
-import OtherProjects from "@/components/self/OtherProjects";
-import Editors from "@/components/self/Editors.vue";
-import PageFooter from "@/components/footer/PageFooter.vue";
-import FooterFbComment from "@/components/footer/FooterFbComment.vue";
-import FooterLogo from "@/components/footer/FooterLogo.vue";
-import PageBackTop from "@/components/layout/PageBackTop.vue";
+import Marketing from '@/components/self/Marketing.vue'
+import OtherProjects from '@/components/self/OtherProjects'
+import Editors from '@/components/self/Editors.vue'
+import PageFooter from '@/components/footer/PageFooter.vue'
+import FooterFbComment from '@/components/footer/FooterFbComment.vue'
+import FooterLogo from '@/components/footer/FooterLogo.vue'
+import PageBackTop from '@/components/layout/PageBackTop.vue'
 
 export default {
-  name: "Poll",
+  name: 'Poll',
   components: {
     PageIndicator,
     HeaderTypeC,
@@ -70,24 +70,24 @@ export default {
     PageBackTop,
   },
   data() {
-    return { windowSize: { width: 0 } };
+    return { windowSize: { width: 0 } }
   },
   methods: {
     checkWindowSize() {
-      const { innerWidth } = window;
-      this.windowSize = { width: innerWidth };
+      const { innerWidth } = window
+      this.windowSize = { width: innerWidth }
     },
   },
   created() {
-    window.addEventListener("resize", this.checkWindowSize);
+    window.addEventListener('resize', this.checkWindowSize)
   },
   mounted() {
-    this.checkWindowSize();
+    this.checkWindowSize()
   },
   destroyed() {
-    window.removeEventListener("resize", this.checkWindowSize);
+    window.removeEventListener('resize', this.checkWindowSize)
   },
-};
+}
 </script>
 <style lang="scss" scoped>
 .header-anchor__list

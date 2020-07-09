@@ -2,7 +2,7 @@
   <div id="app">
     <PageIndicator />
     <HeaderTypeA slot="header">
-      <HeaderLink />
+      <HeaderLink :isNotRoot="false" />
     </HeaderTypeA>
     <Timeline />
     <Marketing />

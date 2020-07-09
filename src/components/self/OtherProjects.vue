@@ -120,7 +120,7 @@ export default {
     getActive() {
       const currentURL = window.location.href
 
-      if (currentURL.indexOf('../problem') !== -1) {
+      if (currentURL.indexOf('/problem') !== -1) {
         this.active = 0
       } else if (currentURL.indexOf('/poll') !== -1) {
         this.active = 1
@@ -203,13 +203,14 @@ export default {
       @media screen and (max-width: 768px) {
         flex: 0 0 340px;
         max-width: 340px;
-        height: 382.5px;
+        // height: 382.5px;
+        height: 400px;
       }
       @media screen and (max-width: 414px) {
         flex: 0 0 280px;
         max-width: 280px;
         // height: 315px;
-        height: 340px;
+        height: 350px;
       }
       @media screen and (max-width: 374.99px) {
         flex: 0 0 200px;

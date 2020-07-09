@@ -121,7 +121,7 @@ const content = {
     },
     {
       text: "台灣教育關鍵數字",
-      link: "./problem/",
+      link: "./data/",
       gaLabel: "台灣教育關鍵數字",
     },
     { text: "台灣教改為何總失敗", link: "./", gaLabel: "台灣教改為何總失敗" },

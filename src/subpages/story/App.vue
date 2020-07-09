@@ -17,7 +17,7 @@
         @click="sendGA({category: 'menu', action: 'click', label: '108課綱上路周年大調查'})"
       ) <span v-if="isAfterOnlineDate">108</span>課綱上路周年大調查<span  v-if="!isAfterOnlineDate"class="menu-item__online-date">（07/13上線）</span>
       a(
-        href="../problem/"
+        href="../data/"
         target="_blank" rel="noopener"
         aria-label="outlink"
         name="outlink"
@@ -194,7 +194,7 @@
 <script>
 import { autoResize_3, sendGaMethods } from '@/mixins/masterBuilder.js'
 import { fbBrowserResize } from '@/mixins/fbBrowserResize.js'
-import isAfterOnlineDate from '@/mixins/handleOnlineDate.js';
+import isAfterOnlineDate from '@/mixins/handleOnlineDate.js'
 
 import ArticleContainer from '@/components/layout/ArticleContainer.vue'
 import BlackHole from '@cs/BlackHole.vue'

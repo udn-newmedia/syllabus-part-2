@@ -13,10 +13,10 @@
         <p>網頁製作</p>
         <p>張庭瑋</p>
       </div>
-      <!-- <div>
+      <div>
         <p>影像</p>
         <p>影像中心、報系資料庫</p>
-      </div> -->
+      </div>
       <div>
         <p>監製</p>
         <p>蕭衡倩</p>
@@ -42,11 +42,7 @@
       <FooterShare />
     </div>
     <div class="questionnaire-wrapper">
-      <a
-        class="questionnaire"
-        href="https://www.surveycake.com/s/KpQKN"
-        target="_blank"
-      >
+      <a class="questionnaire" href="https://www.surveycake.com/s/KpQKN" target="_blank">
         <span>填寫閱讀體驗問卷</span>
       </a>
     </div>
@@ -54,14 +50,14 @@
 </template>
 
 <script>
-import FooterShare from "@/components/footer/FooterShare.vue";
-import FooterEditor from "@/components/footer/FooterEditor.vue";
+import FooterShare from '@/components/footer/FooterShare.vue'
+import FooterEditor from '@/components/footer/FooterEditor.vue'
 
 export default {
-  name: "Editors",
+  name: 'Editors',
   props: { onlineTime: { type: String } },
   components: { FooterShare, FooterEditor },
-};
+}
 </script>
 <style lang="scss" scoped>
 .editors-wrapper {
