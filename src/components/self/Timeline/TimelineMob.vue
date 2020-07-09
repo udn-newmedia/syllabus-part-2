@@ -111,6 +111,13 @@ export default {
           ) {
             result[i] = [true, true]
           }
+        } else if (i === 7) {
+          if (
+            pageYOffset >
+            this.tops[i] - 0.5 * (this.tops[i] - this.tops[i - 1])
+          ) {
+            result[i] = true
+          }
         } else {
           if (
             pageYOffset >

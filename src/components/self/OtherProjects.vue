@@ -36,7 +36,7 @@
             <!-- <span class="underline">{{ item.title }}</span> -->
             <span class="underline" v-html="item.title" />
             <br />
-            <span class="online" v-if="item.online">{{ item.online }}</span>
+            <span class="online" v-if="item.online&& !isAfterOnlineDate">{{ item.online }}</span>
           </span>
         </div>
       </a>

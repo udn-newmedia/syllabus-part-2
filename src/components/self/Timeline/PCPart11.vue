@@ -4,7 +4,7 @@
       <div class="part11-1year-wrapper">
         <div class="part11-1year">
           <h2 class="part11-title">2020年：108課綱上路1年後</h2>
-          <h3 class="part11-subtitle">《聯合報》針對1200位民眾、929所學校進行民調後發現：</h3>
+          <h3 class="part11-subtitle">《聯合報》針對1243位民眾、929所學校進行民調後發現：</h3>
           <ul class="part11-list">
             <li>
               <span class="strong-red">6成</span>以上民眾沒聽過108課綱；聽過的人，
