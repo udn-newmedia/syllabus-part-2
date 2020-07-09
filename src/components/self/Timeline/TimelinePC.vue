@@ -158,18 +158,20 @@ export default {
   },
   methods: {
     updateProgress() {
+      console.log('strat update!')
       const containerTop = this.$refs.timeLineContainer.offsetTop
       const containerHeight = this.$refs.timeLineContainer.offsetHeight
       const containBottom = containerTop + containerHeight
       const listHeight = this.$refs.timeLineList.offsetHeight
-      const { scrollTop } = document.documentElement
+      // const { scrollTop } = document.documentElement
+      const { pageYOffset } = window
       const { innerHeight } = window
-      const scrollBottom = scrollTop + innerHeight
+      const scrollBottom = pageYOffset + innerHeight
       // const bodyHeight = document.body.offsetHeight
 
       const allHeight = containerHeight - listHeight
       // count the progress
-      const progress = ((scrollTop - containerTop) * 100) / allHeight
+      const progress = ((pageYOffset - containerTop) * 100) / allHeight
 
       this.progress = progress
       // count the distance for bottom after leaving the area
@@ -207,6 +209,7 @@ export default {
           }
         }
       }
+      console.log('end update!')
     },
     // countListWidth() {
     //   const { innerWidth } = window;
