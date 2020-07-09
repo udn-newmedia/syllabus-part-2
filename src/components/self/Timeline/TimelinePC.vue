@@ -158,14 +158,12 @@ export default {
   },
   methods: {
     updateProgress() {
-      console.log('strat update!')
       const containerTop = this.$refs.timeLineContainer.offsetTop
       const containerHeight = this.$refs.timeLineContainer.offsetHeight
       const containBottom = containerTop + containerHeight
       const listHeight = this.$refs.timeLineList.offsetHeight
       // const { scrollTop } = document.documentElement
-      const { pageYOffset } = window
-      const { innerHeight } = window
+      const { pageYOffset, innerHeight } = window
       const scrollBottom = pageYOffset + innerHeight
       // const bodyHeight = document.body.offsetHeight
 
@@ -209,19 +207,7 @@ export default {
           }
         }
       }
-      console.log('end update!')
     },
-    // countListWidth() {
-    //   const { innerWidth } = window;
-
-    //   if (innerWidth <= 1280) {
-    //     this.listWidth =
-    //       this.pageNumber.length * 100 + 50 + 0.1588 * (1280 - innerWidth);
-    //   } else {
-    //     this.listWidth =
-    //       this.pageNumber.length * 100 + 50 - 0.09 * (innerWidth - 1280);
-    //   }
-    // },
   },
   computed: {
     areaTranslateX() {
