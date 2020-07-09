@@ -3,6 +3,7 @@ const contentGenerator = require("./utils/contentGenerator.js");
 /* 內容文件 */
 const monitorCode = contentGenerator("../contents/monitor.html");
 const mainPageContent = contentGenerator("../contents/mainPage.html");
+const noIndex = contentGenerator("../contents/noIndex.html");
 const storyContent = contentGenerator("../contents/story.html");
 const pollContent = contentGenerator("../contents/poll.html");
 
@@ -76,6 +77,7 @@ module.exports = {
       publicPath: pathRoot,
       mainPage: pathRoot,
       theme: "#ffffff",
+      noIndex,
     },
   },
 };
