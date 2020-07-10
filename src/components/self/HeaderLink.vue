@@ -68,6 +68,9 @@ export default {
       if (index === this.active || (index === 1 && isAfterOnlineDate)) {
         return 'javascript:void(0);'
       } else {
+        if (link.indexOf('http') !== -1) {
+          return link
+        }
         return this.isNotRoot ? `.${link}` : link
       }
     },
