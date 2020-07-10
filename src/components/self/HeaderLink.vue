@@ -26,60 +26,59 @@
       <span
         class="menu-item__online-date"
         v-if="link.online && !isAfterOnlineDate"
-        >{{ link.online }}</span
-      >
+      >{{ link.online }}</span>
     </a>
   </div>
 </template>
 
 <script>
-import content from "../../data/content";
-import { sendGaMethods } from "@/mixins/masterBuilder.js";
-import isAfterOnlineDate from "@/mixins/handleOnlineDate.js";
+import content from '../../data/content'
+import { sendGaMethods } from '@/mixins/masterBuilder.js'
+import isAfterOnlineDate from '@/mixins/handleOnlineDate.js'
 
 export default {
-  name: "HeaderLink",
+  name: 'HeaderLink',
   props: {
-    theme: { type: String, default: "light" },
+    theme: { type: String, default: 'light' },
     isNotRoot: { type: Boolean, default: true },
   },
   mixins: [sendGaMethods, isAfterOnlineDate],
   data() {
-    return { links: content.headerLink, active: 3 };
+    return { links: content.headerLink, active: 3 }
   },
   methods: {
     getActive() {
-      const currentURL = window.location.href;
+      const currentURL = window.location.href
 
-      if (currentURL.indexOf("../problem") !== -1) {
-        this.active = 0;
-      } else if (currentURL.indexOf("/poll") !== -1) {
-        this.active = 1;
-      } else if (currentURL.indexOf("/data") !== -1) {
-        this.active = 2;
-      } else if (currentURL.indexOf("/story") !== -1) {
-        this.active = 4;
-      } else if (currentURL.indexOf("/collect") !== -1) {
-        this.active = 5;
+      if (currentURL.indexOf('/problem') !== -1) {
+        this.active = 0
+      } else if (currentURL.indexOf('/poll') !== -1) {
+        this.active = 1
+      } else if (currentURL.indexOf('/data') !== -1) {
+        this.active = 2
+      } else if (currentURL.indexOf('/story') !== -1) {
+        this.active = 4
+      } else if (currentURL.indexOf('/collect') !== -1) {
+        this.active = 5
       } else {
-        this.active = 3;
+        this.active = 3
       }
     },
     operatedLink(link, index) {
       if (index === this.active || (index === 1 && isAfterOnlineDate)) {
-        return "javascript:void(0);";
+        return 'javascript:void(0);'
       } else {
-        return this.isNotRoot ? `.${link}` : link;
+        return this.isNotRoot ? `.${link}` : link
       }
     },
   },
   mounted() {
-    this.getActive();
+    this.getActive()
   },
-};
+}
 </script>
 <style lang="scss" scoped>
-@import "~/style/menu_item_disabled.scss";
+@import '~/style/menu_item_disabled.scss';
 
 .header-link-wrapper {
   height: 100%;

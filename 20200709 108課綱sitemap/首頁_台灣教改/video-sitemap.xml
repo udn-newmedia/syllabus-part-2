@@ -1,0 +1,26 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+   
+   <url>
+     <loc>https://udn.com/newmedia/2020/12-years-education/</loc>
+     
+     <video:video>
+       <video:thumbnail_loc>https://udn.com/newmedia/2020/12-years-education/img/12-years-education_v3.1024ad34.jpg</video:thumbnail_loc>
+       <video:title>台灣教改 為什麼總失敗 | 專題 | 聯合報</video:title>
+       <video:description>【108課綱上路周年追蹤報導】每一次教育改革，方向都是鼓勵多元、減輕學生升學壓力，但台灣學生真的有比較快樂嗎？瑩光教育協會創辦人藍偉瑩教學經歷超過24年，長年在教育現場的她觀察，孩子逐漸失去學習的快樂，升學道路看似更寬廣，但「大人」卻常當算命師，限縮、窄化了孩子的可能性。</video:description>
+       <!--<video:content_loc>https://p3.udn.com.tw/memory_collector/cover_video_web.mp4</video:content_loc>-->
+       <!-- 指向實際影片媒體檔案的網址-->
+       <video:player_loc>https://www.youtube.com/embed/rs0jwv1cBg4</video:player_loc>
+       <!-- 指向特定影片播放器的網址，YouTube 影片，應使用此值-->
+       <video:duration>184</video:duration>
+       <!-- 影片的片長 (以秒為單位)。這個值必須介於 1 至 28800 (8 小時) 之間 (含首尾值)"-->
+       <video:publication_date>2020-07-09T07:00:00+08:00</video:publication_date>
+       <video:requires_subscription>no</video:requires_subscription>
+       <video:uploader info="https://udn.com/">聯合報</video:uploader>
+       <video:tag>教改,九年一貫,108課綱,12年國教,國中會考,學測,指考</video:tag>
+     </video:video>
+
+   </url>
+
+
+</urlset>
