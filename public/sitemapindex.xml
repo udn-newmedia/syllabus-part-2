@@ -54,6 +54,16 @@
       <loc>https://udn.com/newmedia/2020/12-years-education/collect/image-sitemap.xml</loc>
       <lastmod>2020-07-09T07:00:00+08:00</lastmod>
    </sitemap>
+
+   <!-- 課綱上路周年大調查_poll -->
+   <sitemap>
+      <loc>https://udn.com/newmedia/2020/12-years-education/poll/sitemap.xml</loc>
+      <lastmod>2020-07-13T07:00:00+08:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://udn.com/newmedia/2020/12-years-education/poll/image-sitemap.xml</loc>
+      <lastmod>2020-07-13T07:00:00+08:00</lastmod>
+   </sitemap>
    
   
 
