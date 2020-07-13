@@ -65,7 +65,7 @@ export default {
       }
     },
     operatedLink(link, index) {
-      if (index === this.active || (index === 1 && isAfterOnlineDate)) {
+      if (index === this.active) {
         return 'javascript:void(0);'
       } else {
         if (link.indexOf('http') !== -1) {

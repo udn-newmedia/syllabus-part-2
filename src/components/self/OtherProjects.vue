@@ -51,7 +51,11 @@
       />
     </ul>
 
-    <a href="https://udn.com/search/word/2/108課綱" class="otherprojects-link">更多課綱相關報導</a>
+    <a
+      href="https://udn.com/search/word/2/108課綱"
+      target="_blank"
+      class="otherprojects-link"
+    >更多課綱相關報導</a>
   </div>
 </template>
 
@@ -88,11 +92,7 @@ export default {
       }
     },
     hoverItem(i) {
-      if (
-        this.windowSize === 'web' &&
-        i !== this.active &&
-        (i !== 1 || !isAfterOnlineDate)
-      ) {
+      if (this.windowSize === 'web' && i !== this.active) {
         this.hovered = i
       }
     },
@@ -144,7 +144,7 @@ export default {
       }
     },
     operatedLink(link, index) {
-      if (index === this.active || (index === 1 && isAfterOnlineDate)) {
+      if (index === this.active) {
         return 'javascript:void(0);'
       } else {
         if (link.indexOf('http') !== -1) {

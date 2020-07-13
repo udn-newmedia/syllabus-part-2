@@ -3,7 +3,7 @@ const contentGenerator = require("./utils/contentGenerator.js");
 /* 內容文件 */
 const monitorCode = contentGenerator("../contents/monitor.html");
 const mainPageContent = contentGenerator("../contents/mainPage.html");
-const noIndex = contentGenerator("../contents/noIndex.html");
+// const noIndex = contentGenerator("../contents/noIndex.html");
 const storyContent = contentGenerator("../contents/story.html");
 const pollContent = contentGenerator("../contents/poll.html");
 
@@ -14,9 +14,9 @@ const pathRoot =
     : "http://localhost:8080/";
 /* 測試路徑 */
 // const pathRoot =
-  // process.env.NODE_ENV === "production"
-  //   ? "https://nmdap.udn.com.tw/test/12-years-education/"
-  //   : "http://localhost:8080/";
+// process.env.NODE_ENV === "production"
+//   ? "https://nmdap.udn.com.tw/test/12-years-education/"
+//   : "http://localhost:8080/";
 
 const story_path = "story/";
 const poll_path = "poll/";
@@ -77,7 +77,7 @@ module.exports = {
       publicPath: pathRoot,
       mainPage: pathRoot,
       theme: "#ffffff",
-      noIndex,
+      // noIndex,
     },
   },
 };
