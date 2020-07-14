@@ -60,9 +60,13 @@
 </template>
 
 <script>
-import content from '../../data/content'
+// import content from '../../data/content'
 import { sendGaMethods } from '@/mixins/masterBuilder.js'
 import isAfterOnlineDate from '@/mixins/handleOnlineDate.js'
+// 正式
+// import contentJSON from '../../../public/related/OtherProject.json'
+// 測試
+// import contentJSON from '@/../public/related/OtherProjectTest.json'
 
 export default {
   name: 'OtherProjects',
@@ -75,7 +79,8 @@ export default {
   },
   data() {
     return {
-      dataArray: content.otherProjects,
+      // dataArray: content.otherProjects,
+      dataArray: [],
       windowSize: 'web',
       active: null,
       hovered: null,
@@ -147,11 +152,26 @@ export default {
       if (index === this.active) {
         return 'javascript:void(0);'
       } else {
-        if (link.indexOf('http') !== -1) {
-          return link
-        }
-        return this.isNotRoot ? `.${link}` : link
+        return link
+        // if (link.indexOf('http') !== -1) {
+        //   return link
+        // }
+        // return this.isNotRoot ? `.${link}` : link
       }
+    },
+    getJsonData() {
+      // test
+      const url =
+        'https://nmdap.udn.com.tw/test/12-years-education/related/OtherProjectTest.json'
+      // 正式
+      // const url =
+      //   'https://udn.com/newmedia/2020/12-years-education/related/OtherProject.json'
+
+      fetch(url)
+        .then(response => response.json())
+        .then(result => {
+          this.dataArray = result
+        })
     },
   },
   mounted() {
@@ -161,6 +181,7 @@ export default {
       .addEventListener('scroll', this.containerScrollHandler)
     this.checkWindowSize()
     this.getActive()
+    this.getJsonData()
   },
   destroyed() {
     window.removeEventListener('scroll', this.checkWindowSize)

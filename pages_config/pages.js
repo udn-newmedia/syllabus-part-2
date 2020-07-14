@@ -8,15 +8,15 @@ const storyContent = contentGenerator("../contents/story.html");
 const pollContent = contentGenerator("../contents/poll.html");
 
 /* 正式路徑 */
+// const pathRoot =
+//   process.env.NODE_ENV === "production"
+//     ? "https://udn.com/newmedia/2020/12-years-education/"
+//     : "http://localhost:8080/";
+/* 測試路徑 */
 const pathRoot =
   process.env.NODE_ENV === "production"
-    ? "https://udn.com/newmedia/2020/12-years-education/"
+    ? "https://nmdap.udn.com.tw/test/12-years-education/"
     : "http://localhost:8080/";
-/* 測試路徑 */
-// const pathRoot =
-// process.env.NODE_ENV === "production"
-//   ? "https://nmdap.udn.com.tw/test/12-years-education/"
-//   : "http://localhost:8080/";
 
 const story_path = "story/";
 const poll_path = "poll/";
