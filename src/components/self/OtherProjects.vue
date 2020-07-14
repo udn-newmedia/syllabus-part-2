@@ -161,11 +161,11 @@ export default {
     },
     getJsonData() {
       // test
-      const url =
-        'https://nmdap.udn.com.tw/test/12-years-education/related/OtherProjectTest.json'
-      // 正式
       // const url =
-      //   'https://udn.com/newmedia/2020/12-years-education/related/OtherProject.json'
+      //   'https://nmdap.udn.com.tw/test/12-years-education/related/OtherProjectTest.json'
+      // 正式
+      const url =
+        'https://udn.com/newmedia/2020/12-years-education/related/OtherProject.json'
 
       fetch(url)
         .then(response => response.json())
