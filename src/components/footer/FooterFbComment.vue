@@ -29,9 +29,9 @@ export default {
 }
 </style>
 <style lang="scss">
-.fb-comments {
-  iframe {
-    width: 100% !important;
-  }
-}
+// .fb-comments {
+//   iframe {
+//     width: 100% !important;
+//   }
+// }
 </style>
