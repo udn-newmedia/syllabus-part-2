@@ -12,6 +12,9 @@ import App from "./App.vue";
 import store from "./store";
 
 import "intersection-observer";
+import "isomorphic-fetch";
+
+Window.Promise = Promise;
 // import "whatwg-fetch";
 // import objectFitPolyfill from "objectFitPolyfill";
 

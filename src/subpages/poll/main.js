@@ -16,6 +16,7 @@ import App from "./App.vue";
 
 // library.add(faAngleDoubleDown);
 // Vue.component("font-awesome-icon", FontAwesomeIcon);
+Window.Promise = Promise;
 
 Vue.config.productionTip = false;
 
